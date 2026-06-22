@@ -107,42 +107,62 @@
   }
 
   // ── ReCharge one-time price ──────────────────────────────────────────────
-  // The widget uses an open shadow root, so we can reach inside with shadowRoot.
-  // We observe the onetime container (not the span itself) because Lit may
-  // re-render the span's content node on variant change.
+  // The widget uses an open shadow root — accessible via .shadowRoot.
+  // The one-time container class is rc-selection__onetime (the part attribute
+  // says rc-purchase-option__onetime but that's not the class).
+  // We observe rc-widget__root (the shadow root's top div) so that Lit
+  // re-renders don't escape our watch. We also retry on init because Lit
+  // may hydrate the shadow DOM after DOMContentLoaded.
 
-  function getRcWidget() {
+  function getRcShadow() {
     var w = document.querySelector('recharge-subscription-widget');
-    return (w && w.shadowRoot) ? w : null;
+    return (w && w.shadowRoot) ? w.shadowRoot : null;
   }
 
-  function applyRcDiscount(discountedFormatted) {
-    var widget = getRcWidget();
-    if (!widget) return;
-    var onetimeEl = widget.shadowRoot.querySelector('.rc-purchase-option__onetime');
-    if (!onetimeEl) return;
-    var priceEl = onetimeEl.querySelector('[part="rc-purchase-option__price"]');
-    if (priceEl) priceEl.textContent = discountedFormatted;
+  function getRcOnetimePriceEl(shadow) {
+    var container = shadow.querySelector('.rc-selection__onetime');
+    return container ? container.querySelector('[part="rc-purchase-option__price"]') : null;
   }
 
-  function watchRcEl(discountedFormatted) {
-    var widget = getRcWidget();
-    if (!widget) return;
-    var onetimeEl = widget.shadowRoot.querySelector('.rc-purchase-option__onetime');
-    if (!onetimeEl) return;
+  function applyRcDiscount() {
+    if (!currentData || currentData.salePercent <= 0) return;
+    var shadow = getRcShadow();
+    if (!shadow) return;
+    var priceEl = getRcOnetimePriceEl(shadow);
+    if (priceEl) priceEl.textContent = currentData.discountedFormatted;
+  }
+
+  function watchRcEl() {
+    var shadow = getRcShadow();
+    if (!shadow) return;
+    var rootEl = shadow.querySelector('.rc-widget__root');
+    if (!rootEl) return;
 
     var obs = new MutationObserver(function () {
       if (!currentData || currentData.salePercent <= 0) return;
-      var priceEl = onetimeEl.querySelector('[part="rc-purchase-option__price"]');
+      var priceEl = getRcOnetimePriceEl(shadow);
       if (!priceEl || priceEl.textContent.trim() === currentData.discountedFormatted) return;
       obs.disconnect();
       priceEl.textContent = currentData.discountedFormatted;
       setTimeout(function () {
-        obs.observe(onetimeEl, { childList: true, subtree: true, characterData: true });
+        obs.observe(rootEl, { childList: true, subtree: true, characterData: true });
       }, 0);
     });
-    obs.observe(onetimeEl, { childList: true, subtree: true, characterData: true });
+    obs.observe(rootEl, { childList: true, subtree: true, characterData: true });
     activeObservers.push(obs);
+  }
+
+  // Retry until Lit has rendered the widget content (up to ~2 s).
+  function initRc(attempts) {
+    attempts = attempts || 0;
+    var shadow = getRcShadow();
+    var priceEl = shadow && getRcOnetimePriceEl(shadow);
+    if (priceEl) {
+      applyRcDiscount();
+      watchRcEl();
+    } else if (attempts < 10) {
+      setTimeout(function () { initRc(attempts + 1); }, 200);
+    }
   }
   // ────────────────────────────────────────────────────────────────────────
 
@@ -187,8 +207,8 @@
     });
 
     // Update the ReCharge one-time purchase price
-    applyRcDiscount(data.discountedFormatted);
-    watchRcEl(data.discountedFormatted);
+    applyRcDiscount();
+    watchRcEl();
   }
 
   function currentVariantId() {
@@ -203,6 +223,7 @@
     var vData = variantData[String(e.detail.variant.id)];
     window[saleFlag] = !!(vData && vData.salePercent > 0);
     applyDiscount(String(e.detail.variant.id));
+    initRc();
   });
 
   document.addEventListener('change', function (e) {
@@ -213,11 +234,13 @@
     var vData = variantData[String(id)];
     window[saleFlag] = !!(vData && vData.salePercent > 0);
     applyDiscount(String(id));
+    initRc();
   });
 
   function init() {
     var id = currentVariantId();
     if (id) applyDiscount(String(id));
+    initRc();
   }
 
   if (document.readyState === 'loading') {
