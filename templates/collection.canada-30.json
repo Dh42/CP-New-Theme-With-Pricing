@@ -521,6 +521,18 @@
         "sidebar_size": "medium"
       }
     },
+    "custom_liquid_CYFVna": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"faq\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
     "icon_with_text_LMTgLi": {
       "type": "icon_with_text",
       "settings": {
@@ -552,6 +564,7 @@
     "custom_line_Hx8wKY",
     "custom_liquid_n4TaAM",
     "main",
+    "custom_liquid_CYFVna",
     "icon_with_text_LMTgLi"
   ]
 }
