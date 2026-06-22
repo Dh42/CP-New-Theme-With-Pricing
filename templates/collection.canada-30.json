@@ -97,6 +97,12 @@
             "btn_icon": "none",
             "alignment": "center"
           }
+        },
+        "custom_liquid_QB47Gd": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div style=\"text-align:center;\">\n  <small style=\"color:#fff;\">\n    Some exclusions may apply. <br>\n    <strong style=\"color:#fff;\">\n      <a href=\"#faq\" style=\"color:#fff; text-decoration:underline;\">\n        Click here for FAQs.\n      </a>\n    </strong>\n  </small>\n</div>"
+          }
         }
       },
       "block_order": [
@@ -108,7 +114,8 @@
         "spacer_qXKRmH",
         "text_FrjNWt",
         "spacer_axWfRL",
-        "button_ACGL8Y"
+        "button_ACGL8Y",
+        "custom_liquid_QB47Gd"
       ],
       "custom_css": [
         "[class*=\"__custom_section_\"] {background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2)), #48873e url(https://cdn.shopify.com/s/files/1/0249/3241/7583/files/30_off.png?v=1781715425) 90% 70% / cover no-repeat !important; min-height: 500px; color: #fff !important;}",
