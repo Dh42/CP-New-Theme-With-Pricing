@@ -71,7 +71,7 @@
         "text_FrjNWt": {
           "type": "text",
           "settings": {
-            "text": "<h2>30% off proteins & supplements </h2>",
+            "text": "<h2>Up to 70% off apparel & exercise equipment</h2>",
             "text_size": "base",
             "alignment": "center",
             "alignment_mb": "center"
@@ -118,7 +118,7 @@
         "custom_liquid_QB47Gd"
       ],
       "custom_css": [
-        "[class*=\"__custom_section_\"] {background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2)), #48873e url(https://cdn.shopify.com/s/files/1/0249/3241/7583/files/30_off.png?v=1781715425) 90% 70% / cover no-repeat !important; min-height: 500px; color: #fff !important;}",
+        "[class*=\"__custom_section_\"] {background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2)), #48873e url(https://cdn.shopify.com/s/files/1/0249/3241/7583/files/70_off_2.png?v=1781721326) 90% 70% / cover no-repeat !important; min-height: 500px; color: #fff !important;}",
         "[class*=\"__custom_section_\"] * {color: #fff !important;}",
         "[class*=\"__custom_section_\"] .hdt-s-gradient,[class*=\"__custom_section_\"] .hdt-s-gradient:before {background: 0 !important;}"
       ],

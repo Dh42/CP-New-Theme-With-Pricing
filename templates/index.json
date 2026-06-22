@@ -15,6 +15,7 @@
         "slide_CP4xta": {
           "type": "slide",
           "name": "Father's Day Sale",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/image_4d32c8e9-3688-45e9-a4ab-b9640179603e.png",
             "eyebrow": "Father's Day Sale",
@@ -166,6 +167,7 @@
         "item_bEGXYh",
         "item_rEUm4e"
       ],
+      "disabled": true,
       "custom_css": [
         "/* Enlarge the Subscribe & Save marquee icon */.hdt-marquee__item-icon--image img[src*=\"Subscribe_and_save\"] {width: 170px !important; max-width: 170px !important; height: auto !important;}"
       ],
