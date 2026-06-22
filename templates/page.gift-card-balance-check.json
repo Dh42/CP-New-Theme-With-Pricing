@@ -1,0 +1,122 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "main-heading",
+      "blocks": {
+        "5ecb9555-19e4-433b-8817-1ccaa3a41384": {
+          "type": "1",
+          "settings": {
+            "heading": "",
+            "heading_size": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "5ecb9555-19e4-433b-8817-1ccaa3a41384"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "spacing_hd": 0,
+        "padding_top": 80,
+        "padding_bottom": 86,
+        "padding_rate": 75
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "176687317171b97a09": {
+      "type": "apps",
+      "blocks": {
+        "giftcheck_pro_gift_card_balance_UGXeH4": {
+          "type": "shopify://apps/giftcheck-pro/blocks/gift-card-balance/37aba7d5-f6b9-4c02-bb91-1d2db714b592",
+          "settings": {
+            "background_primary_color": "#f6f6f6",
+            "hide_border": true,
+            "hide_shadow": true,
+            "description": "Enter the last 4 digits of gift card code to check your balance.",
+            "placeholder": "Gift Card Code",
+            "button_text": "Check Balance",
+            "loading_text": "Searching...",
+            "button_primary_color": "#28a745",
+            "balance_text": "Your balance is",
+            "not_enough_characters_text": "Enter last 4 characters of gift card code.",
+            "general_error_text": "Error: Please try again."
+          }
+        }
+      },
+      "block_order": [
+        "giftcheck_pro_gift_card_balance_UGXeH4"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "featured_collection_carousel_4DDF7z": {
+      "type": "featured-collection-carousel",
+      "name": "t:sections.collection_products.carousel_name",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "Best Selling Proteins",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "btn_heading": false,
+        "nav_heading": "disable",
+        "heading_gap": 18,
+        "sec_heading_spacing": 30,
+        "collection": "protein-powders",
+        "product_list": [],
+        "product_des": "1",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 8,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "half_item": false,
+        "navUI": false,
+        "nav_des": "default",
+        "nav_pos": "middle_in",
+        "dotUI": false,
+        "pagination_type": "none",
+        "paginate_pos": "center",
+        "dis_pagination": 30,
+        "btn_label": "View all",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "main",
+    "176687317171b97a09",
+    "featured_collection_carousel_4DDF7z"
+  ]
+}

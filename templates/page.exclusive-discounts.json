@@ -1,0 +1,562 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_section_3r3KUp": {
+      "type": "custom-section",
+      "blocks": {
+        "parent_gMbp4h": {
+          "type": "parent",
+          "settings": {
+            "column_lg": "hdt-col-lg-6",
+            "column_md": "hdt-col-md-9",
+            "column": "hdt-col-12",
+            "color_scheme": "",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": ""
+          }
+        },
+        "heading_ctJekQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Exclusive discounts f<strong>or those who serve, protect, </strong>and<strong> lead</strong>",
+            "tag": "h2",
+            "heading_size": "h2",
+            "alignment": "center"
+          }
+        },
+        "spacer_g7rJQM": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 30,
+            "space_md": 30,
+            "space": 20
+          }
+        },
+        "text_AE96Je": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Whether you’re a student, military member, or first responder, Canadian Protein is proud to support your journey with <strong>10% off</strong>. Verify with VerifyPass and fuel your goals today.</p>",
+            "text_size": "base",
+            "alignment": "center",
+            "alignment_mb": "center"
+          }
+        },
+        "parent_RFiU7X": {
+          "type": "parent",
+          "settings": {
+            "column_lg": "",
+            "column_md": "",
+            "column": "hdt-col-12",
+            "color_scheme": "",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": ""
+          }
+        },
+        "button_eVXMFp": {
+          "type": "button",
+          "settings": {
+            "btn_label": "How Does It Work",
+            "btn_link": "#FAQ",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "outline",
+            "btn_fw": "normal",
+            "btn_icon": "1",
+            "alignment": "center"
+          }
+        },
+        "spacer_wjq8ki": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 20,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "text_Hmx4KP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Please review all the <strong>FAQs</strong> carefully to understand the rules, eligibility requirements, and limitations of the VerifyPass program.</p>",
+            "text_size": "xs",
+            "alignment": "center",
+            "alignment_mb": "center"
+          }
+        }
+      },
+      "block_order": [
+        "parent_gMbp4h",
+        "heading_ctJekQ",
+        "spacer_g7rJQM",
+        "text_AE96Je",
+        "parent_RFiU7X",
+        "button_eVXMFp",
+        "spacer_wjq8ki",
+        "text_Hmx4KP"
+      ],
+      "name": "Custom section",
+      "settings": {
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "direction": "",
+        "justify": "hdt-justify-center",
+        "gap": false,
+        "space": 0,
+        "padding_top": 40,
+        "padding_bottom": 72,
+        "padding_rate": 75
+      }
+    },
+    "image_with_tabs_content_amUz7R": {
+      "type": "image-with-tabs-content",
+      "blocks": {
+        "tab_item_gWLdq7": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Military Veterans",
+            "heading": "Honouring Your Service with Every Scoop",
+            "content_text": "At Canadian Protein, we are grateful for the sacrifices made by our military personnel. To show our appreciation, we offer a 10% discount to active service members, veterans, and reservists through VerifyPass verification. Thank you for your dedication.",
+            "btn_label": "Verify Now",
+            "btn_link": "https://verifypass.com/auth/7422668afe",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1"
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_gWLdq7"
+      ],
+      "name": "Military",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h5",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 30,
+        "main_img": "shopify://shop_images/Canadian-Protein-Military-Discounts.jpg",
+        "image_pos": "left",
+        "image_ratio": "adapt_image",
+        "custom_height": 860,
+        "custom_height_tb": 300,
+        "custom_height_mb": 300,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "image_with_tabs_content_fxAjNR": {
+      "type": "image-with-tabs-content",
+      "blocks": {
+        "tab_item_WzFzgG": {
+          "type": "tab_item",
+          "settings": {
+            "title": "First Responders",
+            "heading": "Fueling Those Who Protect and Serve",
+            "content_text": "Our first responders work tirelessly to keep our communities safe. As a small thank-you, we’re offering a 10% discount through VerifyPass verification, ensuring you stay fuelled for the challenges ahead.",
+            "btn_label": "Verify Now",
+            "btn_link": "https://verifypass.com/auth/7422668afe",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1"
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_WzFzgG"
+      ],
+      "name": "First Responders",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h5",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 30,
+        "main_img": "shopify://shop_images/Canadian-Protein-First-Responder-Discountsv2.jpg",
+        "image_pos": "right",
+        "image_ratio": "adapt_image",
+        "custom_height": 860,
+        "custom_height_tb": 300,
+        "custom_height_mb": 300,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "image_with_tabs_content_j9wQGc": {
+      "type": "image-with-tabs-content",
+      "blocks": {
+        "tab_item_pge8MY": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Teachers (K-12 / University / Staff)",
+            "heading": "Inspiring Future Generations",
+            "content_text": "Faculty and staff in K–12 and higher education receive 10% off at Canadian Protein. A quick VerifyPass check is all that’s needed.",
+            "btn_label": "Verify Now",
+            "btn_link": "https://verifypass.com/auth/7422668afe",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1"
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_pge8MY"
+      ],
+      "name": "Teachers",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h5",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 30,
+        "main_img": "shopify://shop_images/Teachers.jpg",
+        "image_pos": "left",
+        "image_ratio": "adapt_image",
+        "custom_height": 860,
+        "custom_height_tb": 300,
+        "custom_height_mb": 300,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "image_with_tabs_content_jLQ3KK": {
+      "type": "image-with-tabs-content",
+      "blocks": {
+        "tab_item_BFYWcX": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Government Employees",
+            "heading": "Serving the Public Gets Rewarded",
+            "content_text": "Federal, provincial, municipal government employees get 10% off with Canadian Protein. Simply verify with VerifyPass to redeem.",
+            "btn_label": "Verify Now",
+            "btn_link": "https://verifypass.com/auth/7422668afe",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1"
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_BFYWcX"
+      ],
+      "name": "Government Employees",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h5",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 30,
+        "main_img": "shopify://shop_images/Government-workers.jpg",
+        "image_pos": "right",
+        "image_ratio": "adapt_image",
+        "custom_height": 860,
+        "custom_height_tb": 300,
+        "custom_height_mb": 300,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "image_with_tabs_content_NVDyyj": {
+      "type": "image-with-tabs-content",
+      "blocks": {
+        "tab_item_cQF9J9": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Healthcare Workers",
+            "heading": "Healthcare Heroes — Thank You",
+            "content_text": "Doctors, nurses, allied health professionals, and support staff are eligible for 10% off at Canadian Protein. Complete the VerifyPass verification to get your code.",
+            "btn_label": "Verify Now",
+            "btn_link": "https://verifypass.com/auth/7422668afe",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1"
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_cQF9J9"
+      ],
+      "name": "Healthcare Workers",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h5",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 30,
+        "main_img": "shopify://shop_images/Healthcare-workers.jpg",
+        "image_pos": "left",
+        "image_ratio": "adapt_image",
+        "custom_height": 860,
+        "custom_height_tb": 300,
+        "custom_height_mb": 300,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "image_with_tabs_content_gNzjyf": {
+      "type": "image-with-tabs-content",
+      "blocks": {
+        "tab_item_QVYjYK": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Students",
+            "heading": "Supporting Future Leaders in Fitness and Beyond",
+            "content_text": "High school, college, and university students qualify for 10% off with Canadian Protein. Verify your student status via VerifyPass to access this discount.",
+            "btn_label": "Verify Now",
+            "btn_link": "https://verifypass.com/auth/7422668afe",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1"
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_QVYjYK"
+      ],
+      "name": "Students",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h5",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 30,
+        "main_img": "shopify://shop_images/Canadian-Protein-Student-Discounts.jpg",
+        "image_pos": "right",
+        "image_ratio": "adapt_image",
+        "custom_height": 860,
+        "custom_height_tb": 300,
+        "custom_height_mb": 300,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "image_with_tabs_content_ckb6wG": {
+      "type": "image-with-tabs-content",
+      "blocks": {
+        "tab_item_GGfbFy": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Seniors | 60+",
+            "heading": "Lifetime of Strength",
+            "content_text": "Customers aged 60 and above are eligible for 10% off at Canadian Protein. Just verify your age once via VerifyPass to enjoy the savings.",
+            "btn_label": "Verify Now",
+            "btn_link": "https://verifypass.com/auth/7422668afe",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1"
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_GGfbFy"
+      ],
+      "name": "Seniors",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h5",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 30,
+        "main_img": "shopify://shop_images/Senior-Citizens.jpg",
+        "image_pos": "left",
+        "image_ratio": "adapt_image",
+        "custom_height": 860,
+        "custom_height_tb": 300,
+        "custom_height_mb": 300,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_FXnpmj": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"FAQ\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "accordion_FNhC6e": {
+      "type": "accordion",
+      "blocks": {
+        "title_ey4CFh": {
+          "type": "title",
+          "settings": {
+            "title": "How it works / Frequently asked Questions:"
+          }
+        },
+        "accordion_item_j3jL9e": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What is VerifyPass and how does it work on the Canadian Protein website?",
+            "content": "VerifyPass is a secure, third-party verification system that confirms eligibility for exclusive discounts. Once verified, you'll instantly receive a 10% discount code to use at checkout on CanadianProtein.com. This offer is available for eligible groups such as students, teachers, first responders, and more."
+          }
+        },
+        "accordion_item_jyVYgb": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Who qualifies for a VerifyPass discount?",
+            "content": "Eligible groups include:\n<br>\n<br>\n<b>\n- Students<br>\n- First Responders<br>\n- Military (active duty, veterans, and retirees)<br>\n- Healthcare Workers<br>\n- Teachers<br>\n- Government Workers<br>\n- Seniors (60+)<br>\n</b>\n<br>\nYou must verify your status through the VerifyPass widget to access the discount."
+          }
+        },
+        "accordion_item_f7MBMg": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What discount do I receive with VerifyPass?",
+            "content": "Verified individuals receive an exclusive 10% discount on their Canadian Protein order. This discount is accessible once per day per user. Some exclusions may apply."
+          }
+        },
+        "accordion_item_AMhFqb": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "How often can I use the VerifyPass discount?",
+            "content": "You can redeem a VerifyPass discount once every 24 hours. If you’ve already claimed your code for the day, please return tomorrow to request another."
+          }
+        },
+        "accordion_item_YzyF8Y": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Can the VerifyPass discount be combined with other promotions or site-wide sales?",
+            "content": "It varies. In some cases, the 10% VerifyPass discount can be combined with other promotions running on the Canadian Protein website. In other cases, it may not stack with additional discounts. You’ll see a notice at checkout if the combination isn’t allowed."
+          }
+        },
+        "accordion_item_aNC8qn": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Is there a limit to how many times I can use the discount?",
+            "content": "There is a limit of one discount code per applicant and can use the discount as often as you’d like — one use per 24 hours."
+          }
+        },
+        "accordion_item_r3T4Jf": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Are any products excluded from the VerifyPass discount?",
+            "content": "<p>\n      Yes. While we’re proud to offer exclusive discounts to verified members through VerifyPass, <strong>some products are excluded</strong> from eligibility due to pricing structures or fulfillment limitations.\n    </p>\n<br>\n    <p>The following <strong>are not eligible</strong> for VerifyPass discounts (subject to change):</p>\n    <ul style=\"margin-left: 1.25rem; list-style: disc;\">\n      <li>\n<strong>All Bulk Protein Products</strong> (including all multi-kilo or case-size protein items)</li>\n      <li>\n<strong>Gift Cards</strong> (digital or physical)</li>\n      <li>\n<strong>Subscription Orders</strong> (including auto-renewing plans)</li>\n    </ul><br>\n    <p>\n      At times, additional exclusions may apply depending on promotional offers or inventory changes.\n      VerifyPass discounts <strong>cannot be combined</strong> with other promotions unless explicitly stated.\n    </p>"
+          }
+        },
+        "accordion_item_6q6dDm": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "My code isn’t working — what should I do?",
+            "content": "If your VerifyPass code isn’t applying at checkout:<br>\n<br>\n- Confirm that it hasn’t expired (codes are time-sensitive).<br>\n- Check whether it conflicts with another site-wide promotion.<br>\n- Make sure you're using it within 24 hours of last redemption.<br>\n<br>\nStill having trouble? Please contact Canadian Protein Customer Support or reach out to VerifyPass directly for help at help@verifypass.com."
+          }
+        }
+      },
+      "block_order": [
+        "title_ey4CFh",
+        "accordion_item_j3jL9e",
+        "accordion_item_jyVYgb",
+        "accordion_item_f7MBMg",
+        "accordion_item_AMhFqb",
+        "accordion_item_YzyF8Y",
+        "accordion_item_aNC8qn",
+        "accordion_item_r3T4Jf",
+        "accordion_item_6q6dDm"
+      ],
+      "name": "t:sections.accordion.name",
+      "settings": {
+        "accordion_position": "start",
+        "accordion_icon": "1",
+        "open_first": false,
+        "enable_link_list": false,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 85,
+        "padding_bottom": 70,
+        "padding_rate": 75
+      }
+    }
+  },
+  "order": [
+    "custom_section_3r3KUp",
+    "image_with_tabs_content_amUz7R",
+    "image_with_tabs_content_fxAjNR",
+    "image_with_tabs_content_j9wQGc",
+    "image_with_tabs_content_jLQ3KK",
+    "image_with_tabs_content_NVDyyj",
+    "image_with_tabs_content_gNzjyf",
+    "image_with_tabs_content_ckb6wG",
+    "custom_liquid_FXnpmj",
+    "accordion_FNhC6e"
+  ]
+}

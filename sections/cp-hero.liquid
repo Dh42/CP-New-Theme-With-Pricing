@@ -1,0 +1,162 @@
+{{ 'cp-homepage.css' | asset_url | stylesheet_tag }}
+
+<section class="cp-section cp-hero" id="cp-hero"
+  data-interval="{{ section.settings.auto_advance | default: 5 | times: 1000 }}">
+
+  {%- if section.blocks.size > 0 -%}
+    <div class="cp-hero__slides">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign s_img     = block.settings.image
+          assign s_mob     = block.settings.image_mobile
+          assign s_eyebrow = block.settings.eyebrow | default: ''
+          assign s_heading = block.settings.heading
+          assign s_sub     = block.settings.subtext | default: ''
+          assign s_rating  = block.settings.rating_text
+          assign s_cta1    = block.settings.cta_label  | default: ''
+          assign s_cta2    = block.settings.cta2_label | default: ''
+          if s_heading == blank
+            assign s_heading = 'Real protein,<br>made right here<br>in <span>Canada.</span>'
+          endif
+        -%}
+        <div class="cp-hero__slide{% if forloop.first %} active{% endif %}" {{ block.shopify_attributes }}>
+
+          {%- if s_img != blank -%}
+            <picture>
+              {%- if s_mob != blank -%}
+                <source
+                  media="(max-width: 767px)"
+                  srcset="{{ s_mob | image_url: width: 800 }} 800w, {{ s_mob | image_url: width: 1080 }} 1080w"
+                  sizes="100vw">
+              {%- endif -%}
+              <img class="cp-hero__bg"
+                src="{{ s_img | image_url: width: 2000 }}"
+                srcset="{{ s_img | image_url: width: 800 }} 800w, {{ s_img | image_url: width: 1400 }} 1400w, {{ s_img | image_url: width: 2000 }} 2000w"
+                sizes="100vw" alt=""
+                {% if forloop.first %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %}>
+            </picture>
+          {%- elsif s_mob != blank -%}
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="{{ s_mob | image_url: width: 800 }} 800w, {{ s_mob | image_url: width: 1080 }} 1080w"
+                sizes="100vw">
+            </picture>
+          {%- endif -%}
+
+          <div class="cp-hero__radial"></div>
+          <div class="cp-hero__scrim"></div>
+
+          <div class="cp-wrap cp-hero__inner">
+            <div class="cp-hero__content">
+              {%- unless s_eyebrow == blank -%}
+                <div class="cp-hero__eyebrow">
+                  <svg width="15" height="15" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M256 24l-22 78c-3 11-15 9-24 4l-34-19 25 140c5 26-12 26-20 15l-59-69-10 35c-2 8-7 11-14 9l-75-16 20 75c4 17 7 23-4 28l-13 5 129 109c8 6 7 11 6 18l-11 39 128-15c4 0 11 3 10 8l-6 142h32l-3-142c0-5 6-9 10-8l128 15-11-39c-2-7-2-12 6-18l129-109-13-5c-12-5-9-11-5-28l20-75-75 16c-7 2-12-1-14-9l-10-35-59 69c-8 11-25 11-20-15l25-140-34 19c-9 5-21 7-24-4z"/></svg>
+                  {{ s_eyebrow }}
+                </div>
+              {%- endunless -%}
+              <h1 class="cp-hero__h1">{{ s_heading }}</h1>
+              {%- unless s_sub == blank -%}
+                <p class="cp-hero__sub">{{ s_sub }}</p>
+              {%- endunless -%}
+              {%- if s_rating != blank -%}
+                <div class="cp-hero__rating">
+                  <span class="cp-stars" aria-hidden="true">
+                    {%- for i in (1..5) -%}
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.9 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+                    {%- endfor -%}
+                  </span>
+                  <span class="cp-hero__rating-text">{{ s_rating }}</span>
+                </div>
+              {%- endif -%}
+              <div class="cp-hero__actions">
+                {%- unless s_cta1 == blank -%}
+                  <a href="{{ block.settings.cta_link | default: '/collections/best-selling-collection' }}" class="cp-btn-primary">
+                    {{ s_cta1 }}
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                  </a>
+                {%- endunless -%}
+                {%- unless s_cta2 == blank -%}
+                  <a href="{{ block.settings.cta2_link | default: '#cp-quiz' }}" class="cp-btn-ghost-white" data-scroll-to="cp-quiz">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.7 6.3L20 10l-6.3 1.7L12 18l-1.7-6.3L4 10l6.3-1.7z"/></svg>
+                    {{ s_cta2 }}
+                  </a>
+                {%- endunless -%}
+              </div>
+            </div>
+          </div>
+
+        </div>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+
+  {%- if section.blocks.size > 1 -%}
+y    {%- if section.settings.show_nav_buttons -%}
+      <button class="cp-hero__prev" aria-label="Previous slide">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button class="cp-hero__next" aria-label="Next slide">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    {%- endif -%}
+    <div class="cp-hero__dots">
+      {%- for block in section.blocks -%}
+        <button class="cp-hero__dot{% if forloop.first %} active{% endif %}"
+          data-slide="{{ forloop.index0 }}"
+          aria-label="Go to slide {{ forloop.index }}"></button>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+
+</section>
+
+{% schema %}
+{
+  "name": "CP Hero",
+  "settings": [
+    {
+      "type": "range",
+      "id": "auto_advance",
+      "label": "Auto-advance (seconds — set to 0 for manual only)",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "checkbox",
+      "id": "show_nav_buttons",
+      "label": "Show navigation arrows",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        { "type": "header", "content": "Images" },
+        { "type": "image_picker", "id": "image", "label": "Desktop photo" },
+        { "type": "paragraph", "content": "Recommended: 2000 × 800 px, landscape. JPG under 500 KB. Keep the main subject centred — edges may crop on narrower screens." },
+        { "type": "image_picker", "id": "image_mobile", "label": "Mobile photo (optional, ≤ 767 px wide)" },
+        { "type": "paragraph", "content": "Recommended: 800 × 1100 px, portrait. JPG under 300 KB. Keep subject upper-centre — text sits at the bottom. If left blank the desktop photo is used on mobile." },
+        { "type": "header", "content": "Content" },
+        { "type": "text", "id": "eyebrow", "label": "Eyebrow badge (leave blank to hide)", "default": "Trusted by 100,000+ Canadians" },
+        { "type": "html", "id": "heading", "label": "Headline (HTML supported)" },
+        { "type": "paragraph", "content": "Use <br> for line breaks. Wrap a word in <span>word</span> to make it red." },
+        { "type": "textarea", "id": "subtext", "label": "Body text (leave blank to hide)", "default": "Lab-tested whey, blended and packed in Windsor, Ontario. Premium quality without the import markup." },
+        { "type": "text", "id": "rating_text", "label": "Rating line (leave blank to hide)", "default": "4.6/5 · 21,000+ verified reviews" },
+        { "type": "header", "content": "Primary button" },
+        { "type": "text", "id": "cta_label", "label": "Label (leave blank to hide)", "default": "Shop Best Sellers" },
+        { "type": "url", "id": "cta_link", "label": "Link" },
+        { "type": "header", "content": "Secondary button" },
+        { "type": "text", "id": "cta2_label", "label": "Label (leave blank to hide)", "default": "Find my protein — 30s quiz" },
+        { "type": "url", "id": "cta2_link", "label": "Link (defaults to #cp-quiz anchor)" }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [{ "name": "CP Hero", "blocks": [{ "type": "slide", "settings": {} }] }]
+}
+{% endschema %}

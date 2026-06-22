@@ -1,0 +1,174 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_Vc37iq": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_label_xFrrhE": {
+          "type": "slide_label",
+          "settings": {
+            "image": "shopify://shop_images/Canadian-Protein-Military-Personnel-Discounts.jpg",
+            "url": "#sheerid-form-military",
+            "banner_target": false,
+            "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+            "sub_heading": "Exclusive 20% Discount for Military Personnel",
+            "sub_heading_fs": "base",
+            "sub_heading_fw": "normal",
+            "sub_heading_bg": false,
+            "heading": "As a thank you for your service, enjoy 20% off when you verify with SheerID.",
+            "heading_fs": "h4",
+            "heading_fw": "semibold",
+            "btn_label": "Verify Now",
+            "btn_link": "#sheerid-form-military",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "none",
+            "btn2_label": "",
+            "btn2_link": "#sheerid-form-military",
+            "target2": false,
+            "btn2_size": "base",
+            "btn2_style": "solid",
+            "btn2_fw": "normal",
+            "btn2_icon": "1",
+            "content_bg": true,
+            "content_position": "center",
+            "alignment": "center",
+            "hide_subtext_mb": false,
+            "content_position_mb": "center",
+            "alignment_mb": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_label_xFrrhE"
+      ],
+      "settings": {
+        "full_width": true,
+        "item_round": "rounded",
+        "image_height": "fixed",
+        "fixed_height": 470,
+        "image_height_mb": "adapt_image",
+        "fixed_height_mb": 300,
+        "color_scheme": "",
+        "loop": false,
+        "auto_play": 0,
+        "pause_hover": false,
+        "navUI": false,
+        "dotUI": false,
+        "dot_style": "default",
+        "dot_direction": "horizontal",
+        "dot_align": "center",
+        "dot_space": 40,
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "icon_box_jHjxYb": {
+      "type": "icon-box",
+      "blocks": {
+        "item_CViMrC": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "box2",
+            "custom_svg": "",
+            "icon_width": 55,
+            "icon_width_mb": 55,
+            "link": "",
+            "open_link": false,
+            "title": "20% Discount",
+            "content": "<p>Discounts for tight budgets, so you can stay fueled without breaking the bank.</p>",
+            "adding_border": false
+          }
+        },
+        "item_AQYKft": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "payment2",
+            "custom_svg": "",
+            "icon_width": 55,
+            "icon_width_mb": 55,
+            "link": "",
+            "open_link": false,
+            "title": "Flexible Payments",
+            "content": "<p>Check out with Sezzle and pay in instalments with a 25% down payment</p>",
+            "adding_border": false
+          }
+        }
+      },
+      "block_order": [
+        "item_CViMrC",
+        "item_AQYKft"
+      ],
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "Military Personnel Benefits",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 29,
+        "sec_heading_spacing": 30,
+        "icon_pos_center": false,
+        "icon_pos_center_mb": true,
+        "icon_circle": false,
+        "space_icon_heading": "medium",
+        "size_heading": "medium",
+        "heading_uppercase": false,
+        "space_heading_content": "small",
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "1",
+        "carousel_mobile": true,
+        "border_style": "none",
+        "fullwidth": true,
+        "boxed_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_6ABbrA": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".sid-inline-iframe {width: 50%; margin: auto;}"
+      ],
+      "settings": {
+        "section_fullwidth": true,
+        "custom_liquid": "<div id=\"sheerid-form-military\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "main_page_JJqKCM": {
+      "type": "main-page",
+      "settings": {
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    }
+  },
+  "order": [
+    "slideshow_Vc37iq",
+    "icon_box_jHjxYb",
+    "custom_liquid_6ABbrA",
+    "main_page_JJqKCM"
+  ]
+}

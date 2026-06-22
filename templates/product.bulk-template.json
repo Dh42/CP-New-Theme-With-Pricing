@@ -1,0 +1,757 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "top_heading_RUz4YP": {
+      "type": "top-heading",
+      "blocks": {
+        "sub_heading_bQkaLL": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "<a href=\"https://canadianprotein.com/collections/remembrance-day-sale\"><small>Remembrance Day Sale</small><br>20% Off Sitewide | 30% Off For Verified Military</a>",
+            "sub_heading_fs": "lg"
+          }
+        }
+      },
+      "block_order": [
+        "sub_heading_bQkaLL"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "# {background: #ea002b;}"
+      ],
+      "settings": {
+        "spacing_item": 0,
+        "alignment": "center",
+        "alignment_mb": "center",
+        "fullwidth": true,
+        "color_scheme": "scheme-dea2a141-c4a8-41c6-8079-fb3ee810a1b8",
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "padding_rate": 75
+      }
+    },
+    "top_heading_ymx9KK": {
+      "type": "top-heading",
+      "blocks": {
+        "sub_heading_QHntzw": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "<a href=\"https://canadianprotein.com/collections/remembrance-day-sale#faq\"><small>Offer valid on select products. Some exclusions may apply. Click here for more details </small></a>",
+            "sub_heading_fs": "base"
+          }
+        }
+      },
+      "block_order": [
+        "sub_heading_QHntzw"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "{padding-top: 5px; line-height: 1;}"
+      ],
+      "settings": {
+        "spacing_item": 0,
+        "alignment": "center",
+        "alignment_mb": "center",
+        "fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 5,
+        "padding_bottom": 5,
+        "padding_rate": 5
+      }
+    },
+    "breacrumb": {
+      "type": "brc-nav-product",
+      "disabled": true,
+      "settings": {
+        "back_next_pr": true,
+        "color_scheme": "scheme-1",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "83296f29-170d-4d7b-9291-c9b59bb98b32": {
+          "type": "badges",
+          "settings": {
+            "special": "",
+            "min": 10,
+            "max": 64,
+            "content": "Selling fast! [count] people have  this in their carts.",
+            "icon_svg": "flash",
+            "ani": "hdt-ani-flash"
+          }
+        },
+        "3a222052-35a9-4684-a336-6a32a56eb638": {
+          "type": "title",
+          "settings": {}
+        },
+        "edac686e-a845-4ed7-9b50-51639a11cf56": {
+          "type": "price",
+          "settings": {}
+        },
+        "custom_liquid_JeBxcU": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"halloween-sale-banner\" role=\"note\" aria-label=\"Halloween Flash Sale\">\n  <a  id=\"launchSpin\"\n     class=\"halloween-sale-pill\" style=\"cursor:pointer\">\n    Spin to Win Up To 30% Off 🎃\n  </a>\n\n  <div class=\"halloween-sale-text\">\n    <div class=\"halloween-sale-title\">Halloween Flash Sale</div>\n    <div class=\"halloween-sale-sub\">Some exclusions may apply.</div>\n  </div>\n</div>\n\n<style>\n  .halloween-sale-banner {\n    display: flex;\n    align-items: stretch;          /* equal height */\n    justify-content: flex-start;\n    gap: 10px;\n    padding: 4px 0;\n    flex-wrap: nowrap;\n  }\n\n  .halloween-sale-text {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    min-width: 0;\n  }\n\n  .halloween-sale-title {\n    font-size: 16px;\n    line-height: 1.2;\n    font-weight: 700;\n    color: #111;\n    margin: 0;\n  }\n\n  .halloween-sale-sub {\n    margin: 2px 0 0 0;\n    font-size: 12px;\n    line-height: 1.2;\n    color: #ff6f00; /* bright pumpkin orange */\n  }\n\n  .halloween-sale-pill {\n    background: #ff6f00; /* orange base */\n    color: #fff;\n    border-radius: 9999px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    padding: 0 14px;\n    font-weight: 700;\n    font-size: 14px;\n    line-height: 1;\n    white-space: nowrap;\n    flex: 0 0 auto;\n    text-decoration: none;          /* remove underline */\n    transition: background .2s ease;\n  }\n\n  .halloween-sale-pill:hover {\n    background: #e65c00;            /* darker orange on hover */\n  }\n\n  @media (max-width: 420px) {\n    .halloween-sale-title { font-size: 15px; }\n    .halloween-sale-sub { font-size: 11px; }\n    .halloween-sale-pill { font-size: 13px; padding: 0 12px; }\n  }\n</style>"
+          }
+        },
+        "custom_liquid_6t3QJd": {
+          "type": "custom_liquid",
+          "name": "Safety Badge",
+          "settings": {
+            "custom_liquid": "{% if product.type == 'Protein Powders' or product.type == 'Supplements' %}<a href=\"https://canadianprotein.com/blogs/lifestyle/the-truth-about-lead-and-heavy-metals-in-protein-powders-and-why-canadian-protein-is-different\">\n  <div style=\"display:flex;align-items:center;gap:8px;margin:12px 0;\">\n    <img \n      src=\"https://cdn.shopify.com/s/files/1/0249/3241/7583/files/Batch_Tested_for_Safety_and_Quality_Bad2ge.png?v=1761267632\"\n      alt=\"Batch tested icon\"\n      style=\"width:32px;height:32px;flex-shrink:0;\"\n    >\n    <small>Batch Tested for <br><b>safety</b> and <b>quality</b></small>\n  </div></a>\n{% endif %}"
+          }
+        },
+        "custom_liquid_xEzqbY": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<span style=\"color: red;\">\n🇨🇦 Canada Day Sale 🇨🇦\n<br><b>Extra 30% off applied at checkout.</b></span>\n<br>\n<small>Some exclusions may apply.</small>"
+          }
+        },
+        "d1c8d030-e7b5-4c90-b03a-12ada38b02cc": {
+          "type": "countdown_timer",
+          "settings": {
+            "content": "HURRY UP! SALE ENDS IN:",
+            "icon_svg": "clock",
+            "ani": "hdt-ani-tada"
+          }
+        },
+        "8032c01b-f33a-4bef-a8ea-680044ceaaac": {
+          "type": "linked_products",
+          "settings": {
+            "option_name": "Choose",
+            "option_values": "",
+            "product_list": [],
+            "linked_type": "image_with_title",
+            "linked_size": "large"
+          }
+        },
+        "1248e930-5734-45b4-a1d6-a814910fdb63": {
+          "type": "variant_picker",
+          "settings": {
+            "pick_mode": "first_available",
+            "enable_historystate": true,
+            "hide_sold_out": false,
+            "color_picker_type": "block_with_color",
+            "color_size": "small",
+            "picker_type": "block",
+            "size_chart_source": "page",
+            "size_chart_page": "size-chart"
+          }
+        },
+        "custom_liquid_tKb6jx": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div style=\"padding:5px;border:1px solid #333;margin-top:10px;margin-bottom:10px;color:#eee;background:#000\"><strong style=\"color:#eee\">New Year, New You Site Wide Sale</strong> <br />\nSpend $100 for 15% OFF<br />\nSpend $200 for 30% OFF<br />\n</div>"
+          }
+        },
+        "sc_back_in_stock_app_block_UxAt7z": {
+          "type": "shopify://apps/sc-back-in-stock/blocks/app-block/839cbcb7-0406-4c2b-8e74-a54d987b90ab",
+          "settings": {}
+        },
+        "custom_liquid_QMUxc8": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"buy-more-save-more\">\n  <p><strong>Buy More Save More!</strong> Discount taken at checkout</p>\n\n  <table class=\"bmsm-table\">\n    <tr>\n      <td><strong>Buy 2</strong></td>\n      <td><strong>5% Off</strong></td>\n    </tr>\n    <tr class=\"bmsm-row-alt\">\n      <td><strong>Buy 3</strong></td>\n      <td><strong>10% Off</strong></td>\n    </tr>\n  </table>\n\n  <small>Some exclusions may apply.</small>\n</div>\n\n<style>\n  .buy-more-save-more { margin: 16px 0 8px; color: #555; font-family: Arial, sans-serif; width: 100%; }\n  .buy-more-save-more p { margin: 0 0 8px; font-size: 14px; }\n\n  /* FORCE full width even if theme limits tables inside .rte or sections */\n  .buy-more-save-more .bmsm-table,\n  .rte .buy-more-save-more .bmsm-table {\n    width: 100% !important;\n    max-width: none !important;\n    table-layout: fixed;            /* prevents shrink */\n    border-collapse: collapse;\n    border: 1px solid #ccc;\n    margin: 0;                      /* no extra space */\n  }\n\n  .buy-more-save-more .bmsm-table td {\n    width: 50%;\n    padding: 12px 16px;\n    border: 1px solid #ccc;\n    font-size: 14px;\n    color: #555;\n    vertical-align: middle;\n  }\n\n  .buy-more-save-more .bmsm-row-alt td { background: #f5f5f5; }\n\n  .buy-more-save-more small {\n    display: block;\n    margin-top: 4px;                /* tight to table */\n    margin-bottom: 0;               /* no big gap */\n    font-size: 12px;\n    color: #777;\n  }\n</style>"
+          }
+        },
+        "custom_liquid_dpaWPp": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div>&nbsp;</div>"
+          }
+        },
+        "recharge_subscriptions_subscription_widget_v2_c7mUzK": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {}
+        },
+        "4fd6bfca-d3a3-432c-8392-a2d3cab423c4": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "ad820e37-dee5-41f3-9692-bf46d9664103": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true,
+            "show_price_variant": false,
+            "show_wishlist": false,
+            "show_compare": false
+          }
+        },
+        "custom_liquid_MmfwLt": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"vp-banner\" role=\"complementary\" aria-label=\"VerifyPass 10% discount\">\n  <div class=\"vp-inner\">\n    <img\n      class=\"vp-logo\"\n      src=\"https://cdn.shopify.com/s/files/1/0080/2547/3142/files/VerifyPass_-_Button_Logo.png?v=1757361011\"\n      alt=\"VerifyPass\"\n      width=\"160\"\n      height=\"32\"\n      loading=\"lazy\"\n      decoding=\"async\"\n    />\n    <span class=\"vp-divider\" aria-hidden=\"true\"></span>\n    <div class=\"vp-copy\">\n      <p class=\"vp-line\">Students, Military, First Responders and more.</p>\n      <p class=\"vp-line\">\n        Apply now for VerifyPass for an exclusive <strong>10% discount</strong>.\n      </p>\n      <a class=\"vp-cta\" href=\"https://verifypass.com/auth/7422668afe\">LEARN MORE</a>\n    </div>\n  </div>\n</div>\n\n<style>\n  .vp-banner { \n    width: 100%; \n    margin: 0.75rem 0 0; \n    padding: 8px 12px;\n    border: 1px solid #d9d9d9;\n    border-radius: 4px;\n  }\n  .vp-inner {\n    display: flex; align-items: center; gap: 18px;\n  }\n  .vp-logo {\n    max-width: 110px; /* reduced from 130px */\n    height: auto; \n    display: block;\n  }\n  .vp-divider {\n    width: 1px; height: 40px;\n    background: #bdbdbd; opacity: 0.8; display: inline-block;\n  }\n  .vp-copy { \n    line-height: 1.4; \n    color: #8f8f8f; \n    font-size: 13px; \n  }\n  .vp-copy .vp-line {\n    margin: 0 0 3px 0; font-weight: 400;\n    font-size: 13px;\n  }\n  .vp-copy strong { color: #8f8f8f; font-weight: 700; }\n  .vp-cta {\n    display: inline-block; margin-top: 3px;\n    font-size: 12px; text-decoration: none;\n    color: #8f8f8f; font-weight: 700;\n  }\n  .vp-cta:hover, .vp-cta:focus { text-decoration: underline; }\n  @media (max-width: 680px) {\n    .vp-inner { flex-wrap: wrap; }\n    .vp-divider { display: none; }\n    .vp-copy { width: 100%; }\n  }\n</style>"
+          }
+        },
+        "8253e974-5acb-4076-9230-03b0f804dcdf": {
+          "type": "back_instock",
+          "disabled": true,
+          "settings": {
+            "only_show_soldout": true
+          }
+        },
+        "113b254d-cc79-43fc-9ed9-4670522082c9": {
+          "type": "extra_link",
+          "settings": {
+            "show_cp_cl": true,
+            "show_ask": false,
+            "show_phone": true,
+            "show_delivery": true,
+            "page_delivery": "shipping-delivery",
+            "show_share_btn": false
+          }
+        },
+        "9586d18a-306e-45c8-813c-3c4b0cc99315": {
+          "type": "delivery_return",
+          "disabled": true,
+          "settings": {
+            "icon_delivery": "ship",
+            "content_devivery": "<p>Estimate delivery times:<strong> 12-26 days</strong> (International),<strong> 3-6 days</strong> (United States).</p>",
+            "icon_return": "return_order",
+            "content_return": "<p>Return within <strong>30 days</strong> of purchase. Duties & taxes are non-refundable.</p>"
+          }
+        },
+        "e2b976ce-0ce6-460a-bc64-cea3ec87cb4b": {
+          "type": "img_trust",
+          "disabled": true,
+          "settings": {
+            "show_icon": true,
+            "mess": "Guarantee Safe Checkout",
+            "source": "2",
+            "wimg": 350,
+            "svg": "visa,paypal,master,american_express,amazon_payments",
+            "height": 30
+          }
+        },
+        "stamped_reviews_main_widget_UgQpdQ": {
+          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
+          "disabled": true,
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "83296f29-170d-4d7b-9291-c9b59bb98b32",
+        "3a222052-35a9-4684-a336-6a32a56eb638",
+        "edac686e-a845-4ed7-9b50-51639a11cf56",
+        "custom_liquid_JeBxcU",
+        "custom_liquid_6t3QJd",
+        "custom_liquid_xEzqbY",
+        "d1c8d030-e7b5-4c90-b03a-12ada38b02cc",
+        "8032c01b-f33a-4bef-a8ea-680044ceaaac",
+        "1248e930-5734-45b4-a1d6-a814910fdb63",
+        "custom_liquid_tKb6jx",
+        "sc_back_in_stock_app_block_UxAt7z",
+        "custom_liquid_QMUxc8",
+        "custom_liquid_dpaWPp",
+        "recharge_subscriptions_subscription_widget_v2_c7mUzK",
+        "4fd6bfca-d3a3-432c-8392-a2d3cab423c4",
+        "ad820e37-dee5-41f3-9692-bf46d9664103",
+        "custom_liquid_MmfwLt",
+        "8253e974-5acb-4076-9230-03b0f804dcdf",
+        "113b254d-cc79-43fc-9ed9-4670522082c9",
+        "9586d18a-306e-45c8-813c-3c4b0cc99315",
+        "e2b976ce-0ce6-460a-bc64-cea3ec87cb4b",
+        "stamped_reviews_main_widget_UgQpdQ"
+      ],
+      "settings": {
+        "space_content_media": true,
+        "media_width": 65,
+        "desktop_media_layout": "thumbnail_left",
+        "desktop_media_position": "left",
+        "mobile_media_layout": "thumbnails",
+        "show_first_media": false,
+        "use_select_varaint_change_media": true,
+        "enable_media_autoplay": true,
+        "enable_video_looping": true,
+        "enable_thumb_efect": true,
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "image_zoom": "zoom",
+        "image_zoom_type": "external",
+        "zoom_level": 2,
+        "max_zoom_lightbox": 3,
+        "sticky_atc": true,
+        "navUI": true,
+        "nav_des": "default",
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "padding_rate": 0
+      }
+    },
+    "marquee_pdzx9z": {
+      "type": "marquee",
+      "blocks": {
+        "item_EQzRhU": {
+          "type": "item",
+          "settings": {
+            "text": "<p><strong>BLACK FRIDAY DEALS</strong></p>",
+            "icon_svg": "flash",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        },
+        "item_63cL3G": {
+          "type": "item",
+          "settings": {
+            "text": "<p>Limited Time Only</p>",
+            "icon_svg": "flash",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        }
+      },
+      "block_order": [
+        "item_EQzRhU",
+        "item_63cL3G"
+      ],
+      "disabled": true,
+      "name": "t:sections.marquee.name",
+      "settings": {
+        "space_item": 30,
+        "speed": 0.3,
+        "direction": "rtl",
+        "marquee_pause_when_hover": false,
+        "text_fs": "h5",
+        "text_fw": "normal",
+        "text_uppercase": false,
+        "adding_border": true,
+        "icon_position_between": true,
+        "color_scheme": "scheme-b118462a-a4ac-4478-a927-bc3e753a2252",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_rate": 75
+      }
+    },
+    "tab_variant_collections_nKMzME": {
+      "type": "tab-variant-collections",
+      "blocks": {
+        "tab_item_3HXR6t": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Extra 20% OFF",
+            "match_key": "tab1",
+            "collection": "bfcm-2025",
+            "product_list": []
+          }
+        },
+        "tab_item_XKyqWd": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Extra 30% OFF",
+            "match_key": "tab2",
+            "collection": "",
+            "product_list": [
+              "limited-edition-mixed-berry-super-greens-powder",
+              "egg-white-protein-powder",
+              "all-natural-premium-vegan-protein-blend"
+            ]
+          }
+        },
+        "tab_item_ngmNy9": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Extra 40% OFF",
+            "match_key": "tab3",
+            "collection": "",
+            "product_list": [
+              "knee-sleeves",
+              "knee-wraps"
+            ]
+          }
+        },
+        "tab_item_a6zVYp": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Extra 10% OFF",
+            "match_key": "tab4",
+            "collection": "",
+            "product_list": [
+              "limited-edition-cinnamon-bun-vegan-protein",
+              "limited-edition-banana-cream-pie-vegan-protein",
+              "limited-edition-blueberry-cobbler-vegan-protein"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_3HXR6t",
+        "tab_item_XKyqWd",
+        "tab_item_ngmNy9",
+        "tab_item_a6zVYp"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "/* TARGETS SVG STARS */#template--20005218746415__tab_variant_collections_C8dGLQ .stamped-svg-star path {fill: #f6ff01 !important;}",
+        " /* TARGETS FONT-ICON STARS */#template--20005218746415__tab_variant_collections_C8dGLQ .stamped-fa-star {color: #f6ff01 !important;}",
+        " /* TARGETS STAR PSEUDO-ELEMENT VARIANTS */#template--20005218746415__tab_variant_collections_C8dGLQ .stamped-fa-star:before,#template--20005218746415__tab_variant_collections_C8dGLQ .stamped-fa-star:after {color: #f6ff01 !important;}"
+      ],
+      "name": "Tabs Collections (Variants)",
+      "settings": {
+        "tabs_heading": "",
+        "heading_size": "h4",
+        "heading_inline": false,
+        "tabs_head_spacing": 30,
+        "tabs_des": "outline",
+        "tab_item_size": "lg",
+        "tab_item_weight": "medium",
+        "text_transform": false,
+        "border_width": 2,
+        "spacing_items": 30,
+        "product_des": "1",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "products_count": 8,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "navUI": true,
+        "nav_des": "outline",
+        "nav_pos": "middle_in",
+        "dotUI": true,
+        "use_pagination": "none",
+        "paginate_pos": "center",
+        "dis_pagination": 30,
+        "btn_label": "View all",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "section_fullwidth": false,
+        "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+        "padding_top": 50,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "tabs": {
+      "type": "main-product-tabs",
+      "blocks": {
+        "76effdab-2914-4a34-a303-417cde99ff0a": {
+          "type": "tab_des",
+          "settings": {
+            "title": "Description"
+          }
+        },
+        "9866bb5f-03b7-4dc7-9387-4be849a0cbf1": {
+          "type": "tab_add",
+          "disabled": true,
+          "settings": {
+            "title": "Additional Information"
+          }
+        },
+        "d0839947-6bc5-42cc-85f7-9e94ce6b3e6c": {
+          "type": "tab_html",
+          "disabled": true,
+          "settings": {
+            "title": "Return Policies",
+            "content": "",
+            "page": "returns"
+          }
+        },
+        "1bc528a7-9da8-48ec-96da-8e48c0e52faf": {
+          "type": "tab_html",
+          "settings": {
+            "title": "Custom tab",
+            "content": "",
+            "page": "wash-care"
+          }
+        },
+        "tab_liquid_hQLWU9": {
+          "type": "tab_liquid",
+          "disabled": true,
+          "settings": {
+            "title": "Benefits",
+            "custom_liquid": "{%- if product.metafields.canadian_info.canadian_info_product.value.benefits -%}\n\t                {{product.metafields.canadian_info.canadian_info_product.value.benefits}}\n                {%- endif -%}"
+          }
+        },
+        "tab_liquid_kKd6Nq": {
+          "type": "tab_liquid",
+          "settings": {
+            "title": "Suggested Use",
+            "custom_liquid": "<div id=\"suggested-container\">\n  {% assign suggested_info = product.metafields.nutrify_nutrition_info.nutrify_nutrition_info_product%}\n  {% if suggested_info %}\n    {% assign suggested_data = suggested_info.value | json_parse %}\n    {% if suggested_data.suggested != blank %}\n      <div class=\"suggested-info\">\n        <h2>{{ block.settings.suggested_title }}</h2>\n        <p>{{ suggested_data.suggested }}</p>\n      </div>\n    {% endif %}\n  {% endif %}\n</div>"
+          }
+        },
+        "tab_liquid_FYAiHy": {
+          "type": "tab_liquid",
+          "disabled": true,
+          "settings": {
+            "title": "Suggested Use",
+            "custom_liquid": "{%- if product.metafields.canadian_info.canadian_info_product.value.suggested -%}\n                \t{{product.metafields.canadian_info.canadian_info_product.value.suggested}}\n                {%- endif -%}"
+          }
+        },
+        "tab_liquid_h6jD6n": {
+          "type": "tab_liquid",
+          "disabled": true,
+          "settings": {
+            "title": "Ingredients",
+            "custom_liquid": "{%-  assign selected_variant = product.selected_or_first_available_variant -%}\n{%- for variant in product.metafields.canadian_info.canadian_info_product.value.variants -%}\n{% if selected_variant.option2%}\n  {%-  assign selected_variant_title= selected_variant.option2| replace: \"&\", \"and\" -%}\n{% else %}\n  {%-  assign selected_variant_title= selected_variant.option1| replace: \"&\", \"and\" -%}\n{% endif %}\n\n              {%-if variant[1].title == selected_variant_title -%}\n              <div data-option=\"{{variant[0]}}\" id=\"variantBoxDefault\" class=\"variantBox\">\n                <h4>Ingredients for  {{variant[0]}}</h4>\n                \t{{variant[1].ingredients}}\n              </div>\n              {%- else -%}\n                  <div data-option=\"{{variant[0]}}\"{% if selected_variant != variant %} style=\"display:none\"{% endif %} class=\"variantBox\">\n                    <h4>Ingredients for  {{variant[0]}}</h4>\n                \t{{variant[1].ingredients}}\n\n                </div>\n                {%- endif -%}\n                {%- endfor -%}"
+          }
+        },
+        "tab_liquid_w6rHMR": {
+          "type": "tab_liquid",
+          "settings": {
+            "title": "Ingredients",
+            "custom_liquid": "{{ 'nutrition_facts.css' | asset_url | stylesheet_tag }}\n\n<div id=\"ingredients-container\">\n{% assign default_variant = nil %}\n{% for variant in product.variants %}\n  {% assign variant_nutrition = variant.metafields.nutrify_nutrition_info.nutrify_nutrition_info_variant %}\n  {% if variant_nutrition.value.isDefault %}\n    {% assign default_variant = variant %}\n    {% break %}\n  {% endif %}\n{% endfor %}\n\n{% for variant in product.variants %}\n  {% assign variant_nutrition = variant.metafields.nutrify_nutrition_info.nutrify_nutrition_info_variant %}\n  {% if variant_nutrition %}\n    {% assign nutrition = variant_nutrition.value %}\n    {% if nutrition.ingredients %}\n      <div class=\"ingredients-info\" data-variant-id=\"{{ variant.id }}\" {% if variant.id == default_variant.id or default_variant == nil and forloop.first %}style=\"display: block;\"{% else %}style=\"display: none;\"{% endif %}>\n        <h2>{{ block.settings.ingredients_title }}</h2>\n        <p>{{ nutrition.ingredients }}</p>\n      </div>\n    {% endif %}\n  {% endif %}\n{% endfor %}\n</div>\n\n<script>\n  // Initialize with the first available variant\n  window.initialIngredientVariant = {{ product.selected_or_first_available_variant | json }};\n\n  class IngredientsInfo {\n    constructor() {\n      this.container = document.getElementById('ingredients-container');\n      this.ingredientsContainers = this.container.querySelectorAll('.ingredients-info');\n      this.mainProductForm = document.querySelector('form[action=\"/cart/add\"]');\n      this.variantSelector = null;\n      this.hasDefaultVariant = {{ default_variant | json }} !== null;\n\n      this.init();\n    }\n\n    init() {\n      if (!this.mainProductForm || this.hasDefaultVariant) return;\n\n      // Try to find the variant selector\n      this.variantSelector = this.mainProductForm.querySelector('[name=\"id\"]');\n\n      if (!this.variantSelector) {\n        // If we can't find a direct variant selector, look for radio buttons\n        const radioButtons = this.mainProductForm.querySelectorAll('input[type=\"radio\"][name=\"id\"]');\n        if (radioButtons.length > 0) {\n          this.variantSelector = radioButtons;\n        }\n      }\n\n      if (this.variantSelector) {\n        // Initial update with the first available variant\n        this.updateIngredients(window.initialIngredientVariant.id.toString());\n\n        // Listen for changes\n        if (Array.isArray(this.variantSelector)) {\n          this.variantSelector.forEach(radio => {\n            radio.addEventListener('change', () => this.updateIngredients());\n          });\n        } else {\n          this.variantSelector.addEventListener('change', () => this.updateIngredients());\n        }\n      }\n    }\n\n    updateIngredients(initialVariantId = null) {\n      if (this.hasDefaultVariant) return;\n\n      let selectedVariantId;\n\n      if (initialVariantId) {\n        selectedVariantId = initialVariantId;\n      } else if (Array.isArray(this.variantSelector)) {\n        // For radio buttons\n        const checkedRadio = Array.from(this.variantSelector).find(radio => radio.checked);\n        selectedVariantId = checkedRadio ? checkedRadio.value : null;\n      } else {\n        // For dropdown\n        selectedVariantId = this.variantSelector.value;\n      }\n\n      if (selectedVariantId) {\n        this.ingredientsContainers.forEach(container => {\n          if (container.getAttribute('data-variant-id') === selectedVariantId) {\n            container.style.display = 'block';\n          } else {\n            container.style.display = 'none';\n          }\n        });\n      }\n    }\n  }\n\n  // Initialize the IngredientsInfo class when the DOM is ready\n  document.addEventListener('DOMContentLoaded', () => {\n    new IngredientsInfo();\n  });\n</script>"
+          }
+        },
+        "tab_liquid_jLQjRw": {
+          "type": "tab_liquid",
+          "settings": {
+            "title": "Nutrition Facts",
+            "custom_liquid": "{{ 'nutrition_facts.css' | asset_url | stylesheet_tag }}\n\n<div id=\"nutrition-facts-container\">\n{% assign default_variant = nil %}\n{% for variant in product.variants %}\n  {% assign variant_nutrition = variant.metafields.nutrify_nutrition_info.nutrify_nutrition_info_variant %}\n  {% if variant_nutrition.value.isDefault %}\n    {% assign default_variant = variant %}\n    {% break %}\n  {% endif %}\n{% endfor %}\n\n\n{% assign config = shop.metafields.nutrify_nutrition_info.nutrify_nutrition_info_config.value %}\n\n{% for variant in product.variants %}\n  {% assign variant_nutrition = variant.metafields.nutrify_nutrition_info.nutrify_nutrition_info_variant %}\n  {% if variant_nutrition %}\n    {% assign nutrition = variant_nutrition.value %}\n    <section class=\"performance-facts\" data-variant-id=\"{{ variant.id }}\" {% if variant.id == default_variant.id or default_variant == nil and forloop.first %}style=\"display: block;\"{% else %}style=\"display: none;\"{% endif %}>\n      <header class=\"performance-facts__header\">\n        <h1 class=\"performance-facts__title\">Nutrition Facts</h1>\n        <p>Serving Size {{ nutrition.ssize }}</p>\n        <p>Servings Per Container {{ nutrition.servingsPerContainer }}</p>\n      </header>\n      <table class=\"performance-facts__table\">\n        <thead>\n          <tr>\n            <th colspan=\"3\" class=\"small-info\">\n              Amount Per Serving\n            </th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr>\n            <th colspan=\"2\">\n              <b>Calories</b>\n              {{ nutrition.cal }}\n            </th>\n            <!--<td>\n              {% if nutrition.calFromFat %}\n                Calories from Fat\n                {{ nutrition.calFromFat }}\n              {% endif %}\n            </td>-->\n          </tr>\n          <tr class=\"thick-row\">\n            <td colspan=\"3\" class=\"small-info\">\n              <b>% Daily Value*</b>\n            </td>\n          </tr>\n          {% for item in nutrition %}\n            {% assign item_key = item[0] %}\n            {% assign item_value = item[1] %}\n            {% assign dv_key = item_key | append: 'DV' %}\n            {% assign dv_value = nutrition[dv_key] %}\n            {% case item_key %}\n              {% when 'fat', 'cholesterol', 'sodium', 'carbs', 'protein' %}\n                <tr{% if item_key == 'protein' %} class=\"thick-end\"{% endif %}>\n                  <th colspan=\"2\">\n                    <b>\n                      {% case item_key %}\n                        {% when 'fat' %}Total Fat\n                        {% when 'cholesterol' %}Cholesterol\n                        {% when 'sodium' %}Sodium\n                        {% when 'carbs' %}Total Carbohydrate\n                        {% when 'protein' %}Protein\n                      {% endcase %}\n                    </b>\n                    {{ item_value }}{% if item_key == 'sodium' or item_key == 'cholesterol' %}mg{% else %}g{% endif %}\n                  </th>\n                  <td>\n                    {% if config.dailyValues[item_key] != '' and config.dailyValues[item_key] != '0' %}\n                      {% assign dv_value = nutrition[item_key] | times: 100.0 | divided_by: config.dailyValues[item_key] | round: 1 %}\n                      {% if dv_value > 0 and dv_value != 'Infinity' %}<b>{{ dv_value }}%</b>{% endif %}\n                    {% endif %}\n                  </td>\n                </tr>\n                {% if item_key == 'fat' %}\n                  {% for subitem in nutrition %}\n                    {% if subitem[0] == 'satfat' or subitem[0] == 'tfat' or subitem[0] == 'usatfat' %}\n                      <tr>\n                        <td class=\"blank-cell\">\n                        </td>\n                        <th>\n                          {% case subitem[0] %}\n                            {% when 'satfat' %}Saturated Fat\n                            {% when 'tfat' %}Trans Fat\n                            {% when 'usatfat' %}Unsaturated Fat\n                          {% endcase %}\n                          {{ subitem[1] }}g\n                        </th>\n                        <td>\n                          {% assign dv = config.dailyValues[subitem[0]] | times: 1 %}\n                          {% if dv > 0 and dv != blank %}\n                            {% assign dv_value = nutrition[subitem[0]] | times: 100.0 | divided_by: dv | round: 1 %}\n                            {% if dv_value > 0 %}<b>{{ dv_value }}%</b>{% endif %}\n                          {% endif %}\n                        </td>\n                      </tr>\n                    {% endif %}\n                  {% endfor %}\n                {% endif %}\n                {% if item_key == 'carbs' %}\n                  {% for subitem in nutrition %}\n                    {% if subitem[0] == 'fiber' or subitem[0] == 'sugar' %}\n                      <tr>\n                        <td class=\"blank-cell\">\n                        </td>\n                        <th>\n                          {% case subitem[0] %}\n                            {% when 'fiber' %}Dietary Fiber\n                            {% when 'sugar' %}Sugars\n                          {% endcase %}\n                          {{ subitem[1] }}g\n                        </th>\n                        <td>\n                          {% assign daily_value = config.dailyValues[subitem[0]] | times: 1 %}\n                          {% if daily_value > 0 %}\n                            {% assign dv_value = nutrition[subitem[0]] | times: 100.0 | divided_by: daily_value | round: 1 %}\n                            {% if dv_value > 0 %}<b>{{ dv_value }}%</b>{% endif %}\n                          {% endif %}\n                      </tr>\n                    {% endif %}\n                  {% endfor %}\n                {% endif %}\n            {% endcase %}\n          {% endfor %}\n          {% for item in config.customFields %}\n            {% if nutrition.customFields[item.name] != blank %}\n            <tr class=\"{% if forloop.last %}thick-end{% else %}thin-end{% endif %}\">\n              <th colspan=\"2\">\n                {{ item.name }}\n\n                  {{ nutrition.customFields[item.name] }}{% if item.unit != blank %}{{ item.unit }}{% endif %}\n\n              </th>\n              <td>\n\n                  {% if item.dailyValue > 0 %}\n                    {% assign dv_value = nutrition.customFields[item.name] | times: 100.0 | divided_by: item.dailyValue | round: 1 %}\n                    {% if dv_value > 0 %}{{ dv_value }}%{% endif %}\n                  {% endif %}\n              </td>\n            {% endif %}\n            </tr>\n          {% endfor %}\n        </tbody>\n      </table>\n\n\n\n      <p class=\"daily-value-note\">* Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs:</p>\n    </section>\n  {% else %}\n    <section class=\"performance-facts\" data-variant-id=\"{{ variant.id }}\" style=\"display: none;\">\n      <p>No nutrition information available for this variant.</p>\n    </section>\n  {% endif %}\n{% endfor %}\n</div>\n\n<script>\n  // Initialize with the first available variant\n  window.initialNutritionVariant = {{ product.selected_or_first_available_variant | json }};\n\n  class NutritionFacts {\n    constructor() {\n      this.container = document.getElementById('nutrition-facts-container');\n      this.nutritionContainers = this.container.querySelectorAll('.performance-facts');\n      this.mainProductForm = document.querySelector('form[action$=\"/cart/add\"]');\n      this.variantSelector = null;\n      this.hasDefaultVariant = {{ default_variant | json }} !== null;\n\n      this.init();\n    }\n\n    init() {\n\n      if (!this.mainProductForm || this.hasDefaultVariant) return;\n\n      // Try to find the variant selector\n      this.variantSelector = this.mainProductForm.querySelector('[name=\"id\"]');\n\n      if (!this.variantSelector) {\n        // If we can't find a direct variant selector, look for radio buttons\n        const radioButtons = this.mainProductForm.querySelectorAll('input[type=\"radio\"][name=\"id\"]');\n        if (radioButtons.length > 0) {\n          this.variantSelector = radioButtons;\n        }\n      }\n\n      if (this.variantSelector) {\n        // Initial update with the first available variant\n        this.updateNutritionFacts(window.initialNutritionVariant.id.toString());\n\n        // Listen for changes\n        if (Array.isArray(this.variantSelector)) {\n          this.variantSelector.forEach(radio => {\n            radio.addEventListener('change', () => this.updateNutritionFacts());\n          });\n        } else {\n          this.variantSelector.addEventListener('change', () => this.updateNutritionFacts());\n        }\n      }\n    }\n\n    updateNutritionFacts(initialVariantId = null) {\n      if (this.hasDefaultVariant) return;\n\n      let selectedVariantId;\n\n      if (initialVariantId) {\n        selectedVariantId = initialVariantId;\n      } else if (Array.isArray(this.variantSelector)) {\n        // For radio buttons\n        const checkedRadio = Array.from(this.variantSelector).find(radio => radio.checked);\n        selectedVariantId = checkedRadio ? checkedRadio.value : null;\n      } else {\n        // For dropdown\n        selectedVariantId = this.variantSelector.value;\n      }\n\n      if (selectedVariantId) {\n        this.nutritionContainers.forEach(container => {\n          if (container.getAttribute('data-variant-id') === selectedVariantId) {\n            container.style.display = 'block';\n          } else {\n            container.style.display = 'none';\n          }\n        });\n      }\n    }\n  }\n\n  // Initialize the NutritionFacts class when the DOM is ready\n  document.addEventListener('DOMContentLoaded', () => {\n    new NutritionFacts();\n  });\n</script>"
+          }
+        },
+        "tab_liquid_88hgfp": {
+          "type": "tab_liquid",
+          "disabled": true,
+          "settings": {
+            "title": "Nutrition Facts",
+            "custom_liquid": "{%-  assign \nselected_variant = product.selected_or_first_available_variant -%}\n{%- for variant in product.metafields.canadian_info.canadian_info_product.value.variants -%}\n\n{% if selected_variant.option2%}\n  {%-  assign selected_variant_title= selected_variant.option2| replace: \"&\", \"and\" -%}\n{% else %}\n  {%-  assign selected_variant_title= selected_variant.option1| replace: \"&\", \"and\" -%}\n{% endif %}\n\n              {%-if variant[1].title == selected_variant_title -%}\n              <div data-option=\"{{variant[0]}}\" class=\"variantBox\">\n            {%- else -%}\n\n                <div data-option=\"{{variant[0]}}\" style=\"display:none\" class=\"variantBox\">\n\n                  {%- endif -%}\n              <section class=\"performance-facts\">\n                <header class=\"performance-facts__header\">\n                  <h1 class=\"performance-facts__title\">Nutrition Facts</h1>\n                  <p>Serving Size {{ variant[1].ssize }} g</p>\n                  <!-- <p>Serving Per Container 8</p> -->\n                </header>\n                <table class=\"performance-facts__table\">\n                  <thead>\n                    <tr>\n                      <th colspan=\"3\" class=\"small-info\">Amount Per Serving</th>\n                    </tr>\n                  </thead>\n                  <tbody>\n                    <tr>\n                      <th colspan=\"2\">\n                        <b>Calories</b>\n                        {{ variant[1].cal }}\n                      </th>\n                      <td>\n                        Calories from Fat\n                        {{ variant[1].cal | times: 9 }}\n                      </td>\n                    </tr>\n                    <tr class=\"thick-row\">\n                      <td colspan=\"3\" class=\"small-info\">\n                        <b>% Daily Value*</b>\n                      </td>\n                    </tr>\n                    <tr>\n                      <th colspan=\"2\">\n                        <b>Total Fat</b>\n                        {{ variant[1].fat }}g\n                      </th>\n                      <td>\n                        <b>{{ variant[1].fat | divided_by: 65.0 | times: 100 | round }}%</b>\n                      </td>\n                    </tr>\n                    <tr>\n                      <td class=\"blank-cell\"></td>\n                      <th>\n                        Saturated Fat\n                        {{ variant[1].satfat }}g\n                      </th>\n                      <td>\n                        <b>{{ variant[1].satfat | divided_by: 20.0 | times: 100 | round }}%</b>\n                      </td>\n                    </tr>\n                    <tr>\n                      <td class=\"blank-cell\"></td>\n                      <th>\n                        Unsaturated Fat\n                        {{ variant[1].usatfat }}g\n                      </th>\n                      <td>\n                        <b></b>\n                      </td>\n                    </tr>\n\n                    <tr>\n                      <td class=\"blank-cell\"></td>\n                      <th>\n                        Trans Fat\n                        {{ variant[1].transfat }}g\n                      </th>\n                      <td>\n                        <b>{{ variant[1].transfat | divided_by: 20.0 | times: 100 | round }}%</b>\n                      </td>\n                    </tr>\n                    <tr>\n                      <th colspan=\"2\">\n                        <b>Cholesterol</b>\n                        {{ variant[1].cholesterol }}mg\n                      </th>\n                      <td>\n                        <b>{{ variant[1].cholesterol | divided_by: 300.0 | times: 100 | round }}%</b>\n                      </td>\n                    </tr>\n                    <tr>\n                      <th colspan=\"2\">\n                        <b>Sodium</b>\n                        {{ variant[1].sodium }}mg\n                      </th>\n                      <td>\n                        <b>{{ variant[1].sodium | divided_by: 2400.0 | times: 100 | round }}%</b>\n                      </td>\n                    </tr>\n                    <tr>\n                      <th colspan=\"2\">\n                        <b>Total Carbohydrate</b>\n                        {{ variant[1].carbs }}g\n                      </th>\n                      <td>\n                        <b>{{ variant[1].carbs | divided_by: 300.0 | times: 100 | round }}%</b>\n                      </td>\n                    </tr>\n                    <tr>\n                      <td class=\"blank-cell\"></td>\n                      <th>\n                        Dietary Fiber\n                        {{ variant[1].fiber }}g\n                      </th>\n                      <td>\n                        <b>{{ variant[1].fiber | divided_by: 25.0 | times: 100 | round }}%</b>\n                      </td>\n                    </tr>\n                    <tr>\n                      <td class=\"blank-cell\"></td>\n                      <th>\n                        Sugars\n                        {{ variant[1].sugar }}g\n                      </th>\n                      <td></td>\n                    </tr>\n                    <tr class=\"thick-end\">\n                      <th colspan=\"2\">\n                        <b>Protein</b>\n                        {{ variant[1].protein }}g\n                      </th>\n                      <td></td>\n                    </tr>\n                  </tbody>\n                </table>\n                {% comment %}\n                  <table class=\"performance-facts__table--grid\">\n                    <tbody>\n                      <tr>\n                        <td colspan=\"2\">\n                          Vitamin A\n                          10%\n                        </td>\n                        <td>\n                          Vitamin C\n                          0%\n                        </td>\n                      </tr>\n                      <tr class=\"thin-end\">\n                        <td colspan=\"2\">\n                          Calcium\n                          10%\n                        </td>\n                        <td>\n                          Iron\n                          6%\n                        </td>\n                      </tr>\n                    </tbody>\n                  </table>\n                {% endcomment %}\n                <p class=\"small-info\">\n                  * Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower\n                  depending on your calorie needs:\n                </p>\n\n                <table class=\"performance-facts__table--small small-info\">\n                  <thead>\n                    <tr>\n                      <td colspan=\"2\"></td>\n                      <th>Calories:</th>\n                      <th>2,000</th>\n                      <th>2,500</th>\n                    </tr>\n                  </thead>\n                  <tbody>\n                    <tr>\n                      <th colspan=\"2\">Total Fat</th>\n                      <td>Less than</td>\n                      <td>65g</td>\n                      <td>80g</td>\n                    </tr>\n                    <tr>\n                      <td class=\"blank-cell\"></td>\n                      <th>Saturated Fat</th>\n                      <td>Less than</td>\n                      <td>20g</td>\n                      <td>25g</td>\n                    </tr>\n                    <tr>\n                      <th colspan=\"2\">Cholesterol</th>\n                      <td>Less than</td>\n                      <td>300mg</td>\n                      <td>300 mg</td>\n                    </tr>\n                    <tr>\n                      <th colspan=\"2\">Sodium</th>\n                      <td>Less than</td>\n                      <td>2,400mg</td>\n                      <td>2,400mg</td>\n                    </tr>\n                    <tr>\n                      <th colspan=\"3\">Total Carbohydrate</th>\n                      <td>300g</td>\n                      <td>375g</td>\n                    </tr>\n                    <tr>\n                      <td class=\"blank-cell\"></td>\n                      <th colspan=\"2\">Dietary Fiber</th>\n                      <td>25g</td>\n                      <td>30g</td>\n                    </tr>\n                    {%- if variant[1].customFields -%}\n                      {%- for field in variant[1].customFields -%}\n                        <tr>\n                          <th colspan=\"3\">\n                            {{ field.name }}\n                          </th>\n                          <td>\n                            {{ field.value }}\n                          </td>\n                        </tr>\n                      {%- endfor -%}\n                    {%- endif -%}\n                  </tbody>\n                </table>\n\n                <p class=\"small-info\">Calories per gram:</p>\n                <p class=\"small-info text-center\">Fat 9 &bull; Carbohydrate 4 &bull; Protein 4</p>\n              </section>\n\n              </div>\n\n          {%- endfor -%}\n\n\n<div style=\"clear:both\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "76effdab-2914-4a34-a303-417cde99ff0a",
+        "9866bb5f-03b7-4dc7-9387-4be849a0cbf1",
+        "d0839947-6bc5-42cc-85f7-9e94ce6b3e6c",
+        "1bc528a7-9da8-48ec-96da-8e48c0e52faf",
+        "tab_liquid_hQLWU9",
+        "tab_liquid_kKd6Nq",
+        "tab_liquid_FYAiHy",
+        "tab_liquid_h6jD6n",
+        "tab_liquid_w6rHMR",
+        "tab_liquid_jLQjRw",
+        "tab_liquid_88hgfp"
+      ],
+      "settings": {
+        "tabs_design": "accordion",
+        "enable_first_tab": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 80,
+        "padding_rate": 50
+      }
+    },
+    "17244288591490698a": {
+      "type": "apps",
+      "blocks": {
+        "stamped_reviews_main_widget_dAC3Dn": {
+          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "stamped_reviews_main_widget_dAC3Dn"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "sidebar": {
+      "type": "sidebar-product",
+      "blocks": {
+        "93375155-f1f0-4598-8fc0-9adcbad23dff": {
+          "type": "iconbox",
+          "settings": {
+            "widget_heading": "Shipping & Delivery",
+            "icon_svg1": "box",
+            "custom_svg1": "",
+            "iconbox_content1": "Free shipping_Free shipping for all US orders",
+            "link_item1": "",
+            "icon_svg2": "support",
+            "custom_svg2": "",
+            "iconbox_content2": "Premium Support_Support 24 hours a day",
+            "link_item2": "",
+            "icon_svg3": "return",
+            "custom_svg3": "",
+            "iconbox_content3": "30 Days Return_ You have 30 days to return",
+            "link_item3": "",
+            "icon_svg4": "payment",
+            "custom_svg4": "",
+            "iconbox_content4": "",
+            "link_item4": ""
+          }
+        },
+        "4bbef404-afc5-4e3e-90cf-4f07d8a58f71": {
+          "type": "featured_products",
+          "settings": {
+            "widget_heading": "Sale products",
+            "collection": "womens-fashion",
+            "product_list": [],
+            "products_count": 3,
+            "image_ratio": "adapt_image",
+            "image_size": true
+          }
+        },
+        "76c4580d-5d01-4485-b53a-98caea9f4605": {
+          "type": "gallery",
+          "settings": {
+            "widget_heading": "Gallery",
+            "link1": "",
+            "link2": "",
+            "link3": "",
+            "link4": "",
+            "link5": "",
+            "link6": "",
+            "open_link": "_blank"
+          }
+        },
+        "5d4020bf-1c84-4908-9a3d-f9d20d6b2025": {
+          "type": "social",
+          "settings": {
+            "widget_heading": "Follow us",
+            "socials_style": "outline",
+            "socials_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "93375155-f1f0-4598-8fc0-9adcbad23dff",
+        "4bbef404-afc5-4e3e-90cf-4f07d8a58f71",
+        "76c4580d-5d01-4485-b53a-98caea9f4605",
+        "5d4020bf-1c84-4908-9a3d-f9d20d6b2025"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-1",
+        "space": 60
+      }
+    },
+    "1715194963c90e536a": {
+      "type": "apps",
+      "blocks": {
+        "stamped_reviews_main_widget_AB8KaR": {
+          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
+          "disabled": true,
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "stamped_reviews_main_widget_AB8KaR"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "recently": {
+      "type": "recently-products",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "Recently Viewed",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 50,
+        "limit": 10,
+        "product_des": "1",
+        "image_ratio": "custom-pr",
+        "image_size": true,
+        "show_vendor": false,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "navUI": true,
+        "nav_des": "default",
+        "nav_pos": "middle_in",
+        "dotUI": false,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 0,
+        "padding_bottom": 100,
+        "padding_rate": 75
+      }
+    },
+    "related": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "People Also Bought",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 50,
+        "limit": 10,
+        "product_des": "1",
+        "image_ratio": "custom-pr",
+        "image_size": true,
+        "show_vendor": false,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "navUI": true,
+        "nav_des": "default",
+        "nav_pos": "middle_in",
+        "dotUI": false,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 0,
+        "padding_bottom": 72,
+        "padding_rate": 75
+      }
+    }
+  },
+  "order": [
+    "top_heading_RUz4YP",
+    "top_heading_ymx9KK",
+    "breacrumb",
+    "main",
+    "marquee_pdzx9z",
+    "tab_variant_collections_nKMzME",
+    "tabs",
+    "17244288591490698a",
+    "sidebar",
+    "1715194963c90e536a",
+    "recently",
+    "related"
+  ]
+}

@@ -1,0 +1,570 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "cp_hero_eRbWr3": {
+      "type": "cp-hero",
+      "blocks": {
+        "slide_CP4xta": {
+          "type": "slide",
+          "name": "Father's Day Sale",
+          "settings": {
+            "image": "shopify://shop_images/image_4d32c8e9-3688-45e9-a4ab-b9640179603e.png",
+            "eyebrow": "Father's Day Sale",
+            "heading": "20% Off Sitewide",
+            "subtext": "No Code Required",
+            "rating_text": "",
+            "cta_label": "Shop Now",
+            "cta_link": "shopify://collections/fathers-day-flash-sale",
+            "cta2_label": "",
+            "cta2_link": "shopify://collections/buy-more-save-more"
+          }
+        },
+        "slide_PUH8NP": {
+          "type": "slide",
+          "name": "Buy More Save More",
+          "settings": {
+            "image": "shopify://shop_images/Hero_Banner_1.jpg",
+            "eyebrow": "TRUSTED BY MILLIONS OF CANADIANS",
+            "heading": "Stock up on everyday essentials.",
+            "subtext": "Buy more, save more on eligible products, up to 25% off — or subscribe and save 30%.",
+            "rating_text": "4.6+ from 21,000+ verified reviews",
+            "cta_label": "Shop Best Sellers",
+            "cta_link": "shopify://collections/best-sellers",
+            "cta2_label": "Build Your Stack & Save",
+            "cta2_link": "shopify://collections/buy-more-save-more"
+          }
+        },
+        "slide_EUDexd": {
+          "type": "slide",
+          "name": "Protein + Creatine",
+          "settings": {
+            "image": "shopify://shop_images/Hero_Banner_2.jpg",
+            "eyebrow": "PROTEIN + CREATINE ESSENTIALS",
+            "heading": "Your daily stack starts here.",
+            "subtext": "Pair Canadian Protein’s best-selling whey proteins with Creatine Monohydrate and save more when you buy together.",
+            "rating_text": "",
+            "cta_label": "Shop Now",
+            "cta_link": "shopify://collections/protein-powders",
+            "cta2_label": "Build Your Stack",
+            "cta2_link": "shopify://collections/stack-save"
+          }
+        },
+        "slide_LhVhML": {
+          "type": "slide",
+          "name": "Stack & Save",
+          "settings": {
+            "image": "shopify://shop_images/Landing_page_1413de64-e847-4a29-893a-cc51e6307b60.jpg",
+            "eyebrow": "STACK & SAVE",
+            "heading": "Build your stack. Save up to 25%.",
+            "subtext": "Mix and match eligible proteins and supplements. Buy 2, 3–4, or 5+ to unlock bigger savings — or subscribe and save 30%.",
+            "rating_text": "",
+            "cta_label": "Start Stacking",
+            "cta_link": "shopify://collections/all-products",
+            "cta2_label": "",
+            "cta2_link": ""
+          }
+        },
+        "slide_md6CMr": {
+          "type": "slide",
+          "name": "Bulk Value",
+          "settings": {
+            "image": "shopify://shop_images/landing_page_bg.png",
+            "eyebrow": "BULK VALUE. MADE IN CANADA.",
+            "heading": "More protein. Better value. Built for stocking up.",
+            "subtext": "Shop Canadian Protein bulk sizes and best-selling whey proteins designed for daily use, better cost per serving, and serious value.",
+            "rating_text": "",
+            "cta_label": "Shop Bulk Protein",
+            "cta_link": "shopify://collections/bulk-protein",
+            "cta2_label": "",
+            "cta2_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_CP4xta",
+        "slide_PUH8NP",
+        "slide_EUDexd",
+        "slide_LhVhML",
+        "slide_md6CMr"
+      ],
+      "name": "CP Hero",
+      "settings": {
+        "auto_advance": 5,
+        "show_nav_buttons": false
+      }
+    },
+    "cp_tier_bar_metnGa": {
+      "type": "cp-tier-bar",
+      "blocks": {
+        "tier_X8kzQz": {
+          "type": "tier",
+          "settings": {
+            "qty_label": "Buy 2",
+            "save_text": "15% off"
+          }
+        },
+        "tier_76ddg4": {
+          "type": "tier",
+          "settings": {
+            "qty_label": "Buy 3",
+            "save_text": "20% off"
+          }
+        },
+        "tier_PecLCt": {
+          "type": "tier",
+          "settings": {
+            "qty_label": "Buy 5+",
+            "save_text": "25% off"
+          }
+        }
+      },
+      "block_order": [
+        "tier_X8kzQz",
+        "tier_76ddg4",
+        "tier_PecLCt"
+      ],
+      "name": "CP Tier Bar",
+      "settings": {
+        "label": "Stack & Save",
+        "show_icon": true,
+        "note": "Applied automatically at checkout"
+      }
+    },
+    "marquee_F4pQdj": {
+      "type": "marquee",
+      "blocks": {
+        "item_bEGXYh": {
+          "type": "item",
+          "settings": {
+            "text": "<p><a href=\"/collections/fathers-day-flash-sale\" title=\"Father's Day Flash Sale\">FATHER'S DAY SALE</a></p>",
+            "icon_svg": "flash",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        },
+        "item_rEUm4e": {
+          "type": "item",
+          "settings": {
+            "text": "<p><a href=\"/collections/fathers-day-flash-sale\" title=\"Father's Day Flash Sale\"><strong>20% OFF SITEWIDE</strong></a></p>",
+            "icon_svg": "flash",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        }
+      },
+      "block_order": [
+        "item_bEGXYh",
+        "item_rEUm4e"
+      ],
+      "custom_css": [
+        "/* Enlarge the Subscribe & Save marquee icon */.hdt-marquee__item-icon--image img[src*=\"Subscribe_and_save\"] {width: 170px !important; max-width: 170px !important; height: auto !important;}"
+      ],
+      "name": "t:sections.marquee.name",
+      "settings": {
+        "space_item": 30,
+        "speed": 0.3,
+        "direction": "rtl",
+        "marquee_pause_when_hover": false,
+        "text_fs": "h5",
+        "text_fw": "semibold",
+        "text_uppercase": false,
+        "adding_border": false,
+        "icon_position_between": true,
+        "color_scheme": "scheme-b118462a-a4ac-4478-a927-bc3e753a2252",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "cp_trust_bar_AqYPGe": {
+      "type": "cp-trust-bar",
+      "blocks": {
+        "item_kgCnaH": {
+          "type": "item",
+          "settings": {
+            "icon": "truck",
+            "title": "Free Shipping",
+            "subtitle": "on Canadian orders over $99"
+          }
+        },
+        "item_zEqFrx": {
+          "type": "item",
+          "settings": {
+            "icon": "check",
+            "title": "Batch Tested",
+            "subtitle": "Every lot lab-verified for quality"
+          }
+        },
+        "item_KmJqff": {
+          "type": "item",
+          "settings": {
+            "icon": "maple",
+            "title": "Made in Canada",
+            "subtitle": "Crafted in Windsor, Ontario"
+          }
+        }
+      },
+      "block_order": [
+        "item_kgCnaH",
+        "item_zEqFrx",
+        "item_KmJqff"
+      ],
+      "name": "CP Trust Bar",
+      "settings": {}
+    },
+    "cp_comparison_grid_GmWrAP": {
+      "type": "cp-comparison-grid",
+      "blocks": {
+        "card_economy": {
+          "type": "product_card",
+          "settings": {
+            "product": "economy-whey",
+            "badge_text": "Best Value",
+            "badge_color": "#1f8a4c",
+            "badge_text_color": "#ffffff",
+            "use_line": "Lowest cost per serving",
+            "is_highlighted": false
+          }
+        },
+        "card_wpc": {
+          "type": "product_card",
+          "settings": {
+            "product": "whey-protein-concentrate",
+            "badge_text": "Best Seller",
+            "badge_color": "#d81e2b",
+            "badge_text_color": "#ffffff",
+            "use_line": "Most popular all-rounder",
+            "is_highlighted": true
+          }
+        },
+        "card_wpi": {
+          "type": "product_card",
+          "settings": {
+            "product": "100-whey-protein-isolate",
+            "badge_text": "Lean Pick",
+            "badge_color": "#111113",
+            "badge_text_color": "#ffffff",
+            "use_line": "Leanest macros, low lactose",
+            "is_highlighted": false
+          }
+        },
+        "card_iso90": {
+          "type": "product_card",
+          "settings": {
+            "product": "all-natural-premium-vegan-protein-blend",
+            "badge_text": "Premium",
+            "badge_color": "#0e76c4",
+            "badge_text_color": "#ffffff",
+            "use_line": "Premium isolate + collagen",
+            "is_highlighted": false
+          }
+        }
+      },
+      "block_order": [
+        "card_economy",
+        "card_wpc",
+        "card_wpi",
+        "card_iso90"
+      ],
+      "name": "CP Comparison Grid",
+      "settings": {
+        "heading": "Which whey is right for you?",
+        "subtext": "Compare our four most-loved formulas — or let us pick for you in 30 seconds.",
+        "subscribe_save_text": "Subscribe & save an extra 30%",
+        "card_density": "rich"
+      }
+    },
+    "cp_quiz_ErxBVN": {
+      "type": "cp-quiz",
+      "blocks": {
+        "q1_goal": {
+          "type": "question",
+          "settings": {
+            "question_text": "What's your main goal?",
+            "opt1_label": "Build muscle",
+            "opt1_icon": "scale",
+            "opt1_product": "whey-protein-concentrate",
+            "opt2_label": "Get lean & toned",
+            "opt2_icon": "bolt",
+            "opt2_product": "100-whey-protein-isolate",
+            "opt3_label": "Everyday wellness",
+            "opt3_icon": "heart",
+            "opt3_product": "economy-whey",
+            "opt4_label": "",
+            "opt4_icon": "check",
+            "opt4_product": ""
+          }
+        },
+        "q2_dairy": {
+          "type": "question",
+          "settings": {
+            "question_text": "How's your stomach with dairy?",
+            "opt1_label": "A bit sensitive to lactose",
+            "opt1_icon": "shield",
+            "opt1_product": "100-whey-protein-isolate",
+            "opt2_label": "No problems at all",
+            "opt2_icon": "check",
+            "opt2_product": "whey-protein-concentrate",
+            "opt3_label": "",
+            "opt3_icon": "heart",
+            "opt3_product": "",
+            "opt4_label": "",
+            "opt4_icon": "check",
+            "opt4_product": ""
+          }
+        },
+        "q3_pref": {
+          "type": "question",
+          "settings": {
+            "question_text": "What matters more to you?",
+            "opt1_label": "Best value for money",
+            "opt1_icon": "scale",
+            "opt1_product": "economy-whey",
+            "opt2_label": "Premium, cleanest formula",
+            "opt2_icon": "spark",
+            "opt2_product": "iso90",
+            "opt3_label": "",
+            "opt3_icon": "heart",
+            "opt3_product": "",
+            "opt4_label": "",
+            "opt4_icon": "check",
+            "opt4_product": ""
+          }
+        }
+      },
+      "block_order": [
+        "q1_goal",
+        "q2_dairy",
+        "q3_pref"
+      ],
+      "name": "CP Product Quiz",
+      "settings": {
+        "heading": "Find your perfect protein in 30 seconds",
+        "subtext": "Three quick questions. We'll match you to your ideal formula.",
+        "result_product_1": "whey-protein-concentrate",
+        "result_why_1": "Best-selling all-rounder — 24g of protein per serving at a great price, great for building muscle.",
+        "result_product_2": "100-whey-protein-isolate",
+        "result_why_2": "Filtered for low lactose with the leanest macros — 27g protein, just 1g fat and 1g sugar.",
+        "result_product_3": "iso90",
+        "result_why_3": "Our cleanest, most premium formula — whey isolate fortified with collagen, gentle and 30g protein.",
+        "result_product_4": "economy-whey",
+        "result_why_4": "The lowest cost per serving without cutting corners — your reliable everyday staple."
+      }
+    },
+    "cp_best_sellers_yQN7pq": {
+      "type": "cp-best-sellers",
+      "blocks": {
+        "product_cckBNd": {
+          "type": "product",
+          "settings": {
+            "product": "whey-protein-concentrate"
+          }
+        },
+        "product_t9Pe7f": {
+          "type": "product",
+          "settings": {
+            "product": "100-whey-protein-isolate"
+          }
+        },
+        "product_DUpLaD": {
+          "type": "product",
+          "settings": {
+            "product": "iso90"
+          }
+        },
+        "product_dfBrdf": {
+          "type": "product",
+          "settings": {
+            "product": "economy-whey"
+          }
+        }
+      },
+      "block_order": [
+        "product_cckBNd",
+        "product_t9Pe7f",
+        "product_DUpLaD",
+        "product_dfBrdf"
+      ],
+      "name": "CP Best Sellers",
+      "settings": {
+        "heading": "Canada's best-loved proteins",
+        "view_all_url": "",
+        "card_density": "lean"
+      }
+    },
+    "cp_categories_B7qhtx": {
+      "type": "cp-categories",
+      "blocks": {
+        "category_QNaXCD": {
+          "type": "category",
+          "settings": {
+            "collection": "protein-powders",
+            "url": "",
+            "label": "Whey Protein",
+            "sublabel": "Build & recover",
+            "image": "shopify://shop_images/hf_20260612_150159_21f1b5bd-d19a-4aec-971e-e7401602c738.png"
+          }
+        },
+        "category_myrGw4": {
+          "type": "category",
+          "settings": {
+            "collection": "best-selling-collection",
+            "url": "",
+            "label": "Best Sellers",
+            "sublabel": "Community favourites",
+            "image": "shopify://shop_images/BEST_-_hf_20260612_163501_f543c2e4-e3f5-44e1-9204-08fcfd3af19e.png"
+          }
+        },
+        "category_wBiE3x": {
+          "type": "category",
+          "settings": {
+            "collection": "supplements",
+            "url": "",
+            "label": "Supplements",
+            "sublabel": "Creatine, vitamins & more",
+            "image": "shopify://shop_images/BEST_--hf_20260612_170933_0002b684-e01d-4c20-a549-c62fb73b2b08.jpg"
+          }
+        },
+        "category_CwMCaU": {
+          "type": "category",
+          "settings": {
+            "collection": "vegan",
+            "url": "",
+            "label": "Vegan",
+            "sublabel": "Plant-based proteins",
+            "image": "shopify://shop_images/BEST_hf_20260612_183205_c93395ae-1465-470f-bc3e-b09e799ce7d8.png"
+          }
+        },
+        "category_hmHjF8": {
+          "type": "category",
+          "settings": {
+            "collection": "bulk-protein",
+            "url": "",
+            "label": "Bulk Value",
+            "sublabel": "Stock up & save",
+            "image": "shopify://shop_images/BEST_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "category_QNaXCD",
+        "category_myrGw4",
+        "category_wBiE3x",
+        "category_CwMCaU",
+        "category_hmHjF8"
+      ],
+      "name": "CP Categories",
+      "settings": {
+        "heading": "Shop by category"
+      }
+    },
+    "cp_iso90_banner_AWNHfV": {
+      "type": "cp-iso90-banner",
+      "blocks": {
+        "feature_Ypqqha": {
+          "type": "feature",
+          "settings": {
+            "text": "Bulk sizes for better cost per serving"
+          }
+        },
+        "feature_VjgD8J": {
+          "type": "feature",
+          "settings": {
+            "text": "Ideal for daily protein users"
+          }
+        },
+        "feature_pgmFYE": {
+          "type": "feature",
+          "settings": {
+            "text": "Mix and match eligible products with Stack & Save"
+          }
+        },
+        "feature_qXNchC": {
+          "type": "feature",
+          "settings": {
+            "text": "Pair with Creatine Monohydrate"
+          }
+        },
+        "feature_6HXeND": {
+          "type": "feature",
+          "settings": {
+            "text": "Made in Windsor, Ontario"
+          }
+        }
+      },
+      "block_order": [
+        "feature_Ypqqha",
+        "feature_VjgD8J",
+        "feature_pgmFYE",
+        "feature_qXNchC",
+        "feature_6HXeND"
+      ],
+      "name": "CP Iso90 Banner",
+      "settings": {
+        "eyebrow": "BULK VALUE",
+        "heading": "Stock up on your daily protein essentials.",
+        "subtext": "Canadian Protein bulk sizes are made for customers who use protein every day and want better value per serving. Choose from best-selling whey proteins, bulk formats, and stackable essentials like Creatine Monohydrate.",
+        "cta_label": "Shop Bulk Protein",
+        "cta_link": "shopify://collections/bulk-protein",
+        "image": "shopify://shop_images/Feature_block_bulk-whey_concentrate.jpg"
+      }
+    },
+    "cp_newsletter_inline_HhdTPP": {
+      "type": "cp-newsletter-inline",
+      "name": "CP Newsletter",
+      "settings": {
+        "heading": "Join 100,000+ Canadians",
+        "subtext": "",
+        "placeholder": "Your email address",
+        "submit_label": "Get 10% Off",
+        "success_msg": "You're in! Check your inbox for your 10% off code."
+      }
+    },
+    "cp_overlays_PPzYM4": {
+      "type": "cp-overlays",
+      "name": "CP Overlays + JS",
+      "settings": {
+        "popup_enabled": false,
+        "popup_badge": "Limited offer",
+        "popup_heading": "Get 10% off your first order",
+        "popup_subtext": "Join 100,000+ Canadians getting honest nutrition tips and exclusive deals.",
+        "popup_placeholder": "Your email address",
+        "popup_cta": "Claim my 10% off",
+        "popup_success": "You're in! Check your inbox for your discount code.",
+        "popup_fine": "No spam. Unsubscribe any time.",
+        "trigger_scroll_pct": 40,
+        "trigger_delay_secs": 28
+      }
+    },
+    "17152628702314a053": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "cp_hero_eRbWr3",
+    "cp_tier_bar_metnGa",
+    "marquee_F4pQdj",
+    "cp_trust_bar_AqYPGe",
+    "cp_comparison_grid_GmWrAP",
+    "cp_quiz_ErxBVN",
+    "cp_best_sellers_yQN7pq",
+    "cp_categories_B7qhtx",
+    "cp_iso90_banner_AWNHfV",
+    "cp_newsletter_inline_HhdTPP",
+    "cp_overlays_PPzYM4",
+    "17152628702314a053"
+  ]
+}

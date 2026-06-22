@@ -1,0 +1,200 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "main-heading",
+      "blocks": {
+        "5ecb9555-19e4-433b-8817-1ccaa3a41384": {
+          "type": "1",
+          "settings": {
+            "heading": "",
+            "heading_size": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "5ecb9555-19e4-433b-8817-1ccaa3a41384"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "spacing_hd": 0,
+        "padding_top": 80,
+        "padding_bottom": 86,
+        "padding_rate": 75
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "17249033664f1d5eeb": {
+      "type": "apps",
+      "blocks": {
+        "stamped_loyalty_referrals_page_summary_edT9nt": {
+          "type": "shopify://apps/stamped-loyalty-referrals/blocks/page-summary/93b8fd18-14d4-464f-a49a-0093afb7e10a",
+          "settings": {
+            "label_greeting_anonymous": "Hello there,",
+            "label_greeting_customer": "Hello {0},",
+            "label_greeting_description": "As a member, you’ll get closer to earning exclusive rewards everytime you shop.",
+            "label_signup": "Sign Up",
+            "label_signin": "Sign In",
+            "label_redeem": "Redeem Now",
+            "label_history": "Rewards History"
+          }
+        },
+        "stamped_loyalty_referrals_page_earnings_GPnhLE": {
+          "type": "shopify://apps/stamped-loyalty-referrals/blocks/page-earnings/93b8fd18-14d4-464f-a49a-0093afb7e10a",
+          "settings": {
+            "label_title": "Ways to Earn Points"
+          }
+        },
+        "stamped_loyalty_referrals_rewards_activities_a8e6Gh": {
+          "type": "shopify://apps/stamped-loyalty-referrals/blocks/rewards-activities/93b8fd18-14d4-464f-a49a-0093afb7e10a",
+          "settings": {
+            "label_title": "",
+            "label_activity": "",
+            "label_date": ""
+          }
+        }
+      },
+      "block_order": [
+        "stamped_loyalty_referrals_page_summary_edT9nt",
+        "stamped_loyalty_referrals_page_earnings_GPnhLE",
+        "stamped_loyalty_referrals_rewards_activities_a8e6Gh"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "accordion_LnytUh": {
+      "type": "accordion",
+      "blocks": {
+        "title_HBgdxb": {
+          "type": "title",
+          "settings": {
+            "title": "Frequently Asked Questions"
+          }
+        },
+        "accordion_item_EVwYPn": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What is the Rewards Program and how does it work?",
+            "content": "Once you sign up or log in on CanadianProtein.com, you’ll earn C‑Points for activities like purchases, social media follows, reviews, birthday rewards, and more. These points can later be redeemed for discounts on future orders via the “reward” pop‑up."
+          }
+        },
+        "accordion_item_graywn": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "How can I check and redeem my points?",
+            "content": "Log in to your account and click the “Rewards” button. A pop‑up will display your current C‑Point balance and available rewards. If you have enough points, simply select a reward and click the “redeem” button."
+          }
+        },
+        "accordion_item_B6Q8aB": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Is there an expiration date on my C‑Points?",
+            "content": "Points do not expire as long as your account stays active. If you’ve been away, make sure to login occasionally so your account remains active and your points safe."
+          }
+        },
+        "accordion_item_wzVRVz": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Why don’t I see the points from my recent activity?",
+            "content": "There may be a short delay (typically a few minutes to a few hours) before points appear in your rewards balance. If they still don’t show after 24 h, please reach out to <a href=\"https://support.canadianprotein.com/hc/en-us/requests/new\" style=\"color: blue;\">support</a>."
+          }
+        },
+        "accordion_item_Q9YWA7": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What if I change my email or address—will I still have access to my points?",
+            "content": "Yes—just make sure you log in with the same email address that earned the points in the first place. If you changed your address or contact info, your points will still be tied to your original account."
+          }
+        },
+        "accordion_item_Ur6EhF": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Who can I contact if I notice an issue with my points?",
+            "content": "If you believe there's an issue—like missing points or incorrect balance— contact <a href=\"https://support.canadianprotein.com/hc/en-us/requests/new\" style=\"color: blue;\">support</a>. Provide details including your account email and recent activities; the support team can investigate further."
+          }
+        }
+      },
+      "block_order": [
+        "title_HBgdxb",
+        "accordion_item_EVwYPn",
+        "accordion_item_graywn",
+        "accordion_item_B6Q8aB",
+        "accordion_item_wzVRVz",
+        "accordion_item_Q9YWA7",
+        "accordion_item_Ur6EhF"
+      ],
+      "name": "t:sections.accordion.name",
+      "settings": {
+        "accordion_position": "start",
+        "accordion_icon": "1",
+        "open_first": false,
+        "enable_link_list": false,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 85,
+        "padding_bottom": 70,
+        "padding_rate": 75
+      }
+    },
+    "marquee_BQ7KMj": {
+      "type": "marquee",
+      "blocks": {
+        "item_ifNKXz": {
+          "type": "item",
+          "settings": {
+            "text": "<p>Easter Code - m7qm8p6tx8gxrbdf</p>",
+            "icon_svg": "none",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        }
+      },
+      "block_order": [
+        "item_ifNKXz"
+      ],
+      "disabled": true,
+      "settings": {
+        "space_item": 30,
+        "speed": 0.3,
+        "direction": "rtl",
+        "marquee_pause_when_hover": false,
+        "text_fs": "h5",
+        "text_fw": "normal",
+        "text_uppercase": false,
+        "adding_border": true,
+        "icon_position_between": true,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "main",
+    "17249033664f1d5eeb",
+    "accordion_LnytUh",
+    "marquee_BQ7KMj"
+  ]
+}

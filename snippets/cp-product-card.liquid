@@ -1,0 +1,205 @@
+{%- liquid
+  assign card_density = section_settings.card_density | default: 'rich'
+  assign card_compact = compact | default: false
+  assign card_class = 'cp-card'
+  if highlight
+    assign card_class = card_class | append: ' cp-card--highlight'
+  endif
+  if card_compact
+    assign card_class = card_class | append: ' cp-card--compact'
+  endif
+
+  assign first_variant = product.selected_or_first_available_variant
+  assign from_price_cents = first_variant.price
+  assign img_src = product.featured_image | image_url: width: 400
+
+  assign rating_avg   = product.metafields.junip.rating_average
+  assign rating_count = product.metafields.junip.rating_count
+
+  unless badge_text
+    if product.tags contains 'best-seller' or product.tags contains 'Best Seller'
+      assign badge_text = 'Best Seller'
+      assign badge_color = '#D81E2B'
+    elsif product.tags contains 'best-value' or product.tags contains 'Best Value'
+      assign badge_text = 'Best Value'
+      assign badge_color = '#1F8A4C'
+    elsif product.tags contains 'new' or product.tags contains 'New'
+      assign badge_text = 'New'
+      assign badge_color = '#0E76C4'
+    elsif product.tags contains 'lean-muscle' or product.tags contains 'Lean Muscle'
+      assign badge_text = 'Lean Pick'
+      assign badge_color = '#111113'
+    endif
+    assign badge_text_color = '#ffffff'
+  endunless
+  unless use_line
+    if product.tags contains 'best-seller'
+      assign use_line = 'Most popular all-rounder'
+    elsif product.tags contains 'lean-muscle'
+      assign use_line = 'Leanest macros, low lactose'
+    elsif product.tags contains 'new'
+      assign use_line = 'Premium isolate + collagen'
+    elsif product.tags contains 'best-value'
+      assign use_line = 'Lowest cost per serving'
+    endif
+  endunless
+
+  assign nutrify_v              = first_variant.metafields.nutrify_nutrition_info.nutrify_nutrition_info_variant.value
+  assign servings_per_container = nutrify_v.servingsPerContainer | round
+  assign protein  = nutrify_v.protein
+  assign ssize    = nutrify_v.ssize
+  assign calories = nutrify_v.cal
+  assign fat      = nutrify_v.fat
+  assign sugar    = nutrify_v.sugar
+
+  assign cost_per_serving = ''
+  if servings_per_container > 0
+    assign cps_cents = first_variant.price | times: 1.0 | divided_by: servings_per_container | round
+    assign cost_per_serving = cps_cents | money_without_trailing_zeros
+  endif
+
+  assign sub_text = subscribe_save_text | default: 'Subscribe & save an extra 30%'
+-%}
+
+<div class="{{ card_class }}">
+  <div class="cp-card__media">
+    {%- if badge_text != blank -%}
+      <div class="cp-card__badge-wrap">
+        <span class="cp-badge" style="background:{{ badge_color | default: '#111113' }};color:{{ badge_text_color | default: '#ffffff' }}">{{ badge_text }}</span>
+      </div>
+    {%- endif -%}
+    {%- if rating_avg != blank -%}
+      <div class="cp-card__rating-avg" aria-label="Rated {{ rating_avg | round: 1 }} out of 5">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.9 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+        {{ rating_avg | round: 1 }}
+      </div>
+    {%- endif -%}
+    <a href="{{ product.url }}">
+      <img class="cp-card__media-img" src="{{ img_src }}" alt="{{ product.title | escape }}" loading="lazy">
+    </a>
+  </div>
+  <div class="cp-card__body">
+    {%- if use_line != blank -%}
+      <div class="cp-card__use">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L4.5 13.5H11l-1 8.5L19.5 10H13z"/></svg>
+        {{ use_line }}
+      </div>
+    {%- endif -%}
+    <h3 class="cp-card__name">
+      <a href="{{ product.url }}" style="color:inherit;text-decoration:none">{{ product.title }}</a>
+    </h3>
+    <div class="cp-card__stars">
+      <span class="junip-product-summary"
+        data-product-id="{{ product.id }}"
+        data-product-rating-count="{{ rating_count }}"
+        data-product-rating-average="{{ rating_avg }}">
+      </span>
+    </div>
+
+    <div class="cp-card__price-row">
+      <span class="cp-card__price-from">From</span>
+      <span class="cp-card__price">{{ from_price_cents | money_without_trailing_zeros }}</span>
+    </div>
+    {%- if cost_per_serving != blank -%}
+      <div class="cp-card__per-serving">~{{ cost_per_serving }}/serving · {{ servings_per_container }} servings</div>
+    {%- elsif ssize != blank -%}
+      <div class="cp-card__per-serving">{{ ssize }}g per serving</div>
+    {%- endif -%}
+    <div class="cp-card__subscribe">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+      {{ sub_text }}
+    </div>
+
+    {%- if card_density == 'rich' and card_compact == false -%}
+      {%- if protein != blank or calories != blank -%}
+        <div class="cp-card__macros">
+          {%- if protein != blank -%}
+            <div class="cp-card__macro"><div class="cp-card__macro-val">{{ protein }}g</div><div class="cp-card__macro-key">Protein</div></div>
+          {%- endif -%}
+          {%- if calories != blank -%}
+            <div class="cp-card__macro"><div class="cp-card__macro-val">{{ calories }}</div><div class="cp-card__macro-key">Calories</div></div>
+          {%- endif -%}
+          {%- if fat != blank -%}
+            <div class="cp-card__macro"><div class="cp-card__macro-val">{{ fat }}g</div><div class="cp-card__macro-key">Fat</div></div>
+          {%- endif -%}
+          {%- if sugar != blank -%}
+            <div class="cp-card__macro"><div class="cp-card__macro-val">{{ sugar }}g</div><div class="cp-card__macro-key">Sugar</div></div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- if card_compact == false -%}
+      {%- assign features = product.metafields.custom.features.value -%}
+      {%- if features != blank -%}
+        <ul class="cp-card__features">
+          {%- for feat in features -%}
+            <li class="cp-card__feature">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>
+              {{ feat }}
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- comment -%} Flavour image map — read by Quick Add JS {%- endcomment -%}
+    {%- assign qa_fi_json = '' -%}
+    {%- assign qa_fi_seen = '' -%}
+    {%- assign qa_flavour_opt_idx = 0 -%}
+    {%- for opt in product.options -%}
+      {%- assign opt_lc = opt | downcase -%}
+      {%- if opt_lc contains 'flavour' or opt_lc contains 'flavor' -%}
+        {%- assign qa_flavour_opt_idx = forloop.index -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- if qa_flavour_opt_idx > 0 -%}
+      {%- for variant in product.variants -%}
+        {%- case qa_flavour_opt_idx -%}
+          {%- when 1 -%}{%- assign qa_fi_val = variant.option1 -%}
+          {%- when 2 -%}{%- assign qa_fi_val = variant.option2 -%}
+          {%- when 3 -%}{%- assign qa_fi_val = variant.option3 -%}
+        {%- endcase -%}
+        {%- assign qa_fi_seen_key = qa_fi_val | append: '|||' -%}
+        {%- unless qa_fi_seen contains qa_fi_seen_key -%}
+          {%- assign qa_fi_seen = qa_fi_seen | append: qa_fi_seen_key -%}
+          {%- assign qa_fi_img = variant.metafields.custom.flavor_image -%}
+          {%- if qa_fi_img != blank -%}
+            {%- assign qa_fi_val_json = qa_fi_val | json -%}
+            {%- assign qa_fi_url = qa_fi_img | image_url: width: 100 | json -%}
+            {%- unless qa_fi_json == '' -%}{%- assign qa_fi_json = qa_fi_json | append: ',' -%}{%- endunless -%}
+            {%- assign qa_fi_json = qa_fi_json | append: qa_fi_val_json | append: ':' | append: qa_fi_url -%}
+          {%- endif -%}
+        {%- endunless -%}
+      {%- endfor -%}
+    {%- endif -%}
+    {%- if qa_fi_json != '' -%}
+      <script type="application/json" class="cp-qa-fi" data-handle="{{ product.handle }}">{ {{ qa_fi_json }} }</script>
+    {%- endif -%}
+
+    {%- comment -%} Servings-per-container map keyed by variant ID — read by Quick Add JS {%- endcomment -%}
+    {%- assign qa_sv_json = '' -%}
+    {%- for variant in product.variants -%}
+      {%- assign qa_nutrify = variant.metafields.nutrify_nutrition_info.nutrify_nutrition_info_variant.value -%}
+      {%- assign qa_spc = qa_nutrify.servingsPerContainer | round -%}
+      {%- if qa_spc > 0 -%}
+        {%- unless qa_sv_json == '' -%}{%- assign qa_sv_json = qa_sv_json | append: ',' -%}{%- endunless -%}
+        {%- assign qa_sv_json = qa_sv_json | append: '"' | append: variant.id | append: '":' | append: qa_spc -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- if qa_sv_json != '' -%}
+      <script type="application/json" class="cp-qa-sv" data-handle="{{ product.handle }}">{ {{ qa_sv_json }} }</script>
+    {%- endif -%}
+
+    <div class="cp-card__actions">
+      <button class="cp-card__quick-add" data-quick-add="{{ product.handle }}" type="button">
+        <svg width="{% if card_compact %}14{% else %}16{% endif %}" height="{% if card_compact %}14{% else %}16{% endif %}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.2 11.2a1.5 1.5 0 0 0 1.5 1.2h8.6a1.5 1.5 0 0 0 1.5-1.2L21 7H6"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg>
+        Quick Add
+      </button>
+      {%- if card_compact == false -%}
+        <a href="{{ product.url }}" class="cp-card__details-link">View full details</a>
+      {%- endif -%}
+    </div>
+  </div>
+</div>

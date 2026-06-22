@@ -1,0 +1,669 @@
+/* ============================================================
+   CP Category Page — product cards, collection hero, in-grid
+   ============================================================ */
+
+/* ── Variables (inherit from theme, fallback safe) ── */
+.cp-cat-card,
+.cp-col-hero,
+.cp-col-qnav,
+.cp-ingrid-source,
+.cp-ingrid-injected,
+.cp-ingrid-preview {
+  --cp-font: var(--font-body-family, "Albert Sans", system-ui, sans-serif);
+  --cp-ink: #111113;
+  --cp-muted: #76767c;
+  --cp-line: #e8e8e6;
+  --cp-bg-soft: #f5f5f3;
+  --cp-accent:      var(--cp-brand-accent,      #D81E2B);
+  --cp-accent-dark: var(--cp-brand-accent-dark, #FF6273);
+  --cp-cta:         var(--cp-brand-cta,         var(--cp-accent));
+  --cp-cta-ink:     var(--cp-brand-cta-ink,     #ffffff);
+}
+
+/* ══════════════════════════════════════════════════════
+   PRODUCT CARD
+   ══════════════════════════════════════════════════════ */
+
+.cp-cat-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid var(--cp-line);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--cp-font);
+  height: 100%;
+  overflow: visible;
+  position: relative;
+}
+
+/* Image wrap */
+.cp-cat-card__img-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 11px 11px 0 0;
+  background: var(--cp-bg-soft);
+  aspect-ratio: 1;
+  flex-shrink: 0;
+}
+
+.cp-cat-card__img-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cp-cat-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Badges */
+.cp-cat-card__badges {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  pointer-events: none;
+}
+
+.cp-cat-badge {
+  display: inline-block;
+  font-family: var(--cp-font);
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  line-height: 1.5;
+}
+
+.cp-cat-badge--accent { background: var(--cp-accent); color: #fff; }
+.cp-cat-badge--ink    { background: #111113; color: #fff; }
+.cp-cat-badge--green  { background: #16a34a; color: #fff; }
+.cp-cat-badge--sale   { background: var(--cp-accent); color: #fff; }
+
+/* Sold-out badge */
+.cp-cat-card__sold-tag {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  z-index: 2;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-family: var(--cp-font);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+/* Card body */
+.cp-cat-card__body {
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0;
+}
+
+/* Junip ratings row */
+.cp-cat-card__rating {
+  min-height: 22px;
+  margin-bottom: 5px;
+}
+
+/* Title */
+.cp-cat-card__title {
+  font-family: var(--cp-font);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--cp-ink);
+  text-decoration: none;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 7px;
+}
+
+.cp-cat-card__title:hover { color: var(--cp-accent); }
+
+/* Price row */
+.cp-cat-card__price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  margin-bottom: 8px;
+}
+
+.cp-cat-price {
+  font-family: var(--cp-font);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--cp-ink);
+}
+
+.cp-cat-price--sale { color: var(--cp-accent); }
+
+.cp-cat-price__was {
+  font-family: var(--cp-font);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--cp-muted);
+  text-decoration: line-through;
+}
+
+/* Size pills */
+.cp-cat-card__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.cp-cat-pill {
+  font-family: var(--cp-font);
+  font-size: 11px;
+  font-weight: 600;
+  color: #444;
+  background: var(--cp-bg-soft);
+  border: 1px solid var(--cp-line);
+  border-radius: 4px;
+  padding: 2px 8px;
+  line-height: 1.5;
+}
+
+.cp-cat-pill--more { color: var(--cp-muted); }
+
+/* CTA area */
+.cp-cat-card__cta {
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+.cp-cat-card__add-btn,
+.cp-cat-card__notify-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 11px 16px;
+  border-radius: 8px;
+  font-family: var(--cp-font);
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter 0.14s, border-color 0.14s, color 0.14s;
+  border: none;
+}
+
+.cp-cat-card__add-btn {
+  background: var(--cp-cta);
+  color: var(--cp-cta-ink);
+}
+.cp-cat-card__add-btn:hover { filter: brightness(0.88); }
+
+.cp-cat-card__notify-btn {
+  background: transparent;
+  color: #444;
+  border: 1.5px solid var(--cp-line);
+}
+.cp-cat-card__notify-btn:hover { border-color: var(--cp-ink); color: var(--cp-ink); }
+
+/* Sold out card dimming */
+.cp-cat-card--sold-out .cp-cat-card__img { opacity: 0.65; }
+.cp-cat-card--sold-out .cp-cat-card__title { color: var(--cp-muted); }
+
+/* Force Globo column div to fill height so cards line up */
+[class*="spf-col"] {
+  display: flex;
+  flex-direction: column;
+}
+
+[class*="spf-col"] .cp-cat-card {
+  flex: 1;
+}
+
+/* Restore CSS Grid on HDT container — Globo overrides it to flex.
+   HDT's --cols variable (set by hdt-grid-cols-N classes) drives column count:
+   hdt-grid-cols-2 → 2/row (mobile)  md:hdt-grid-cols-3 → 3/row (tablet)  lg:hdt-grid-cols-4 → 4/row (desktop ≥1150px) */
+.hdt-row-grid.hdt-collection-products {
+  display: grid !important;
+}
+
+/* Strip Globo's flex-based width classes from grid items — grid template handles sizing */
+.hdt-collection-products > [class*="spf-col"] {
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0;
+}
+
+/* Suppress Globo's own card styles when our card is present */
+.spf-product-card:has(.cp-cat-card__body),
+.spf-product-card__inner:has(.cp-cat-card__body) {
+  all: unset;
+  display: contents;
+}
+
+/* ══════════════════════════════════════════════════════
+   COLLECTION HERO
+   ══════════════════════════════════════════════════════ */
+
+.cp-col-hero {
+  font-family: var(--cp-font);
+  background: #fff;
+  border-bottom: 1px solid var(--cp-line);
+}
+
+.cp-col-hero__wrap {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.cp-col-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Left column */
+.cp-col-hero__left {}
+
+.cp-col-hero__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--cp-accent);
+  margin-bottom: 14px;
+}
+
+.cp-col-hero__h1 {
+  font-family: var(--cp-font);
+  font-size: 44px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.04;
+  color: var(--cp-ink);
+  margin: 0 0 18px;
+}
+
+.cp-col-hero__h1 em {
+  font-style: italic;
+  color: var(--cp-accent);
+}
+
+.cp-col-hero__sub {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #555;
+  margin: 0 0 24px;
+  max-width: 540px;
+}
+
+.cp-col-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 24px;
+  background: var(--cp-cta);
+  color: var(--cp-cta-ink);
+  border-radius: 8px;
+  font-family: var(--cp-font);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: filter 0.14s;
+  margin-bottom: 24px;
+}
+.cp-col-hero__cta:hover { filter: brightness(0.88); }
+
+/* Trust pills */
+.cp-col-hero__trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.cp-col-hero__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--cp-font);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cp-ink);
+  background: var(--cp-bg-soft);
+  border: 1px solid var(--cp-line);
+  padding: 7px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.cp-col-hero__pill svg { color: var(--cp-accent); flex-shrink: 0; }
+
+/* Social proof card (right column) */
+.cp-col-hero__card {
+  background: var(--cp-ink);
+  color: #fff;
+  border-radius: 16px;
+  padding: 22px 24px;
+  min-width: 230px;
+  max-width: 270px;
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.cp-col-hero__card-top {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 16px;
+}
+
+.cp-col-hero__rating-big {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1;
+  color: #fff;
+}
+
+.cp-col-hero__stars-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cp-col-hero__stars-row {
+  display: flex;
+  gap: 2px;
+}
+
+.cp-col-hero__stars-row svg { color: #F5A623; }
+
+.cp-col-hero__reviews {
+  font-size: 11.5px;
+  color: rgba(255,255,255,0.7);
+  font-weight: 600;
+}
+
+.cp-col-hero__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.cp-col-hero__stat b {
+  display: block;
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.cp-col-hero__stat span {
+  font-size: 11px;
+  color: rgba(255,255,255,0.65);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.cp-col-hero__card-foot {
+  font-size: 11.5px;
+  color: rgba(255,255,255,0.65);
+  font-weight: 600;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cp-col-hero__card-foot svg { color: var(--cp-accent-dark); flex-shrink: 0; }
+
+/* ── Quick-nav chips (separate block row below hero) ── */
+.cp-col-qnav {
+  background: #fff;
+  border-bottom: 1px solid var(--cp-line);
+}
+
+.cp-col-qnav__scroll {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 24px;
+  overflow-x: auto;
+  display: flex;
+  gap: 8px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.cp-col-qnav__scroll::-webkit-scrollbar { display: none; }
+
+.cp-col-qnav-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 1.5px solid var(--cp-line);
+  background: #fff;
+  color: var(--cp-ink);
+  font-family: var(--cp-font);
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s, color 0.12s;
+  flex-shrink: 0;
+}
+
+.cp-col-qnav-chip:hover,
+.cp-col-qnav-chip.active {
+  border-color: var(--cp-ink);
+  background: var(--cp-ink);
+  color: #fff;
+}
+
+/* Single-column layout when social card is hidden */
+.cp-col-hero__inner--no-card {
+  grid-template-columns: 1fr;
+  max-width: 720px;
+}
+
+/* Hero responsive */
+@media (max-width: 900px) {
+  .cp-col-hero__h1 { font-size: 34px; }
+  .cp-col-hero__card { min-width: 200px; max-width: 230px; }
+}
+
+@media (max-width: 720px) {
+  .cp-col-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .cp-col-hero__h1 { font-size: 28px; }
+  .cp-col-hero__card {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .cp-col-hero__stats { grid-template-columns: 1fr 1fr; }
+  .cp-col-hero__sub { font-size: 15px; }
+}
+
+/* ══════════════════════════════════════════════════════
+   IN-GRID INJECTED BLOCKS
+   ══════════════════════════════════════════════════════ */
+
+.cp-ingrid-injected {
+  width: 100% !important;
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+  grid-column: 1 / -1;
+  box-sizing: border-box;
+  padding: 8px 4px;
+}
+
+.cp-ingrid-block {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: var(--cp-font);
+  box-sizing: border-box;
+}
+
+/* Image-only type */
+.cp-ingrid-block--image a {
+  display: block;
+}
+
+.cp-ingrid-block--image img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.cp-ingrid-img-desktop { display: block; }
+.cp-ingrid-img-mobile  { display: none;  }
+
+@media (max-width: 767px) {
+  .cp-ingrid-img-desktop { display: none; }
+  .cp-ingrid-img-mobile  { display: block; }
+}
+
+/* Promo type */
+.cp-ingrid-block--promo {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 36px 44px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cp-ingrid-promo__img-wrap {
+  flex-shrink: 0;
+  width: 200px;
+}
+
+.cp-ingrid-promo__img-wrap img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.cp-ingrid-promo__content { flex: 1; }
+
+.cp-ingrid-promo__eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.cp-ingrid-promo__heading {
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  line-height: 1.15;
+  margin: 0 0 12px;
+}
+
+.cp-ingrid-promo__sub {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 22px;
+  max-width: 480px;
+}
+
+.cp-ingrid-promo__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--cp-cta);
+  color: var(--cp-cta-ink);
+  border-radius: 8px;
+  font-family: var(--cp-font);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: filter 0.14s;
+}
+
+.cp-ingrid-promo__btn:hover { filter: brightness(0.88); }
+
+/* Text color variants */
+.cp-ingrid-block--text-light .cp-ingrid-promo__heading,
+.cp-ingrid-block--text-light .cp-ingrid-promo__eyebrow { color: #fff; }
+.cp-ingrid-block--text-light .cp-ingrid-promo__sub { color: rgba(255,255,255,0.75); }
+
+.cp-ingrid-block--text-dark .cp-ingrid-promo__heading { color: #111113; }
+.cp-ingrid-block--text-dark .cp-ingrid-promo__eyebrow { color: var(--cp-accent); }
+.cp-ingrid-block--text-dark .cp-ingrid-promo__sub { color: #444; }
+.cp-ingrid-block--text-dark .cp-ingrid-promo__btn { background: var(--cp-ink); color: #fff; }
+
+/* Promo responsive */
+@media (max-width: 720px) {
+  .cp-ingrid-block--promo {
+    flex-direction: column;
+    padding: 28px 22px;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .cp-ingrid-promo__img-wrap {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .cp-ingrid-promo__sub { max-width: 100%; }
+
+  .cp-ingrid-promo__heading { font-size: 22px; }
+}
+
+/* Theme editor preview placeholder */
+.cp-ingrid-preview {
+  padding: 14px 18px;
+  background: #f0f9ff;
+  border: 2px dashed #0891B2;
+  border-radius: 10px;
+  margin: 20px 0;
+  font-family: var(--cp-font);
+}
+
+.cp-ingrid-preview__label {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #0891B2;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+
+.cp-ingrid-preview__content {
+  font-size: 12.5px;
+  color: #555;
+  font-weight: 600;
+}

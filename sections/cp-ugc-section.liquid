@@ -1,0 +1,183 @@
+{%- liquid
+  assign product_image = section.settings.placeholder_image | default: product.featured_image
+-%}
+
+<div class="cp-ugc-section" id="cp-ugc-{{ section.id }}">
+  <div class="cp-ugc-section__header">
+    <h2 class="cp-ugc-section__heading">
+      {{ section.settings.heading | default: "Don't take our<br>word for it." }}
+    </h2>
+    <p class="cp-ugc-section__tagline">{{ section.settings.tagline | default: 'Tag  #CanadianProtein  to be featured' }}</p>
+  </div>
+
+  <div class="cp-ugc-section__carousel-wrap">
+    <button
+      class="cp-ugc-section__arrow cp-ugc-section__arrow--prev"
+      aria-label="Previous"
+      onclick="(function(s){var c=s.querySelector('.cp-ugc-section__card');s.scrollBy({left:-(c.offsetWidth+16),behavior:'smooth'})})(document.getElementById('ugc-scroller-{{ section.id }}'))"
+    >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+
+    <button
+      class="cp-ugc-section__arrow cp-ugc-section__arrow--next"
+      aria-label="Next"
+      onclick="(function(s){var c=s.querySelector('.cp-ugc-section__card');s.scrollBy({left:c.offsetWidth+16,behavior:'smooth'})})(document.getElementById('ugc-scroller-{{ section.id }}'))"
+    >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+
+    <div class="cp-ugc-section__scroller" id="ugc-scroller-{{ section.id }}">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'ugc_card' -%}
+          <div class="cp-ugc-section__card" {{ block.shopify_attributes }}>
+            <div class="cp-ugc-section__card-img-wrap">
+              {%- if block.settings.image -%}
+                {{
+                  block.settings.image
+                  | image_url: width: 400
+                  | image_tag:
+                    loading: 'lazy',
+                    alt: block.settings.handle,
+                    widths: '300, 400, 600'
+                }}
+              {%- elsif product_image -%}
+                {{
+                  product_image
+                  | image_url: width: 400
+                  | image_tag:
+                    loading: 'lazy',
+                    alt: 'Canadian Protein',
+                    widths: '300, 400, 600'
+                }}
+              {%- else -%}
+                {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- endif -%}
+
+              <div class="cp-ugc-section__play">
+                <div class="cp-ugc-section__play-btn">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="#000"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+
+              <span class="cp-ugc-section__handle">{{ block.settings.handle | default: '@canadianprotein' }}</span>
+            </div>
+
+            <div class="cp-ugc-section__card-footer">
+              <p class="cp-ugc-section__caption">&ldquo;{{ block.settings.caption }}&rdquo;</p>
+              <a
+                href="{{ block.settings.product_link | default: product.url }}"
+                class="cp-ugc-section__cart-btn"
+                aria-label="Shop the look"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              </a>
+            </div>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- comment -%}Fallback placeholder cards when no blocks configured{%- endcomment -%}
+      {%- if section.blocks.size == 0 -%}
+        {%- assign ugc_placeholders = '@morgan.lifts,Post-leg-day shake. The chocolate hits.,@coachjames,24g protein no chalk. Client approved.,@runwithpriya,Mixes clean in cold water — finally.,@thefitkitchen,Smoothie bowl base for a week of mornings.,@d.arnold,5kg bag = unbeatable cost per serving.,@mtnmovement,Trail-day fuel. Vanilla in oats every time.' | split: ',' -%}
+        {%- for i in (0..5) -%}
+          {%- assign handle_idx = i | times: 2 -%}
+          {%- assign caption_idx = handle_idx | plus: 1 -%}
+          <div class="cp-ugc-section__card">
+            <div class="cp-ugc-section__card-img-wrap">
+              {%- if product_image -%}
+                {{
+                  product_image
+                  | image_url: width: 400
+                  | image_tag: loading: 'lazy', alt: 'Canadian Protein', widths: '300, 400, 600'
+                }}
+              {%- else -%}
+                {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- endif -%}
+              <div class="cp-ugc-section__play">
+                <div class="cp-ugc-section__play-btn">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="#000"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+              <span class="cp-ugc-section__handle">{{ ugc_placeholders[handle_idx] }}</span>
+            </div>
+            <div class="cp-ugc-section__card-footer">
+              <p class="cp-ugc-section__caption">&ldquo;{{ ugc_placeholders[caption_idx] }}&rdquo;</p>
+              <a href="{{ product.url }}" class="cp-ugc-section__cart-btn" aria-label="Shop the look">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              </a>
+            </div>
+          </div>
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "UGC Section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Don't take our word for it."
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "Tag  #CanadianProtein  to be featured"
+    },
+    {
+      "type": "image_picker",
+      "id": "placeholder_image",
+      "label": "Fallback image (uses product image if blank)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ugc_card",
+      "name": "UGC Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "handle",
+          "label": "Social handle",
+          "placeholder": "@username"
+        },
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "Caption"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "product_link",
+          "label": "Product link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "UGC Section",
+      "blocks": [
+        { "type": "ugc_card", "settings": { "handle": "@morgan.lifts", "caption": "Post-leg-day shake. The chocolate hits." } },
+        { "type": "ugc_card", "settings": { "handle": "@coachjames", "caption": "24g protein, no chalk. Client approved." } },
+        { "type": "ugc_card", "settings": { "handle": "@runwithpriya", "caption": "Mixes clean in cold water — finally." } },
+        { "type": "ugc_card", "settings": { "handle": "@thefitkitchen", "caption": "Smoothie bowl base for a week of mornings." } },
+        { "type": "ugc_card", "settings": { "handle": "@d.arnold", "caption": "5kg bag = unbeatable cost per serving." } },
+        { "type": "ugc_card", "settings": { "handle": "@mtnmovement", "caption": "Trail-day fuel. Vanilla in oats, every time." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

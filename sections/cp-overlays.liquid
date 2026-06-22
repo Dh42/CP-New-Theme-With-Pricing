@@ -1,0 +1,152 @@
+{{ 'cp-homepage.css' | asset_url | stylesheet_tag }}
+{{ 'cp-homepage.js' | asset_url | script_tag }}
+
+{%- comment -%} Junip store key — required once per page for star widgets to initialise {%- endcomment -%}
+<span class="junip-store-key" data-store-key="{{ shop.metafields.junip.store_key }}" style="display:none"></span>
+
+{%- render 'cp-quick-add-drawer' -%}
+
+{%- if section.settings.popup_enabled -%}
+<div class="cp-nl-popup" id="cp-nl-popup"
+     role="dialog" aria-label="Newsletter signup" aria-modal="true" aria-hidden="true"
+     data-scroll-pct="{{ section.settings.trigger_scroll_pct | default: 40 }}"
+     data-delay-secs="{{ section.settings.trigger_delay_secs | default: 28 }}">
+  <div class="cp-nl-popup__backdrop" id="cp-nl-popup-backdrop"></div>
+  <div class="cp-nl-popup__box">
+    <button class="cp-nl-popup__close" id="cp-nl-popup-close" type="button" aria-label="Close">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="cp-nl-popup__inner{% if section.settings.popup_image != blank %} cp-nl-popup__inner--with-image{% endif %}">
+      {%- if section.settings.popup_image != blank -%}
+        <div class="cp-nl-popup__image-col">
+          <img class="cp-nl-popup__image"
+            src="{{ section.settings.popup_image | image_url: width: 600 }}"
+            alt="{{ section.settings.popup_heading | escape }}"
+            loading="lazy" width="300">
+        </div>
+      {%- endif -%}
+      <div class="cp-nl-popup__content">
+        {%- if section.settings.popup_badge != blank -%}
+          <div class="cp-nl-popup__badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D81E2B" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.9 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+            {{ section.settings.popup_badge }}
+          </div>
+        {%- endif -%}
+        <h2 class="cp-nl-popup__h2">{{ section.settings.popup_heading | default: 'Get 10% off your first order' }}</h2>
+        {%- if section.settings.popup_subtext != blank -%}
+          <p class="cp-nl-popup__sub">{{ section.settings.popup_subtext }}</p>
+        {%- endif -%}
+        {%- form 'customer', id: 'cp-nl-popup-form', class: 'cp-nl-popup__form' -%}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <input type="hidden" name="contact[accepts_marketing]" value="true">
+          <input class="cp-nl-popup__input" type="email" name="contact[email]"
+            id="cp-nl-popup-email"
+            placeholder="{{ section.settings.popup_placeholder | default: 'Your email address' }}"
+            autocomplete="email"
+            required
+            aria-label="Email address">
+          <button class="cp-btn-primary cp-nl-popup__submit" type="submit">
+            {{ section.settings.popup_cta | default: 'Claim my 10% off' }}
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          {%- if form.posted_successfully? -%}
+            <div class="cp-nl-popup__success" role="status">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>
+              {{ section.settings.popup_success | default: "You're in! Check your inbox for your discount code." }}
+            </div>
+          {%- endif -%}
+        {%- endform -%}
+        <p class="cp-nl-popup__fine">{{ section.settings.popup_fine | default: 'No spam. Unsubscribe any time.' }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "CP Overlays + JS",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Newsletter popup"
+    },
+    {
+      "type": "checkbox",
+      "id": "popup_enabled",
+      "label": "Enable newsletter popup",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "popup_image",
+      "label": "Side image (optional — adds image column to popup)"
+    },
+    {
+      "type": "text",
+      "id": "popup_badge",
+      "label": "Badge label (leave blank to hide)",
+      "default": "Limited offer"
+    },
+    {
+      "type": "text",
+      "id": "popup_heading",
+      "label": "Heading",
+      "default": "Get 10% off your first order"
+    },
+    {
+      "type": "textarea",
+      "id": "popup_subtext",
+      "label": "Subtext",
+      "default": "Join 100,000+ Canadians getting honest nutrition tips and exclusive deals."
+    },
+    {
+      "type": "text",
+      "id": "popup_placeholder",
+      "label": "Email field placeholder",
+      "default": "Your email address"
+    },
+    {
+      "type": "text",
+      "id": "popup_cta",
+      "label": "Submit button label",
+      "default": "Claim my 10% off"
+    },
+    {
+      "type": "text",
+      "id": "popup_success",
+      "label": "Success message",
+      "default": "You're in! Check your inbox for your discount code."
+    },
+    {
+      "type": "text",
+      "id": "popup_fine",
+      "label": "Fine print",
+      "default": "No spam. Unsubscribe any time."
+    },
+    {
+      "type": "header",
+      "content": "Popup trigger timing"
+    },
+    {
+      "type": "range",
+      "id": "trigger_scroll_pct",
+      "label": "Trigger at scroll depth (%)",
+      "min": 10,
+      "max": 90,
+      "step": 5,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "trigger_delay_secs",
+      "label": "Or after X seconds (0 = disabled)",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "default": 28
+    }
+  ],
+  "presets": [{ "name": "CP Overlays + JS" }]
+}
+{% endschema %}

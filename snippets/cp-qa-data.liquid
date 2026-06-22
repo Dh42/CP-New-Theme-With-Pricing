@@ -1,0 +1,52 @@
+{%- comment -%}
+  Emits cp-qa-fi (flavour image) and cp-qa-sv (servings) JSON script tags for a product.
+  Mirrors the logic in cp-product-card.liquid so Quick Add drawer works on collection pages.
+  Usage: {%- render 'cp-qa-data', product: col_prod -%}
+{%- endcomment -%}
+
+{%- assign qa_fi_json = '' -%}
+{%- assign qa_fi_seen = '' -%}
+{%- assign qa_flavour_opt_idx = 0 -%}
+{%- for opt in product.options -%}
+  {%- assign opt_lc = opt | downcase -%}
+  {%- if opt_lc contains 'flavour' or opt_lc contains 'flavor' -%}
+    {%- assign qa_flavour_opt_idx = forloop.index -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if qa_flavour_opt_idx > 0 -%}
+  {%- for variant in product.variants -%}
+    {%- case qa_flavour_opt_idx -%}
+      {%- when 1 -%}{%- assign qa_fi_val = variant.option1 -%}
+      {%- when 2 -%}{%- assign qa_fi_val = variant.option2 -%}
+      {%- when 3 -%}{%- assign qa_fi_val = variant.option3 -%}
+    {%- endcase -%}
+    {%- assign qa_fi_seen_key = qa_fi_val | append: '|||' -%}
+    {%- unless qa_fi_seen contains qa_fi_seen_key -%}
+      {%- assign qa_fi_seen = qa_fi_seen | append: qa_fi_seen_key -%}
+      {%- assign qa_fi_img = variant.metafields.custom.flavor_image -%}
+      {%- if qa_fi_img != blank -%}
+        {%- assign qa_fi_val_json = qa_fi_val | json -%}
+        {%- assign qa_fi_url = qa_fi_img | image_url: width: 100 | json -%}
+        {%- unless qa_fi_json == '' -%}{%- assign qa_fi_json = qa_fi_json | append: ',' -%}{%- endunless -%}
+        {%- assign qa_fi_json = qa_fi_json | append: qa_fi_val_json | append: ':' | append: qa_fi_url -%}
+      {%- endif -%}
+    {%- endunless -%}
+  {%- endfor -%}
+{%- endif -%}
+{%- if qa_fi_json != '' -%}
+  <script type="application/json" class="cp-qa-fi" data-handle="{{ product.handle }}">{ {{ qa_fi_json }} }</script>
+{%- endif -%}
+
+{%- assign qa_sv_json = '' -%}
+{%- for variant in product.variants -%}
+  {%- assign qa_nutrify = variant.metafields.nutrify_nutrition_info.nutrify_nutrition_info_variant.value -%}
+  {%- assign qa_spc = qa_nutrify.servingsPerContainer | round -%}
+  {%- if qa_spc > 0 -%}
+    {%- unless qa_sv_json == '' -%}{%- assign qa_sv_json = qa_sv_json | append: ',' -%}{%- endunless -%}
+    {%- assign qa_sv_json = qa_sv_json | append: '"' | append: variant.id | append: '":' | append: qa_spc -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if qa_sv_json != '' -%}
+  <script type="application/json" class="cp-qa-sv" data-handle="{{ product.handle }}">{ {{ qa_sv_json }} }</script>
+{%- endif -%}

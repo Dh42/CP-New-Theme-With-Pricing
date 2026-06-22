@@ -1,0 +1,97 @@
+<script type="application/json" id="cp-discount-data-{{ product.id }}">
+{
+  "variants": {
+    {% for v in product.variants %}
+      "{{ v.id }}": {{ v.metafields.custom.custom_stacked_discount_chain | default: '' | json }}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  }
+}
+</script>
+
+<div id="cp-bfcm-discount-message-{{ product.id }}" style="display:none;"></div>
+
+<script>
+(function () {
+  var productId = {{ product.id }};
+  var dataEl = document.getElementById('cp-discount-data-' + productId);
+  if (!dataEl) return;
+
+  var data;
+  try {
+    data = JSON.parse(dataEl.textContent);
+  } catch (e) {
+    return;
+  }
+
+  function normalizeChain(chain) {
+    if (chain === null || chain === undefined) return '';
+    chain = String(chain);
+    return chain.replace(/\s+/g, '').replace(/\+/g, ',');
+  }
+
+  function parseCodes(chain) {
+    var norm = normalizeChain(chain);
+    if (!norm) return [];
+    return norm.split(',').filter(function (code) {
+      return code !== '';
+    });
+  }
+
+  function variantHas40S(variantChain) {
+    var codes = parseCodes(variantChain);
+    for (var i = 0; i < codes.length; i++) {
+      if (codes[i].toUpperCase() === '40S') return true;
+    }
+    return false;
+  }
+
+  function buildHtml40() {
+    return ''
+      + '<div style="text-align:left; line-height:1.35; margin-top:8px;">'
+      + '  <span style="display:inline-block; background:#00BADB; color:#ffffff; font-weight:800; font-size:20px; padding:6px 10px; border-radius:999px; letter-spacing:0.5px; margin-bottom:6px;">'
+      + '    40% OFF'
+      + '  </span>'
+      + '  <br>'
+      + '  <span style="font-size:22px; font-weight:700;">'
+      + '    Use code: <span style="font-weight:800;">SPRING</span>'
+      + '  </span>'
+      + '  <br>'
+      + '  <small style="color:#000000;">'
+      + '    Valid on select items only. Must apply discount code at checkout.'
+      + '  </small>'
+      + '</div>';
+  }
+
+  function updateMessage() {
+    var msgEl = document.getElementById('cp-bfcm-discount-message-' + productId);
+    if (!msgEl) return;
+
+    var idInput = document.querySelector('form[action^="/cart/add"] [name="id"]');
+    var variantId = idInput && idInput.value ? String(idInput.value) : null;
+
+    var variantChain =
+      (variantId && data.variants && data.variants[variantId] !== undefined)
+        ? data.variants[variantId]
+        : '';
+
+    if (variantHas40S(variantChain)) {
+      msgEl.innerHTML = buildHtml40();
+      msgEl.style.display = '';
+    } else {
+      msgEl.innerHTML = '';
+      msgEl.style.display = 'none';
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateMessage);
+  } else {
+    updateMessage();
+  }
+
+  document.addEventListener('change', function (e) {
+    var form = e.target.closest && e.target.closest('form[action^="/cart/add"]');
+    if (form) setTimeout(updateMessage, 20);
+  });
+})();
+</script>

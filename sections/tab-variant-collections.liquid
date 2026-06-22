@@ -1,0 +1,472 @@
+<!-- Tabs-collections-carousel-variants.liquid -->
+{{ 'hdt-tabs-collections.css' | asset_url | stylesheet_tag }}
+{%- comment -%}{{ 'hdt-card-products.css' | asset_url | stylesheet_tag }}{%- endcomment -%}
+
+{%- liquid
+  assign current_width = settings.page_width | append: 'px'
+  assign current_width_tb = '100vw'
+  assign current_width_mb = '100vw'
+  assign space_item = "30px"
+  assign space_item_tb = "15px"
+  assign space_item_mb = "15px"
+
+  if section.settings.section_fullwidth
+    if section.settings.boxed_fullwidth
+      assign current_width = '100vw - 80px'
+      assign current_width_tb = '100vw - 40px'
+      assign current_width_mb = '100vw - 10px'
+    else
+      assign current_width = '100vw'
+    endif
+  endif
+
+  assign color_list = 'products.theme_settings.color' | t | downcase | strip | replace: ' ,', ',' | replace: ', ', ',' | split: ',' | uniq
+  assign size_list  = 'products.theme_settings.size'  | t | downcase | strip | replace: ' ,', ',' | replace: ', ', ',' | split: ',' | uniq
+-%}
+
+{%- style -%}
+#{{section.id}} .hdt-tabs-head{--tab-border-width:{{section.settings.border_width}}px}
+{% if section.settings.tabs_head_spacing>30 %}
+  #{{section.id}} .hdt-tabs-head{--tabs-head-spacing:30px}
+  @media(min-width:1150px){#{{section.id}} .hdt-tabs-head{--tabs-head-spacing:{{section.settings.tabs_head_spacing}}px}}
+{% else %}
+  #{{section.id}} .hdt-tabs-head{--tabs-head-spacing:{{section.settings.tabs_head_spacing}}px}
+{% endif %}
+
+{% if section.settings.spacing_items>30 %}
+  #{{section.id}} .hdt-tabs-head .hdt-tabs-slider{--slide-spacing:30px;gap:30px}
+  @media(min-width:1150px){#{{section.id}} .hdt-tabs-head .hdt-tabs-slider{--slide-spacing:{{section.settings.spacing_items}}px;gap:{{section.settings.spacing_items}}px}}
+{% else %}
+  #{{section.id}} .hdt-tabs-head .hdt-tabs-slider{--slide-spacing:{{section.settings.spacing_items}}px;gap:{{section.settings.spacing_items}}px}
+{% endif %}
+{%- endstyle -%}
+
+{%- capture sizes -%}
+(min-width: 1150px) calc(({{ current_width }} -  ({{ space_item }} * ( {{ section.settings.col_dk }} - 1 ))) * 1 / {{ section.settings.col_dk }}),
+(min-width: 768px) calc( ({{ current_width_tb }} - ({{ space_item_tb }} * ( {{ section.settings.col_tb }} - 1 ))) * 1 / {{ section.settings.col_tb }}),
+calc( ({{ current_width_mb }} - ({{ space_item_mb }} * ( {{ section.settings.col_mb }} - 1 ) )) * 1 / {{ section.settings.col_mb }})
+{%- endcapture -%}
+
+<div id="{{ section.id }}"
+     class="hdt-section-spacing hdt-s-gradient"
+     style="--section-pt: {{ section.settings.padding_top }}px; --section-pb: {{ section.settings.padding_bottom }}px; --section-prate:{{ section.settings.padding_rate }};"
+     color-scheme="{{ section.settings.color_scheme }}">
+
+  <div class="hdt-container{%- if section.settings.section_fullwidth -%}-full{% endif %}">
+    <div class="hdt-tabs-{{ section.settings.tabs_des }}">
+
+      <!-- HEAD / TABS -->
+      <div class="hdt-tabs-head hdt-flex {% unless section.settings.heading_inline %}hdt-flex-col hdt-align-center {% else %}hdt-tabs-inline hdt-justify-between hdt-align-center{% endunless %}">
+        {% if section.settings.tabs_heading != blank %}
+          <h4 class="hdt-{{ section.settings.heading_size }} hdt-font-semibold hdt-truncate" hdt-reveal="slide-in" timeline>
+            {{ section.settings.tabs_heading }}
+          </h4>
+        {% endif %}
+
+        <hdt-tab id="Scroller-{{ section.id }}"
+                 class="hdt-tab hdt-tabs-list hdt-{{ section.blocks.size | at_most: 5 }}tab-item hdt-text-uppercase-{{ section.settings.text_transform }} hdt-flex {% unless section.settings.heading_inline %} hdt-row-grid--modify lg:hdt-justify-center{% else %} lg:hdt-justify-end{% endunless %}"
+                 aria-controls="{{ section.id }}-content">
+
+          <hdt-slider id="Slider-{{ section.id }}"
+                      class="hdt-tabs-slider hdt-flex md:hdt-justify-center hdt-oh hdt-slider hdt-slider__dots_outline hdt-text-uppercase-{{ section.settings.text_transform }} lg:hdt-slides-10 md:hdt-slides-6 hdt-slides-3"
+                      config='{ "id": "Slider-{{ section.id }}", "navUI": false, "dotUI": true }'
+                      hdt-reveal="slide-in"
+                      timeline>
+
+            <div class="hdt-slider__viewport hdt-relative">
+              <div class="hdt-slider__container">
+                {%- for block in section.blocks -%}
+                  <div class="hdt-slider__slide">
+                    {%- if block.type == "tab_item" -%}
+                      <button class="hdt-tabs-item-title hdt-inline-flex hdt-align-center hdt-justify-between hdt-relative hdt-text-{{ section.settings.tab_item_size }} hdt-font-{{ section.settings.tab_item_weight }}"
+                              aria-current="{% if forloop.first %}true{% else %}false{% endif %}"
+                              {{ block.shopify_attributes }}>
+                        <span class="hdt-collection-title-text hdt-truncate hdt-relative">{{ block.settings.title }}</span>
+                      </button>
+                    {%- else -%}
+                      <a class="hdt-tabs-item-title hdt-inline-flex hdt-align-center hdt-slider__slide hdt-justify-between hdt-relative hdt-text-{{ section.settings.tab_item_size }} hdt-font-{{ section.settings.tab_item_weight }}"
+                         href="{{ block.settings.item_link }}">
+                        <span class="hdt-collection-title-text hdt-truncate hdt-relative">{{ block.settings.title }}</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                          <path d="M1.07692 10L0 8.92308L7.38462 1.53846H0.769231V0H10V9.23077H8.46154V2.61538L1.07692 10Z" fill="currentColor"/>
+                        </svg>
+                      </a>
+                    {%- endif -%}
+                  </div>
+                {%- endfor -%}
+              </div>
+            </div>
+
+          </hdt-slider>
+        </hdt-tab>
+      </div>
+
+      <!-- CONTENT -->
+      <div id="{{ section.id }}-content">
+        {%- for block in section.blocks -%}
+          <div class="hdt-tab-item" tab-item {% if forloop.first %} tab-selected {% endif %}>
+
+            <hdt-slider id="Slider-{{ block.id }}"
+                        class="hdt-collection-products hdt-slider__products hdt-collection-has-pr{{ section.settings.product_des }} hdt-slider hdt-slider-parent hdt-slide-spacing-x hdt-relative {% if section.settings.navUI %}hdt-slider-has-nav hdt-nav-btns-{{ section.settings.nav_des }} hdt-nav-{{ section.settings.nav_pos }}{% endif %} hdt-slider__dots_outline {% if section.settings.dotUI %} hdt-slider-has-dots-dk{% endif %} hdt-ratio--{{ section.settings.image_ratio }} {% unless section.settings.image_size %} hdt-ratio--contain{% endunless %} lg:hdt-slides-{{ section.settings.col_dk }} md:hdt-slides-{{ section.settings.col_tb }} hdt-slides-{{ section.settings.col_mb }}"
+                        config='{ "id": "Slider-{{ block.id }}", "navUI": {{ section.settings.navUI }}, "dotUI": true, "navUICenter": true }'>
+
+              <div class="hdt-slider__viewport hdt-relative">
+                <div class="hdt-slider__container">
+
+                  {%- assign product_collection = block.settings.product_list | default: block.settings.collection.products -%}
+                  {%- assign tab_value = block.settings.match_key | downcase | strip %}
+
+                  {%- if product_collection != blank -%}
+
+                    {%- capture btn_wishlist_code -%}
+                      {%- if settings.wishlist_mode != '0' -%}
+                        {%- render 'btn-wishlist', class: 'hdt-card-product__btn-wishlist hdt-pr_btn', placement: 'top' -%}
+                      {%- endif -%}
+                    {%- endcapture -%}
+
+                    {%- assign shown_count = 0 -%}
+
+                    {%- for product in product_collection -%}
+                      {%- for v in product.variants -%}
+                        {%- if shown_count >= section.settings.products_count -%}
+                          {%- break -%}
+                        {%- endif -%}
+
+                        {%- if v.metafields.custom.featured_tab_group.value == tab_value -%}
+
+                          {%- unless settings.remove_collection_url or block.settings.product_list != blank -%}
+                            {%- assign product_url = product.url | within: block.settings.collection | append: '?variant=' | append: v.id -%}
+                          {%- endunless -%}
+
+                          {%- render 'card-variant', product: product, variant: v, class: "hdt-slider__slide hdt-pr-style1", section_id: block.id, sizes: sizes, image_ratio: section.settings.image_ratio, color_list: color_list, size_list: size_list, product_url: product_url, btn_wishlist_code: btn_wishlist_code, show_vendor: section.settings.show_vendor -%}
+
+                          {%- assign shown_count = shown_count | plus: 1 -%}
+                        {%- endif -%}
+
+                      {%- endfor -%}
+                    {%- endfor -%}
+
+                  {%- else -%}
+                    {%- for i in (1..section.settings.products_count) -%}
+                      {%- capture current -%}{% cycle 1, 2, 3, 4 %}{%- endcapture -%}
+                      {%- assign placeholder_image = 'product-apparel-' | append: current -%}
+                      {%- render 'card-product-placeholder', image_ratio: section.settings.image_ratio, placeholder_image: placeholder_image, section_id: block.id, class: "hdt-slider__slide" -%}
+                    {%- endfor -%}
+                  {%- endif -%}
+
+                </div>
+              </div>
+
+              {%- render 'nav_slider', section_id: block.id, nav_des: section.settings.nav_des -%}
+              <div hdt-slider-dots class="hdt-slider__dots hdt-flex hdt-align-center hdt-justify-center" aria-controls="Slider-{{ block.id }}"></div>
+
+              {%- if section.settings.use_pagination != "none" -%}
+                <div data-wrap-lm class="hdt-prs-footer hdt-pagination-wrapp hdt-pagination-{{ section.settings.use_pagination }} hdt-flex hdt-justify-{{ section.settings.paginate_pos }}"
+                     timeline
+                     hdt-reveal="slide-in"
+                     style="--pagination-distance:{{ section.settings.dis_pagination }}px;">
+                  <a class="hdt-view-all-btn hdt-btn hdt-oh hdt-inline-flex hdt-align-center hdt-justify-center hdt-relative hdt-btn-{{ section.settings.btn_style }} hdt-font-{{ section.settings.btn_fw }}"
+                     href="{{ block.settings.collection.url | default: routes.all_products_collection_url }}"
+                     hdt-reveal="slide-in"
+                     timeline>
+                    {% assign view_all_df = 'general.pagination.view_all' | t %}
+                    <span>{{ section.settings.btn_label | default: view_all_df | escape }}</span>
+                  </a>
+                </div>
+              {%- endif -%}
+
+            </hdt-slider>
+          </div>
+        {%- endfor -%}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Tabs Variants",
+  "tag": "section",
+  "class": "hdt-section hdt-tabs-collections",
+  "settings": [
+    { "type": "header", "content": "Section heading" },
+    { "type": "text", "id": "tabs_heading", "label": "Heading" },
+    {
+      "type": "select", "id": "heading_size", "label": "Heading size",
+      "options": [
+        { "value": "text-lg", "label": "Small" },
+        { "value": "h5", "label": "Medium" },
+        { "value": "h4", "label": "Large" },
+        { "value": "h3", "label": "XL" }
+      ],
+      "default": "h4"
+    },
+    { "type": "checkbox", "id": "heading_inline", "label": "Heading inline", "default": false },
+    {
+      "type": "range", "id": "tabs_head_spacing",
+      "min": 1, "max": 100, "step": 1,
+      "label": "Tabs head spacing", "default": 30
+    },
+
+    { "type": "header", "content": "Tabs list" },
+    {
+      "type": "select", "id": "tabs_des",
+      "label": "Tabs style",
+      "options": [
+        { "value": "underline", "label": "Underline" },
+        { "value": "outline", "label": "Outline" }
+      ],
+      "default": "underline"
+    },
+    {
+      "type": "select","id": "tab_item_size","label": "Tab text size",
+      "options": [
+        { "value": "lg", "label": "Normal" },
+        { "value": "12xl", "label": "Large" },
+        { "value": "14xl", "label": "XL" }
+      ],
+      "default": "lg"
+    },
+    {
+      "type": "select","id": "tab_item_weight","label": "Tab weight",
+      "options": [
+        { "value": "normal", "label": "Normal" },
+        { "value": "medium", "label": "Medium" },
+        { "value": "semibold", "label": "Semi-bold" },
+        { "value": "extrabold", "label": "Extra-bold" },
+        { "value": "bold", "label": "bold" }
+      ],
+      "default": "medium"
+    },
+    { "type": "checkbox", "id": "text_transform", "label": "Uppercase tabs", "default": false },
+    { "type": "range", "id": "border_width", "min": 1, "max": 3, "step": 1, "label": "Tab border width", "default": 2 },
+    { "type": "range", "id": "spacing_items", "min": 10, "max": 70, "step": 1, "label": "Tabs spacing", "unit": "px", "default": 30 },
+
+    { "type": "header", "content": "Products options" },
+    {
+      "type": "select","id": "product_des","label": "Product layout",
+      "options": [
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" },
+        { "value": "3", "label": "3" },
+        { "value": "4", "label": "4" },
+        { "value": "5", "label": "5" },
+        { "value": "6", "label": "6" },
+        { "value": "7", "label": "7" },
+        { "value": "8", "label": "8" },
+        { "value": "9", "label": "9" },
+        { "value": "10", "label": "10" },
+        { "value": "11", "label": "11" }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "select","id": "image_ratio","label": "Image ratio",
+      "options": [
+        { "value": "adapt_image", "label": "Adapt" },
+        { "value": "square", "label": "Square" },
+        { "value": "portrait", "label": "Portrait" },
+        { "value": "asos", "label": "Asos" },
+        { "value": "landscape", "label": "Landscape" },
+        { "value": "custom-pr", "label": "Custom" }
+      ],
+      "default": "adapt_image"
+    },
+    { "type": "checkbox", "id": "image_size", "label": "Cover", "default": true },
+    { "type": "checkbox", "id": "show_vendor", "label": "Show vendor", "default": false },
+
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "products_count", "min": 1, "max": 50, "step": 1, "label": "Max variants per tab", "default": 8 },
+    {
+      "type": "select", "id": "col_dk", "label": "Desktop columns",
+      "default": "4",
+      "options": [
+        { "label": "2", "value": "2" },
+        { "label": "3", "value": "3" },
+        { "label": "4", "value": "4" },
+        { "label": "5", "value": "5" },
+        { "label": "6", "value": "6" }
+      ]
+    },
+    {
+      "type": "select", "id": "col_tb", "label": "Tablet columns",
+      "default": "2",
+      "options": [
+        { "label": "1", "value": "1" },
+        { "label": "2", "value": "2" },
+        { "label": "3", "value": "3" },
+        { "label": "4", "value": "4" }
+      ]
+    },
+    {
+      "type": "select", "id": "col_mb", "label": "Mobile columns",
+      "default": "1",
+      "options": [
+        { "label": "1", "value": "1" },
+        { "label": "2", "value": "2" }
+      ]
+    },
+
+    { "type": "header", "content": "Slider" },
+    { "type": "checkbox", "id": "navUI", "label": "Show arrows", "default": false },
+    {
+      "type": "select", "id": "nav_des", "label": "Arrow style",
+      "options": [
+        { "value": "default", "label": "Default" },
+        { "value": "outline", "label": "Outline" },
+        { "value": "simple", "label": "Simple" }
+      ],
+      "default": "default"
+    },
+    {
+      "type": "select", "id": "nav_pos", "label": "Arrow position",
+      "options": [
+        { "value": "middle_in", "label": "Inside" },
+        { "value": "middle_out", "label": "Outside" }
+      ],
+      "default": "middle_in"
+    },
+    { "type": "checkbox", "id": "dotUI", "label": "Show dots", "default": false },
+
+    { "type": "select", "id": "use_pagination", "label": "Pagination",
+      "default": "none",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "view-all", "label": "View all link" }
+      ]
+    },
+    {
+      "type": "select", "id": "paginate_pos", "label": "Pagination position",
+      "default": "center",
+      "options": [
+        { "value": "start", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "end", "label": "Right" }
+      ]
+    },
+    { "type": "range", "id": "dis_pagination", "min": 0, "max": 100, "step": 1, "unit": "px", "label": "Pagination distance", "default": 30 },
+    { "type": "text", "id": "btn_label", "label": "View all label", "default": "View all" },
+    {
+      "type": "select","id": "btn_style","label": "Button style",
+      "options": [
+        { "value": "solid", "label": "Solid" },
+        { "value": "outline", "label": "Outline" },
+        { "value": "link", "label": "Link" }
+      ],
+      "default": "solid"
+    },
+    {
+      "type": "select","id": "btn_fw","label": "Button weight",
+      "options": [
+        { "value": "normal", "label": "Normal" },
+        { "value": "medium", "label": "Medium" },
+        { "value": "semibold", "label": "Semi-bold" },
+        { "value": "bold", "label": "Bold" }
+      ],
+      "default": "normal"
+    },
+
+    { "type": "header", "content": "Section layout" },
+    { "type": "checkbox", "id": "section_fullwidth", "label": "Full width", "default": false },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "background-1" },
+
+    { "type": "header", "content": "Padding" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 1, "unit": "px", "label": "Padding top", "default": 0 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 1, "unit": "px", "label": "Padding bottom", "default": 52 },
+    { "type": "range", "id": "padding_rate", "min": 0, "max": 100, "step": 1, "unit": "%", "label": "Padding rate", "default": 75 }
+  ],
+  "blocks": [
+    {
+      "type": "tab_item",
+      "name": "Tab item",
+      "settings": [
+        {
+        "type": "text",
+        "id": "title",
+        "label": "Tab Title (visible to customers)",
+        "default": "Extra 30% OFF",
+        },
+        {
+        "type": "text",
+        "id": "match_key",
+        "label": "Match Key (must match variant metafield: tab1/tab2/tab3/tab4)",
+        "default": "tab1"
+        },
+        {
+        "id": "collection",
+        "type": "collection",
+        "label": "Collection"
+        },
+        {
+          "type": "product_list",
+          "id": "product_list",
+          "label": "Product list (optional)"
+        }
+      ]
+    },
+    {
+      "type": "other_link",
+      "name": "Other link",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Tab title", "default": "Tab title" },
+        { "id": "item_link", "type": "url", "label": "Link" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tabs Collections (Variants)",
+      "blocks": [
+        {
+          "type": "tab_item",
+          "settings": {
+            "title": "Extra 20% OFF",
+            "match_key": "tab1",
+            "collection": "bfcm-2025",
+            "product_list": []
+          }
+        },
+        {
+          "type": "tab_item",
+          "settings": {
+            "title": "Extra 30% OFF",
+            "match_key": "tab2",
+            "collection": "",
+            "product_list": [
+              "limited-edition-mixed-berry-super-greens-powder",
+              "egg-white-protein-powder",
+              "all-natural-premium-vegan-protein-blend"
+            ]
+          }
+        },
+        {
+          "type": "tab_item",
+          "settings": {
+            "title": "Extra 40% OFF",
+            "match_key": "tab3",
+            "collection": "",
+            "product_list": [
+              "knee-sleeves",
+              "knee-wraps"
+            ]
+          }
+        },
+        {
+          "type": "tab_item",
+          "settings": {
+            "title": "Extra 10% OFF",
+            "match_key": "tab4",
+            "collection": "",
+            "product_list": [
+              "limited-edition-cinnamon-bun-vegan-protein",
+              "limited-edition-banana-cream-pie-vegan-protein",
+              "limited-edition-blueberry-cobbler-vegan-protein"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

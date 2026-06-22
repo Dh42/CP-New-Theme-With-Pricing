@@ -1,0 +1,1763 @@
+/* ══════════════════════════════════════════════════════════════
+   Canadian Protein — Product Page Redesign
+   V2: Apple-cool (off-white surfaces, near-black, hairline dividers)
+   ══════════════════════════════════════════════════════════════ */
+
+/* ─── CSS Variables ──────────────────────────────────────────── */
+.hdt-main-product {
+  --cp-black: #1A1A18;
+  --cp-surface: #fafaf8;
+  --cp-hairline: #EFEDE7;
+  --cp-muted: #888;
+  --cp-text: #555;
+  --cp-radius-sm: 8px;
+  --cp-radius-md: 12px;
+  --cp-radius-lg: 14px;
+}
+
+/* ─── Section Base ───────────────────────────────────────────── */
+.hdt-main-product {
+  background: #fafaf8;
+  font-family: 'Albert Sans', sans-serif;
+}
+
+.hdt-main-product.hdt-section-spacing {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Remove container side padding so columns extend to edges */
+.hdt-main-product > .hdt-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* ─── Stat Box — Vertical sidebar over product image ─────────── */
+.cp-stat-strip {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: #ffffff;
+  border: 2px solid #7B2D8B;
+  border-radius: 12px;
+  width: 110px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+}
+
+.cp-stat-strip__inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+}
+
+.cp-stat-strip__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 14px 10px;
+  border-bottom: 1px solid var(--cp-hairline);
+  border-right: none;
+}
+
+.cp-stat-strip__item:last-child {
+  border-bottom: none;
+}
+
+.cp-stat-strip__value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--cp-black);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  font-variant-numeric: tabular-nums;
+  font-family: 'Albert Sans', sans-serif;
+  text-align: center;
+}
+
+.cp-stat-strip__label {
+  font-size: 9px;
+  color: var(--cp-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: center;
+  line-height: 1.3;
+  font-weight: 500;
+  white-space: pre-line;
+  font-family: 'Albert Sans', sans-serif;
+}
+
+@media (max-width: 767px) {
+  .cp-stat-strip {
+    left: 8px;
+    width: 88px;
+  }
+
+  .cp-stat-strip__item {
+    padding: 10px 8px;
+  }
+
+  .cp-stat-strip__value {
+    font-size: 18px;
+  }
+}
+
+/* ─── Grid Layout — 48/48 ────────────────────────────────────── */
+@media (min-width: 768px) {
+  .hdt-main-product .hdt-product-media-wrapp {
+    width: 48% !important;
+  }
+
+  .hdt-main-product .hdt-product-info-wrapp {
+    width: 48% !important;
+  }
+
+  .hdt-main-product .hdt-row-flex {
+    align-items: stretch;
+  }
+}
+
+/* ─── Image Column ───────────────────────────────────────────── */
+.hdt-main-product .hdt-product-media-wrapp {
+  background: #fafaf8 !important;
+  padding: 20px;
+  position: relative;
+}
+
+.hdt-main-product .cp-sticky-media-inner {
+  position: sticky;
+  top: calc(var(--header-height, 88px) + 16px);
+}
+
+/* White card only on the main image viewport, not the nutrition boxes or thumbnails */
+.hdt-main-product .nemo-slider-col {
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.hdt-main-product .hdt-product-media__main {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Thumbnails sit below the white card on the gray page background */
+.hdt-main-product .hdt-product-media__thumb {
+  background: #fafaf8 !important;
+  padding-top: 12px;
+  overflow: visible;
+}
+
+@media (min-width: 768px) {
+  .hdt-main-product .hdt-product-media__thumb {
+    display: none !important;
+  }
+}
+.hdt-main-product .hdt-product-media__thumb hdt-slider-thumb {
+  --slide-size: 12% !important;
+}
+.hdt-main-product .hdt-product-media__thumb .hdt-slider__slide {
+  flex: 0 0 12% !important;
+  max-width: 12% !important;
+}
+
+/* Sticky image: JS (cpInitStickyMedia) handles the translateY behaviour and
+   caps at maxSlide so the image never overruns the media column. */
+
+/* Image: contain with padding */
+.hdt-main-product .hdt-product-media-wrapp .hdt-ratio > img,
+.hdt-main-product .hdt-product-media-wrapp .hdt-ratio > .zoom {
+  object-fit: contain !important;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+/* Thumbnails: much less padding so the image fills the box */
+.hdt-main-product .hdt-product-media-wrapp .hdt-thumbnail__media .hdt-ratio > img,
+.hdt-main-product .hdt-product-media-wrapp .hdt-thumbnail__media .hdt-ratio > .zoom {
+  padding: 6px;
+}
+
+/* ─── Mobile title header (vendor + h1 + reviews above image) ──────── */
+/* Desktop: show original in info col, hide mobile duplicate */
+.cp-mobile-title-header {
+  display: none;
+}
+/* Mobile: show header, hide original title+reviews in info col */
+@media (max-width: 767px) {
+  .cp-mobile-title-header {
+    display: block;
+    margin-bottom: 2px;
+    padding-left: 10px;
+    margin-top: 15px;
+  }
+  .cp-mobile-title-header .hdt-product-info__item:first-child {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  .hdt-product-info-wrapp .cp-desktop-title-section {
+    display: none;
+  }
+
+  /* Price + reviews row: flex so price sits LEFT of reviews */
+  .cp-mobile-title-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0;
+  }
+  /* Title takes full width on its own row */
+  .cp-mobile-title-header .hdt-product-info__item {
+    flex: 0 0 100%;
+    order: 1;
+  }
+  /* Reviews sit on same row as sold count */
+  .cp-mobile-app-block {
+    order: 2;
+    flex: 0 0 auto;
+    margin: 2px 0 4px;
+  }
+  .cp-mobile-app-block .junip-product-summary-stars-wrapper {
+    display: inline-flex !important;
+  }
+  /* Price full width row under reviews */
+  .cp-mobile-price {
+    order: 4;
+    flex: 0 0 100%;
+    margin-bottom: 4px;
+  }
+  .cp-mobile-price .hdt-price-wrapp {
+    margin: 0;
+  }
+  .cp-mobile-price .hdt-price {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+  }
+  /* Price on its own row; servings pill + bogo badge share the row below */
+  .cp-mobile-price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .cp-mobile-price .hdt-price-wrapp {
+    flex: 0 0 100%;
+  }
+  .cp-mobile-price .cp-price-servings {
+    margin-top: 0;
+    flex: 0 0 auto;
+  }
+  .cp-mobile-price .cp-bogo-label-wrap {
+    flex: 0 0 auto;
+    margin-top: 0;
+  }
+  .cp-mobile-price .cp-bogo-label-wrap .product-label {
+    font-size: 11.5px;
+    padding: 5px 11px;
+    letter-spacing: 0.05em;
+  }
+  .cp-mobile-price .cp-price-servings__cps {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #1a6e30;
+    opacity: 1;
+  }
+  /* AI summary — full width row under price */
+  .cp-mobile-ai-summary {
+    order: 5;
+    flex: 0 0 100%;
+    margin: 4px 0 4px;
+    padding: 8px 0;
+    border-top: 1px solid #EFEDE7;
+    border-bottom: 1px solid #EFEDE7;
+  }
+  /* Hide the ai-summary block in the info col on mobile (shown in header instead) */
+  .hdt-product-info-wrapp .cp-ai-summary:not(.cp-mobile-ai-summary) {
+    display: none;
+  }
+
+  /* Hide the price block in the info column on mobile (shown in header instead) */
+  .hdt-product-info-wrapp .hdt-product__price {
+    display: none !important;
+  }
+
+  /* Remove row gap between image and info columns when stacked on mobile */
+  .hdt-main-product .hdt-row-flex {
+    row-gap: 0 !important;
+    gap: 0 !important;
+  }
+
+  /* Hide the small thumbnail strip (second row) on mobile — fully collapse it */
+  .hdt-main-product .hdt-product-media__thumb {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+  /* Collapse any residual space from the hdt-product-media component on mobile */
+  .hdt-main-product .hdt-product-media {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .hdt-main-product .nemo-slider-col {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .hdt-main-product .hdt-product-media-wrapp {
+    padding-bottom: 0 !important;
+  }
+}
+
+/* Fix thumbnail reveal delay — bypass the reval/revealInView intersection-observer system.
+   The theme adds [reval] to each .hdt-thumbnail__media slide and uses an IntersectionObserver
+   to transition them from hidden → visible. Combined with loading="lazy" on the images,
+   this causes a 5–8 s blank/flash. Force immediate visibility to eliminate the delay. */
+.hdt-main-product .hdt-product-media-wrapp .hdt-thumbnail__media,
+.hdt-main-product .hdt-product-media-wrapp .hdt-thumbnail__media[reval] {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  transition: none !important;
+}
+.hdt-main-product .hdt-product-media-wrapp .hdt-thumbnail__media img {
+  content-visibility: visible !important;
+}
+
+.hdt-main-product .hdt-product-media-wrapp .hdt-product__media-item {
+  background: #ffffff !important;
+}
+
+/* Thumbnails — clean styling */
+.hdt-main-product .hdt-product-media-wrapp .hdt-product__thumb-item {
+  border-radius: var(--cp-radius-sm);
+  overflow: hidden;
+  background: var(--cp-surface);
+}
+
+.hdt-main-product .hdt-product-media-wrapp .hdt-product__thumb-item.is--active,
+.hdt-main-product .hdt-product-media-wrapp .hdt-product__thumb-item:hover {
+  outline: 2px solid var(--cp-black);
+  outline-offset: 2px;
+}
+
+/* ─── Info Column Padding ────────────────────────────────────── */
+@media (min-width: 768px) {
+  .hdt-main-product .hdt-product-info-wrapp {
+    padding: 48px 48px 64px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hdt-main-product .hdt-product-info-wrapp {
+    padding: 8px 16px 40px !important;
+  }
+}
+
+/* ─── Sold this month ────────────────────────────────────────── */
+/* Image column — darken on desktop, hide on mobile (shown in title header instead) */
+.cp-sold-count {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #1A1A18 !important;
+}
+.cp-sold-count strong {
+  font-weight: 800 !important;
+}
+@media (max-width: 767px) {
+  .cp-sold-count {
+    display: none !important;
+  }
+}
+
+/* Mobile title header version — same row as reviews */
+.cp-sold-count-mobile {
+  display: none;
+}
+@media (max-width: 767px) {
+  .cp-sold-count-mobile {
+    display: inline-flex;
+    align-items: center;
+    order: 2;
+    flex: 0 0 auto;
+    margin: 2px 0 4px 10px;
+    padding-left: 10px;
+    border-left: 1.5px solid #ccc;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1A1A18;
+    font-family: 'Albert Sans', sans-serif;
+    line-height: 1;
+  }
+  .cp-sold-count-mobile strong {
+    font-weight: 800;
+    margin-right: 2px;
+  }
+}
+
+/* Desktop: inline copy rendered next to reviews in info column */
+.cp-sold-count-desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  .cp-desktop-title-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .cp-desktop-title-section > .hdt-product__title {
+    flex: 0 0 100%;
+  }
+  /* Stop the Shopify app block wrapper from stretching to full row width */
+  .cp-desktop-title-section .shopify-app-block:has([class^=junip-]) {
+    flex-grow: 0 !important;
+    max-width: none !important;
+    width: auto !important;
+  }
+  /* Stop the reviews widget growing to fill the row */
+  .cp-desktop-title-section .junip-product-summary-stars-wrapper {
+    display: inline-flex !important;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+  .cp-desktop-title-section .cp-sold-count-desktop {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 14px;
+    padding-left: 14px;
+    border-left: 1.5px solid #ddd;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1A1A18;
+    font-family: 'Albert Sans', sans-serif;
+    white-space: nowrap;
+    line-height: 1;
+  }
+}
+
+/* ─── Category Badge + Best Seller Pill ─────────────────────── */
+.cp-product-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.cp-product-badge__category {
+  font-size: 11px;
+  color: #999;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: 'Albert Sans', sans-serif;
+}
+
+.cp-product-badge__pill {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 20px;
+  border: 1px solid var(--cp-hairline);
+  color: var(--cp-black);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-family: 'Albert Sans', sans-serif;
+}
+
+/* ─── Product Title ──────────────────────────────────────────── */
+.hdt-main-product .hdt-product__title {
+  font-family: 'Albert Sans', sans-serif !important;
+  font-weight: 600 !important;
+  color: var(--cp-black) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.035em !important;
+  margin-bottom: 14px !important;
+}
+
+@media (min-width: 768px) {
+  .hdt-main-product .hdt-product__title {
+    font-size: 44px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hdt-main-product .hdt-product__title {
+    font-size: 30px !important;
+    letter-spacing: -0.03em !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+/* ─── Price ──────────────────────────────────────────────────── */
+.hdt-main-product .hdt-product__price .hdt-price-item--regular,
+.hdt-main-product .hdt-product__price .hdt-price__sale .hdt-price-item--sale {
+  font-family: 'Albert Sans', sans-serif;
+  font-weight: 600 !important;
+  color: var(--cp-black) !important;
+  line-height: 1 !important;
+  letter-spacing: -0.025em !important;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (min-width: 768px) {
+  .hdt-main-product .hdt-product__price .hdt-price-item--regular,
+  .hdt-main-product .hdt-product__price .hdt-price__sale .hdt-price-item--sale {
+    font-size: 32px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hdt-main-product .hdt-product__price .hdt-price-item--regular,
+  .hdt-main-product .hdt-product__price .hdt-price__sale .hdt-price-item--sale {
+    font-size: 28px !important;
+  }
+}
+
+.hdt-main-product .hdt-product__price .hdt-price-item--compare {
+  font-size: 16px !important;
+  color: var(--cp-muted) !important;
+  font-weight: 400 !important;
+}
+
+/* ─── Variant Labels ─────────────────────────────────────────── */
+.hdt-main-product .hdt-variant__label,
+.hdt-main-product .hdt-variant-swatch__label {
+  font-family: 'Albert Sans', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: var(--cp-muted) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  margin-bottom: 10px !important;
+}
+
+/* ─── Flavor Swatches — Circles ──────────────────────────────── */
+.hdt-main-product .hdt-color-list-color,
+.hdt-main-product .hdt-color-list .hdt-color-list-color .hdt-color-bg {
+  border-radius: 50% !important;
+}
+
+.hdt-main-product .hdt-color-list .hdt-color-list-item .hdt-color-list-color {
+  width: 52px !important;
+  height: 52px !important;
+  min-width: 52px !important;
+  border-radius: 50% !important;
+  border: 3px solid transparent !important;
+  outline-offset: 2px !important;
+  transition: all 0.15s !important;
+}
+
+.hdt-main-product .hdt-color-list input:checked + .hdt-color-list-color,
+.hdt-main-product .hdt-color-list .hdt-color-list-color.is--active {
+  outline: 3px solid var(--cp-black) !important;
+}
+
+.hdt-main-product .hdt-color-list .hdt-color-list-color:hover {
+  outline: 3px solid rgba(0,0,0,0.25) !important;
+  transform: scale(1.08);
+}
+
+/* ─── Size Picker — Card Style ───────────────────────────────── */
+.hdt-main-product .hdt-product__variant-picker .hdt-variant__item:not(.hdt-color-list-item) .hdt-block {
+  border-radius: var(--cp-radius-md) !important;
+  border: 1px solid var(--cp-hairline) !important;
+  padding: 14px 10px !important;
+  font-family: 'Albert Sans', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  background: #fff !important;
+  color: var(--cp-black) !important;
+  transition: all 0.18s !important;
+  text-align: center !important;
+}
+
+.hdt-main-product .hdt-product__variant-picker .hdt-variant__item:not(.hdt-color-list-item) input:checked + .hdt-block,
+.hdt-main-product .hdt-product__variant-picker .hdt-variant__item:not(.hdt-color-list-item) .hdt-block.is--active {
+  border: 1.5px solid var(--cp-black) !important;
+  background: var(--cp-black) !important;
+  color: #fff !important;
+}
+
+/* Sold out variant styling */
+.hdt-main-product .hdt-product__variant-picker .hdt-variant__item .is-disabled .hdt-block,
+.hdt-main-product .hdt-product__variant-picker .hdt-variant__item .hdt-block.is--soldout {
+  opacity: 0.38 !important;
+  cursor: not-allowed !important;
+}
+
+/* ─── Purchase Options (Recharge) ────────────────────────────── */
+.hdt-main-product .hdt-product-info__item [class*="subscription"] *,
+.hdt-main-product .hdt-product-info__item .rca-widget-container * {
+  font-family: 'Albert Sans', sans-serif;
+}
+
+/* Subscribe & Save badge */
+.hdt-main-product .rca-subscription-option .rca-discount-badge,
+.hdt-main-product [class*="discount-badge"] {
+  background: var(--cp-black) !important;
+  color: #fff !important;
+  border-radius: 20px !important;
+  font-family: 'Albert Sans', sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+}
+
+/* ─── Qty Selector ───────────────────────────────────────────── */
+.hdt-main-product .hdt-qty-selector {
+  border: 1px solid var(--cp-hairline) !important;
+  border-radius: var(--cp-radius-md) !important;
+  overflow: hidden;
+  background: #fff !important;
+  align-self: stretch !important;
+  height: auto !important;
+}
+
+.hdt-main-product .hdt-qty-selector .hdt-qty-btn {
+  font-size: 20px !important;
+  color: var(--cp-black) !important;
+  font-weight: 300 !important;
+  width: 44px !important;
+  height: 100% !important;
+  min-height: 52px !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.hdt-main-product .hdt-qty-selector .hdt-qty-input {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: var(--cp-black) !important;
+  font-variant-numeric: tabular-nums;
+  font-family: 'Albert Sans', sans-serif !important;
+}
+
+/* ─── ATC Button ─────────────────────────────────────────────── */
+.hdt-main-product .hdt-product__buy-button .hdt-btn-solid,
+.hdt-main-product .hdt-product__buy-button button[name="add"] {
+  background: rgb(29, 185, 84) !important;
+  color: #fff !important;
+  border-color: rgb(29, 185, 84) !important;
+  border-radius: var(--cp-radius-lg) !important;
+  font-family: 'Albert Sans', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  letter-spacing: -0.005em !important;
+  padding: 13px 24px !important;
+  transition: background 0.2s !important;
+}
+
+.hdt-main-product .hdt-product__buy-button .hdt-btn-solid:hover,
+.hdt-main-product .hdt-product__buy-button button[name="add"]:hover {
+  background: rgb(22, 155, 68) !important;
+  border-color: rgb(22, 155, 68) !important;
+}
+
+/* ─── Trust Bar ──────────────────────────────────────────────── */
+.cp-trust-bar {
+  display: flex;
+  gap: 0;
+  border-top: 1px solid var(--cp-hairline);
+  border-bottom: 1px solid var(--cp-hairline);
+  margin: 20px 0;
+}
+
+.cp-trust-bar__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 14px 8px;
+  border-right: 1px solid var(--cp-hairline);
+}
+
+.cp-trust-bar__item:last-child {
+  border-right: none;
+}
+
+.cp-trust-bar__icon {
+  font-size: 17px;
+  opacity: 0.85;
+  line-height: 1;
+}
+
+.cp-trust-bar__text {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--cp-text);
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: 0.005em;
+  font-family: 'Albert Sans', sans-serif;
+}
+
+/* ─── Accordions ─────────────────────────────────────────────── */
+.hdt-main-product .hdt-accordion-item,
+.hdt-main-product details.hdt-accordion-item {
+  border-bottom: 1px solid var(--cp-hairline) !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.hdt-main-product .hdt-accordion-item summary,
+.hdt-main-product .hdt-accordion-item .hdt-accordion__head,
+.hdt-main-product details.hdt-accordion-item > summary {
+  font-family: 'Albert Sans', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  color: var(--cp-black) !important;
+  letter-spacing: -0.005em !important;
+  padding: 12px 0 !important;
+  background: transparent !important;
+}
+
+.hdt-main-product .hdt-accordion-item .hdt-accordion__content,
+.hdt-main-product details.hdt-accordion-item .hdt-accordion__body {
+  color: var(--cp-text) !important;
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+  padding-bottom: 18px !important;
+  font-family: 'Albert Sans', sans-serif !important;
+}
+
+/* ─── Reviews Section ────────────────────────────────────────── */
+.hdt-main-product .hdt-product__review-summary {
+  font-family: 'Albert Sans', sans-serif;
+}
+
+/* Stamped/reviews app container */
+.hdt-main-product [data-widget-type*="main"],
+.hdt-main-product #stamped-reviews-widget,
+.hdt-main-product .stamped-widget {
+  font-family: 'Albert Sans', sans-serif;
+}
+
+/* ─── Sticky ATC Bar ─────────────────────────────────────────── */
+.hdt-sticky-btn-atc .hdt-sticky-atc__submit {
+  border-radius: 14px !important;
+  background: rgb(29, 185, 84) !important;
+  border-color: rgb(29, 185, 84) !important;
+  color: #ffffff !important;
+  font-family: 'Albert Sans', sans-serif !important;
+  font-weight: 500 !important;
+  transition: background 0.2s !important;
+}
+
+.hdt-sticky-btn-atc .hdt-sticky-atc__submit:hover {
+  background: rgb(22, 155, 68) !important;
+  border-color: rgb(22, 155, 68) !important;
+}
+
+.hdt-sticky-btn-atc .hdt-sticky-atc__submit .hdt-btn-atc_text {
+  color: #ffffff !important;
+}
+
+/* ─── Stack & Save / Buy More Table ─────────────────────────── */
+.hdt-main-product .shappify-qty-msg {
+  border: 1px solid var(--cp-hairline) !important;
+  border-radius: var(--cp-radius-md) !important;
+  padding: 14px !important;
+  margin-top: 12px !important;
+}
+
+.hdt-main-product .shappify-qty-msg .h4 {
+  font-family: 'Albert Sans', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: var(--cp-black) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.03em !important;
+  margin-bottom: 8px !important;
+}
+
+.hdt-main-product table.shappify_qb_grid {
+  border-radius: var(--cp-radius-sm) !important;
+  overflow: hidden !important;
+  font-family: 'Albert Sans', sans-serif !important;
+  font-size: 13px !important;
+}
+
+.hdt-main-product table.shappify_qb_grid td {
+  color: var(--cp-text) !important;
+  border-color: var(--cp-hairline) !important;
+}
+
+/* ─── UGC Section ────────────────────────────────────────────── */
+.cp-ugc-section {
+  background: #000;
+  color: #fff;
+  padding: 88px 0 96px;
+  overflow: hidden;
+}
+
+.cp-ugc-section__header {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 5rem;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.cp-ugc-section__heading {
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  text-transform: uppercase;
+  margin: 0;
+  color: #fff;
+}
+
+.cp-ugc-section__tagline {
+  margin-top: 14px;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  font-weight: 500;
+  font-family: 'Albert Sans', sans-serif;
+}
+
+.cp-ugc-section__carousel-wrap {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.cp-ugc-section__scroller {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 80px 8px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.cp-ugc-section__scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.cp-ugc-section__card {
+  flex: 0 0 calc(25vw - 52px);
+  scroll-snap-align: start;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #0F0F0F;
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.cp-ugc-section__card-img-wrap {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  background: #1A1A18;
+  overflow: hidden;
+}
+
+.cp-ugc-section__card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 24px;
+  box-sizing: border-box;
+  display: block;
+}
+
+.cp-ugc-section__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.45) 100%);
+  pointer-events: none;
+}
+
+.cp-ugc-section__play-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+
+.cp-ugc-section__handle {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(0,0,0,0.6);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #fff;
+  font-family: 'Albert Sans', sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.cp-ugc-section__card-footer {
+  padding: 14px 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cp-ugc-section__caption {
+  font-size: 13px;
+  line-height: 1.35;
+  color: rgba(255,255,255,0.85);
+  font-family: 'Albert Sans', sans-serif;
+}
+
+.cp-ugc-section__cart-btn {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.cp-ugc-section__cart-btn:hover {
+  background: #f0f0f0;
+}
+
+.cp-ugc-section__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  cursor: pointer;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.cp-ugc-section__arrow:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+.cp-ugc-section__arrow--prev { left: 12px; }
+.cp-ugc-section__arrow--next { right: 12px; }
+
+@media (max-width: 767px) {
+  .cp-ugc-section {
+    padding: 56px 0 64px;
+  }
+
+  .cp-ugc-section__header {
+    padding: 0 1.5rem;
+    margin-bottom: 36px;
+  }
+
+  .cp-ugc-section__heading {
+    font-size: 32px;
+  }
+
+  .cp-ugc-section__tagline {
+    font-size: 12px;
+  }
+
+  .cp-ugc-section__scroller {
+    padding: 0 1.5rem 8px;
+  }
+
+  .cp-ugc-section__card {
+    flex: 0 0 240px;
+  }
+
+  .cp-ugc-section__arrow {
+    display: none;
+  }
+}
+
+/* ─── Misc cleanup ───────────────────────────────────────────── */
+/* Remove section gap between main-product and tabs */
+#shopify-section-main + [id^="shopify-section-"] {
+  margin-top: 0;
+}
+
+/* ─── Product Type / Vendor Label ───────────────────────────── */
+.cp-product-type-label {
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #999;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  line-height: 1;
+}
+
+/* ─── Hide Sezzle Widget ─────────────────────────────────────── */
+.sezzle-checkout-button-wrapper,
+.sezzle-widget,
+.sezzle-widget-container,
+[id*="sezzle"],
+[class*="sezzle"],
+hdt-payment-terms {
+  display: none !important;
+}
+
+/* ─── Info Column Background ─────────────────────────────────── */
+.hdt-main-product .hdt-product-info-wrapp {
+  background: #fafaf8 !important;
+}
+
+/* ─── Size Picker — Larger Pills ─────────────────────────────── */
+.hdt-main-product .hdt-product__variant-picker .hdt-product__values:not(.hdt-color-list) {
+  display: flex !important;
+  gap: 12px !important;
+}
+
+.hdt-main-product .hdt-product__variant-picker .hdt-variant__item:not(.hdt-color-list-item) {
+  flex: 1 !important;
+}
+
+.hdt-main-product .hdt-product-form__values:not(.hdt-color-list) {
+  display: flex !important;
+  gap: 12px !important;
+}
+
+.hdt-main-product .hdt-product-form__values:not(.hdt-color-list):not(.cp-flavor-values-wrap) .hdt-product-form_value.is-type-block {
+  flex: 0 0 46% !important;
+  padding: 13px 12px !important;
+  font-size: 16px !important;
+  border-radius: 14px !important;
+  min-height: 72px !important;
+  justify-content: center !important;
+  position: relative !important;
+  overflow: visible !important;
+}
+
+/* Best Value badge on 2kg size card */
+.cp-size-best-value {
+  position: absolute;
+  top: -9px;
+  right: 8px;
+  background: rgb(0, 186, 219);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  font-family: 'Albert Sans', sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 999px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.hdt-main-product .hdt-product-form_value.is-type-block .size-label-name {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  font-family: 'Albert Sans', sans-serif !important;
+}
+
+.hdt-main-product .hdt-product-form_value.is-type-block .size-label-cost {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  opacity: 0.7 !important;
+  font-family: 'Albert Sans', sans-serif !important;
+}
+
+/* ─── Variant Order — Flavor above Size ──────────────────────── */
+/* Both options are is-style-other; use data-index to differentiate:
+   data-index="0" = Protein Size (show second), data-index="1" = Protein Flavour (show first) */
+.hdt-main-product hdt-variant-picker {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.hdt-main-product hdt-variant-picker .hdt-product-form__input[data-index="1"] {
+  order: 1; /* Protein Flavour — show first */
+}
+
+.hdt-main-product hdt-variant-picker .hdt-product-form__input[data-index="0"] {
+  order: 2; /* Protein Size — show second */
+}
+
+/* ─── Price Row + Servings Pill ──────────────────────────────── */
+.hdt-main-product .hdt-product__price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cp-price-servings {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(29, 185, 84, 0.09);
+  border: 1px solid rgba(29, 185, 84, 0.22);
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.cp-price-servings__sep {
+  color: rgba(0, 0, 0, 0.25);
+  font-weight: 300;
+}
+
+.cp-price-servings__cps {
+  font-weight: 700;
+  color: #1a6e30;
+  font-size: 13.5px;
+}
+
+/* ─── Bogo / coupon label — inline under price ───────────────────── */
+.cp-bogo-label-wrap {
+  margin-top: 5px;
+}
+.cp-bogo-label-wrap .product-label,
+.template-product .cp-bogo-label-wrap .product-label {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #EA002B;
+  color: #fff;
+}
+
+/* ─── Accordion: hide browser disclosure marker ─────────────────── */
+.hdt-product-accordion__item summary::marker,
+.hdt-product-accordion__item summary::-webkit-details-marker {
+  display: none !important;
+  content: '' !important;
+}
+
+.hdt-product-accordion__item > summary {
+  list-style: none !important;
+}
+
+/* ─── Accordion: fix double + icon ──────────────────────────────── */
+/* hdt-product-tabs.css creates + via absolutely-positioned :before/:after bars.
+   theme.css creates + via ::after { content: '+' }. Both show at once = double icon.
+   Suppress the bar-based approach; let the content:'+' approach win cleanly. */
+.hdt-product-accordion__icon::before {
+  display: none !important;
+  content: none !important;
+}
+
+.hdt-product-accordion__icon::after {
+  content: '+' !important;
+  position: static !important;
+  display: inline !important;
+  background: none !important;
+  width: auto !important;
+  height: auto !important;
+  transform: none !important;
+  opacity: 1 !important;
+  border-radius: 0 !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+.hdt-product-accordion__icon {
+  width: auto !important;
+  height: auto !important;
+}
+
+/* ─── Accordion: reduce padding + remove border ──────────────────── */
+.hdt-product-accordion__item {
+  margin-bottom: 0 !important;
+}
+
+.hdt-product-accordion__item > summary {
+  padding: 10px 0 !important;
+}
+
+.hdt-product-accordion__content {
+  border: none !important;
+  padding: 0 40px 16px !important;
+  margin-top: 0 !important;
+}
+
+/* ─── Accordion section — hide after JS moves it into info col ───── */
+#shopify-section-tabs {
+  display: none;
+}
+.hdt-money {
+  font-weight: 700;
+}
+
+/* ─── Flavor swatch — grid with names ───────────────────────────── */
+/* Mobile: 4-column grid so icons fill the full row width evenly.
+   Three-class selector (0,3,0) beats theme's display:flex !important */
+@media (max-width: 767px) {
+  .hdt-color-mode__color_rounded .hdt-product-form__values.cp-flavor-values-wrap {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 6px !important;
+    justify-content: unset !important;
+    flex-wrap: unset !important;
+    overflow-x: hidden !important;
+  }
+}
+.hdt-product-form__input .cp-flavor-values-wrap .hdt-product-form_value.is-type-color {
+  flex-direction: column !important;
+  height: auto !important;
+  width: auto !important;
+  min-width: unset !important;
+  gap: 5px !important;
+  padding: 6px 2px 8px !important;
+  border-radius: 10px !important;
+  border: 2px solid transparent !important;
+  outline: none !important;
+  transition: border-color 0.15s !important;
+}
+/* Remove the circle from the inner swatch */
+.hdt-product-form__input .cp-flavor-values-wrap .hdt-product-form_value.is-type-color .hdt-form-color-pattern {
+  outline: none !important;
+  box-shadow: none !important;
+}
+/* Selected state — rounded rectangle, no circle */
+.hdt-product-form__input .cp-flavor-values-wrap input:checked + .hdt-product-form_value.is-type-color {
+  border-color: #1A1A18 !important;
+  background: rgba(26, 26, 24, 0.04) !important;
+  outline: none !important;
+}
+.hdt-product-form__input .cp-flavor-values-wrap .cp-flavor-name {
+  font-size: 10px;
+  line-height: 1.2;
+  text-align: center;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #1A1A18;
+  font-weight: 500;
+  font-family: 'Albert Sans', sans-serif;
+}
+/* Mobile collapse — JS sets --cp-flavor-row2-height */
+@media (max-width: 767px) {
+  .cp-flavor-values-wrap.cp-flavor-collapsed {
+    overflow: hidden !important;
+    max-height: var(--cp-flavor-row2-height, 200px) !important;
+  }
+}
+/* See More Flavours toggle button */
+.cp-flavor-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  margin-top: 4px;
+  padding: 11px 16px;
+  border: 1.5px solid #D0CEC7;
+  border-radius: 999px;
+  background: #fff;
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1A1A18;
+  cursor: pointer;
+  letter-spacing: -0.01em;
+}
+.cp-flavor-toggle:hover {
+  border-color: #1A1A18;
+}
+.cp-flavor-toggle__arrow {
+  font-size: 16px;
+  line-height: 1;
+  transition: transform 0.2s;
+}
+@media (min-width: 768px) {
+  .cp-flavor-toggle {
+    display: none !important;
+  }
+  .cp-flavor-name {
+    display: none !important;
+  }
+}
+
+/* ─── In Stock · Ships Fast badge ───────────────────────────────── */
+.cp-instock-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 11px 16px;
+  background: rgba(29, 185, 84, 0.09);
+  border-radius: 12px;
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a6e30;
+  letter-spacing: 0.005em;
+  box-sizing: border-box;
+}
+.cp-instock-badge__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #1db954;
+  flex-shrink: 0;
+  position: relative;
+}
+.cp-instock-badge__dot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(29, 185, 84, 0.5);
+  animation: cp-pulse-green 2s ease-in-out infinite;
+}
+@keyframes cp-pulse-green {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  55%       { transform: scale(2.8); opacity: 0; }
+}
+
+/* ─── Short description (above accordions) ───────────────────────── */
+.cp-short-description {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  font-family: 'Albert Sans', sans-serif;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #EFEDE7;
+  margin-bottom: 4px;
+}
+.cp-short-description p:last-child {
+  margin-bottom: 0;
+}
+
+/* ─── Flavor pill — selected value badge ─────────────────────────── */
+.hdt-product-form__label [update-value] {
+  display: inline-block;
+  background: #1A1A18;
+  color: #fff;
+  padding: 3px 11px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  vertical-align: middle;
+}
+
+/* ─── AI Summary — "What customers say" block ────────────────────── */
+.cp-ai-summary {
+  padding: 12px 0 4px;
+  border-top: 1px solid #EFEDE7;
+  border-bottom: 1px solid #EFEDE7;
+  margin: 4px 0 4px;
+}
+.cp-ai-summary__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.cp-ai-summary__title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1A1A18;
+  font-family: 'Albert Sans', sans-serif;
+}
+.cp-ai-summary__badge {
+  font-size: 11px;
+  color: #22c55e;
+  font-weight: 500;
+  font-family: 'Albert Sans', sans-serif;
+}
+.cp-ai-summary__text {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.55;
+  margin: 0;
+  font-family: 'Albert Sans', sans-serif;
+}
+
+/* ─── UGC Video Testimonials ────────────────────────────────────── */
+.cp-ugc-section {
+  background: #f5f4f2 !important;
+  color: #1A1A18 !important;
+  border-radius: 16px;
+  padding: 16px 16px 14px !important;
+  margin-top: 4px;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.cp-ugc-section__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: #1A1A18;
+  font-family: 'Albert Sans', sans-serif;
+}
+
+.cp-ugc-slider {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  overflow-y: clip;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 6px;
+  scrollbar-width: none;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  cursor: grab;
+  user-select: none;
+}
+.cp-ugc-slider:active {
+  cursor: grabbing;
+}
+
+.cp-ugc-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.cp-ugc-item {
+  flex: 0 0 calc(25% - 7.5px);
+  scroll-snap-align: start;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background: none;
+  display: block;
+}
+
+.cp-ugc-item__thumb {
+  width: 100%;
+  aspect-ratio: 11 / 15;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+.cp-ugc-item__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 10px;
+  transition: background 0.15s;
+}
+
+.cp-ugc-item:hover .cp-ugc-item__play {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.cp-ugc-item__play svg {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 1px 6px rgba(0,0,0,0.3));
+}
+
+/* Lightbox modal */
+/* ---- UGC Modal ---- */
+.cp-ugc-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+}
+.cp-ugc-modal.is-open { display: flex; }
+
+.cp-ugc-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.88);
+}
+
+.cp-ugc-modal__inner {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 16px;
+  z-index: 1;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.cp-ugc-modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  padding: 4px 9px;
+  border-radius: 50%;
+  opacity: 0.9;
+  z-index: 10;
+}
+.cp-ugc-modal__close:hover { opacity: 1; background: rgba(0,0,0,0.7); }
+
+.cp-ugc-modal__layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.cp-ugc-modal__video-wrap { position: relative; background: #000; }
+
+.cp-ugc-modal__video {
+  width: 100%;
+  display: block;
+  max-height: 56vh;
+  background: #000;
+  object-fit: contain;
+}
+
+/* ATC Panel */
+.cp-ugc-modal__panel {
+  background: #fff;
+  padding: 14px 16px 18px;
+  max-height: 38vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cp-ugc-modal__product-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.cp-ugc-modal__product-img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  border: 1px solid #eee;
+}
+.cp-ugc-modal__product-meta { flex: 1; min-width: 0; }
+.cp-ugc-modal__product-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A1A18;
+  font-family: 'Albert Sans', sans-serif;
+  margin: 0 0 2px;
+  line-height: 1.2;
+}
+.cp-ugc-modal__product-price {
+  font-size: 14px;
+  color: #1A1A18;
+  font-family: 'Albert Sans', sans-serif;
+  margin: 0;
+}
+
+/* Quick Add button (mobile header row) */
+.cp-ugc-modal__add-quick {
+  flex-shrink: 0;
+  background: #1A1A18;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Albert Sans', sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+.cp-ugc-modal__add-quick:hover { background: #333; }
+
+/* Option groups */
+.cp-ugc-modal__option-group { margin-bottom: 10px; }
+
+/* Flavor dropdown */
+.cp-ugc-modal__select {
+  width: 100%;
+  padding: 9px 36px 9px 12px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Albert Sans', sans-serif;
+  color: #1A1A18;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231A1A18' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 12px center;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+.cp-ugc-modal__select:focus { outline: none; border-color: #1A1A18; }
+
+/* Size pills */
+.cp-ugc-modal__pills { display: flex; flex-wrap: wrap; gap: 6px; }
+.cp-ugc-modal__pill {
+  padding: 7px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'Albert Sans', sans-serif;
+  color: #1A1A18;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.cp-ugc-modal__pill:hover { border-color: #1A1A18; }
+.cp-ugc-modal__pill.is-selected { background: #1A1A18; color: #fff; border-color: #1A1A18; }
+
+/* Full ATC button (desktop only) */
+.cp-ugc-modal__atc-btn {
+  display: none;
+  width: 100%;
+  padding: 13px;
+  background: rgb(29, 185, 84);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Albert Sans', sans-serif;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background 0.15s;
+}
+.cp-ugc-modal__atc-btn:hover { background: rgb(22, 155, 68); }
+
+/* Desktop: side-by-side */
+@media (min-width: 768px) {
+  .cp-ugc-modal__inner {
+    max-width: 900px;
+    margin: 0 24px;
+    max-height: 86vh;
+    overflow-y: visible;
+  }
+  .cp-ugc-modal__layout {
+    flex-direction: row;
+    align-items: stretch;
+    height: 86vh;
+    max-height: 86vh;
+    overflow: hidden;
+  }
+  .cp-ugc-modal__video-wrap { flex: 0 0 55%; }
+  .cp-ugc-modal__video {
+    max-height: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .cp-ugc-modal__panel {
+    flex: 1;
+    max-height: none;
+    overflow-y: auto;
+    padding: 28px 24px 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  .cp-ugc-modal__product-row { margin-bottom: 20px; }
+  .cp-ugc-modal__product-img { width: 64px; height: 64px; }
+  .cp-ugc-modal__product-title { font-size: 15px; }
+  .cp-ugc-modal__product-price { font-size: 15px; }
+  .cp-ugc-modal__option-group { margin-bottom: 14px; }
+  .cp-ugc-modal__add-quick { display: none; }
+  .cp-ugc-modal__atc-btn { display: block; margin-top: auto; }
+}
+
+/* ─── Fix: nav dropdowns above product sale labels ────────────── */
+/* .product-label has z-index:99 in root stacking context.
+   The header stacking context is only z-index:20 (base.css uses
+   .hdt-section-header.shopify-section-group-header-group which has
+   higher specificity than a single-class rule). Match it exactly
+   to win the cascade. */
+.hdt-section-header.shopify-section-group-header-group {
+  z-index: 200;
+}
+
+/* ─── YouTube facade ─────────────────────────────────────────────── */
+.cp-yt-facade {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cp-yt-facade img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cp-yt-facade__btn {
+  position: relative;
+  z-index: 1;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+  transition: transform 0.15s ease;
+}
+.cp-yt-facade:hover .cp-yt-facade__btn {
+  transform: scale(1.08);
+}
+.cp-yt-facade iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}

@@ -1,0 +1,88 @@
+{{ 'cp-homepage.css' | asset_url | stylesheet_tag }}
+
+<div class="cp-section cp-tier-bar">
+  <div class="cp-wrap cp-tier-bar__inner">
+    {%- if section.settings.label != blank -%}
+      <span class="cp-tier-bar__label">
+        {%- if section.settings.show_icon -%}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L4.5 13.5H11l-1 8.5L19.5 10H13z"/></svg>
+        {%- endif -%}
+        {{ section.settings.label }}
+      </span>
+    {%- endif -%}
+
+    <div class="cp-tier-bar__tiers">
+      {%- for block in section.blocks -%}
+        {%- unless forloop.first -%}
+          <span class="cp-tier-bar__sep" aria-hidden="true">|</span>
+        {%- endunless -%}
+        <span class="cp-tier-bar__tier" {{ block.shopify_attributes }}>
+          <b>{{ block.settings.qty_label }}</b>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="opacity:.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <span class="cp-tier-bar__tier-save">{{ block.settings.save_text }}</span>
+        </span>
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.note != blank -%}
+      <span class="cp-tier-bar__note">{{ section.settings.note }}</span>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CP Tier Bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Bar label",
+      "default": "Stack & Save"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_icon",
+      "label": "Show lightning icon beside label",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "note",
+      "label": "Trailing note",
+      "default": "Applied automatically at checkout"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tier",
+      "name": "Discount tier",
+      "settings": [
+        {
+          "type": "text",
+          "id": "qty_label",
+          "label": "Quantity label",
+          "default": "Buy 2"
+        },
+        {
+          "type": "text",
+          "id": "save_text",
+          "label": "Discount text",
+          "default": "10% off"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "CP Tier Bar",
+      "blocks": [
+        { "type": "tier", "settings": { "qty_label": "Buy 2", "save_text": "10% off" } },
+        { "type": "tier", "settings": { "qty_label": "Buy 3", "save_text": "15% off" } },
+        { "type": "tier", "settings": { "qty_label": "Buy 4+", "save_text": "25% off" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

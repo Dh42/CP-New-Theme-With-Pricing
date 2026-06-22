@@ -1,0 +1,30 @@
+<section class="product-safety-badge">
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'richtext' %}
+        <div class="safety-badge-block" {{ block.shopify_attributes }}>
+          {{ block.settings.content }}
+        </div>
+    {% endcase %}
+  {% endfor %}
+</section>
+
+{% schema %}
+{
+  "name": "Product: Custom Badge",
+  "templates": ["product"],
+  "max_blocks": 10,
+  "blocks": [
+    {
+      "type": "richtext",
+      "name": "Rich text",
+      "settings": [
+        { "type": "richtext", "id": "content", "label": "Content", "default": "<p>Your <strong>rich</strong> text here.</p>" }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "Product: Custom Badge" }
+  ]
+}
+{% endschema %}

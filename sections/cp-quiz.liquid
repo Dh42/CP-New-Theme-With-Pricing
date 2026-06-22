@@ -1,0 +1,144 @@
+{{ 'cp-homepage.css' | asset_url | stylesheet_tag }}
+
+{%- comment -%} Build quiz config JSON from blocks {%- endcomment -%}
+{%- assign quiz_items = '' -%}
+{%- for block in section.blocks -%}
+  {%- unless forloop.first -%}{%- assign quiz_items = quiz_items | append: ',' -%}{%- endunless -%}
+  {%- assign opts_items = '' -%}
+  {%- for n in (1..4) -%}
+    {%- assign lk = 'opt' | append: n | append: '_label' -%}
+    {%- assign ik = 'opt' | append: n | append: '_icon' -%}
+    {%- assign pk = 'opt' | append: n | append: '_product' -%}
+    {%- assign opt_label = block.settings[lk] -%}
+    {%- if opt_label != blank -%}
+      {%- unless opts_items == '' -%}{%- assign opts_items = opts_items | append: ',' -%}{%- endunless -%}
+      {%- assign opt_prod = all_products[block.settings[pk]] -%}
+      {%- capture opt_entry -%}{"label":{{ opt_label | json }},"icon":{{ block.settings[ik] | json }},"handle":{{ opt_prod.handle | json }}}{%- endcapture -%}
+      {%- assign opts_items = opts_items | append: opt_entry -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- capture q_entry -%}{"q":{{ block.settings.question_text | json }},"opts":[{{ opts_items }}]}{%- endcapture -%}
+  {%- assign quiz_items = quiz_items | append: q_entry -%}
+{%- endfor -%}
+
+<section class="cp-section cp-quiz" id="cp-quiz">
+  {%- if quiz_items != '' -%}
+    <script type="application/json" id="cp-quiz-config">[{{ quiz_items }}]</script>
+  {%- endif -%}
+
+  {%- comment -%} Hidden product data nodes consumed by quiz recommender JS {%- endcomment -%}
+  <div class="cp-quiz-data" hidden aria-hidden="true">
+    {%- for n in (1..4) -%}
+      {%- assign pk = 'result_product_' | append: n -%}
+      {%- assign wk = 'result_why_'     | append: n -%}
+      {%- assign rp = all_products[section.settings[pk]] -%}
+      {%- unless rp == blank -%}
+        <div data-quiz-product="{{ rp.handle }}"
+             data-handle="{{ rp.handle }}"
+             data-name="{{ rp.title | escape }}"
+             data-url="{{ rp.url }}"
+             data-img="{{ rp.featured_image | image_url: width: 300 }}"
+             data-price="{{ rp.selected_or_first_available_variant.price | money_without_trailing_zeros }}"
+             data-why="{{ section.settings[wk] | escape }}"
+        ></div>
+      {%- endunless -%}
+    {%- endfor -%}
+  </div>
+
+  <div class="cp-wrap cp-quiz__wrap">
+    <div class="cp-quiz__header">
+      <div class="cp-eyebrow">Product Finder</div>
+      <h2 class="cp-quiz__h2">{{ section.settings.heading | default: 'Find your perfect protein in 30 seconds' }}</h2>
+      <p class="cp-quiz__sub">{{ section.settings.subtext | default: "Three quick questions. We'll match you to your ideal formula." }}</p>
+    </div>
+    <div class="cp-quiz__progress" id="cp-quiz-progress" aria-hidden="true"></div>
+    <div class="cp-quiz-question-area"></div>
+    <div class="cp-quiz-result-area" style="display:none"></div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "CP Product Quiz",
+  "settings": [
+    { "type": "text",     "id": "heading", "label": "Heading", "default": "Find your perfect protein in 30 seconds" },
+    { "type": "textarea", "id": "subtext", "label": "Subtext",  "default": "Three quick questions. We'll match you to your ideal formula." },
+    { "type": "header",   "content": "Possible result products" },
+    { "type": "paragraph","content": "Add every product that the quiz could recommend." },
+    { "type": "product",  "id": "result_product_1", "label": "Result product 1" },
+    { "type": "text",     "id": "result_why_1",     "label": "Why text — product 1" },
+    { "type": "product",  "id": "result_product_2", "label": "Result product 2" },
+    { "type": "text",     "id": "result_why_2",     "label": "Why text — product 2" },
+    { "type": "product",  "id": "result_product_3", "label": "Result product 3" },
+    { "type": "text",     "id": "result_why_3",     "label": "Why text — product 3" },
+    { "type": "product",  "id": "result_product_4", "label": "Result product 4" },
+    { "type": "text",     "id": "result_why_4",     "label": "Why text — product 4" }
+  ],
+  "blocks": [
+    {
+      "type": "question",
+      "name": "Quiz question",
+      "settings": [
+        { "type": "text", "id": "question_text", "label": "Question", "default": "Your question here?" },
+        { "type": "header", "content": "Option 1" },
+        { "type": "text",   "id": "opt1_label",   "label": "Label",   "default": "Option A" },
+        {
+          "type": "select", "id": "opt1_icon", "label": "Icon", "default": "scale",
+          "options": [
+            { "value": "scale",  "label": "Scale (muscle / balance)" },
+            { "value": "bolt",   "label": "Bolt (energy / lean)" },
+            { "value": "heart",  "label": "Heart (wellness / care)" },
+            { "value": "shield", "label": "Shield (sensitive / protection)" },
+            { "value": "check",  "label": "Check (all clear)" },
+            { "value": "spark",  "label": "Spark (premium / quality)" }
+          ]
+        },
+        { "type": "product", "id": "opt1_product", "label": "Leads to product" },
+        { "type": "header", "content": "Option 2" },
+        { "type": "text",   "id": "opt2_label",   "label": "Label",   "default": "Option B" },
+        {
+          "type": "select", "id": "opt2_icon", "label": "Icon", "default": "bolt",
+          "options": [
+            { "value": "scale",  "label": "Scale (muscle / balance)" },
+            { "value": "bolt",   "label": "Bolt (energy / lean)" },
+            { "value": "heart",  "label": "Heart (wellness / care)" },
+            { "value": "shield", "label": "Shield (sensitive / protection)" },
+            { "value": "check",  "label": "Check (all clear)" },
+            { "value": "spark",  "label": "Spark (premium / quality)" }
+          ]
+        },
+        { "type": "product", "id": "opt2_product", "label": "Leads to product" },
+        { "type": "header",  "content": "Option 3 (leave label blank to hide)" },
+        { "type": "text",    "id": "opt3_label",   "label": "Label" },
+        {
+          "type": "select", "id": "opt3_icon", "label": "Icon", "default": "heart",
+          "options": [
+            { "value": "scale",  "label": "Scale (muscle / balance)" },
+            { "value": "bolt",   "label": "Bolt (energy / lean)" },
+            { "value": "heart",  "label": "Heart (wellness / care)" },
+            { "value": "shield", "label": "Shield (sensitive / protection)" },
+            { "value": "check",  "label": "Check (all clear)" },
+            { "value": "spark",  "label": "Spark (premium / quality)" }
+          ]
+        },
+        { "type": "product", "id": "opt3_product", "label": "Leads to product" },
+        { "type": "header",  "content": "Option 4 (leave label blank to hide)" },
+        { "type": "text",    "id": "opt4_label",   "label": "Label" },
+        {
+          "type": "select", "id": "opt4_icon", "label": "Icon", "default": "check",
+          "options": [
+            { "value": "scale",  "label": "Scale (muscle / balance)" },
+            { "value": "bolt",   "label": "Bolt (energy / lean)" },
+            { "value": "heart",  "label": "Heart (wellness / care)" },
+            { "value": "shield", "label": "Shield (sensitive / protection)" },
+            { "value": "check",  "label": "Check (all clear)" },
+            { "value": "spark",  "label": "Spark (premium / quality)" }
+          ]
+        },
+        { "type": "product", "id": "opt4_product", "label": "Leads to product" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "CP Product Quiz" }]
+}
+{% endschema %}

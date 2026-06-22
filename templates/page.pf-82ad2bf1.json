@@ -1,0 +1,39 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "pf-82ad2bf1": {
+      "type": "pf-82ad2bf1",
+      "settings": {
+        "pf_e0e7c07b_value": "Join our team as a Laboratory Technician, responsible for essential tasks such as running ATR-FTIR for compound identification, performing microbiological testing, conducting allergen testing using ELISA methods, formulating new products for nutritional supplements, conducting organoleptic analysis, and creating Certificates of Analyses. Click below for detailed responsibilities.<br>",
+        "pf_e1eb7ff4_value": "<b>Exciting Opportunity:&nbsp;<br></b><br>Are you a dynamic and enthusiastic individual eager to make an impact in the world of digital advertising? Look no further! Canadian Protein&nbsp;is actively seeking a motivated individual to join our team as a Junior Digital Advertising Specialist,",
+        "pf_e2e302b1_value": "<b>Exciting Opportunity:&nbsp;<br></b><br>Are you a dynamic and enthusiastic individual eager to make an impact in the world of email marketing? Look no further! Canadian Protein is actively seeking a motivated individual to join our team as a Junior Email Marketing Specialist.",
+        "pf_71e43f45_value": "<b>Exciting Opportunity:&nbsp;<br></b><br>Are you a dynamic and enthusiastic individual eager to make an impact in the world of marketing? Look no further! Canadian Protein&nbsp;is actively seeking a motivated individual to join our team as a Junior Marketing Specialist,",
+        "pf_59b51b8a_label": "Junior Digital Advertising Specialist",
+        "pf_1377392d_label": "Junior Email Marketing Specialist",
+        "pf_07cc0623_label": "Junior Marketing Specialist",
+        "pf_1e0c9fba_value": "LOCATION: WINDSOR, ONTARIO",
+        "pf_3f459b23_value": "LOCATION: WINDSOR, ONTARIO",
+        "pf_7bde0d28_value": "LOCATION: WINDSOR, ONTARIO",
+        "pf_f1518b95_value": "LOCATION: WINDSOR, ONTARIO",
+        "pf_153afd9f_value": "at Canadian Protein™",
+        "pf_3dd8c2f0_label": "Lab Technician<br>",
+        "pf_0dfe153a_value": "<b>Careers</b>",
+        "pf_12834011_value": "LEARN MORE",
+        "pf_1dcee0a5_value": "LEARN MORE",
+        "pf_a2ce47b4_value": "LEARN MORE",
+        "pf_ca703e9d_value": "LEARN MORE"
+      }
+    }
+  },
+  "order": [
+    "pf-82ad2bf1"
+  ]
+}

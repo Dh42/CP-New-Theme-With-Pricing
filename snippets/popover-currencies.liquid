@@ -1,0 +1,135 @@
+{%- assign flag_currency = true -%}
+
+{%- if settings.currency_type == "1" -%}
+    {%- comment -%}
+      COUNTRY-BASED SELECTOR (limit to US & CA)
+      No array building; filter inline inside the loop to avoid push-filter issues.
+    {%- endcomment -%}
+
+    {%- assign current_iso = localization.country.iso_code -%}
+    {%- assign selected_iso = '' -%}
+    {%- if current_iso == 'US' or current_iso == 'CA' -%}
+        {%- assign selected_iso = current_iso -%}
+    {%- else -%}
+        {%- assign has_us = false -%}{%- assign has_ca = false -%}
+        {%- for c in localization.available_countries -%}
+            {%- if c.iso_code == 'US' -%}{%- assign has_us = true -%}{%- endif -%}
+            {%- if c.iso_code == 'CA' -%}{%- assign has_ca = true -%}{%- endif -%}
+        {%- endfor -%}
+        {%- if has_us -%}
+            {%- assign selected_iso = 'US' -%}
+        {%- elsif has_ca -%}
+            {%- assign selected_iso = 'CA' -%}
+        {%- else -%}
+            {%- assign selected_iso = current_iso -%}
+        {%- endif -%}
+    {%- endif -%}
+
+    <hdt-popover class="hdt-popover-currencies hdt-popover hdt-dropdown hdt-hidden hdt-text-start hdt-current-scrollbar hdt-flag-size-sm"
+                 id="popover-currencies"
+                 placement="bottom"
+                 color-scheme="{{ settings.color_scheme_dialog }}"
+                 config='{ "closeRichlistSelect": true }'>
+        {%- assign formID = 'localization_form_currencies_' | append: id -%}
+        {%- form 'localization', id: formID -%}
+
+            {%- comment -%}
+              With 2 options max, this search will almost never show; keep logic intact.
+            {%- endcomment -%}
+            {%- assign allowed_count = 0 -%}
+            {%- for _c in localization.available_countries -%}
+                {%- if _c.iso_code == 'US' or _c.iso_code == 'CA' -%}
+                    {%- assign allowed_count = allowed_count | plus: 1 -%}
+                {%- endif -%}
+            {%- endfor -%}
+            {%- if allowed_count > 9 -%}
+                <country-filter>
+                    <input type="search" class="hdt-country_filter hdt-input" value placeholder="Search" name="country_filter">
+                </country-filter>
+            {%- endif -%}
+
+            <hdt-richlist role="listbox" selected="{{ selected_iso }}">
+                {%- for country in localization.available_countries -%}
+                    {%- if country.iso_code == 'US' or country.iso_code == 'CA' -%}
+                        <button type="submit"
+                                name="country_code"
+                                role="option"
+                                value="{{ country.iso_code }}"
+                                data-name="{{ country.name }}"
+                                aria-selected="{% if country.iso_code == selected_iso %}true{% else %}false{% endif %}">
+                            {%- if flag_currency -%}
+                                {{ country | image_url: width: 32 | image_tag: loading: 'lazy', class: 'hdt-flag hdt-relative' }}
+                            {%- endif -%}
+                            <span>{{- country.currency.iso_code }} {{ country.currency.symbol }} | {{ country.name }}</span>
+                        </button>
+                    {%- endif -%}
+                {%- endfor -%}
+            </hdt-richlist>
+
+        {%- endform -%}
+    </hdt-popover>
+
+{%- else -%}
+    {%- comment -%}
+      CURRENCY-LIST SELECTOR (limit to USD/CAD from settings.supported_currencies)
+      Fix variable order so data_currency is defined before used.
+    {%- endcomment -%}
+
+    {%- assign supported_codes = settings.supported_currencies | newline_to_br | split: '<br />' -%}
+    {%- capture dropdown -%}
+        {%- for code in supported_codes -%}
+            {%- liquid
+                assign array_money   = code | split: '-'
+                assign data_currency = array_money | first | upcase | strip | remove: ' '
+                assign name_money    = array_money | last  | strip
+            -%}
+            {%- if data_currency == 'USD' or data_currency == 'CAD' -%}
+                {%- if settings.auto_currency and forloop.first -%}
+                    <button class="hdt-item-auto wait"
+                            name="country_code"
+                            data-name="{{ data_currency }}"
+                            role="option"
+                            value="{{ data_currency }}"
+                            aria-selected="">
+                        {%- if flag_currency -%}
+                            <img width="30" height="22.5" class="hdt-flag hdt-relative"
+                                 src="//cdn.shopify.com/static/images/flags/{{ name_money | slice: 0, 2 | downcase }}.svg"
+                                 alt="{{ name_money }}" loading="lazy">
+                        {%- endif -%}
+                        <span>{{ name_money }}</span>
+                    </button>
+                {%- endif -%}
+
+                <button role="option"
+                        name="country_code"
+                        data-name="{{ data_currency }}"
+                        value="{{ data_currency }}"
+                        aria-selected="{% if data_currency == cart.currency.iso_code %}true{% else %}false{% endif %}">
+                    {%- if flag_currency -%}
+                        <img width="30" height="22.5" class="hdt-flag hdt-relative"
+                             src="//cdn.shopify.com/static/images/flags/{{ name_money | slice: 0, 2 | downcase }}.svg"
+                             alt="{{ name_money }}" loading="lazy">
+                    {%- endif -%}
+                    <span>{{ name_money }}</span>
+                </button>
+            {%- endif -%}
+        {%- endfor -%}
+    {%- endcapture -%}
+
+    <hdt-popover class="hdt-popover-currencies hdt-popover hdt-dropdown hdt-hidden hdt-text-start hdt-current-scrollbar hdt-flag-size-sm"
+                 id="popover-currencies"
+                 placement="bottom"
+                 color-scheme="{{ settings.color_scheme_dialog }}"
+                 config='{ "closeRichlistSelect": true }'>
+        {%- if supported_codes.size > 900 -%}
+            <country-filter>
+                <input type="search" class="hdt-country_filter hdt-input" value placeholder="Search" name="country_filter">
+            </country-filter>
+        {%- endif -%}
+        <hdt-richlist role="listbox" selected="">
+            {{- dropdown -}}
+        </hdt-richlist>
+    </hdt-popover>
+{%- endif -%}
+
+{% comment %} end popover currencies {% endcomment %}

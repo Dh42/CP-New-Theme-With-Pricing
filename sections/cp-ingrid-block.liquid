@@ -1,0 +1,260 @@
+{{ 'cp-category.css' | asset_url | stylesheet_tag }}
+{{ 'cp-category.js'  | asset_url | script_tag }}
+
+{%- liquid
+  assign insert_n  = section.settings.insert_after | default: 8
+  assign btype     = section.settings.block_type   | default: 'promo'
+  assign bg_col    = section.settings.bg_color      | default: '#111113'
+  assign txt_class = 'cp-ingrid-block--text-' | append: section.settings.text_color | default: 'cp-ingrid-block--text-light'
+  assign has_dest  = section.settings.desktop_image
+  assign has_mob   = section.settings.mobile_image
+-%}
+
+{%- comment -%}
+  Hidden source element — cp-category.js reads data-insert-after and
+  clones this content into the Globo product grid after card N.
+{%- endcomment -%}
+<div class="cp-ingrid-source"
+     data-insert-after="{{ insert_n }}"
+     style="display:none"
+     {{ section.shopify_attributes }}>
+
+  {%- if btype == 'image_only' -%}
+
+    <div class="cp-ingrid-block cp-ingrid-block--image">
+      {%- if has_dest or has_mob -%}
+        {%- assign link_url = section.settings.image_link -%}
+        {%- capture img_wrap_open -%}
+          {%- unless link_url == blank -%}<a href="{{ link_url }}">{%- endunless -%}
+        {%- endcapture -%}
+        {%- capture img_wrap_close -%}
+          {%- unless link_url == blank -%}</a>{%- endunless -%}
+        {%- endcapture -%}
+
+        {{ img_wrap_open }}
+          {%- if has_dest -%}
+            <img class="cp-ingrid-img-desktop"
+                 src="{{ has_dest | image_url: width: 1400 }}"
+                 srcset="{{ has_dest | image_url: width: 800 }} 800w, {{ has_dest | image_url: width: 1400 }} 1400w"
+                 sizes="(max-width: 767px) 0px, 100vw"
+                 alt="{{ section.settings.image_alt | escape }}"
+                 loading="lazy">
+          {%- endif -%}
+          {%- if has_mob -%}
+            <img class="cp-ingrid-img-mobile"
+                 src="{{ has_mob | image_url: width: 800 }}"
+                 srcset="{{ has_mob | image_url: width: 600 }} 600w, {{ has_mob | image_url: width: 800 }} 800w"
+                 sizes="(max-width: 767px) 100vw, 0px"
+                 alt="{{ section.settings.image_alt | escape }}"
+                 loading="lazy">
+          {%- elsif has_dest -%}
+            <img class="cp-ingrid-img-mobile"
+                 src="{{ has_dest | image_url: width: 800 }}"
+                 srcset="{{ has_dest | image_url: width: 600 }} 600w, {{ has_dest | image_url: width: 800 }} 800w"
+                 sizes="(max-width: 767px) 100vw, 0px"
+                 alt="{{ section.settings.image_alt | escape }}"
+                 loading="lazy">
+          {%- endif -%}
+        {{ img_wrap_close }}
+      {%- endif -%}
+    </div>
+
+  {%- else -%}
+
+    {%- comment -%} Promo type {%- endcomment -%}
+    <div class="cp-ingrid-block cp-ingrid-block--promo {{ txt_class }}"
+         style="background:{{ bg_col }}">
+
+      {%- if has_dest or has_mob -%}
+        <div class="cp-ingrid-promo__img-wrap">
+          {%- if has_dest -%}
+            <img class="cp-ingrid-img-desktop"
+                 src="{{ has_dest | image_url: width: 400 }}"
+                 alt="{{ section.settings.image_alt | escape }}"
+                 loading="lazy">
+          {%- endif -%}
+          {%- if has_mob -%}
+            <img class="cp-ingrid-img-mobile"
+                 src="{{ has_mob | image_url: width: 400 }}"
+                 alt="{{ section.settings.image_alt | escape }}"
+                 loading="lazy">
+          {%- elsif has_dest -%}
+            <img class="cp-ingrid-img-mobile"
+                 src="{{ has_dest | image_url: width: 400 }}"
+                 alt="{{ section.settings.image_alt | escape }}"
+                 loading="lazy">
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      <div class="cp-ingrid-promo__content">
+        {%- unless section.settings.eyebrow == blank -%}
+          <div class="cp-ingrid-promo__eyebrow">{{ section.settings.eyebrow }}</div>
+        {%- endunless -%}
+
+        {%- unless section.settings.heading == blank -%}
+          <div class="cp-ingrid-promo__heading">{{ section.settings.heading }}</div>
+        {%- endunless -%}
+
+        {%- unless section.settings.subtext == blank -%}
+          <p class="cp-ingrid-promo__sub">{{ section.settings.subtext }}</p>
+        {%- endunless -%}
+
+        {%- unless section.settings.cta_label == blank -%}
+          <a class="cp-ingrid-promo__btn"
+             href="{{ section.settings.cta_url | default: '#' }}">
+            {{ section.settings.cta_label }}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        {%- endunless -%}
+      </div>
+
+    </div>
+
+  {%- endif -%}
+
+</div>
+
+{%- comment -%} Theme editor preview — only shows in customiser {%- endcomment -%}
+{%- if request.design_mode -%}
+  <div class="cp-ingrid-preview">
+    <div class="cp-ingrid-preview__label">
+      In-grid block — injects after product #{{ insert_n }}
+    </div>
+    <div class="cp-ingrid-preview__content">
+      {%- if btype == 'image_only' -%}
+        Type: Image only
+        {%- if has_dest -%} · Desktop image set{%- else -%} · ⚠ No desktop image{%- endif -%}
+        {%- if has_mob -%} · Mobile image set{%- else -%} · (uses desktop for mobile){%- endif -%}
+      {%- else -%}
+        Type: Promo
+        {%- unless section.settings.heading == blank -%} · "{{ section.settings.heading }}"{%- endunless -%}
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "CP In-Grid Block",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Position"
+    },
+    {
+      "type": "number",
+      "id": "insert_after",
+      "label": "Insert after product #",
+      "default": 8,
+      "info": "Block will be injected into the product grid after this product number. E.g. 8 = after the 8th product card."
+    },
+    {
+      "type": "header",
+      "content": "Block type"
+    },
+    {
+      "type": "select",
+      "id": "block_type",
+      "label": "Block type",
+      "options": [
+        { "value": "image_only", "label": "Image only" },
+        { "value": "promo",      "label": "Promo (image + text + button)" }
+      ],
+      "default": "promo"
+    },
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile image (optional — desktop image used if blank)"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image alt text"
+    },
+    {
+      "type": "url",
+      "id": "image_link",
+      "label": "Image click link (image only type)"
+    },
+    {
+      "type": "header",
+      "content": "Promo text"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow text",
+      "placeholder": "Not sure where to start?"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "placeholder": "Find your perfect protein in 30 seconds."
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Subtext",
+      "placeholder": "Answer a few quick questions about your goals — we'll match you to the right product."
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Button label",
+      "placeholder": "Take the quiz"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "header",
+      "content": "Promo styling"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#111113"
+    },
+    {
+      "type": "select",
+      "id": "text_color",
+      "label": "Text colour",
+      "options": [
+        { "value": "light", "label": "Light (white text)" },
+        { "value": "dark",  "label": "Dark (black text)" }
+      ],
+      "default": "light"
+    }
+  ],
+  "presets": [
+    {
+      "name": "CP In-Grid Block",
+      "settings": {
+        "insert_after": 8,
+        "block_type": "promo",
+        "heading": "Find your perfect protein.",
+        "subtext": "Answer a few quick questions — we'll match you to the right formula and size.",
+        "cta_label": "Take the quiz",
+        "bg_color": "#111113",
+        "text_color": "light"
+      }
+    }
+  ]
+}
+{% endschema %}

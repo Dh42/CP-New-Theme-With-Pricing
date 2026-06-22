@@ -1,0 +1,28 @@
+{% assign bestseller_map =
+        "bestseller-1:10000,
+   bestseller-2:9000,
+   bestseller-3:8000,
+   bestseller-4:7000,
+   bestseller-5:6000,
+   bestseller-6:5000,
+   bestseller-7:4000,
+   bestseller-8:3000,
+   bestseller-9:2000,
+   bestseller-10:1000" | split: "," %}
+
+{% for tag_value in bestseller_map %}
+    {% assign tag_parts = tag_value | strip | split: ":" %}
+    {% assign tag_name = tag_parts[0] %}
+    {% assign sold_count = tag_parts[1] %}
+
+    {% if product.tags contains tag_name %}
+        <div class="hdt-product-info__item hdt-product__badges cp-sold-badge">
+            <div class="hdt-product__status-content hdt-inline-flex hdt-align-center" style="vertical-align: middle;">
+                <p class="hdt-s-text hdt-font">
+                        <span class="hdt-font-semibold">{{ sold_count }}+</span> sold this month
+                </p>
+            </div>
+        </div>
+        {% break %}
+    {% endif %}
+{% endfor %}

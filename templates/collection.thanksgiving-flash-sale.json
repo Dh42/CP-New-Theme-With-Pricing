@@ -1,0 +1,754 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-collection",
+      "blocks": {
+        "6df762d7-beda-4452-bcf6-1242b294077c": {
+          "type": "description",
+          "settings": {
+            "description": "Thanksgiving Flash Sale"
+          }
+        },
+        "9a1347b4-da62-490d-9fd4-427a03686ac2": {
+          "type": "heading",
+          "settings": {
+            "heading": "25% Off Sitewide"
+          }
+        }
+      },
+      "block_order": [
+        "6df762d7-beda-4452-bcf6-1242b294077c",
+        "9a1347b4-da62-490d-9fd4-427a03686ac2"
+      ],
+      "settings": {
+        "spacing_hd": 10,
+        "color_scheme": "scheme-2",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "marquee_mx4yME": {
+      "type": "marquee",
+      "blocks": {
+        "item_a976f7": {
+          "type": "item",
+          "settings": {
+            "text": "<p>2X Loyalty Points</p>",
+            "icon_svg": "dividing_icon",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        },
+        "item_BW4DUK": {
+          "type": "item",
+          "settings": {
+            "text": "<p>Free Shaker Cup</p>",
+            "icon_svg": "dividing_icon",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        }
+      },
+      "block_order": [
+        "item_a976f7",
+        "item_BW4DUK"
+      ],
+      "name": "t:sections.marquee.name",
+      "settings": {
+        "space_item": 60,
+        "speed": 0.1,
+        "direction": "rtl",
+        "marquee_pause_when_hover": false,
+        "text_fs": "h5",
+        "text_fw": "normal",
+        "text_uppercase": false,
+        "adding_border": true,
+        "icon_position_between": true,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 15,
+        "padding_rate": 75
+      }
+    },
+    "top_heading_74naTk": {
+      "type": "top-heading",
+      "blocks": {
+        "sub_heading_B86Yza": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "<a href=\"https://canadianprotein.com/collections/thanksgiving-flash-sale#faq\"><small>Some exclusions may apply. While supplies last. <br>Terms & Conditions apply to free gift. <u>Click here for more details.<u></u></u></small></a>",
+            "sub_heading_fs": "base"
+          }
+        }
+      },
+      "block_order": [
+        "sub_heading_B86Yza"
+      ],
+      "settings": {
+        "spacing_item": 0,
+        "alignment": "center",
+        "alignment_mb": "center",
+        "fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "padding_rate": 40
+      }
+    },
+    "top_heading_KpPgyy": {
+      "type": "top-heading",
+      "blocks": {
+        "sub_heading_hfntch": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "Use discount code:",
+            "sub_heading_fs": "lg"
+          }
+        }
+      },
+      "block_order": [
+        "sub_heading_hfntch"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacing_item": 0,
+        "alignment": "center",
+        "alignment_mb": "center",
+        "fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "padding_rate": 40
+      }
+    },
+    "icon_with_text_2_E4fh46": {
+      "type": "icon-with-text-2",
+      "disabled": true,
+      "name": "Icon-with-text2",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "btn_label": "Shop All",
+        "btn_link": "#shopall",
+        "target": false,
+        "btn_size": "xl",
+        "btn_style": "outline",
+        "btn_fw": "bold",
+        "btn_icon": "none",
+        "padding_top": 10,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_CWHEmW": {
+      "type": "custom-line",
+      "disabled": true,
+      "name": "Custom line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 1,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "padding_rate": 75
+      }
+    },
+    "categories_section_WybXU9": {
+      "type": "categories-section",
+      "blocks": {
+        "collection_item_3jDXjf": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "whey-protein-isolate",
+            "title": "Whey Protein Isolate",
+            "collection_link": "shopify://products/100-whey-protein-isolate"
+          }
+        },
+        "collection_item_TxQm8w": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "creatine-supplements",
+            "title": "Creatine",
+            "collection_link": "shopify://products/creatine-monohydrate"
+          }
+        },
+        "collection_item_YfM8Pd": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/C-PRE-Blue-Raspberry_b305a934-1e5c-416e-a614-2663d14e6f43.jpg",
+            "title": "C-Pre",
+            "collection_link": "shopify://products/c-pre"
+          }
+        },
+        "collection_item_qmeK9w": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "whey-concentrate",
+            "title": "Whey Protein Concentrate",
+            "collection_link": "shopify://products/whey-protein-concentrate"
+          }
+        },
+        "collection_item_Jg6gej": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "bcaas-branched-chain-amino-acids",
+            "title": "BCAAs",
+            "collection_link": "shopify://products/bcaa"
+          }
+        },
+        "collection_item_UVzWNG": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "micellar-casein",
+            "title": "Micellar Casein",
+            "collection_link": "shopify://products/micellar-casein"
+          }
+        },
+        "collection_item_JCaEfn": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "vegan-protein",
+            "title": "Vegan Protein",
+            "collection_link": "shopify://products/all-natural-premium-vegan-protein-blend"
+          }
+        },
+        "collection_item_YrJWjt": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "omega-supplements",
+            "title": "Omega-3 Softgels",
+            "collection_link": "shopify://products/omega-3"
+          }
+        },
+        "collection_item_a7cmDa": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "grass-fed-new-zealand-whey-concentrate",
+            "title": "Grass-Fed New Zealand Whey Protein",
+            "collection_link": "shopify://products/grass-fed-new-zealand-whey-protein-concentrate"
+          }
+        },
+        "collection_item_Db84Ph": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "l-glutamine",
+            "title": "L-Glutamine",
+            "collection_link": "shopify://products/l-glutamine"
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_3jDXjf",
+        "collection_item_TxQm8w",
+        "collection_item_YfM8Pd",
+        "collection_item_qmeK9w",
+        "collection_item_Jg6gej",
+        "collection_item_UVzWNG",
+        "collection_item_JCaEfn",
+        "collection_item_YrJWjt",
+        "collection_item_a7cmDa",
+        "collection_item_Db84Ph"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-1",
+        "style": "normal",
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "padding_rate": 50
+      }
+    },
+    "custom_line_gGhH7p": {
+      "type": "custom-line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#00badb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 25,
+        "padding_rate": 75
+      }
+    },
+    "discount_collection_mGxVtH": {
+      "type": "discount-collection",
+      "name": "t:sections.collection_products.discount_name",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "Best Sellers | 25% off",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_heading_spacing": 30,
+        "collection": "thanksgiving-flash-sale",
+        "product_list": [],
+        "product_des": "3",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "products_count": 20,
+        "col_dk": "5",
+        "col_tb": "3",
+        "col_mb": "2",
+        "navUI": true,
+        "nav_des": "default",
+        "nav_pos": "middle_in",
+        "dotUI": false,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "box_layout": "1",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_Cgdqii": {
+      "type": "custom-line",
+      "disabled": true,
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#00badb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 25,
+        "padding_rate": 75
+      }
+    },
+    "image_with_tabs_content_4ftiXT": {
+      "type": "image-with-tabs-content",
+      "blocks": {
+        "tab_item_aFxPHi": {
+          "type": "tab_item",
+          "settings": {
+            "title": "FREE GIFT W/ EVERY ORDER",
+            "heading": "Omega-3 | 90-Capsules",
+            "content_text": "For a limited time, get a FREE Omega-3, 90-day supply when you order during our Labour Day flash sale while supplies last.",
+            "btn_label": "Shop Now",
+            "btn_link": "#all_collection",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1"
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_aFxPHi"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading_align": "start",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "xl",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 30,
+        "main_img": "shopify://shop_images/Omega-3-Softgels-90-Capsules.png",
+        "image_pos": "right",
+        "image_ratio": "adapt_image",
+        "custom_height": 270,
+        "custom_height_tb": 300,
+        "custom_height_mb": 300,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "tabs_collections_carousel_9zJeTB": {
+      "type": "tabs-collections-carousel",
+      "blocks": {
+        "tab_item_kQ38Hj": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Popular Items",
+            "collection": "",
+            "product_list": [
+              "creatine-monohydrate",
+              "limited-edition-strawberry-kiwi-super-greens-powder",
+              "bcaa",
+              "limited-edition-strawberry-daiquiri-super-greens-powder",
+              "limited-edition-lemon-iced-tea-super-greens-powder",
+              "creapure"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_kQ38Hj"
+      ],
+      "disabled": true,
+      "settings": {
+        "tabs_heading": "Best Selling Supplements",
+        "heading_size": "h4",
+        "heading_inline": false,
+        "tabs_head_spacing": 30,
+        "tabs_des": "outline",
+        "tab_item_size": "lg",
+        "tab_item_weight": "normal",
+        "text_transform": false,
+        "border_width": 2,
+        "spacing_items": 30,
+        "product_des": "1",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "products_count": 8,
+        "col_dk": "4",
+        "col_tb": "4",
+        "col_mb": "2",
+        "navUI": false,
+        "nav_des": "default",
+        "nav_pos": "middle_in",
+        "dotUI": false,
+        "use_pagination": "none",
+        "paginate_pos": "center",
+        "dis_pagination": 30,
+        "btn_label": "View all",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "section_fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "tabs_collections_carousel_eazx9C": {
+      "type": "tabs-collections-carousel",
+      "blocks": {
+        "tab_item_XRUybF": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Popular Items",
+            "collection": "",
+            "product_list": [
+              "limited-edition-canada-day-canadian-maple-all-natural-premium-vegan-protein-blend",
+              "100-whey-protein-isolate",
+              "whey-protein-concentrate",
+              "all-natural-premium-vegan-protein-blend",
+              "grass-fed-new-zealand-whey-protein-concentrate",
+              "grass-fed-new-zealand-whey-protein-isolate",
+              "premium-whey-protein-isolate",
+              "premium-whey-protein-blend"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_XRUybF"
+      ],
+      "disabled": true,
+      "settings": {
+        "tabs_heading": "Best Selling Protein Powders",
+        "heading_size": "h4",
+        "heading_inline": false,
+        "tabs_head_spacing": 30,
+        "tabs_des": "outline",
+        "tab_item_size": "lg",
+        "tab_item_weight": "normal",
+        "text_transform": false,
+        "border_width": 2,
+        "spacing_items": 30,
+        "product_des": "1",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "products_count": 8,
+        "col_dk": "4",
+        "col_tb": "4",
+        "col_mb": "2",
+        "navUI": false,
+        "nav_des": "default",
+        "nav_pos": "middle_in",
+        "dotUI": false,
+        "use_pagination": "none",
+        "paginate_pos": "center",
+        "dis_pagination": 30,
+        "btn_label": "View all",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "section_fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_hNgpay": {
+      "type": "custom-liquid",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"shopall\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "custom_line_y6VrFj": {
+      "type": "custom-line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#00badb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 35,
+        "padding_rate": 75
+      }
+    },
+    "main_heading_9yN8PP": {
+      "type": "main-heading",
+      "blocks": {
+        "1_ihbQgE": {
+          "type": "1",
+          "settings": {
+            "heading": "Shop all",
+            "heading_size": "h4"
+          }
+        }
+      },
+      "block_order": [
+        "1_ihbQgE"
+      ],
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "",
+        "spacing_hd": 5,
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_D4LHax": {
+      "type": "custom-liquid",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<p id=\"all_collection\"></p>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "product_des": "1",
+        "image_ratio": "custom-pr",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 12,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "pagination_type": "links",
+        "paginate_pos": "center",
+        "dis_pagination": 60,
+        "enable_sorting": true,
+        "enable_filtering": false,
+        "enable_num_cols_selector": true,
+        "widget_heading": "Product categories",
+        "cat_source": "1",
+        "cat_link_list": "",
+        "count": true,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 30,
+        "padding_bottom": 70,
+        "padding_rate": 75,
+        "sidebar_position": "left",
+        "sidebar_size": "medium"
+      }
+    },
+    "custom_liquid_piD3Gx": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"faq\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "accordion_6hCrXz": {
+      "type": "accordion",
+      "blocks": {
+        "title_VreN3V": {
+          "type": "title",
+          "settings": {
+            "title": "Frequently Asked Questions"
+          }
+        },
+        "accordion_item_MLXrj9": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What discounts are available during the Thanksgiving Flash Sale?",
+            "content": "Enjoy 25% off sitewide for a limited time. This promotion cannot be combined with our 'Buy More, Save More' promotion."
+          }
+        },
+        "accordion_item_zdgNjx": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Do I need a discount code to take advantage of the sale?",
+            "content": "No, the discounts are applied automatically at checkout. No code is needed."
+          }
+        },
+        "accordion_item_EKtzX8": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Can this discount be applied to subscription orders?",
+            "content": "No, this promotion can not be applied to subscription orders. However, our subscription orders include a 30% discount with a 3-order minimum."
+          }
+        },
+        "accordion_item_WCjYAa": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Is there a gift with purchase during the sale?",
+            "content": "Yes! Every order over $1 will receive a free Shaker Cup. Only one free Shaker Cup can be received per order, per day, regardless of order size."
+          }
+        },
+        "accordion_item_cUNmbE": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Are there any product exclusions in the sale?",
+            "content": "Yes, some exclusions apply. The following products are not eligible for the 25% discount (but are not limited to): <br>\n- Bulk Proteins<br>\n- Creatine<br>\n- Superwomen and Supermen Multivitamin<br>\n- Collagen <br>\n - Additional exclusions may apply at the discretion of Canadian Protein."
+          }
+        },
+        "accordion_item_KnedXj": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "When does the Thanksgiving Flash Sale end?",
+            "content": "This is a limited-time event. Be sure to shop early while supplies last — once the sale ends or stock runs out, the promotion will no longer be available."
+          }
+        },
+        "accordion_item_QKHhpN": {
+          "type": "accordion_item",
+          "disabled": true,
+          "settings": {
+            "title": "Can I receive more than one free Omega 3 supplement if I place a large order?",
+            "content": "No, only one free Omega 3 supplement is included per order, regardless of order size."
+          }
+        },
+        "accordion_item_mMMYDT": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Does the sale apply to bulk items?",
+            "content": "No, bulk items are excluded from this sale."
+          }
+        },
+        "accordion_item_HYfx8z": {
+          "type": "accordion_item",
+          "disabled": true,
+          "settings": {
+            "title": "What happens if I need to return a sale item?",
+            "content": "The exact end date of the promotion is not specified. We recommend placing your order as soon as possible, as sales may be limited-time or while supplies last."
+          }
+        },
+        "accordion_item_3UKNWT": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Can I return or exchange items purchased in this promotion?",
+            "content": "Standard return and exchange policies apply. However, if you return an item that was part of the sale, your refund amount may be adjusted to reflect the promotion pricing."
+          }
+        }
+      },
+      "block_order": [
+        "title_VreN3V",
+        "accordion_item_MLXrj9",
+        "accordion_item_zdgNjx",
+        "accordion_item_EKtzX8",
+        "accordion_item_WCjYAa",
+        "accordion_item_cUNmbE",
+        "accordion_item_KnedXj",
+        "accordion_item_QKHhpN",
+        "accordion_item_mMMYDT",
+        "accordion_item_HYfx8z",
+        "accordion_item_3UKNWT"
+      ],
+      "name": "t:sections.accordion.name",
+      "settings": {
+        "accordion_position": "start",
+        "accordion_icon": "1",
+        "open_first": false,
+        "enable_link_list": false,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 70,
+        "padding_rate": 75
+      }
+    },
+    "icon_with_text_jff4fE": {
+      "type": "icon_with_text",
+      "name": "t:sections.icon_text.name",
+      "settings": {
+        "color_scheme": "",
+        "text": "<p>Sales / Promotions Terms and Conditions</p>",
+        "btn_label": "Learn More",
+        "btn_link": "https://canadianprotein.com/pages/terms-and-conditions-for-promotions-and-sales",
+        "target": false,
+        "btn_size": "base",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "btn_icon": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "marquee_mx4yME",
+    "top_heading_74naTk",
+    "top_heading_KpPgyy",
+    "icon_with_text_2_E4fh46",
+    "custom_line_CWHEmW",
+    "categories_section_WybXU9",
+    "custom_line_gGhH7p",
+    "discount_collection_mGxVtH",
+    "custom_line_Cgdqii",
+    "image_with_tabs_content_4ftiXT",
+    "tabs_collections_carousel_9zJeTB",
+    "tabs_collections_carousel_eazx9C",
+    "custom_liquid_hNgpay",
+    "custom_line_y6VrFj",
+    "main_heading_9yN8PP",
+    "custom_liquid_D4LHax",
+    "main",
+    "custom_liquid_piD3Gx",
+    "accordion_6hCrXz",
+    "icon_with_text_jff4fE"
+  ]
+}

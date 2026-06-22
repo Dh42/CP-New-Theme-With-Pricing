@@ -1,0 +1,307 @@
+{%- liquid
+  assign s_eyebrow  = section.settings.eyebrow
+  assign s_heading  = section.settings.heading  | default: collection.title
+  assign s_sub      = section.settings.subtext
+  assign s_cta      = section.settings.cta_label
+  assign s_cta_url  = section.settings.cta_url  | default: '#'
+  assign show_card  = section.settings.show_social_card
+  assign pt         = section.settings.padding_top    | default: 56
+  assign pb         = section.settings.padding_bottom | default: 36
+
+  assign trust_blocks = section.blocks | where: 'type', 'trust_pill'
+  assign nav_blocks   = section.blocks | where: 'type', 'quick_nav_chip'
+-%}
+
+<div class="cp-col-hero" style="padding-top:{{ pt }}px; padding-bottom:{{ pb }}px; background:{{ section.settings.bg_color | default: '#fff' }}">
+  <div class="cp-col-hero__wrap">
+    <div class="cp-col-hero__inner{% unless show_card %} cp-col-hero__inner--no-card{% endunless %}">
+
+      {%- comment -%} ── Left column ── {%- endcomment -%}
+      <div class="cp-col-hero__left">
+
+        {%- unless s_eyebrow == blank -%}
+          <div class="cp-col-hero__eyebrow">
+            <svg width="13" height="13" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M256 24l-22 78c-3 11-15 9-24 4l-34-19 25 140c5 26-12 26-20 15l-59-69-10 35c-2 8-7 11-14 9l-75-16 20 75c4 17 7 23-4 28l-13 5 129 109c8 6 7 11 6 18l-11 39 128-15c4 0 11 3 10 8l-6 142h32l-3-142c0-5 6-9 10-8l128 15-11-39c-2-7-2-12 6-18l129-109-13-5c-12-5-9-11-5-28l20-75-75 16c-7 2-12-1-14-9l-10-35-59 69c-8 11-25 11-20-15l25-140-34 19c-9 5-21 7-24-4z"/></svg>
+            {{ s_eyebrow }}
+          </div>
+        {%- endunless -%}
+
+        <h1 class="cp-col-hero__h1">{{ s_heading }}</h1>
+
+        {%- unless s_sub == blank -%}
+          <p class="cp-col-hero__sub">{{ s_sub }}</p>
+        {%- endunless -%}
+
+        {%- unless s_cta == blank -%}
+          <a href="{{ s_cta_url }}" class="cp-col-hero__cta">
+            {{ s_cta }}
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        {%- endunless -%}
+
+        {%- if trust_blocks.size > 0 -%}
+          <div class="cp-col-hero__trust">
+            {%- for block in trust_blocks -%}
+              {%- liquid
+                assign icon = block.settings.icon | default: 'leaf'
+              -%}
+              <span class="cp-col-hero__pill" {{ block.shopify_attributes }}>
+                {%- case icon -%}
+                  {%- when 'leaf' -%}
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 3C21 3 14 3 8 9S3 21 3 21c0 0 2-7 5-10M3 21s4-1 8-5"/></svg>
+                  {%- when 'flask' -%}
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M9 3v7l-5 9a1 1 0 0 0 .9 1.5h10.2A1 1 0 0 0 21 19l-5-9V3"/><path d="M6.5 15.5h11"/></svg>
+                  {%- when 'truck' -%}
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h11v9H3zM14 9h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.5"/><circle cx="17" cy="18" r="1.5"/></svg>
+                  {%- when 'shield' -%}
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l9 4v6c0 5-4 9-9 10C7 21 3 17 3 12V6z"/></svg>
+                  {%- when 'star' -%}
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6 6.6.9-4.8 4.7 1.1 6.5L12 17l-5.8 3.1 1.1-6.5L2.5 8.9l6.6-.9z"/></svg>
+                  {%- when 'check' -%}
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>
+                  {%- when 'refresh' -%}
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9A9 9 0 0 1 20.49 15M20.49 15a9 9 0 0 1-16.98 0"/></svg>
+                  {%- else -%}
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>
+                {%- endcase -%}
+                {{ block.settings.label }}
+              </span>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+
+      </div>
+
+      {%- comment -%} ── Social proof card (right) ── {%- endcomment -%}
+      {%- if show_card -%}
+        <div class="cp-col-hero__card">
+
+          <div class="cp-col-hero__card-top">
+            <div class="cp-col-hero__rating-big">{{ section.settings.rating_number | default: '4.8' }}</div>
+            <div class="cp-col-hero__stars-col">
+              <div class="cp-col-hero__stars-row" aria-hidden="true">
+                {%- for i in (1..5) -%}
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l2.9 6 6.6.9-4.8 4.7 1.1 6.5L12 17l-5.8 3.1 1.1-6.5L2.5 8.9l6.6-.9z"/></svg>
+                {%- endfor -%}
+              </div>
+              <div class="cp-col-hero__reviews">{{ section.settings.review_count_text | default: '48,200+ verified reviews' }}</div>
+            </div>
+          </div>
+
+          <div class="cp-col-hero__stats">
+            <div class="cp-col-hero__stat">
+              <b>{{ section.settings.stat1_value | default: '~$0.71' }}</b>
+              <span>{{ section.settings.stat1_label | default: 'avg. price / serving' }}</span>
+            </div>
+            <div class="cp-col-hero__stat">
+              <b>{{ section.settings.stat2_value | default: '1.2M+' }}</b>
+              <span>{{ section.settings.stat2_label | default: 'orders shipped' }}</span>
+            </div>
+          </div>
+
+          {%- unless section.settings.card_footer == blank -%}
+            <div class="cp-col-hero__card-foot">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 3C21 3 14 3 8 9S3 21 3 21c0 0 2-7 5-10M3 21s4-1 8-5"/></svg>
+              {{ section.settings.card_footer }}
+            </div>
+          {%- endunless -%}
+
+        </div>
+      {%- endif -%}
+
+    </div>
+  </div>
+</div>
+
+{%- comment -%} ── Quick-nav chips row ── {%- endcomment -%}
+{%- if nav_blocks.size > 0 -%}
+  <nav class="cp-col-qnav" aria-label="Quick navigation">
+    <div class="cp-col-qnav__scroll">
+      {%- for block in nav_blocks -%}
+        <a class="cp-col-qnav-chip" href="{{ block.settings.url | default: '#' }}" {{ block.shopify_attributes }}>
+          {{ block.settings.label | default: 'Category' }}
+        </a>
+      {%- endfor -%}
+    </div>
+  </nav>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "CP Collection Hero",
+  "tag": "section",
+  "class": "cp-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow text",
+      "placeholder": "All Products"
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading (HTML allowed — wrap italic accent in <em>)",
+      "default": "Canada's best-priced protein, <em>made right here in Ontario.</em>"
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Subtext paragraph",
+      "default": "Lab-tested whey, plant & performance supplements shipped fresh from Windsor — at a transparent price per serving, never marked up."
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA button label (leave blank to hide)"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "CTA button URL"
+    },
+    {
+      "type": "header",
+      "content": "Social proof card"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social_card",
+      "label": "Show social proof card",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "rating_number",
+      "label": "Rating number",
+      "default": "4.8"
+    },
+    {
+      "type": "text",
+      "id": "review_count_text",
+      "label": "Review count line",
+      "default": "48,200+ verified reviews"
+    },
+    {
+      "type": "text",
+      "id": "stat1_value",
+      "label": "Stat 1 — value",
+      "default": "~$0.71"
+    },
+    {
+      "type": "text",
+      "id": "stat1_label",
+      "label": "Stat 1 — label",
+      "default": "avg. price / serving"
+    },
+    {
+      "type": "text",
+      "id": "stat2_value",
+      "label": "Stat 2 — value",
+      "default": "1.2M+"
+    },
+    {
+      "type": "text",
+      "id": "stat2_label",
+      "label": "Stat 2 — label",
+      "default": "orders shipped"
+    },
+    {
+      "type": "text",
+      "id": "card_footer",
+      "label": "Card footer text",
+      "default": "Rated #1 for value by Canadian lifters"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 20,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 16,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "trust_pill",
+      "name": "Trust pill",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "leaf",    "label": "Leaf (Made in Canada)" },
+            { "value": "flask",   "label": "Flask (Lab tested)" },
+            { "value": "truck",   "label": "Truck (Shipping)" },
+            { "value": "shield",  "label": "Shield (Safety)" },
+            { "value": "star",    "label": "Star (Rating)" },
+            { "value": "check",   "label": "Checkmark" },
+            { "value": "refresh", "label": "Refresh (Subscribe)" }
+          ],
+          "default": "leaf"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Made in Canada"
+        }
+      ]
+    },
+    {
+      "type": "quick_nav_chip",
+      "name": "Quick nav chip",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Chip label",
+          "default": "Whey Protein"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Chip URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CP Collection Hero",
+      "blocks": [
+        { "type": "trust_pill", "settings": { "icon": "leaf",  "label": "Made in Canada" } },
+        { "type": "trust_pill", "settings": { "icon": "flask", "label": "Batch lab-tested" } },
+        { "type": "trust_pill", "settings": { "icon": "truck", "label": "Free shipping over $99" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

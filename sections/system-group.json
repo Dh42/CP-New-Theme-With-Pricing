@@ -1,0 +1,145 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.name_group.system",
+  "type": "custom.system",
+  "sections": {
+    "cart-drawer": {
+      "type": "cart-drawer",
+      "blocks": {
+        "ca4a9586-08fd-471b-a5a7-11e1ffc068a4": {
+          "type": "subtotal",
+          "settings": {}
+        },
+        "88e6ef7a-281c-45e7-b62c-b556ebd6f705": {
+          "type": "tax",
+          "settings": {}
+        },
+        "f932f430-a2c4-4a2f-a3d6-d2f099407d44": {
+          "type": "line",
+          "settings": {}
+        },
+        "54f7a627-75c8-4b50-8c43-45e4be386afb": {
+          "type": "bnt_cart_checkout",
+          "settings": {
+            "enable_btn_cart": true,
+            "btn_style_cart": "outline",
+            "btn_fw_cart": "semibold",
+            "btn_icon_cart": "none",
+            "enable_btn_checkout": true,
+            "btn_style_checkout": "solid",
+            "btn_fw_checkout": "semibold",
+            "btn_icon_checkout": "none"
+          }
+        }
+      },
+      "block_order": [
+        "ca4a9586-08fd-471b-a5a7-11e1ffc068a4",
+        "88e6ef7a-281c-45e7-b62c-b556ebd6f705",
+        "f932f430-a2c4-4a2f-a3d6-d2f099407d44",
+        "54f7a627-75c8-4b50-8c43-45e4be386afb"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "show_free_shipping_bar": true,
+        "show_cart_note": true,
+        "show_gift_wrap": false,
+        "show_shipping_estimator": false,
+        "heading": "Customers also bought",
+        "product_list": [
+          "super-greens",
+          "creatine-monohydrate",
+          "mens-signature-t-shirt"
+        ],
+        "replaces_products_selected": true
+      }
+    },
+    "toolbar-mobile": {
+      "type": "toolbar-mobile",
+      "blocks": {
+        "chat_pnQLFX": {
+          "type": "chat",
+          "settings": {}
+        },
+        "7992c70e-320b-4406-9d5a-ca387c85cfa8": {
+          "type": "shop",
+          "settings": {
+            "title": "Shop",
+            "collection_list": [],
+            "menu_categories": "",
+            "link": ""
+          }
+        },
+        "56750290-ad59-44cd-957d-573b93c0ee9a": {
+          "type": "filter",
+          "settings": {
+            "title": "Filter"
+          }
+        },
+        "278a2b3b-9b25-4e46-bfeb-c2515ac171fd": {
+          "type": "account",
+          "settings": {
+            "title": "Account"
+          }
+        },
+        "d7521907-d76e-490e-accf-d0e6504fc515": {
+          "type": "wishlist",
+          "disabled": true,
+          "settings": {
+            "title": "Wishlist"
+          }
+        },
+        "45c18f86-eb94-46bf-a2fb-83315d49e16a": {
+          "type": "cart",
+          "settings": {
+            "title": "Cart"
+          }
+        }
+      },
+      "block_order": [
+        "chat_pnQLFX",
+        "7992c70e-320b-4406-9d5a-ca387c85cfa8",
+        "56750290-ad59-44cd-957d-573b93c0ee9a",
+        "278a2b3b-9b25-4e46-bfeb-c2515ac171fd",
+        "d7521907-d76e-490e-accf-d0e6504fc515",
+        "45c18f86-eb94-46bf-a2fb-83315d49e16a"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "show_txt": true
+      }
+    },
+    "065b2487-37b3-4771-810e-b88870b5b74f": {
+      "type": "back_top",
+      "settings": {
+        "enable_hidden_mobile": false,
+        "backtop_des": "1",
+        "enable_progress_bar": true,
+        "border_cl": "#f5f5f5",
+        "border_cl_active": "#000000"
+      }
+    },
+    "cp_theme_config": {
+      "type": "cp-theme-config",
+      "settings": {
+        "accent_color": "#00badb",
+        "accent_ink": "#ffffff",
+        "cta_color": "#1db954",
+        "cta_ink": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "cart-drawer",
+    "toolbar-mobile",
+    "065b2487-37b3-4771-810e-b88870b5b74f",
+    "cp_theme_config"
+  ]
+}

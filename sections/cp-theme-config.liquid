@@ -1,0 +1,62 @@
+<style>
+  :root {
+    --cp-brand-accent:        {{ section.settings.accent_color }};
+    --cp-brand-accent-ink:    {{ section.settings.accent_ink }};
+    --cp-brand-accent-strong: color-mix(in srgb, {{ section.settings.accent_color }} 78%, #000000);
+    --cp-brand-accent-tint:   color-mix(in srgb, {{ section.settings.accent_color }} 10%, #ffffff);
+    --cp-brand-accent-dark:   color-mix(in srgb, {{ section.settings.accent_color }} 65%, #ffffff);
+    --cp-brand-cta:           {{ section.settings.cta_color }};
+    --cp-brand-cta-ink:       {{ section.settings.cta_ink }};
+  }
+</style>
+
+{% schema %}
+{
+  "name": "CP Theme Config",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Brand Accent Color"
+    },
+    {
+      "type": "paragraph",
+      "content": "Controls the primary accent used across all CP sections — badges, trust pills, price highlights, active chips, and more."
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#D81E2B"
+    },
+    {
+      "type": "color",
+      "id": "accent_ink",
+      "label": "Text on accent (badge labels, etc.)",
+      "default": "#ffffff",
+      "info": "Usually white. Switch to black if you pick a light or bright accent color."
+    },
+    {
+      "type": "header",
+      "content": "Button / CTA Color"
+    },
+    {
+      "type": "paragraph",
+      "content": "Controls all call-to-action buttons independently — Add to Cart, Quick Add, hero CTAs, and in-grid promo buttons. Defaults to the same color as the accent."
+    },
+    {
+      "type": "color",
+      "id": "cta_color",
+      "label": "Button color",
+      "default": "#D81E2B"
+    },
+    {
+      "type": "color",
+      "id": "cta_ink",
+      "label": "Text on buttons",
+      "default": "#ffffff",
+      "info": "Usually white. Switch to black if you pick a light or bright button color."
+    }
+  ],
+  "presets": [{ "name": "CP Theme Config" }]
+}
+{% endschema %}

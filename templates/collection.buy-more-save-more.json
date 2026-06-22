@@ -1,0 +1,985 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-collection",
+      "blocks": {
+        "9a1347b4-da62-490d-9fd4-427a03686ac2": {
+          "type": "heading",
+          "settings": {
+            "heading": "Buy More Save More <br>Up To 25% Off"
+          }
+        },
+        "6df762d7-beda-4452-bcf6-1242b294077c": {
+          "type": "description",
+          "settings": {
+            "description": "Mix and match your favourite Canadian Protein products and stack your savings automatically."
+          }
+        }
+      },
+      "block_order": [
+        "9a1347b4-da62-490d-9fd4-427a03686ac2",
+        "6df762d7-beda-4452-bcf6-1242b294077c"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacing_hd": 10,
+        "color_scheme": "scheme-5",
+        "padding_top": 21,
+        "padding_bottom": 10,
+        "padding_rate": 75
+      }
+    },
+    "custom_section_UmxijM": {
+      "type": "custom-section",
+      "blocks": {
+        "custom_liquid_4rdpy6": {
+          "type": "custom_liquid",
+          "name": "Early Access",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<span style=\"\n  font-size:12px;\n  font-weight:700;\n  letter-spacing:1.5px;\n  text-transform:uppercase;\n  background: linear-gradient(\n    90deg,\n    #b8860b,\n    #ffd700,\n    #fff4a3,\n    #ffd700,\n    #b8860b\n  );\n  background-size: 200% auto;\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  color: transparent;\n  animation: goldLoop 4s linear infinite;\n  display:inline-block;\n\">\n  VIP EARLY ACCESS\n</span>\n\n<style>\n@keyframes goldLoop {\n  0% { background-position: 0% center; }\n  100% { background-position: 200% center; }\n}\n</style>"
+          }
+        },
+        "parent_6nW8aN": {
+          "type": "parent",
+          "settings": {
+            "column_lg": "hdt-col-lg-12",
+            "column_md": "hdt-col-md-12",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-67a7ca9f-3333-4245-b79f-2e9849d7e615",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": "bfcm-col-clear"
+          }
+        },
+        "spacer_zBpfdE": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 6,
+            "space_md": 6,
+            "space": 10
+          }
+        },
+        "heading_rPwf3X": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Easter Flash Sale 🌸",
+            "tag": "h2",
+            "heading_size": "h5",
+            "alignment": "start"
+          }
+        },
+        "heading_wUQV3J": {
+          "type": "heading",
+          "settings": {
+            "heading": "Buy More Save More",
+            "tag": "h2",
+            "heading_size": "h1",
+            "alignment": "center"
+          }
+        },
+        "heading_GBfx9n": {
+          "type": "heading",
+          "settings": {
+            "heading": "Up To <strong>25% Off</strong>",
+            "tag": "h2",
+            "heading_size": "h3",
+            "alignment": "center"
+          }
+        },
+        "spacer_YdJNik": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "spacer_jH8qac": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "text_LMewqQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Mix and match 2 or more Protein products and stack your savings automatically.</p>",
+            "text_size": "xl",
+            "alignment": "center",
+            "alignment_mb": "center"
+          }
+        },
+        "text_CacMUa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Or</p>",
+            "text_size": "xl",
+            "alignment": "center",
+            "alignment_mb": "center"
+          }
+        },
+        "text_z8x4Rr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Mix and match 2 or more Supplement products and stack your savings automatically.</p>",
+            "text_size": "xl",
+            "alignment": "center",
+            "alignment_mb": "center"
+          }
+        },
+        "custom_liquid_7GRLmn": {
+          "type": "custom_liquid",
+          "name": "Learn More",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<details class=\"bfcm-learn-more\" style=\"color:#fff;\">\n  <summary style=\"cursor:pointer; text-decoration:underline;\">Learn more</summary>\n  <div style=\"margin-top:10px; line-height:1.5;\">\n\n    <h6><strong>Your goals. Our quality. Canadian Protein delivers.</strong></h6><br>\n\n    <p>From high-quality protein powders to premium supplements, we’ve got every corner of your routine covered. Shop our full lineup, including:<br>\n    <strong>Whey Protein Isolate, Whey Protein Concentrate, Vegan Protein, Creatine Monohydrate (Creapure®), Essential Vitamins, Tested Supplements</strong> and more.</p>\n    <br>\n\n    <p>This <strong>Black Friday / Cyber Monday</strong>, unlock <strong>up to 70% off</strong> select products crafted to support strength, performance, recovery, and everyday wellness.</p>\n    <br>\n\n    <p><strong>Plus, we're stacking the extras:</strong><br>\n    – Every order is entered for a chance to <strong>win a full refund</strong> — <strong>2 winners</strong> chosen.<br>\n    – Every order is entered for a chance to <strong>win a pair of Meta Ray-Ban Glasses</strong>.<br>\n    – All orders include a <strong>free mystery gift</strong>.<br>\n    – <strong>Orders $150+</strong> receive a <strong>Canadian Protein Mystery Supplement</strong>.<br>\n    – <strong>More giveaways, surprises, and bonuses</strong> dropping throughout the event.</p>\n    <br>\n\n    <p>Fuel clean. Recover smarter. Train with confidence.</p>\n\n    <p><strong>For all giveaways and contests, terms and conditions apply.</strong>\n    <a href=\"https://canadianprotein.com/pages/bfcm-sale-terms-and-conditions\" target=\"_blank\" rel=\"noopener noreferrer\">Click here for terms and conditions.</a></p>\n\n<br/>\n\n  </div>\n</details>"
+          }
+        },
+        "spacer_BTTJjJ": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 20,
+            "space_md": 20,
+            "space": 20
+          }
+        },
+        "custom_liquid_UJ3VVM": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<link href=\"https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500&display=swap\" rel=\"stylesheet\">\n\n<style>\n  .savings-tiers {\n    font-family: 'Albert Sans', sans-serif;\n    display: flex;\n    flex-direction: row;\n    gap: 20px;\n    padding: 20px;\n    background: transparent;\n    max-width: 1200px;\n    margin: 0 auto;\n    box-sizing: border-box;\n  }\n\n  .savings-tiers__card {\n    flex: 1 1 0;\n    border: 1px solid rgba(255, 255, 255, 1);\n    border-radius: 16px;\n    padding: 30px 10px;\n    text-align: center;\n    background: rgba(0, 0, 0, 0.75);\n    min-width: 0;\n  }\n\n  .savings-tiers__title {\n    font-size: 28px;\n    font-weight: 500;\n    color: #ffffff;\n    margin: 0 0 12px 0;\n    line-height: 1.2;\n  }\n\n  .savings-tiers__subtitle {\n    font-size: 16px;\n    font-weight: 400;\n    color: #ffffff;\n    margin: 0;\n    line-height: 1.4;\n  }\n\n  @media (max-width: 749px) {\n    .savings-tiers {\n      gap: 8px;\n      padding: 10px;\n    }\n    .savings-tiers__card {\n      padding: 20px 6px;\n      border-radius: 10px;\n    }\n    .savings-tiers__title {\n      font-size: 16px;\n      margin-bottom: 6px;\n    }\n    .savings-tiers__subtitle {\n      font-size: 11px;\n      line-height: 1.3;\n    }\n  }\n</style>\n\n<div class=\"savings-tiers\">\n  <div class=\"savings-tiers__card\">\n    <h3 class=\"savings-tiers__title\">Save 15%</h3>\n    <p class=\"savings-tiers__subtitle\">When you buy 2 items</p>\n  </div>\n  <div class=\"savings-tiers__card\">\n    <h3 class=\"savings-tiers__title\">Save 20%</h3>\n    <p class=\"savings-tiers__subtitle\">When you buy 3 or 4 items</p>\n  </div>\n  <div class=\"savings-tiers__card\">\n    <h3 class=\"savings-tiers__title\">Save 25%</h3>\n    <p class=\"savings-tiers__subtitle\">When you buy 5 or more items</p>\n  </div>\n</div>"
+          }
+        },
+        "text_R8VkeP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>No code needed. Discount applied at checkout.</p>",
+            "text_size": "base",
+            "alignment": "center",
+            "alignment_mb": "center"
+          }
+        },
+        "spacer_r3aYcW": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 50,
+            "space_md": 50,
+            "space": 20
+          }
+        },
+        "parent_iwGz79": {
+          "type": "parent",
+          "name": "Button 1",
+          "settings": {
+            "column_lg": "hdt-col-lg-auto",
+            "column_md": "hdt-col-md-auto",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-b118462a-a4ac-4478-a927-bc3e753a2252",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": "bfcm-col-clear"
+          }
+        },
+        "button_i6QMUE": {
+          "type": "button",
+          "settings": {
+            "btn_label": "Shop All",
+            "btn_link": "#shopall",
+            "target": false,
+            "btn_size": "xl",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "none",
+            "alignment": "center"
+          }
+        },
+        "spacer_iBhnM3": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 6,
+            "space": 6
+          }
+        },
+        "parent_WQD84g": {
+          "type": "parent",
+          "name": "Button 2",
+          "settings": {
+            "column_lg": "hdt-col-lg-12",
+            "column_md": "hdt-col-md-12",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-b118462a-a4ac-4478-a927-bc3e753a2252",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": "bfcm-col-clear"
+          }
+        },
+        "spacer_rnaEcF": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 0,
+            "space_md": 6,
+            "space": 6
+          }
+        },
+        "custom_liquid_Ynzrjc": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<small style=\"color:#fff; display:block; text-align:center;\">\n  Some exclusions may apply. <br>\n  <strong style=\"color:#fff;\">\n    <a href=\"#faq\" style=\"color:#fff; text-decoration:underline;\">\n      Click here for FAQs.\n    </a>\n  </strong>\n</small>"
+          }
+        }
+      },
+      "block_order": [
+        "custom_liquid_4rdpy6",
+        "parent_6nW8aN",
+        "spacer_zBpfdE",
+        "heading_rPwf3X",
+        "heading_wUQV3J",
+        "heading_GBfx9n",
+        "spacer_YdJNik",
+        "spacer_jH8qac",
+        "text_LMewqQ",
+        "text_CacMUa",
+        "text_z8x4Rr",
+        "custom_liquid_7GRLmn",
+        "spacer_BTTJjJ",
+        "custom_liquid_UJ3VVM",
+        "text_R8VkeP",
+        "spacer_r3aYcW",
+        "parent_iwGz79",
+        "button_i6QMUE",
+        "spacer_iBhnM3",
+        "parent_WQD84g",
+        "spacer_rnaEcF",
+        "custom_liquid_Ynzrjc"
+      ],
+      "custom_css": [
+        "[class*=\"__custom_section_\"] {background: url(https://cdn.shopify.com/s/files/1/0249/3241/7583/files/Desktop.png?v=1775577815) left/cover no-repeat !important;}",
+        "[class*=\"__custom_section_\"] .hdt-s-gradient,[class*=\"__custom_section_\"] .hdt-s-gradient:before {background: 0 !important;}"
+      ],
+      "name": "BFCM25 - Header",
+      "settings": {
+        "section_fullwidth": false,
+        "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+        "direction": "",
+        "justify": "",
+        "gap": true,
+        "space": 0,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "padding_rate": 70
+      }
+    },
+    "icon_box_MqDBYE": {
+      "type": "icon-box",
+      "blocks": {
+        "item_C6yd9x": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "none",
+            "custom_svg": "",
+            "icon_width": 60,
+            "icon_width_mb": 30,
+            "link": "",
+            "open_link": false,
+            "title": "Save 15%",
+            "content": "<h5>When you buy 2 or more items</h5>",
+            "adding_border": false
+          }
+        },
+        "item_emp8JG": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "none",
+            "custom_svg": "",
+            "icon_width": 30,
+            "icon_width_mb": 30,
+            "link": "",
+            "open_link": false,
+            "title": "<h4>Save 20%<h4></h4>\n</h4>",
+            "content": "<h5>When you buy 3 or more items</h5>",
+            "adding_border": false
+          }
+        },
+        "item_zCkLAc": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "none",
+            "custom_svg": "",
+            "icon_width": 30,
+            "icon_width_mb": 30,
+            "link": "",
+            "open_link": false,
+            "title": "<h4>Save 25%<h4></h4>\n</h4>",
+            "content": "<h5>When you buy 5 or more items</h5>",
+            "adding_border": false
+          }
+        },
+        "item_q3weVF": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "icon_svg": "support",
+            "custom_svg": "",
+            "icon_width": 30,
+            "icon_width_mb": 30,
+            "link": "",
+            "open_link": false,
+            "title": "Premium Suport",
+            "content": "<p>Outstanding premium support</p>",
+            "adding_border": false
+          }
+        }
+      },
+      "block_order": [
+        "item_C6yd9x",
+        "item_emp8JG",
+        "item_zCkLAc",
+        "item_q3weVF"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "t:sections.icon-box.name",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 0,
+        "sec_heading_spacing": 0,
+        "icon_pos_center": true,
+        "icon_pos_center_mb": true,
+        "icon_circle": false,
+        "space_icon_heading": "large",
+        "size_heading": "large",
+        "heading_uppercase": false,
+        "space_heading_content": "small",
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "carousel_mobile": false,
+        "border_style": "1",
+        "fullwidth": false,
+        "boxed_fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "icon_box_aQW8hB": {
+      "type": "icon-box",
+      "blocks": {
+        "item_aFimLM": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "box",
+            "custom_svg": "",
+            "icon_width": 30,
+            "icon_width_mb": 30,
+            "link": "",
+            "open_link": false,
+            "title": "Best Value on the Market",
+            "content": "<p>Canadian Protein offers <strong>unbeatable value</strong> on bulk protein. <strong>Get more, spend less</strong>—without compromising on quality.</p>",
+            "adding_border": false
+          }
+        },
+        "item_PnpbV4": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "payment2",
+            "custom_svg": "",
+            "icon_width": 30,
+            "icon_width_mb": 30,
+            "link": "",
+            "open_link": false,
+            "title": "Cost Savings",
+            "content": "<p>Save <strong>20% on 6kg</strong> protein bags and <strong>25% on 10kg</strong> protein bags compared to retail prices. Unbeatable value—don't miss out!</p>",
+            "adding_border": false
+          }
+        },
+        "item_GhGyQU": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "health",
+            "custom_svg": "",
+            "icon_width": 30,
+            "icon_width_mb": 30,
+            "link": "",
+            "open_link": false,
+            "title": "Quality You Can Trust",
+            "content": "<p>Enjoy our <strong>premium protein powders</strong>, known for their great taste and easy mixability, all while saving on bulk orders.</p>",
+            "adding_border": false
+          }
+        }
+      },
+      "block_order": [
+        "item_aFimLM",
+        "item_PnpbV4",
+        "item_GhGyQU"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "",
+        "heading_tag": "h2",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "xl",
+        "heading_reverse": false,
+        "heading_gap": 29,
+        "sec_heading_spacing": 30,
+        "icon_pos_center": false,
+        "icon_pos_center_mb": true,
+        "icon_circle": false,
+        "space_icon_heading": "medium",
+        "size_heading": "medium",
+        "heading_uppercase": false,
+        "space_heading_content": "small",
+        "col_dk": "4",
+        "col_tb": "4",
+        "col_mb": "2",
+        "carousel_mobile": true,
+        "border_style": "none",
+        "fullwidth": true,
+        "boxed_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 80,
+        "padding_rate": 75
+      }
+    },
+    "marquee_xcTg8g": {
+      "type": "marquee",
+      "blocks": {
+        "item_kaUPF7": {
+          "type": "item",
+          "settings": {
+            "text": "<p>FREE SHAKER CUP ON ORDERS $150+</p>",
+            "icon_svg": "none",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        },
+        "item_hyYTBG": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "text": "<p>1-Day Only</p>",
+            "icon_svg": "none",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        }
+      },
+      "block_order": [
+        "item_kaUPF7",
+        "item_hyYTBG"
+      ],
+      "disabled": true,
+      "settings": {
+        "space_item": 30,
+        "speed": 0.3,
+        "direction": "rtl",
+        "marquee_pause_when_hover": false,
+        "text_fs": "h5",
+        "text_fw": "normal",
+        "text_uppercase": false,
+        "adding_border": true,
+        "icon_position_between": true,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "collections_list_7TDCzK": {
+      "type": "collections-list",
+      "blocks": {
+        "collection_item_xFj4h4": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "best-sellers",
+            "title": "Best Sellers",
+            "collection_link": "shopify://collections/best-sellers"
+          }
+        },
+        "collection_item_6Bkbqj": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "trending-products",
+            "title": "Trending Products",
+            "collection_link": "shopify://collections/trending-products"
+          }
+        },
+        "collection_item_J3FahB": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "protein-powders",
+            "title": "Protein Powders",
+            "collection_link": "shopify://collections/protein-powders"
+          }
+        },
+        "collection_item_WdhxGw": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "supplements",
+            "title": "Supplements",
+            "collection_link": "shopify://collections/supplements"
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_xFj4h4",
+        "collection_item_6Bkbqj",
+        "collection_item_J3FahB",
+        "collection_item_WdhxGw"
+      ],
+      "name": "t:sections.collection_list.name",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "Shop By Category",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "<p>Mix & Match Items to qualify for the Buy More Save More promotion</p>",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "btn_heading_collection": false,
+        "heading_gap": 15,
+        "sec_heading_spacing": 10,
+        "collection_list": [],
+        "collection_des": "6",
+        "content_size": "4xl",
+        "content_weight": "medium",
+        "text_transform": false,
+        "content_position": "center",
+        "content_padding": 10,
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "col_dk": "4",
+        "col_tb": "4",
+        "col_mb": "2",
+        "space_items": "x",
+        "half_item": false,
+        "navUI": false,
+        "nav_des": "default",
+        "nav_pos": "middle_in",
+        "dotUI": false,
+        "dots_pos": "default",
+        "section_fullwidth": false,
+        "boxed_fullwidth": false,
+        "boxed_content": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_rate": 75
+      }
+    },
+    "main_heading_kbTqAd": {
+      "type": "main-heading",
+      "blocks": {
+        "1_7rEnGd": {
+          "type": "1",
+          "settings": {
+            "heading": "Shop By Category",
+            "heading_size": "h4"
+          }
+        }
+      },
+      "block_order": [
+        "1_7rEnGd"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "spacing_hd": 5,
+        "padding_top": 30,
+        "padding_bottom": 19,
+        "padding_rate": 75
+      }
+    },
+    "categories_section_iieiPP": {
+      "type": "categories-section",
+      "blocks": {
+        "collection_item_dDBatE": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "best-sellers",
+            "title": "Best Sellers",
+            "collection_link": "shopify://collections/best-sellers"
+          }
+        },
+        "collection_item_tHirJe": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "protein-powders",
+            "title": "Protein Powders",
+            "collection_link": "shopify://collections/protein-powders"
+          }
+        },
+        "collection_item_TKJfeA": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "supplements",
+            "title": "Supplements",
+            "collection_link": ""
+          }
+        },
+        "collection_item_p3LjMx": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "vitamin-mineral-supplements",
+            "title": "Vitamin & Mineral Supplements",
+            "collection_link": ""
+          }
+        },
+        "collection_item_RRnJcb": {
+          "type": "collection_item",
+          "disabled": true,
+          "settings": {
+            "collection": "creatine-supplements",
+            "title": "Creatine",
+            "collection_link": ""
+          }
+        },
+        "collection_item_WjUJD9": {
+          "type": "collection_item",
+          "disabled": true,
+          "settings": {
+            "collection": "pre-workout-supplements",
+            "title": "Pre Workout",
+            "collection_link": ""
+          }
+        },
+        "collection_item_hYTnG9": {
+          "type": "collection_item",
+          "disabled": true,
+          "settings": {
+            "collection": "weight-loss-supplements",
+            "title": "Weight Loss Supplements",
+            "collection_link": "shopify://collections/weight-loss-supplements"
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_dDBatE",
+        "collection_item_tHirJe",
+        "collection_item_TKJfeA",
+        "collection_item_p3LjMx",
+        "collection_item_RRnJcb",
+        "collection_item_WjUJD9",
+        "collection_item_hYTnG9"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-1",
+        "style": "normal",
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_xMEByG": {
+      "type": "custom-line",
+      "disabled": true,
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_rate": 75
+      }
+    },
+    "image_with_tabs_content_9hbpjb": {
+      "type": "image-with-tabs-content",
+      "blocks": {
+        "tab_item_iFTwVk": {
+          "type": "tab_item",
+          "settings": {
+            "title": "OFFER ENDS TONIGHT",
+            "heading": "Honoring Service: 30% Off for Military Personnel Today Only",
+            "content_text": "TODAY ONLY: Military personnel receive 30% off in honor of Remembrance Day! Verify with SheerID to claim your discount. Thank you for your service.",
+            "btn_label": "Verify with SheerID",
+            "btn_link": "shopify://pages/military-discounts",
+            "target": true,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1"
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_iFTwVk"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "30% off for Military Personnel",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "<p>Exclusive deal with SheerID verficiation</p>",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 10,
+        "sec_heading_spacing": 49,
+        "main_img": "shopify://shop_images/military-image.png",
+        "image_pos": "left",
+        "image_ratio": "adapt_image",
+        "custom_height": 860,
+        "custom_height_tb": 300,
+        "custom_height_mb": 300,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_Hx8wKY": {
+      "type": "custom-line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_GWd3j7": {
+      "type": "custom-liquid",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"shopall\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "main_heading_9yN8PP": {
+      "type": "main-heading",
+      "blocks": {
+        "1_ihbQgE": {
+          "type": "1",
+          "settings": {
+            "heading": "Shop All",
+            "heading_size": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "1_ihbQgE"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "spacing_hd": 5,
+        "padding_top": 30,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "product_des": "1",
+        "image_ratio": "custom-pr",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 12,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "pagination_type": "links",
+        "paginate_pos": "center",
+        "dis_pagination": 60,
+        "enable_sorting": true,
+        "enable_filtering": false,
+        "enable_num_cols_selector": true,
+        "widget_heading": "Product categories",
+        "cat_source": "1",
+        "cat_link_list": "",
+        "count": true,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 30,
+        "padding_bottom": 70,
+        "padding_rate": 75,
+        "sidebar_position": "left",
+        "sidebar_size": "medium"
+      }
+    },
+    "custom_liquid_jWAa9h": {
+      "type": "custom-liquid",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"faq\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "accordion_GzNMUJ": {
+      "type": "accordion",
+      "blocks": {
+        "title_QMaciC": {
+          "type": "title",
+          "settings": {
+            "title": "Frequently Asked Questions"
+          }
+        },
+        "accordion_item_yT6fX4": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "How does Buy More Save More work?",
+            "content": "It's simple — the more eligible products you add to your cart, the bigger your discount. Buy 2 and save 15%, buy 3 and save 20%, or buy 5 or more and save 25%. Mix and match within either category: proteins or supplements. The more you add, the more you save — automatically at checkout, no code needed."
+          }
+        },
+        "accordion_item_4yKUMN": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Do I need a promo code to get the discount?",
+            "content": "No code required. The discount is applied automatically at checkout as soon as you reach a qualifying tier."
+          }
+        },
+        "accordion_item_JRcMaU": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Which products are eligible?",
+            "content": "Most Canadian Protein products qualify. A small number of items — like bulk protein, gift cards, and sale items — are excluded. Look for the \"Buy More Save More\" badge on eligible product pages."
+          }
+        },
+        "accordion_item_ijzxVc": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Can I mix and match different products?",
+            "content": "Yes — that's the best part. Your tier is based on the total number of eligible products in your cart, not how many of the same item you buy. It is however based on category, you must add 2+ to you cart of either protein products or supplement products."
+          }
+        },
+        "accordion_item_nJVyaJ": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Can I combine different flavours or sizes of the same product?",
+            "content": "Absolutely. Two bags of Whey Isolate in different flavours count as two products. Same goes for different sizes."
+          }
+        },
+        "accordion_item_qxRJ9y": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Does Buy More Save More stack with other discounts or promo codes?",
+            "content": "Buy More Save More cannot be combined with other promotional codes or site-wide sales.Subscribe & Save customers cannot stack their subscription discount on top."
+          }
+        },
+        "accordion_item_MG9jTt": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Is there a limit to how much I can save?",
+            "content": "The maximum tier is 25% off when you buy 5 or more eligible products."
+          }
+        },
+        "accordion_item_K6fnFM": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "When does the program end?",
+            "content": "Buy More Save More is an ongoing program (other than during select sales)— no end date, no countdown. Stock up whenever it works for you."
+          }
+        }
+      },
+      "block_order": [
+        "title_QMaciC",
+        "accordion_item_yT6fX4",
+        "accordion_item_4yKUMN",
+        "accordion_item_JRcMaU",
+        "accordion_item_ijzxVc",
+        "accordion_item_nJVyaJ",
+        "accordion_item_qxRJ9y",
+        "accordion_item_MG9jTt",
+        "accordion_item_K6fnFM"
+      ],
+      "name": "t:sections.accordion.name",
+      "settings": {
+        "accordion_position": "start",
+        "accordion_icon": "1",
+        "open_first": false,
+        "enable_link_list": false,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 85,
+        "padding_bottom": 70,
+        "padding_rate": 50
+      }
+    },
+    "icon_with_text_dMcQeP": {
+      "type": "icon_with_text",
+      "settings": {
+        "color_scheme": "",
+        "text": "<p>Terms and Conditions for Buy More Save More</p>",
+        "btn_label": "View Terms and Conditions",
+        "btn_link": "shopify://pages/terms-and-conditions-for-buy-more-save-more",
+        "target": false,
+        "btn_size": "xs",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "btn_icon": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "custom_section_UmxijM",
+    "icon_box_MqDBYE",
+    "icon_box_aQW8hB",
+    "marquee_xcTg8g",
+    "collections_list_7TDCzK",
+    "main_heading_kbTqAd",
+    "categories_section_iieiPP",
+    "custom_line_xMEByG",
+    "image_with_tabs_content_9hbpjb",
+    "custom_line_Hx8wKY",
+    "custom_liquid_GWd3j7",
+    "main_heading_9yN8PP",
+    "main",
+    "custom_liquid_jWAa9h",
+    "accordion_GzNMUJ",
+    "icon_with_text_dMcQeP"
+  ]
+}

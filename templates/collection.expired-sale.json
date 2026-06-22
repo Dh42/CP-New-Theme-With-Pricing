@@ -1,0 +1,191 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "top_heading_GGBcmh": {
+      "type": "top-heading",
+      "blocks": {
+        "heading_RKW3GC": {
+          "type": "heading",
+          "settings": {
+            "heading": "You just missed it.<br>Don't miss out again!",
+            "heading_fs": "h3"
+          }
+        },
+        "sub_heading_EnX7dt": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "Sorry, but this promotion has <b>ended</b>! 🥲",
+            "sub_heading_fs": "lg"
+          }
+        }
+      },
+      "block_order": [
+        "heading_RKW3GC",
+        "sub_heading_EnX7dt"
+      ],
+      "name": "t:sections.section_title.name",
+      "settings": {
+        "spacing_item": 30,
+        "alignment": "center",
+        "alignment_mb": "center",
+        "fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "heading": {
+      "type": "heading-collection",
+      "blocks": {
+        "9a1347b4-da62-490d-9fd4-427a03686ac2": {
+          "type": "heading",
+          "settings": {
+            "heading": ""
+          }
+        },
+        "6df762d7-beda-4452-bcf6-1242b294077c": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "9a1347b4-da62-490d-9fd4-427a03686ac2",
+        "6df762d7-beda-4452-bcf6-1242b294077c"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacing_hd": 10,
+        "color_scheme": "",
+        "padding_top": 65,
+        "padding_bottom": 65,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_afCdcr": {
+      "type": "custom-liquid",
+      "name": "Missed Sale (Mobile) (Email and SMS consent)",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div class=\"klaviyo-form-TDcaMD\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "custom_liquid_mtjjpG": {
+      "type": "custom-liquid",
+      "name": "Missed Sale (Desktop) (Email and SMS consent)",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div class=\"klaviyo-form-WU8atp\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "custom_liquid_qcfAKr": {
+      "type": "custom-liquid",
+      "name": "Missed Sale (Mobile) (Email only)",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div class=\"klaviyo-form-WinSc4\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "custom_liquid_4iaUkc": {
+      "type": "custom-liquid",
+      "name": "Missed Sale (Mobile) (SMS only)",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div class=\"klaviyo-form-UjYdZu\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "custom_liquid_zWyxXe": {
+      "type": "custom-liquid",
+      "name": "Missed Sale (Desktop) (SMS only)",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div class=\"klaviyo-form-RKRxiY\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "custom_liquid_q3JwRB": {
+      "type": "custom-liquid",
+      "name": "Missed Sale (Desktop) (Email only)",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div class=\"klaviyo-form-TcNTr9\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "product_des": "1",
+        "image_ratio": "custom-pr",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 12,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "pagination_type": "links",
+        "paginate_pos": "center",
+        "dis_pagination": 60,
+        "enable_sorting": true,
+        "enable_filtering": false,
+        "enable_num_cols_selector": true,
+        "widget_heading": "Product categories",
+        "cat_source": "1",
+        "cat_link_list": "",
+        "count": true,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 30,
+        "padding_bottom": 70,
+        "padding_rate": 75,
+        "sidebar_position": "left",
+        "sidebar_size": "medium"
+      }
+    }
+  },
+  "order": [
+    "top_heading_GGBcmh",
+    "heading",
+    "custom_liquid_afCdcr",
+    "custom_liquid_mtjjpG",
+    "custom_liquid_qcfAKr",
+    "custom_liquid_4iaUkc",
+    "custom_liquid_zWyxXe",
+    "custom_liquid_q3JwRB",
+    "main"
+  ]
+}

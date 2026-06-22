@@ -1,0 +1,51 @@
+{%- liquid
+  assign selected_variant = product.selected_or_first_available_variant
+  assign nutrition_info = selected_variant.metafields.nutrify_nutrition_info.nutrify_nutrition_info_variant.value
+  assign protein_g = nil
+  assign servings_count = nil
+
+  if nutrition_info
+    assign protein_g = nutrition_info.protein
+    assign servings_count = nutrition_info.servingsPerContainer
+  endif
+
+  unless protein_g
+    assign protein_g = product.metafields.custom.stat_protein_g
+  endunless
+  unless servings_count
+    assign servings_count = product.metafields.custom.stat_servings
+  endunless
+
+  if servings_count and servings_count != '' and servings_count != '0'
+    assign servings_int = servings_count | plus: 0
+    if servings_int > 0
+      assign cost_cents = selected_variant.price | divided_by: servings_int
+      assign cost_dollars = selected_variant.price | divided_by: 100.0 | divided_by: servings_int
+    endif
+  endif
+-%}
+
+{%- if protein_g or servings_count -%}
+<div class="cp-stat-strip">
+  <div class="cp-stat-strip__inner">
+    {%- if protein_g -%}
+      <div class="cp-stat-strip__item">
+        <span class="cp-stat-strip__value">{{ protein_g }}g</span>
+        <span class="cp-stat-strip__label">Protein&#10;per serving</span>
+      </div>
+    {%- endif -%}
+    {%- if servings_count -%}
+      <div class="cp-stat-strip__item">
+        <span class="cp-stat-strip__value">{{ servings_count }}</span>
+        <span class="cp-stat-strip__label">Servings&#10;per container</span>
+      </div>
+    {%- endif -%}
+    {%- if cost_dollars -%}
+      <div class="cp-stat-strip__item">
+        <span class="cp-stat-strip__value">${{ cost_dollars | round: 2 }}</span>
+        <span class="cp-stat-strip__label">Cost&#10;per serving</span>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+{%- endif -%}

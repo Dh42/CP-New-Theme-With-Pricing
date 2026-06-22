@@ -1,0 +1,78 @@
+.performance-facts {
+  border: 1px solid #000;
+  max-width: 340px;
+  padding: 0;
+  margin: 0 0 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #000;
+}
+.performance-facts__header {
+  padding: 4px 6px;
+  border-bottom: 8px solid #000;
+}
+.performance-facts__title {
+  font-size: 28px;
+  font-weight: 900;
+  margin: 0 0 2px;
+  line-height: 1;
+}
+.performance-facts__header p {
+  margin: 0;
+  font-size: 12px;
+}
+.performance-facts__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.performance-facts__table td,
+.performance-facts__table th {
+  padding: 2px 6px;
+  text-align: left;
+  font-weight: normal;
+  border: none;
+}
+.performance-facts__table td:last-child,
+.performance-facts__table th:last-child {
+  text-align: right;
+}
+.performance-facts__table .small-info {
+  font-size: 11px;
+  border-top: 4px solid #000;
+  border-bottom: 1px solid #aaa;
+}
+.performance-facts__table tr {
+  border-top: 1px solid #aaa;
+}
+.performance-facts__table .thick-row {
+  border-top: 8px solid #000;
+}
+.performance-facts__table .thick-end {
+  border-bottom: 8px solid #000;
+}
+.performance-facts__table .thin-end {
+  border-bottom: 1px solid #aaa;
+}
+.performance-facts__table .blank-cell {
+  width: 20px;
+}
+.daily-value-note {
+  font-size: 10px;
+  padding: 4px 6px;
+  margin: 0;
+  border-top: 4px solid #000;
+}
+.ingredients-info {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 8px 0;
+}
+.ingredients-info h2 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+.ingredients-info p {
+  margin: 0;
+  color: #333;
+}

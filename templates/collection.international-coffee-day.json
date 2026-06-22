@@ -1,0 +1,786 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-collection",
+      "blocks": {
+        "6df762d7-beda-4452-bcf6-1242b294077c": {
+          "type": "description",
+          "settings": {
+            "description": "International Coffee Day"
+          }
+        },
+        "9a1347b4-da62-490d-9fd4-427a03686ac2": {
+          "type": "heading",
+          "settings": {
+            "heading": "Up To 30% Off Select Coffee Items"
+          }
+        }
+      },
+      "block_order": [
+        "6df762d7-beda-4452-bcf6-1242b294077c",
+        "9a1347b4-da62-490d-9fd4-427a03686ac2"
+      ],
+      "settings": {
+        "spacing_hd": 10,
+        "color_scheme": "scheme-5",
+        "padding_top": 72,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "top_heading_74naTk": {
+      "type": "top-heading",
+      "blocks": {
+        "sub_heading_B86Yza": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "<a href=\"https://canadianprotein.com/collections/international-coffee-day#faq\"><small>Some exclusions may apply. Click here for more details.</small></a>",
+            "sub_heading_fs": "base"
+          }
+        }
+      },
+      "block_order": [
+        "sub_heading_B86Yza"
+      ],
+      "settings": {
+        "spacing_item": 0,
+        "alignment": "center",
+        "alignment_mb": "center",
+        "fullwidth": false,
+        "color_scheme": "scheme-5",
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "padding_rate": 40
+      }
+    },
+    "top_heading_KpPgyy": {
+      "type": "top-heading",
+      "blocks": {
+        "sub_heading_hfntch": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "Use discount code:",
+            "sub_heading_fs": "lg"
+          }
+        }
+      },
+      "block_order": [
+        "sub_heading_hfntch"
+      ],
+      "settings": {
+        "spacing_item": 0,
+        "alignment": "center",
+        "alignment_mb": "center",
+        "fullwidth": false,
+        "color_scheme": "scheme-5",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 40
+      }
+    },
+    "icon_with_text_2_E4fh46": {
+      "type": "icon-with-text-2",
+      "name": "Icon-with-text2",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "btn_label": "COFFEE",
+        "btn_link": "#shopall",
+        "target": false,
+        "btn_size": "xl",
+        "btn_style": "outline",
+        "btn_fw": "bold",
+        "btn_icon": "none",
+        "padding_top": 10,
+        "padding_bottom": 72,
+        "padding_rate": 75
+      }
+    },
+    "categories_section_WybXU9": {
+      "type": "categories-section",
+      "blocks": {
+        "collection_item_3jDXjf": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "whey-protein-isolate",
+            "title": "Whey Protein Isolate",
+            "collection_link": "shopify://products/100-whey-protein-isolate"
+          }
+        },
+        "collection_item_TxQm8w": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "creatine-supplements",
+            "title": "Creatine",
+            "collection_link": "shopify://products/creatine-monohydrate"
+          }
+        },
+        "collection_item_YfM8Pd": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/C-PRE-Blue-Raspberry_b305a934-1e5c-416e-a614-2663d14e6f43.jpg",
+            "title": "C-Pre",
+            "collection_link": "shopify://products/c-pre"
+          }
+        },
+        "collection_item_qmeK9w": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "whey-concentrate",
+            "title": "Whey Protein Concentrate",
+            "collection_link": "shopify://products/whey-protein-concentrate"
+          }
+        },
+        "collection_item_Jg6gej": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "bcaas-branched-chain-amino-acids",
+            "title": "BCAAs",
+            "collection_link": "shopify://products/bcaa"
+          }
+        },
+        "collection_item_UVzWNG": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "micellar-casein",
+            "title": "Micellar Casein",
+            "collection_link": "shopify://products/micellar-casein"
+          }
+        },
+        "collection_item_JCaEfn": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "vegan-protein",
+            "title": "Vegan Protein",
+            "collection_link": "shopify://products/all-natural-premium-vegan-protein-blend"
+          }
+        },
+        "collection_item_YrJWjt": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "omega-supplements",
+            "title": "Omega-3 Softgels",
+            "collection_link": "shopify://products/omega-3"
+          }
+        },
+        "collection_item_a7cmDa": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "grass-fed-new-zealand-whey-concentrate",
+            "title": "Grass-Fed New Zealand Whey Protein",
+            "collection_link": "shopify://products/grass-fed-new-zealand-whey-protein-concentrate"
+          }
+        },
+        "collection_item_Db84Ph": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "l-glutamine",
+            "title": "L-Glutamine",
+            "collection_link": "shopify://products/l-glutamine"
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_3jDXjf",
+        "collection_item_TxQm8w",
+        "collection_item_YfM8Pd",
+        "collection_item_qmeK9w",
+        "collection_item_Jg6gej",
+        "collection_item_UVzWNG",
+        "collection_item_JCaEfn",
+        "collection_item_YrJWjt",
+        "collection_item_a7cmDa",
+        "collection_item_Db84Ph"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-1",
+        "style": "normal",
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "padding_rate": 50
+      }
+    },
+    "top_heading_9deeyq": {
+      "type": "top-heading",
+      "blocks": {
+        "sub_heading_NfgDgC": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "<small>Some exclusions may apply. While supplies last. Not combinable with other promotions.</small>",
+            "sub_heading_fs": "base"
+          }
+        }
+      },
+      "block_order": [
+        "sub_heading_NfgDgC"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "{line-height: 1;}"
+      ],
+      "settings": {
+        "spacing_item": 0,
+        "alignment": "center",
+        "alignment_mb": "center",
+        "fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "padding_rate": 40
+      }
+    },
+    "custom_line_gGhH7p": {
+      "type": "custom-line",
+      "disabled": true,
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 25,
+        "padding_rate": 75
+      }
+    },
+    "image_with_tabs_content_4ftiXT": {
+      "type": "image-with-tabs-content",
+      "blocks": {
+        "tab_item_aFxPHi": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Protein Coffee",
+            "heading": "The Perfect Protein/Energy Boost",
+            "content_text": "Energize your mornings with Canadian Protein’s Protein Coffee!\n<br>\n<br>\nAvailable in both vegan and regular options\n<br>\n<br>A rich, smooth blend of premium coffee and high-quality protein that fuels your day with clean energy, focus, and lasting strength",
+            "btn_label": "Get Yours Now",
+            "btn_link": "shopify://collections/protein-coffee",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1"
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_aFxPHi"
+      ],
+      "settings": {
+        "heading_align": "start",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "xl",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 30,
+        "main_img": "shopify://shop_images/Protein-coffee-canadian-protein-web.jpg",
+        "image_pos": "right",
+        "image_ratio": "adapt_image",
+        "custom_height": 270,
+        "custom_height_tb": 300,
+        "custom_height_mb": 300,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 72,
+        "padding_rate": 75
+      }
+    },
+    "featured_collection_carousel_UpcwG9": {
+      "type": "featured-collection-carousel",
+      "name": "t:sections.collection_products.carousel_name",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "Whey Protein Isolate / Concentrate",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "<p><strong>30% OFF</strong> Cappuccino Flavoured Protein</p>",
+        "subheading_size": "2xl",
+        "heading_reverse": false,
+        "btn_heading": false,
+        "nav_heading": "disable",
+        "heading_gap": 10,
+        "sec_heading_spacing": 30,
+        "collection": "",
+        "product_list": [
+          "100-whey-protein-isolate",
+          "whey-protein-concentrate"
+        ],
+        "product_des": "1",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 8,
+        "col_dk": "2",
+        "col_tb": "2",
+        "col_mb": "2",
+        "half_item": false,
+        "navUI": false,
+        "nav_des": "default",
+        "nav_pos": "middle_in",
+        "dotUI": false,
+        "pagination_type": "none",
+        "paginate_pos": "center",
+        "dis_pagination": 30,
+        "btn_label": "View all",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "section_fullwidth": false,
+        "color_scheme": "scheme-5",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_rate": 75
+      }
+    },
+    "featured_collection_carousel_q8CEJ9": {
+      "type": "featured-collection-carousel",
+      "name": "t:sections.collection_products.carousel_name",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "Protein & Caffeine",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "<p><strong>Choose from 3</strong> Protein Coffee Products</p>",
+        "subheading_size": "2xl",
+        "heading_reverse": false,
+        "btn_heading": false,
+        "nav_heading": "disable",
+        "heading_gap": 10,
+        "sec_heading_spacing": 30,
+        "collection": "",
+        "product_list": [
+          "vegan-protein-coffee",
+          "whey-protein-iso-latte",
+          "protein-coffee"
+        ],
+        "product_des": "1",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 8,
+        "col_dk": "3",
+        "col_tb": "3",
+        "col_mb": "2",
+        "half_item": false,
+        "navUI": true,
+        "nav_des": "default",
+        "nav_pos": "middle_out",
+        "dotUI": true,
+        "pagination_type": "none",
+        "paginate_pos": "center",
+        "dis_pagination": 30,
+        "btn_label": "View all",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_rate": 75
+      }
+    },
+    "main_heading_9yN8PP": {
+      "type": "main-heading",
+      "blocks": {
+        "1_ihbQgE": {
+          "type": "1",
+          "settings": {
+            "heading": "Shop all",
+            "heading_size": "h4"
+          }
+        }
+      },
+      "block_order": [
+        "1_ihbQgE"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "",
+        "spacing_hd": 5,
+        "padding_top": 30,
+        "padding_bottom": 8,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_hNgpay": {
+      "type": "custom-liquid",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"shopall\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "marquee_hjg6Mm": {
+      "type": "marquee",
+      "blocks": {
+        "item_8mHggy": {
+          "type": "item",
+          "settings": {
+            "text": "<p>1kg Protein Coffee</p>",
+            "icon_svg": "none",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        },
+        "item_77px7H": {
+          "type": "item",
+          "settings": {
+            "text": "<p>1kg Vegan Protein Coffee</p>",
+            "icon_svg": "none",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        },
+        "item_CKzXPK": {
+          "type": "item",
+          "settings": {
+            "text": "<p>1kg IsoLatte</p>",
+            "icon_svg": "none",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        },
+        "item_DkaGKW": {
+          "type": "item",
+          "settings": {
+            "text": "<p>Whey Protein Concentrate – Cappuccino (1kg & 2kg)</p>",
+            "icon_svg": "none",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        },
+        "item_K8fh4c": {
+          "type": "item",
+          "settings": {
+            "text": "<p>Whey Protein Isolate – Cappuccino (1kg & 2kg)</p>",
+            "icon_svg": "none",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        }
+      },
+      "block_order": [
+        "item_8mHggy",
+        "item_77px7H",
+        "item_CKzXPK",
+        "item_DkaGKW",
+        "item_K8fh4c"
+      ],
+      "disabled": true,
+      "name": "t:sections.marquee.name",
+      "settings": {
+        "space_item": 50,
+        "speed": 0.1,
+        "direction": "rtl",
+        "marquee_pause_when_hover": false,
+        "text_fs": "h5",
+        "text_fw": "normal",
+        "text_uppercase": false,
+        "adding_border": true,
+        "icon_position_between": true,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_D4LHax": {
+      "type": "custom-liquid",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<p id=\"all_collection\"></p>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "top_heading_WMTHQG": {
+      "type": "top-heading",
+      "blocks": {
+        "heading_iYiUGU": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop All",
+            "heading_fs": "h4"
+          }
+        },
+        "sub_heading_j7VTqH": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "<b>Choose from:</b> 1kg Protein Coffee, 1kg Vegan Protein Coffee, 1kg IsoLatte, Whey Protein Concentrate – Cappuccino Flavour (1kg & 2kg), Whey Protein Isolate – Cappuccino Flavour (1kg & 2kg)",
+            "sub_heading_fs": "lg"
+          }
+        }
+      },
+      "block_order": [
+        "heading_iYiUGU",
+        "sub_heading_j7VTqH"
+      ],
+      "settings": {
+        "spacing_item": 10,
+        "alignment": "left",
+        "alignment_mb": "left",
+        "fullwidth": false,
+        "color_scheme": "scheme-5",
+        "padding_top": 80,
+        "padding_bottom": 30,
+        "padding_rate": 40
+      }
+    },
+    "discount_collection_mRKRDf": {
+      "type": "discount-collection",
+      "blocks": {
+        "countdown_xajyWX": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "year": 2025,
+            "month": 10,
+            "day": 2,
+            "hour": 0,
+            "minute": 0
+          }
+        }
+      },
+      "block_order": [
+        "countdown_xajyWX"
+      ],
+      "name": "t:sections.collection_products.discount_name",
+      "settings": {
+        "heading_align": "start",
+        "sec_heading": "",
+        "heading_tag": "h2",
+        "heading_size": "h4",
+        "sec_heading_spacing": 60,
+        "collection": "international-coffee-day",
+        "product_list": [],
+        "product_des": "2",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "products_count": 8,
+        "col_dk": "5",
+        "col_tb": "3",
+        "col_mb": "2",
+        "navUI": true,
+        "nav_des": "default",
+        "nav_pos": "middle_out",
+        "dotUI": true,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-5",
+        "box_layout": "1",
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "disabled": true,
+      "settings": {
+        "product_des": "1",
+        "image_ratio": "custom-pr",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 12,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "pagination_type": "links",
+        "paginate_pos": "center",
+        "dis_pagination": 60,
+        "enable_sorting": true,
+        "enable_filtering": false,
+        "enable_num_cols_selector": true,
+        "widget_heading": "Product categories",
+        "cat_source": "1",
+        "cat_link_list": "",
+        "count": true,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 30,
+        "padding_bottom": 70,
+        "padding_rate": 75,
+        "sidebar_position": "left",
+        "sidebar_size": "medium"
+      }
+    },
+    "custom_liquid_piD3Gx": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"faq\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "accordion_6hCrXz": {
+      "type": "accordion",
+      "blocks": {
+        "title_VreN3V": {
+          "type": "title",
+          "settings": {
+            "title": "Frequently Asked Questions"
+          }
+        },
+        "accordion_item_MLXrj9": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What discounts are available during the International Coffee Day Sale?",
+            "content": "Enjoy 30% off Protein Coffee, Vegan Protein Coffee, and select Cappuccino-flavoured proteins for a limited time."
+          }
+        },
+        "accordion_item_zdgNjx": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Do I need a discount code to take advantage of the sale?",
+            "content": "Yes — use the discount code COFFEE at checkout to apply the savings."
+          }
+        },
+        "accordion_item_WCjYAa": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Is there a gift with purchase or loyalty points during the sale?",
+            "content": "No, this promotion is strictly 30% off the selected coffee protein products."
+          }
+        },
+        "accordion_item_cUNmbE": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Are there any product exclusions in the sale?",
+            "content": "Yes, the sale only applies to the following products:\n<br>\n- 1kg Protein Coffee\n<br>\n- 1kg Vegan Protein Coffee\n<br>\n- 1kg IsoLatte\n<br>\n- Whey Protein Concentrate – Cappuccino (1kg & 2kg)\n<br>\n- Whey Protein Isolate – Cappuccino (1kg & 2kg)\n<br>\n<br>\nAll other products, bundles, clearance, and non-qualifying items are excluded."
+          }
+        },
+        "accordion_item_KnedXj": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "When does the International Coffee Day Sale end?",
+            "content": "This is a limited-time event - 1 day only. Be sure to shop early while supplies last!"
+          }
+        },
+        "accordion_item_QKHhpN": {
+          "type": "accordion_item",
+          "disabled": true,
+          "settings": {
+            "title": "Are any products excluded from the 25% discount?",
+            "content": "Yes, some exclusions may apply. Final prices are shown on product pages or at checkout. Items already heavily discounted may not receive additional reductions."
+          }
+        },
+        "accordion_item_mMMYDT": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Does the sale apply to bulk items?",
+            "content": "no, bulk items are excluded from this sale."
+          }
+        },
+        "accordion_item_HYfx8z": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Will The Buy More, Save More Promotion Work With This Sale?",
+            "content": "No, the Buy More, Save More promotion will not work with this sale."
+          }
+        },
+        "accordion_item_3UKNWT": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Can I return or exchange items purchased in this promotion?",
+            "content": "Standard return and exchange policies apply. However, if you return an item that was part of the sale, your refund amount may be adjusted to reflect the promotion pricing."
+          }
+        }
+      },
+      "block_order": [
+        "title_VreN3V",
+        "accordion_item_MLXrj9",
+        "accordion_item_zdgNjx",
+        "accordion_item_WCjYAa",
+        "accordion_item_cUNmbE",
+        "accordion_item_KnedXj",
+        "accordion_item_QKHhpN",
+        "accordion_item_mMMYDT",
+        "accordion_item_HYfx8z",
+        "accordion_item_3UKNWT"
+      ],
+      "name": "t:sections.accordion.name",
+      "settings": {
+        "accordion_position": "start",
+        "accordion_icon": "1",
+        "open_first": false,
+        "enable_link_list": false,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 52,
+        "padding_bottom": 70,
+        "padding_rate": 75
+      }
+    },
+    "icon_with_text_jff4fE": {
+      "type": "icon_with_text",
+      "name": "t:sections.icon_text.name",
+      "settings": {
+        "color_scheme": "",
+        "text": "<p>Sales / Promotions Terms and Conditions</p>",
+        "btn_label": "Learn More",
+        "btn_link": "https://canadianprotein.com/pages/terms-and-conditions-for-promotions-and-sales",
+        "target": false,
+        "btn_size": "base",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "btn_icon": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "top_heading_74naTk",
+    "top_heading_KpPgyy",
+    "icon_with_text_2_E4fh46",
+    "categories_section_WybXU9",
+    "top_heading_9deeyq",
+    "custom_line_gGhH7p",
+    "image_with_tabs_content_4ftiXT",
+    "featured_collection_carousel_UpcwG9",
+    "featured_collection_carousel_q8CEJ9",
+    "main_heading_9yN8PP",
+    "custom_liquid_hNgpay",
+    "marquee_hjg6Mm",
+    "custom_liquid_D4LHax",
+    "top_heading_WMTHQG",
+    "discount_collection_mRKRDf",
+    "main",
+    "custom_liquid_piD3Gx",
+    "accordion_6hCrXz",
+    "icon_with_text_jff4fE"
+  ]
+}

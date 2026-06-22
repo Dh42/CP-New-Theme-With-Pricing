@@ -1,0 +1,330 @@
+{%- comment -%}
+  Renders product variant options
+
+  Accepts:
+  - product: {Object} product object.
+  - option: {Object} current product_option object.
+  - block: {Object} block object.
+  - product_form_id: {String} Id of the product form to which the variant picker is associated.
+  - picker_type: {String} a picker type
+  - hide_sold_out
+  - color_option_index
+  - un_no_pick
+  - selected_value
+
+  Usage:
+  {%- render 'product-variant-options', product: product, option: option, block: block -%}
+{%- endcomment -%}
+{%- liquid
+  assign color_picker_type = block.settings.color_picker_type
+  assign option_name_down = option.name | downcase
+  assign is_flavour_icon = false
+  if option_name_down contains 'flavour'
+    unless color_picker_type == 'block' or color_picker_type == 'block_with_color'
+      assign is_flavour_icon = true
+    endunless
+  endif
+  if option_type == 'color' or option_type == 'color_rounded' or is_flavour_icon
+    assign color_white = 'products.theme_settings.color_white' | t | downcase | strip
+    if color_picker_type contains 'color' or color_picker_type == 'image' or color_picker_type == 'image_rounded' or is_flavour_icon
+      assign colors = shop.metafields.ecomrise.colors.value
+      assign color_values = shop.metaobjects.theme_swatch.values | first
+      assign colors2 = color_values.colors.value
+      assign use_style_color = true
+    endif
+  else
+    assign use_style_color = false
+  endif
+-%}
+
+{%- for value in option.values -%}
+
+  {%- liquid
+    assign option_unavailable = true
+    assign option_soldout = true
+    case option.position
+      when 1
+        if variants_option1_arr contains value
+          assign option_unavailable = false
+        endif
+        if variants_option1_available_arr contains value
+          assign option_soldout = false
+        endif
+      when 2
+        if variants_option2_arr contains value
+          assign option_unavailable = false
+        endif
+        if variants_option2_available_arr contains value
+          assign option_soldout = false
+        endif
+      when 3
+        if variants_option3_arr contains value
+          assign option_unavailable = false
+        endif
+        if variants_option3_available_arr contains value
+          assign option_soldout = false
+        endif
+    endcase
+  -%}
+
+  {%- if option_type == 'color' or option_type == 'color_rounded' or is_flavour_icon -%}
+    {%- if option_name_down contains 'flavour' -%}
+      {%- liquid
+        case option.position
+          when 1
+            assign flavor_variants = product.variants | where: 'option1', value
+          when 2
+            assign flavor_variants = product.variants | where: 'option2', value
+          when 3
+            assign flavor_variants = product.variants | where: 'option3', value
+        endcase
+        assign flavor_variant_obj = flavor_variants | first
+        assign flavor_img = flavor_variant_obj.metafields.custom.flavor_image
+      -%}
+    {%- endif -%}
+    {%- liquid
+      if use_style_color
+        assign color_downcase = value | downcase
+        assign color_handle = value | handle
+        assign color_obj = colors[color_handle] | default: colors2[color_handle]
+        assign color_style_inline = ''
+        if color_picker_type == 'image' or color_picker_type == 'image_rounded'
+          assign variants_has_color = product.variants | where: color_option_index, value
+          assign variant_first_color = variants_has_color | first
+          if variant_first_color.featured_image
+            assign variant_first_image = variant_first_color
+          else
+            assign variant_first_image = variants_has_color | where: 'featured_image' | first
+          endif
+          assign variant_image = variant_first_image.featured_image
+        else
+          assign variant_image = nil
+        endif
+        assign image = variant_image | default: value.swatch.image | default: images[color_obj.imageName]
+        if image != blank
+          assign color_image = image | image_url: width: 90
+          assign color_image_style = '--hdt-bg-image: url(' | append: color_image | append: ');'
+        else
+          assign color_image_style = nil
+          unless option_name_down contains 'flavour'
+            if value.swatch.color
+              assign color_style_inline = '--hdt-bg-color: ' | append: value.swatch.color | append: ';'
+            elsif color_obj.colorsCSS != blank
+              assign color_style_inline = color_obj.colorsCSS
+            endif
+          endunless
+        endif
+      endif
+    -%}
+    {%- capture color_style -%}{%- if use_style_color and color_image_style or color_style_inline.size > 0 %} style="{{ color_image_style }}{{ color_style_inline }}"{% endif -%}{%- endcapture -%}
+
+    {%- if color_picker_type == 'color' or color_picker_type == 'color_rounded' or is_flavour_icon -%}
+      <input autocomplete="off" is-value type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" name="{{ option.name | escape }}" value="{{ value | escape }}" form="{{ product_form_id }}"{% if selected_value == value and un_no_pick %} checked{% endif %} class="sr-only {% if option_unavailable %}is-unavailable{% elsif option_soldout %}is-disabled{% endif %}">
+      <label is="hdt-label-tooltip" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" class="hdt-product-form_value is-type-color">
+          <span class="hdt-form-color-pattern {% if color_white == color_downcase %} hdt-bg-color-white{% endif %}" {{ color_style }}>
+            {%- if flavor_img != blank -%}
+              {{ flavor_img | image_url: width: 54 | image_tag: alt: value, loading: 'lazy', class: 'flavor-img' }}
+            {%- endif -%}
+          </span>
+        {%- unless hide_sold_out %}<span class="sr-only">{{ 'products.product.variant_sold_out' | t }}</span>{% endunless -%}
+        <span class="hdt-form-color-name cp-flavor-name">{{- value | escape -}}</span>
+      </label>
+    {%- elsif color_picker_type == 'image' or color_picker_type == 'image_rounded' -%}
+      <input autocomplete="off" is-value type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" name="{{ option.name | escape }}" value="{{ value | escape }}" form="{{ product_form_id }}"{% if selected_value == value and un_no_pick %} checked{% endif %} class="sr-only {% if option_unavailable %}is-unavailable{% elsif option_soldout %}is-disabled{% endif %}">
+      {%- if variant_image != blank -%}
+        <label is="hdt-label-tooltip" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" class="hdt-product-form_value hdt-product-form_value_has-image is-type-color{% if color_white == color_downcase %} hdt-bg-color-white{% endif %}">
+          {{ image | image_url: width: 160 | image_tag: widths: '50, 100, 160', loading: 'lazy' }}
+          {%- unless hide_sold_out %}<span class="sr-only">{{ 'products.product.variant_sold_out' | t }}</span>{% endunless -%}
+          <span class="hdt-form-color-name sr-only">{{- value | escape -}}</span>
+        </label>
+      {%- else -%}
+        <label is="hdt-label-tooltip" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" class="hdt-product-form_value is-type-color">
+            <span class="hdt-form-color-pattern {% if color_white == color_downcase %} hdt-bg-color-white{% endif %}" {{ color_style }}>
+              {%- if flavor_img != blank -%}
+                {{ flavor_img | image_url: width: 54 | image_tag: alt: value, loading: 'lazy', class: 'flavor-img' }}
+              {%- endif -%}
+            </span>
+          {%- unless hide_sold_out %}<span class="sr-only">{{ 'products.product.variant_sold_out' | t }}</span>{% endunless -%}
+          <span class="hdt-form-color-name sr-only">{{- value | escape -}}</span>
+        </label>
+      {%- endif -%}
+    {%- elsif color_picker_type contains 'dropdown' -%}
+      <button type="button" role="option" value="{{ value | escape }}" aria-selected="{% if selected_value == value and un_no_pick %}true{% else %}false{% endif %}" class="hdt-product-form_value is-type-{{ color_picker_type }} {% if option_unavailable %}is-unavailable{% elsif option_soldout %}is-disabled{% endif %}">
+        <span class="hdt-block-swatch__color{% if color_white == color_downcase %} hdt-bg-color-white{% endif %}" {{ color_style }}></span>
+        <span class="hdt-form-color-name">{{- value | escape -}}</span>
+      </button>
+    {%- else -%}
+      <input autocomplete="off" is-value type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" name="{{ option.name | escape }}" value="{{ value | escape }}" form="{{ product_form_id }}"{% if selected_value == value and un_no_pick %} checked{% endif %} class="sr-only {% if option_unavailable %}is-unavailable{% elsif option_soldout %}is-disabled{% endif %}">
+      <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" class="hdt-product-form_value  is-type-block">
+        {%- unless hide_sold_out %}<span class="sr-only">{{ 'products.product.variant_sold_out' | t }}</span>{% endunless -%}
+        {%- if option_name_down contains 'size' -%}
+          {%- liquid
+            case option.position
+              when 1
+                assign size_variants = product.variants | where: 'option1', value
+                if selected_variant
+                  assign _sv_matched = size_variants | where: 'option2', selected_variant.option2
+                  if _sv_matched.size > 0
+                    assign size_variants = _sv_matched
+                  endif
+                endif
+              when 2
+                assign size_variants = product.variants | where: 'option2', value
+                if selected_variant
+                  assign _sv_matched = size_variants | where: 'option1', selected_variant.option1
+                  if _sv_matched.size > 0
+                    assign size_variants = _sv_matched
+                  endif
+                endif
+              when 3
+                assign size_variants = product.variants | where: 'option3', value
+                if selected_variant
+                  assign _sv_matched = size_variants | where: 'option1', selected_variant.option1
+                  if _sv_matched.size > 0
+                    assign size_variants = _sv_matched
+                  endif
+                endif
+            endcase
+            assign size_variant = size_variants | first
+            assign size_nutrition = size_variant.metafields.nutrify_nutrition_info.nutrify_nutrition_info_variant.value
+            assign size_servings = size_nutrition.servingsPerContainer | round
+            assign size_cost_cents = 0
+            if size_servings > 0
+              assign size_cost_cents = size_variant.price | times: 1.0 | divided_by: size_servings | round
+            endif
+            assign size_name_base = value | split: '(' | first | strip
+          -%}
+          {%- if value contains '2 kg' or value contains '2kg' -%}<span class="cp-size-best-value">Best Value</span>{%- endif -%}
+          <span class="size-label-name">{{ size_name_base }}</span>
+          <span class="size-label-cost">{% if size_cost_cents > 0 %}{{ size_cost_cents | money | strip_html }}/serving{% else %}—/serving{% endif %}</span>
+        {%- else -%}
+          <span class="size-label-name">{{- value | escape -}}</span>
+        {%- endif -%}
+      </label>
+    {%- endif -%}
+
+  {%- elsif block.settings.picker_type == 'dropdown' -%}
+    <button type="button" role="option" value="{{ value | escape }}" aria-selected="{% if selected_value == value and un_no_pick %}true{% else %}false{% endif %}"{% if option_soldout or option_unavailable %} class="{% if option_unavailable %}is-unavailable{% else %}is-disabled{% endif %}"{% endif %}>{{ value }}</button>
+  {%- else -%}
+    <input autocomplete="off" is-value type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" name="{{ option.name | escape }}" value="{{ value | escape }}" form="{{ product_form_id }}"{% if selected_value == value and un_no_pick %} checked{% endif %} class="sr-only {% if option_unavailable %}is-unavailable{% elsif option_soldout %}is-disabled{% endif %}">
+    <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" class="hdt-product-form_value  is-type-block">
+      {%- unless hide_sold_out %}<span class="sr-only">{{ 'products.product.variant_sold_out' | t }}</span>{% endunless -%}
+      {%- if option_name_down contains 'size' -%}
+        {%- liquid
+          case option.position
+            when 1
+              assign size_variants = product.variants | where: 'option1', value
+              if selected_variant
+                assign _sv_matched = size_variants | where: 'option2', selected_variant.option2
+                if _sv_matched.size > 0
+                  assign size_variants = _sv_matched
+                endif
+              endif
+            when 2
+              assign size_variants = product.variants | where: 'option2', value
+              if selected_variant
+                assign _sv_matched = size_variants | where: 'option1', selected_variant.option1
+                if _sv_matched.size > 0
+                  assign size_variants = _sv_matched
+                endif
+              endif
+            when 3
+              assign size_variants = product.variants | where: 'option3', value
+              if selected_variant
+                assign _sv_matched = size_variants | where: 'option1', selected_variant.option1
+                if _sv_matched.size > 0
+                  assign size_variants = _sv_matched
+                endif
+              endif
+          endcase
+          assign size_variant = size_variants | first
+          assign size_nutrition = size_variant.metafields.nutrify_nutrition_info.nutrify_nutrition_info_variant.value
+          assign size_servings = size_nutrition.servingsPerContainer | round
+          assign size_cost_cents = 0
+          if size_servings > 0
+            assign size_cost_cents = size_variant.price | times: 1.0 | divided_by: size_servings | round
+          endif
+          assign size_name_base = value | split: '(' | first | strip
+        -%}
+        {%- if value contains '2 kg' or value contains '2kg' -%}<span class="cp-size-best-value">Best Value</span>{%- endif -%}
+        <span class="size-label-name">{{ size_name_base }}{% if size_servings > 0 %} · {{ size_servings }} servings{% endif %}</span>
+        <span class="size-label-cost">{% if size_cost_cents > 0 %}{{ size_cost_cents | money | strip_html }}/serving{% else %}—/serving{% endif %}</span>
+      {%- else -%}
+        <span class="size-label-name">{{- value | escape -}}</span>
+      {%- endif -%}
+    </label>
+  {%- endif -%}
+
+{%- endfor -%}
+
+<style>
+  .hdt-form-color-pattern {
+    position: relative !important;
+    overflow: hidden !important;
+    width: 54px !important;
+    height: 54px !important;
+    border-radius: 50% !important;
+  }
+  .flavor-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+  }
+  .hdt-product-form__values {
+    flex-wrap: wrap !important;
+  }
+  .hdt-product-form_value.is-type-color {
+    width: 64px !important;
+    height: 64px !important;
+    padding: 3px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .hdt-product-form_value.is-type-block {
+    border: 1px solid #E8E6DF !important;
+    border-radius: 12px !important;
+    padding: 9px 10px !important;
+    width: 46% !important;
+    background: #fff !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    letter-spacing: -0.01em !important;
+    cursor: pointer !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 3px !important;
+  }
+  input:checked + .hdt-product-form_value.is-type-block {
+    border: 1.5px solid #1A1A18 !important;
+    background: #1A1A18 !important;
+    color: #fff !important;
+  }
+  .cp-flavor-values-wrap .hdt-product-form_value.is-type-block {
+    width: auto !important;
+    border-radius: 999px !important;
+    padding: 5px 12px !important;
+    flex-direction: row !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    font-family: 'Albert Sans', sans-serif !important;
+  }
+  .cp-flavor-values-wrap input:checked + .hdt-product-form_value.is-type-block {
+    font-weight: 600 !important;
+  }
+  .size-label-name {
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .size-label-cost {
+    font-size: 12px;
+    opacity: 0.65;
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+  }
+</style>

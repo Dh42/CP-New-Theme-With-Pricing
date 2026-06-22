@@ -1,0 +1,761 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-collection",
+      "blocks": {
+        "6df762d7-beda-4452-bcf6-1242b294077c": {
+          "type": "description",
+          "settings": {
+            "description": "Supplement Sale"
+          }
+        },
+        "9a1347b4-da62-490d-9fd4-427a03686ac2": {
+          "type": "heading",
+          "settings": {
+            "heading": "30% Off Supplements"
+          }
+        }
+      },
+      "block_order": [
+        "6df762d7-beda-4452-bcf6-1242b294077c",
+        "9a1347b4-da62-490d-9fd4-427a03686ac2"
+      ],
+      "settings": {
+        "spacing_hd": 10,
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "top_heading_KpPgyy": {
+      "type": "top-heading",
+      "blocks": {
+        "sub_heading_hfntch": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "Use discount code:",
+            "sub_heading_fs": "base"
+          }
+        }
+      },
+      "block_order": [
+        "sub_heading_hfntch"
+      ],
+      "settings": {
+        "spacing_item": 0,
+        "alignment": "center",
+        "alignment_mb": "center",
+        "fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "padding_rate": 40
+      }
+    },
+    "icon_with_text_2_E4fh46": {
+      "type": "icon-with-text-2",
+      "name": "Icon-with-text2",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "btn_label": "SUPP30",
+        "btn_link": "#shopall",
+        "target": false,
+        "btn_size": "xl",
+        "btn_style": "outline",
+        "btn_fw": "bold",
+        "btn_icon": "none",
+        "padding_top": 10,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "categories_section_WybXU9": {
+      "type": "categories-section",
+      "blocks": {
+        "collection_item_3jDXjf": {
+          "type": "collection_item",
+          "disabled": true,
+          "settings": {
+            "collection": "creatine-supplements",
+            "title": "Creatine Supplements",
+            "collection_link": "shopify://collections/creatine-supplements"
+          }
+        },
+        "collection_item_qmeK9w": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "pre-workout-supplements",
+            "title": "Pre-Workout Supplements",
+            "collection_link": ""
+          }
+        },
+        "collection_item_JCaEfn": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "weight-loss-supplements",
+            "title": "Weight Loss Support",
+            "collection_link": ""
+          }
+        },
+        "collection_item_TxQm8w": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "vitamin-mineral-supplements",
+            "title": "Greens / Nutrition Supplements",
+            "collection_link": "shopify://products/super-greens"
+          }
+        },
+        "collection_item_a7cmDa": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "vitamin-mineral-supplements",
+            "title": "Vitamins",
+            "collection_link": "shopify://collections/vitamin-mineral-supplements"
+          }
+        },
+        "collection_item_Jg6gej": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "joint-supplements",
+            "title": "Joint Health Supplements",
+            "collection_link": ""
+          }
+        },
+        "collection_item_PdmhqV": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "amino-acid-supplements",
+            "title": "Amino Acid Supplements",
+            "collection_link": ""
+          }
+        },
+        "collection_item_YrJWjt": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "mental-health-supplements",
+            "title": "Mental Health Supplements",
+            "collection_link": ""
+          }
+        },
+        "collection_item_Db84Ph": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "omega-supplements",
+            "title": "Omega Supplements",
+            "collection_link": ""
+          }
+        },
+        "collection_item_WGHcT8": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "carbohydrate-supplements",
+            "title": "Carbohydrate Supplements",
+            "collection_link": "shopify://collections/carbohydrate-supplements"
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_3jDXjf",
+        "collection_item_qmeK9w",
+        "collection_item_JCaEfn",
+        "collection_item_TxQm8w",
+        "collection_item_a7cmDa",
+        "collection_item_Jg6gej",
+        "collection_item_PdmhqV",
+        "collection_item_YrJWjt",
+        "collection_item_Db84Ph",
+        "collection_item_WGHcT8"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "style": "normal",
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "padding_rate": 50
+      }
+    },
+    "top_heading_9deeyq": {
+      "type": "top-heading",
+      "blocks": {
+        "sub_heading_NfgDgC": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "<a href=\"https://canadianprotein.com/collections/supplement-sale#FAQ\"><small>Some exclusions may apply. While supplies last. <br><u>Click here for more details.<u></u></u></small></a>",
+            "sub_heading_fs": "base"
+          }
+        }
+      },
+      "block_order": [
+        "sub_heading_NfgDgC"
+      ],
+      "settings": {
+        "spacing_item": 0,
+        "alignment": "center",
+        "alignment_mb": "center",
+        "fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 10,
+        "padding_bottom": 20,
+        "padding_rate": 40
+      }
+    },
+    "custom_line_gGhH7p": {
+      "type": "custom-line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 25,
+        "padding_rate": 75
+      }
+    },
+    "image_with_tabs_content_4ftiXT": {
+      "type": "image-with-tabs-content",
+      "blocks": {
+        "tab_item_aFxPHi": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Magnesium Glycinate",
+            "heading": "Calm, Strong, Balanced.",
+            "content_text": "Support sleep, stress, and muscle recovery with our most absorbable form of magnesium.",
+            "btn_label": "Get Yours Now",
+            "btn_link": "shopify://products/magnesium-glycinate",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1"
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_aFxPHi"
+      ],
+      "settings": {
+        "heading_align": "start",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "xl",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 30,
+        "main_img": "shopify://shop_images/Magnesium-Glycinate-v2---Image.jpg",
+        "image_pos": "right",
+        "image_ratio": "adapt_image",
+        "custom_height": 270,
+        "custom_height_tb": 300,
+        "custom_height_mb": 300,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_MryH8T": {
+      "type": "custom-line",
+      "disabled": true,
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 25,
+        "padding_rate": 75
+      }
+    },
+    "tabs_collections_carousel_qgmBeW": {
+      "type": "tabs-collections-carousel",
+      "blocks": {
+        "tab_item_W8tNAN": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Whey Protein Isolate",
+            "collection": "",
+            "product_list": [
+              "100-whey-protein-isolate",
+              "grass-fed-new-zealand-whey-protein-isolate",
+              "premium-whey-protein-isolate",
+              "premium-whey-protein-blend"
+            ]
+          }
+        },
+        "tab_item_zqLzGY": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Whey Protein Concentrate",
+            "collection": "",
+            "product_list": [
+              "whey-protein-concentrate",
+              "grass-fed-new-zealand-whey-protein-concentrate",
+              "premium-whey-protein-blend"
+            ]
+          }
+        },
+        "tab_item_gDHM9E": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Vegan Protein",
+            "collection": "",
+            "product_list": [
+              "all-natural-premium-vegan-protein-blend"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_W8tNAN",
+        "tab_item_zqLzGY",
+        "tab_item_gDHM9E"
+      ],
+      "disabled": true,
+      "settings": {
+        "tabs_heading": "Best Selling Proteins",
+        "heading_size": "h4",
+        "heading_inline": false,
+        "tabs_head_spacing": 30,
+        "tabs_des": "outline",
+        "tab_item_size": "lg",
+        "tab_item_weight": "normal",
+        "text_transform": false,
+        "border_width": 2,
+        "spacing_items": 30,
+        "product_des": "1",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "products_count": 8,
+        "col_dk": "3",
+        "col_tb": "3",
+        "col_mb": "2",
+        "navUI": true,
+        "nav_des": "default",
+        "nav_pos": "middle_in",
+        "dotUI": true,
+        "use_pagination": "none",
+        "paginate_pos": "center",
+        "dis_pagination": 30,
+        "btn_label": "View all",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "section_fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_Cgdqii": {
+      "type": "custom-line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 25,
+        "padding_rate": 75
+      }
+    },
+    "tabs_collections_carousel_9zJeTB": {
+      "type": "tabs-collections-carousel",
+      "blocks": {
+        "tab_item_kQ38Hj": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Best Selling Supplements",
+            "collection": "",
+            "product_list": [
+              "magnesium-glycinate",
+              "creapure",
+              "c-pre",
+              "bcaa",
+              "creatine-monohydrate",
+              "hydrolyzed-collagen",
+              "zma"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_kQ38Hj"
+      ],
+      "settings": {
+        "tabs_heading": "Best Selling Supplements",
+        "heading_size": "h4",
+        "heading_inline": false,
+        "tabs_head_spacing": 30,
+        "tabs_des": "outline",
+        "tab_item_size": "lg",
+        "tab_item_weight": "normal",
+        "text_transform": false,
+        "border_width": 2,
+        "spacing_items": 30,
+        "product_des": "1",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "products_count": 8,
+        "col_dk": "4",
+        "col_tb": "4",
+        "col_mb": "2",
+        "navUI": false,
+        "nav_des": "default",
+        "nav_pos": "middle_in",
+        "dotUI": false,
+        "use_pagination": "none",
+        "paginate_pos": "center",
+        "dis_pagination": 30,
+        "btn_label": "View all",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "section_fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "icon_with_text_BMm3qc": {
+      "type": "icon_with_text",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "text": "<p>Didn't find what you're looking for?</p>",
+        "btn_label": "Shop All",
+        "btn_link": "#shopall",
+        "target": false,
+        "btn_size": "xl",
+        "btn_style": "solid",
+        "btn_fw": "medium",
+        "btn_icon": "1",
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_y6VrFj": {
+      "type": "custom-line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 35,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_hNgpay": {
+      "type": "custom-liquid",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"shopall\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "price_tables_Giw4Aq": {
+      "type": "price_tables",
+      "blocks": {
+        "package_df3P6g": {
+          "type": "package",
+          "settings": {
+            "color_scheme": "scheme-c4883d1b-ef0d-432c-8b91-5440621a5983",
+            "product": "health-bundle-max",
+            "show_vendor": true,
+            "label_cl": "#ff3232",
+            "content": "Includes 6 premium wellness products\nSupports skin, hair, joints, and bone strength\nPromotes immune health and daily energy\nHelps regulate mood, metabolism, and hormones\nIdeal for full-body balance and recovery",
+            "btn_label": "Buy Now",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "semibold",
+            "btn_icon": "none"
+          }
+        },
+        "package_7UYWM6": {
+          "type": "package",
+          "settings": {
+            "color_scheme": "",
+            "product": "health-bundle-pro",
+            "show_vendor": true,
+            "label_cl": "#ff3232",
+            "content": "Includes 4 essential daily supplements\nPromotes deep sleep and stress relief\nBoosts immunity and digestive health\nSupports lean muscle and recovery\nGreat for building a sustainable wellness routine",
+            "btn_label": "Buy Now",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "semibold",
+            "btn_icon": "none"
+          }
+        },
+        "package_BUEnxt": {
+          "type": "package",
+          "settings": {
+            "color_scheme": "",
+            "product": "health-bundle-lite-strawberry-kiwi-super-greens",
+            "show_vendor": true,
+            "label_cl": "#ff3232",
+            "content": "Includes vegan protein and super greens\nNourishes the body with clean, plant-based fuel\nSupports healthy digestion and energy\nPromotes glowing skin and immune strength\nPerfect for starting a healthy daily habit",
+            "btn_label": "Buy Now",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "semibold",
+            "btn_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "package_df3P6g",
+        "package_7UYWM6",
+        "package_BUEnxt"
+      ],
+      "disabled": true,
+      "settings": {
+        "top_heading": "Build Your Wellness Routine with the Right Bundle",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "top_description": "<p>From daily essentials to full-body support, find the bundle that fits your health goals—without the guesswork.</p>",
+        "sec_heading_spacing": 0,
+        "enable_icon_check": true,
+        "content_pos": "start",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "col_dk": "3",
+        "col_tb": "3",
+        "col_mb": "2",
+        "navUI": false,
+        "dotUI": false,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 76,
+        "padding_bottom": 50,
+        "padding_rate": 75
+      }
+    },
+    "main_heading_9yN8PP": {
+      "type": "main-heading",
+      "blocks": {
+        "1_ihbQgE": {
+          "type": "1",
+          "settings": {
+            "heading": "Shop all",
+            "heading_size": "h4"
+          }
+        }
+      },
+      "block_order": [
+        "1_ihbQgE"
+      ],
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "",
+        "spacing_hd": 5,
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_D4LHax": {
+      "type": "custom-liquid",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<p id=\"all_collection\"></p>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "product_des": "1",
+        "image_ratio": "custom-pr",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 12,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "pagination_type": "links",
+        "paginate_pos": "center",
+        "dis_pagination": 60,
+        "enable_sorting": true,
+        "enable_filtering": false,
+        "enable_num_cols_selector": true,
+        "widget_heading": "Product categories",
+        "cat_source": "1",
+        "cat_link_list": "",
+        "count": true,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 30,
+        "padding_bottom": 70,
+        "padding_rate": 75,
+        "sidebar_position": "left",
+        "sidebar_size": "medium"
+      }
+    },
+    "custom_liquid_tcaYh9": {
+      "type": "custom-liquid",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"FAQ\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "accordion_MnGEfK": {
+      "type": "accordion",
+      "blocks": {
+        "title_EWHLft": {
+          "type": "title",
+          "settings": {
+            "title": "Frequently Asked Questions"
+          }
+        },
+        "accordion_item_MVwbmM": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What discounts are available during the Supplement Sale?",
+            "content": "Enjoy 30% off select supplements for a limited time."
+          }
+        },
+        "accordion_item_wbMq8H": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Do I need a discount code to take advantage of the sale?",
+            "content": "Yes — use the discount code SUPP30 at checkout to apply the savings"
+          }
+        },
+        "accordion_item_PmyAgC": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Is there a gift with purchase or loyalty points during the sale?",
+            "content": "No, this promotion is strictly 30% off supplements. There are no gifts with purchase and no loyalty point redemptions available for this sale."
+          }
+        },
+        "accordion_item_kDy6xL": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Are there any product exclusions in the sale?",
+            "content": "Yes, the sale only applies to supplement products. Exclusions include:\n<br>\n- Creatine Monohydrate\n<br>\n - Superman Multivitamin \n<br>\n - Clearance or heavily discounted items\n<br>\n - Non-supplement products such as protein powders, apparel, and shakers\n<br>\n - Other products at the sole discretion of Canadian Protein"
+          }
+        },
+        "accordion_item_WjPErw": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Can this sale combine with Buy More, Save More?",
+            "content": "No - this sale can not combine with the Buy More, Save More promotion."
+          }
+        },
+        "accordion_item_c4BdpH": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "When does the Supplement Sale end?",
+            "content": "This is a limited-time event. Be sure to shop early while supplies last — once stock runs out, the promotion ends."
+          }
+        },
+        "accordion_item_d4j3p4": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Can I return items bought during the Supplement Sale?",
+            "content": "Yes, items purchased during the sale are subject to Canadian Protein’s standard return policy. Refunds will reflect the discounted sale price, not the original retail price."
+          }
+        }
+      },
+      "block_order": [
+        "title_EWHLft",
+        "accordion_item_MVwbmM",
+        "accordion_item_wbMq8H",
+        "accordion_item_PmyAgC",
+        "accordion_item_kDy6xL",
+        "accordion_item_WjPErw",
+        "accordion_item_c4BdpH",
+        "accordion_item_d4j3p4"
+      ],
+      "name": "t:sections.accordion.name",
+      "settings": {
+        "accordion_position": "start",
+        "accordion_icon": "1",
+        "open_first": false,
+        "enable_link_list": false,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 85,
+        "padding_bottom": 70,
+        "padding_rate": 75
+      }
+    },
+    "icon_with_text_LMTgLi": {
+      "type": "icon_with_text",
+      "settings": {
+        "color_scheme": "",
+        "text": "<p>Terms and Conditions for Promotions and Sales</p>",
+        "btn_label": "View Terms and Conditions",
+        "btn_link": "shopify://pages/terms-and-conditions-for-promotions-and-sales",
+        "target": false,
+        "btn_size": "base",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "btn_icon": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "top_heading_KpPgyy",
+    "icon_with_text_2_E4fh46",
+    "categories_section_WybXU9",
+    "top_heading_9deeyq",
+    "custom_line_gGhH7p",
+    "image_with_tabs_content_4ftiXT",
+    "custom_line_MryH8T",
+    "tabs_collections_carousel_qgmBeW",
+    "custom_line_Cgdqii",
+    "tabs_collections_carousel_9zJeTB",
+    "icon_with_text_BMm3qc",
+    "custom_line_y6VrFj",
+    "custom_liquid_hNgpay",
+    "price_tables_Giw4Aq",
+    "main_heading_9yN8PP",
+    "custom_liquid_D4LHax",
+    "main",
+    "custom_liquid_tcaYh9",
+    "accordion_MnGEfK",
+    "icon_with_text_LMTgLi"
+  ]
+}

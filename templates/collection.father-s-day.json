@@ -1,0 +1,625 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-collection",
+      "blocks": {
+        "6df762d7-beda-4452-bcf6-1242b294077c": {
+          "type": "description",
+          "settings": {
+            "description": "Father's Day Flash Sale"
+          }
+        },
+        "9a1347b4-da62-490d-9fd4-427a03686ac2": {
+          "type": "heading",
+          "settings": {
+            "heading": "25% Off Sitewide"
+          }
+        }
+      },
+      "block_order": [
+        "6df762d7-beda-4452-bcf6-1242b294077c",
+        "9a1347b4-da62-490d-9fd4-427a03686ac2"
+      ],
+      "settings": {
+        "spacing_hd": 10,
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "top_heading_KpPgyy": {
+      "type": "top-heading",
+      "blocks": {
+        "sub_heading_hfntch": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "Use discount code:",
+            "sub_heading_fs": "base"
+          }
+        }
+      },
+      "block_order": [
+        "sub_heading_hfntch"
+      ],
+      "settings": {
+        "spacing_item": 0,
+        "alignment": "center",
+        "alignment_mb": "center",
+        "fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "padding_rate": 40
+      }
+    },
+    "icon_with_text_2_E4fh46": {
+      "type": "icon-with-text-2",
+      "name": "Icon-with-text2",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "btn_label": "DAD25",
+        "btn_link": "#shopall",
+        "target": false,
+        "btn_size": "xl",
+        "btn_style": "outline",
+        "btn_fw": "bold",
+        "btn_icon": "none",
+        "padding_top": 10,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "categories_section_WybXU9": {
+      "type": "categories-section",
+      "blocks": {
+        "collection_item_3jDXjf": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "whey-protein-isolate",
+            "title": "Whey Protein Isolate",
+            "collection_link": "shopify://products/100-whey-protein-isolate"
+          }
+        },
+        "collection_item_TxQm8w": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "creatine-supplements",
+            "title": "Creatine",
+            "collection_link": "shopify://products/creatine-monohydrate"
+          }
+        },
+        "collection_item_qmeK9w": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "whey-concentrate",
+            "title": "Whey Protein Concentrate",
+            "collection_link": "shopify://products/whey-protein-concentrate"
+          }
+        },
+        "collection_item_JCaEfn": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "vegan-protein",
+            "title": "Vegan Protein",
+            "collection_link": "shopify://products/all-natural-premium-vegan-protein-blend"
+          }
+        },
+        "collection_item_Jg6gej": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "greens",
+            "title": "Super Greens",
+            "collection_link": "shopify://products/super-greens"
+          }
+        },
+        "collection_item_a7cmDa": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "grass-fed-new-zealand-whey-concentrate",
+            "title": "Grass-Fed New Zealand Whey Protein",
+            "collection_link": "shopify://products/grass-fed-new-zealand-whey-protein-concentrate"
+          }
+        },
+        "collection_item_Db84Ph": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "creatine-supplements",
+            "title": "(Creapure®) Creatine Monohydrate",
+            "collection_link": "shopify://products/creapure"
+          }
+        },
+        "collection_item_YrJWjt": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "premium-whey-protein-blend",
+            "title": "Premium Whey Protein Blend",
+            "collection_link": "shopify://products/premium-whey-protein-blend"
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_3jDXjf",
+        "collection_item_TxQm8w",
+        "collection_item_qmeK9w",
+        "collection_item_JCaEfn",
+        "collection_item_Jg6gej",
+        "collection_item_a7cmDa",
+        "collection_item_Db84Ph",
+        "collection_item_YrJWjt"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "style": "normal",
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "padding_rate": 50
+      }
+    },
+    "top_heading_9deeyq": {
+      "type": "top-heading",
+      "blocks": {
+        "sub_heading_NfgDgC": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "<small>Some exclusions may apply. While supplies last. Not combinable with other promotions.</small>",
+            "sub_heading_fs": "base"
+          }
+        }
+      },
+      "block_order": [
+        "sub_heading_NfgDgC"
+      ],
+      "settings": {
+        "spacing_item": 0,
+        "alignment": "center",
+        "alignment_mb": "center",
+        "fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 10,
+        "padding_bottom": 60,
+        "padding_rate": 40
+      }
+    },
+    "custom_line_gGhH7p": {
+      "type": "custom-line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 25,
+        "padding_rate": 75
+      }
+    },
+    "image_with_tabs_content_4ftiXT": {
+      "type": "image-with-tabs-content",
+      "blocks": {
+        "tab_item_aFxPHi": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Men's Health Week",
+            "heading": "Bundles Up To 30% Off",
+            "content_text": "Give Dad the gift of gains, energy, and wellness with curated bundles built to fuel every level of fitness. Whether he's just getting started or going all out, there's a stack for him—now up to 30% off.\n<br><br>\nPrime-Time Bundle – Wellness essentials for strength and recovery\n<br><br>\nPerformance Bundle – Daily fuel for energy and training\n<br><br>\nElite Bundle – Full-stack support for serious results",
+            "btn_label": "Get Yours Now",
+            "btn_link": "shopify://collections/mens-health-week-bundles",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1"
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_aFxPHi"
+      ],
+      "settings": {
+        "heading_align": "start",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "xl",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 30,
+        "main_img": "shopify://shop_images/Elite_bundle_1_-min.png",
+        "image_pos": "right",
+        "image_ratio": "adapt_image",
+        "custom_height": 270,
+        "custom_height_tb": 300,
+        "custom_height_mb": 300,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_MryH8T": {
+      "type": "custom-line",
+      "disabled": true,
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 25,
+        "padding_rate": 75
+      }
+    },
+    "tabs_collections_carousel_qgmBeW": {
+      "type": "tabs-collections-carousel",
+      "blocks": {
+        "tab_item_W8tNAN": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Whey Protein Isolate",
+            "collection": "",
+            "product_list": [
+              "100-whey-protein-isolate",
+              "grass-fed-new-zealand-whey-protein-isolate",
+              "premium-whey-protein-isolate",
+              "premium-whey-protein-blend"
+            ]
+          }
+        },
+        "tab_item_zqLzGY": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Whey Protein Concentrate",
+            "collection": "",
+            "product_list": [
+              "whey-protein-concentrate",
+              "grass-fed-new-zealand-whey-protein-concentrate",
+              "premium-whey-protein-blend"
+            ]
+          }
+        },
+        "tab_item_gDHM9E": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Vegan Protein",
+            "collection": "",
+            "product_list": [
+              "all-natural-premium-vegan-protein-blend"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_W8tNAN",
+        "tab_item_zqLzGY",
+        "tab_item_gDHM9E"
+      ],
+      "disabled": true,
+      "settings": {
+        "tabs_heading": "Best Selling Proteins",
+        "heading_size": "h4",
+        "heading_inline": false,
+        "tabs_head_spacing": 30,
+        "tabs_des": "outline",
+        "tab_item_size": "lg",
+        "tab_item_weight": "normal",
+        "text_transform": false,
+        "border_width": 2,
+        "spacing_items": 30,
+        "product_des": "1",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "products_count": 8,
+        "col_dk": "3",
+        "col_tb": "3",
+        "col_mb": "2",
+        "navUI": true,
+        "nav_des": "default",
+        "nav_pos": "middle_in",
+        "dotUI": true,
+        "use_pagination": "none",
+        "paginate_pos": "center",
+        "dis_pagination": 30,
+        "btn_label": "View all",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "section_fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_Cgdqii": {
+      "type": "custom-line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 25,
+        "padding_rate": 75
+      }
+    },
+    "tabs_collections_carousel_9zJeTB": {
+      "type": "tabs-collections-carousel",
+      "blocks": {
+        "tab_item_kQ38Hj": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Best Selling Supplements",
+            "collection": "",
+            "product_list": [
+              "creapure",
+              "creatine-monohydrate",
+              "super-greens",
+              "bcaa"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_kQ38Hj"
+      ],
+      "settings": {
+        "tabs_heading": "Best Selling Supplements",
+        "heading_size": "h4",
+        "heading_inline": false,
+        "tabs_head_spacing": 30,
+        "tabs_des": "outline",
+        "tab_item_size": "lg",
+        "tab_item_weight": "normal",
+        "text_transform": false,
+        "border_width": 2,
+        "spacing_items": 30,
+        "product_des": "1",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "products_count": 8,
+        "col_dk": "4",
+        "col_tb": "4",
+        "col_mb": "2",
+        "navUI": false,
+        "nav_des": "default",
+        "nav_pos": "middle_in",
+        "dotUI": false,
+        "use_pagination": "none",
+        "paginate_pos": "center",
+        "dis_pagination": 30,
+        "btn_label": "View all",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "section_fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "tabs_collections_carousel_eazx9C": {
+      "type": "tabs-collections-carousel",
+      "blocks": {
+        "tab_item_XRUybF": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Best Selling Proteins",
+            "collection": "",
+            "product_list": [
+              "100-whey-protein-isolate",
+              "whey-protein-concentrate",
+              "grass-fed-new-zealand-whey-protein-concentrate",
+              "grass-fed-new-zealand-whey-protein-isolate",
+              "all-natural-premium-vegan-protein-blend",
+              "premium-whey-protein-isolate",
+              "premium-whey-protein-blend"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_XRUybF"
+      ],
+      "settings": {
+        "tabs_heading": "Best Selling Protein Powders",
+        "heading_size": "h4",
+        "heading_inline": false,
+        "tabs_head_spacing": 30,
+        "tabs_des": "outline",
+        "tab_item_size": "lg",
+        "tab_item_weight": "normal",
+        "text_transform": false,
+        "border_width": 2,
+        "spacing_items": 30,
+        "product_des": "1",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "products_count": 8,
+        "col_dk": "4",
+        "col_tb": "4",
+        "col_mb": "2",
+        "navUI": false,
+        "nav_des": "default",
+        "nav_pos": "middle_in",
+        "dotUI": false,
+        "use_pagination": "none",
+        "paginate_pos": "center",
+        "dis_pagination": 30,
+        "btn_label": "View all",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "section_fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "icon_with_text_BMm3qc": {
+      "type": "icon_with_text",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-1",
+        "text": "<p>Didn't find what you're looking for?</p>",
+        "btn_label": "Shop All",
+        "btn_link": "#shopall",
+        "target": false,
+        "btn_size": "xl",
+        "btn_style": "solid",
+        "btn_fw": "medium",
+        "btn_icon": "1",
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_y6VrFj": {
+      "type": "custom-line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 35,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_hNgpay": {
+      "type": "custom-liquid",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"shopall\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "main_heading_9yN8PP": {
+      "type": "main-heading",
+      "blocks": {
+        "1_ihbQgE": {
+          "type": "1",
+          "settings": {
+            "heading": "Shop all",
+            "heading_size": "h4"
+          }
+        }
+      },
+      "block_order": [
+        "1_ihbQgE"
+      ],
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "",
+        "spacing_hd": 5,
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_D4LHax": {
+      "type": "custom-liquid",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<p id=\"all_collection\"></p>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "product_des": "1",
+        "image_ratio": "custom-pr",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 12,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "pagination_type": "links",
+        "paginate_pos": "center",
+        "dis_pagination": 60,
+        "enable_sorting": true,
+        "enable_filtering": false,
+        "enable_num_cols_selector": true,
+        "widget_heading": "Product categories",
+        "cat_source": "1",
+        "cat_link_list": "",
+        "count": true,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 30,
+        "padding_bottom": 70,
+        "padding_rate": 75,
+        "sidebar_position": "left",
+        "sidebar_size": "medium"
+      }
+    },
+    "icon_with_text_LMTgLi": {
+      "type": "icon_with_text",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "text": "<p>Terms and Conditions for Promotions and Sales</p>",
+        "btn_label": "View Terms and Conditions",
+        "btn_link": "shopify://pages/terms-and-conditions-for-promotions-and-sales",
+        "target": false,
+        "btn_size": "xs",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "btn_icon": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "top_heading_KpPgyy",
+    "icon_with_text_2_E4fh46",
+    "categories_section_WybXU9",
+    "top_heading_9deeyq",
+    "custom_line_gGhH7p",
+    "image_with_tabs_content_4ftiXT",
+    "custom_line_MryH8T",
+    "tabs_collections_carousel_qgmBeW",
+    "custom_line_Cgdqii",
+    "tabs_collections_carousel_9zJeTB",
+    "tabs_collections_carousel_eazx9C",
+    "icon_with_text_BMm3qc",
+    "custom_line_y6VrFj",
+    "custom_liquid_hNgpay",
+    "main_heading_9yN8PP",
+    "custom_liquid_D4LHax",
+    "main",
+    "icon_with_text_LMTgLi"
+  ]
+}

@@ -1,0 +1,32 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "pf-cc94df19": {
+      "type": "pf-cc94df19",
+      "settings": {
+        "pf_c3e90c09_value": "This is your golden opportunity to stock up on your favorite products at prices that won't last. Don't miss out on these incredible deals, available for a limited time only.",
+        "pf_c2a94f8f_value": "Concentrate - Isolate - Vegan Protein - Grass-Fed New Zealand Isolate -&nbsp;Grass-Fed New Zealand Concentrate &amp; <b>MORE</b>",
+        "pf_f1813e54_value": "Creatine - BCAAs - Super Greens - Multi-Vitamins&nbsp;-&nbsp;Taurine - Beta-Alanine - L-Glutamine &amp; <b>MORE</b>",
+        "pf_16dcccf3_value": "SPEND $150: GET <b><span style=\"color: rgb(0, 186, 219);\">25% OFF</span></b>",
+        "pf_bd9e230b_value": "SPEND $100: GET <b><span style=\"color: rgb(0, 186, 219);\">15% OFF</span></b>",
+        "pf_56b0cbef_value": "Get your favourite protein powders&nbsp;in 10kg&nbsp;at unbeatable prices!",
+        "pf_795bffb9_value": "Boosts athletic performance and aids muscle growth.",
+        "pf_3e6df181_value": "SHOP SUPPLEMENTS",
+        "pf_34de795b_value": "SHOP CREATINE",
+        "pf_daf8c2a9_value": "SHOP PROTEIN",
+        "pf_39bd56b0_value": "SHOP BULK"
+      }
+    }
+  },
+  "order": [
+    "pf-cc94df19"
+  ]
+}

@@ -1,0 +1,54 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "pf-81a13b19": {
+      "type": "pf-81a13b19",
+      "settings": {
+        "pf_364b43ec_value": "Discover answers to common questions about the Canadian Protein Affiliate Program below. If you have more specific inquiries or need assistance, don't hesitate to reach out to our affiliate support team during business hours. We're here to help you make the most of your affiliate experience and boost your earnings! ",
+        "pf_4c4bad35_value": "Yes, we have a tiered system. When you achieve $1000 in sales, you'll be eligible for a boosted 10% commission rate. This tier is refreshed on the 1st of each month when payouts are processed, provided you reach the minimum payout threshold of $10.",
+        "pf_aad752ed_value": "To join our affiliate program, simply complete the registration process, providing your contact information, social media accounts, and PayPal email. Once approved, you'll receive your unique affiliate URL.",
+        "pf_4624ed2a_value": "You can easily track your affiliate earnings, referrals, and performance through our affiliate dashboard. Detailed statistics and reports are available to help you monitor your progress.",
+        "pf_df9c376a_value": "As of now, our affiliate program primarily focuses on customer referrals. However, we're open to exploring the possibility of a referral program for affiliates in the future.",
+        "pf_f7f8608a_value": "Absolutely! Our affiliate program's user interface provides insights into trending products from our store, helping you make informed choices to increase your sales.",
+        "pf_99b130d4_value": "No, there's no minimum sales requirement to remain in the program. Once you're approved, you can continue to earn commissions without a minimum sales threshold.",
+        "pf_e75228a1_value": "Affiliates earn a generous 10% commission on first-time customer orders and an ongoing 5% commission on all subsequent orders made by those customers.",
+        "pf_d6c77b44_value": "Get a 10% commission when a first-time customer makes a purchase using your unique link, and 5% of every order they make thereafter, forever!",
+        "pf_e69c76bd_value": "While we encourage creative promotion, please ensure compliance with our affiliate program's policies and adhere to all relevant regulations.",
+        "pf_99f9e006_value": "Affiliate earnings are paid out on the 1st. Payments are typically made via WISE and typically take 7-15 business days to process.",
+        "pf_1d597954_value": "Yes, we offer live chat support during business hours (Monday to Friday) to assist with any questions or concerns you may have.",
+        "pf_dd25b3ee_value": "Cash out every 1st of the month or keep your earnings in your account to use in our online store!",
+        "pf_82231d81_value": "Get a piece of the action and earn 5% of every sale made through your unique affiliate link.",
+        "pf_e006382b_label": " Is there a minimum sales requirement to remain in the affiliate program?",
+        "pf_30d49d8f_label": " Are there any restrictions on promoting Canadian Protein products?",
+        "pf_79549e57_label": " Can I access data on trending products to boost my sales?",
+        "pf_76bd2493_label": " How can I track my affiliate earnings and performance?",
+        "pf_baea8edb_label": "How do I join the Canadian Protein Affiliate Program?",
+        "pf_608accae_label": " Are there different tiers in the affiliate program?",
+        "pf_ad35ade6_label": " How and when will I receive my affiliate earnings?",
+        "pf_28a1e38e_label": " Is there any support available for affiliates?",
+        "pf_8e90b262_value": "Become a <b>Canadian Protein</b>&nbsp;Affiliate",
+        "pf_ed2af044_label": " Can I refer other affiliates to the program?",
+        "pf_b262b861_value": "Apply now, let's make <b>gains together</b>.",
+        "pf_9ea792bb_label": "What commissions do affiliates earn?",
+        "pf_5d099bdd_value": "Cash-out or use store-credit",
+        "pf_d3204b36_value": "Frequently Asked Questions",
+        "pf_ec4aef82_value": "Get a piece of the action",
+        "pf_afd10cd3_value": "Affiliate Program FAQ",
+        "pf_1c9dc0d6_value": "Earn forever!",
+        "pf_12eb30a6_value": "Apply Now",
+        "pf_b86106b4_value": "Apply now"
+      }
+    }
+  },
+  "order": [
+    "pf-81a13b19"
+  ]
+}

@@ -1,0 +1,60 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "pf-10f947ea": {
+      "type": "pf-10f947ea",
+      "settings": {
+        "pf_97c64877_value": "With our commitment to transparency, we're excited to introduce our new Online Batch Tester. This powerful tool allows you to delve even deeper into the quality and safety of our products. Simply enter your product's lot number, and within seconds, you'll have access to detailed batch-specific test results. We believe in empowering our customers with the knowledge they deserve, and our Online Batch Tester is designed to provide you with complete transparency and confidence in every purchase.",
+        "pf_c9c72da5_value": "Canadian Protein believes in empowering our customers with complete access to information. That's why we provide an online testing tool, allowing you to conveniently explore comprehensive test results for every product we offer. With a few clicks, you can dive into a world of transparency and make informed decisions about the supplements you choose.",
+        "pf_32ea8eb4_value": " Enter the Lot Number for Instant Results\nEnter the lot number of your product in our above. With a simple tap, you'll gain instant access to detailed test results, including compound ID, total protein, amino spiking analysis, microbio, and heavy metal testing.",
+        "pf_b97c80fa_value": "We offer a wide range of supplements to suit various dietary needs, including options for vegans, vegetarians, and those with specific allergies or dietary preferences. Please refer to our product descriptions or contact our support team for more information",
+        "pf_686a3623_value": "We strive to provide up-to-date information. The test results are updated regularly to ensure accuracy. However, please note that there might be a short delay between the time of testing and the results being made available for viewing.",
+        "pf_e76ae05b_value": "Yes, we prioritize the safety and purity of our supplements. Through rigorous testing for heavy metals, microorganisms, and amino spiking, we ensure that our products meet the highest standards of quality and safety.",
+        "pf_128b2141_value": "Discover peace of mind through transparency. Our online testing tool provides easy access to comprehensive test results for every product. Visit the link below to experience full transparency in just a few clicks.",
+        "pf_80fbbebf_value": "The online testing tool allows you to access comprehensive test results for every product we offer. It promotes transparency by giving you detailed information about the quality and composition of our supplements.",
+        "pf_061b3878_value": "Your safety is our top priority. We conduct rigorous testing for heavy metals, microorganisms, and amino spiking. Rest easy knowing that our supplements meet the highest standards for safety and purity.",
+        "pf_8e90d728_value": "We have a dedicated customer support team ready to assist you. You can reach out to us via phone, email, or our website. We're here to provide exceptional support and answer any inquiries you may have.",
+        "pf_a1925828_value": "At Canadian Protein, we don't just talk about quality – we prove it. Our stringent Batch Testing process confirms the excellence of every product we offer. Trust in our commitment to your well-being.",
+        "pf_bbd7fcda_value": "Our rigorous testing process includes compound ID, total protein, amino spiking analysis, microbio, and heavy metal testing. These tests ensure the integrity, safety, and quality of our supplements.",
+        "pf_1de722bf_value": "Yes, customer satisfaction is our priority. If you are not completely satisfied with your purchase, please reach out to our customer support team, and we will do our best to resolve any issues.",
+        "pf_a5c92560_value": "Upon receiving your product, find the lot number printed on the back of the packaging. This unique identifier ensures accurate and specific test results for your specific product batch.",
+        "pf_36682bdc_value": "Choose from our wide range of high-quality supplements and complete your order. We ensure that every product is crafted with precision to meet your fitness and wellness goals.",
+        "pf_13067b7f_value": "Welcome to Canadian Protein, where we're transforming the supplement industry with our unwavering commitment to quality and complete transparency.",
+        "pf_d8e964d0_value": "To access the test results, enter the lot number found on the back of your product packaging&nbsp;to instantly unlock detailed test results.",
+        "pf_d034c9c7_value": "<first-sel>Every Lot. Every Batch. In Real Time.</first-sel>",
+        "pf_2899e447_label": "Are your supplements suitable for specific dietary needs?",
+        "pf_cd3d1306_value": "<strong>Quality and Transparency You Can Trust</strong>",
+        "pf_d35a97c6_value": "<strong>Introducing Our Online Batch Tester</strong>",
+        "pf_943f54e2_label": "How do I access the test results for my product?",
+        "pf_2ec61659_label": "What is the purpose of the online testing tool?",
+        "pf_58495480_value": "4 Steps To Test Our Products <b>On The Go</b>",
+        "pf_ed00fc08_label": "What if I have questions or need assistance?",
+        "pf_da4228de_label": "Are the supplements safe for consumption?",
+        "pf_23fc386d_label": " Do you offer a satisfaction guarantee?",
+        "pf_d06c3967_label": "How often are the test results updated?",
+        "pf_9d81a192_value": "<strong>Trust in Excellence</strong>",
+        "pf_a69c128b_value": "<strong>Transparent Quality</strong>",
+        "pf_bf7fa389_label": "What does the testing process cover?",
+        "pf_7fa7f22d_label": "Click here to enter your lot number",
+        "pf_a402061b_value": "<strong>Safety Assured</strong>",
+        "pf_6d549f24_value": "Frequently asked questions",
+        "pf_918d3ca2_value": "Test My Batch Now",
+        "pf_7e4b5849_value": "How it works",
+        "pf_e9c2d35a_value": "TEST A BATCH",
+        "pf_3ecad034_value": "OUR PROMISE",
+        "pf_84b56d54_value": "FAQ"
+      }
+    }
+  },
+  "order": [
+    "pf-10f947ea"
+  ]
+}

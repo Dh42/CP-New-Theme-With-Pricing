@@ -1,0 +1,28 @@
+{%- comment -%}
+  Renders a size list
+
+  Accepts:
+  - size_variants: {Array} (required)
+  - size_variants_avai: {Array} (required)
+  - size_count: {Interger} (required)
+  - class: {String} a list class. (optional)
+
+  Usage:
+  {% render 'size-list', size_variants: size_variants, size_variants_avai: size_variants_avai %}
+{%- endcomment -%}
+<div class="hdt-size-list {{ class }}">
+  {%- if settings.size_mode == 'size' -%}
+    {%- for size in size_variants -%}
+      {%- liquid
+      unless size_variants_avai contains size or settings.size_type == 'all'
+        continue
+      endunless
+      -%}
+      <span class="hdt-size-list-item"{% unless size_variants_avai contains size %} unavailable{% endunless %}>{{ size | escape }}</span>
+    {%- endfor -%}
+  {%- else -%}
+  <div class="hdt-size-list">
+    <p class="hdt-size-count">{{- 'products.product.sizes_count' | t: count: size_count -}}</p>
+  </div>
+  {%- endif -%}
+</div>

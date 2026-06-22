@@ -1,0 +1,901 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-collection",
+      "blocks": {
+        "6df762d7-beda-4452-bcf6-1242b294077c": {
+          "type": "description",
+          "settings": {
+            "description": "Canadian Protein + Courtney Ustrzycki"
+          }
+        },
+        "9a1347b4-da62-490d-9fd4-427a03686ac2": {
+          "type": "heading",
+          "settings": {
+            "heading": "IFBB Pro Supplement Bundles"
+          }
+        }
+      },
+      "block_order": [
+        "6df762d7-beda-4452-bcf6-1242b294077c",
+        "9a1347b4-da62-490d-9fd4-427a03686ac2"
+      ],
+      "settings": {
+        "spacing_hd": 10,
+        "color_scheme": "scheme-1",
+        "padding_top": 72,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "top_heading_74naTk": {
+      "type": "top-heading",
+      "blocks": {
+        "sub_heading_B86Yza": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "<a href=\"https://canadianprotein.com/collections/courtneys-pro-supplement-bundles#faq\"><small>Some exclusions may apply. Click here for more details.</small></a>",
+            "sub_heading_fs": "base"
+          }
+        }
+      },
+      "block_order": [
+        "sub_heading_B86Yza"
+      ],
+      "settings": {
+        "spacing_item": 0,
+        "alignment": "center",
+        "alignment_mb": "center",
+        "fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "padding_rate": 40
+      }
+    },
+    "top_heading_KpPgyy": {
+      "type": "top-heading",
+      "blocks": {
+        "sub_heading_hfntch": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "Use discount code:",
+            "sub_heading_fs": "lg"
+          }
+        }
+      },
+      "block_order": [
+        "sub_heading_hfntch"
+      ],
+      "settings": {
+        "spacing_item": 0,
+        "alignment": "center",
+        "alignment_mb": "center",
+        "fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 40
+      }
+    },
+    "icon_with_text_2_E4fh46": {
+      "type": "icon-with-text-2",
+      "name": "Icon-with-text2",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "btn_label": "test",
+        "btn_link": "#shopall",
+        "target": false,
+        "btn_size": "xl",
+        "btn_style": "outline",
+        "btn_fw": "bold",
+        "btn_icon": "none",
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "padding_rate": 75
+      }
+    },
+    "featured_collection_carousel_UpcwG9": {
+      "type": "featured-collection-carousel",
+      "name": "t:sections.collection_products.carousel_name",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "2xl",
+        "heading_reverse": false,
+        "btn_heading": false,
+        "nav_heading": "disable",
+        "heading_gap": 10,
+        "sec_heading_spacing": 30,
+        "collection": "",
+        "product_list": [
+          "100-whey-protein-isolate",
+          "whey-protein-concentrate"
+        ],
+        "product_des": "1",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "on_item",
+        "products_count": 8,
+        "col_dk": "2",
+        "col_tb": "2",
+        "col_mb": "2",
+        "half_item": false,
+        "navUI": false,
+        "nav_des": "default",
+        "nav_pos": "middle_in",
+        "dotUI": false,
+        "pagination_type": "none",
+        "paginate_pos": "center",
+        "dis_pagination": 30,
+        "btn_label": "View all",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "section_fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_rate": 75
+      }
+    },
+    "categories_section_WybXU9": {
+      "type": "categories-section",
+      "blocks": {
+        "collection_item_3jDXjf": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "whey-protein-isolate",
+            "title": "Whey Protein Isolate",
+            "collection_link": "shopify://products/100-whey-protein-isolate"
+          }
+        },
+        "collection_item_TxQm8w": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "creatine-supplements",
+            "title": "Creatine",
+            "collection_link": "shopify://products/creatine-monohydrate"
+          }
+        },
+        "collection_item_YfM8Pd": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/C-PRE-Blue-Raspberry_b305a934-1e5c-416e-a614-2663d14e6f43.jpg",
+            "title": "C-Pre",
+            "collection_link": "shopify://products/c-pre"
+          }
+        },
+        "collection_item_qmeK9w": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "whey-concentrate",
+            "title": "Whey Protein Concentrate",
+            "collection_link": "shopify://products/whey-protein-concentrate"
+          }
+        },
+        "collection_item_Jg6gej": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "bcaas-branched-chain-amino-acids",
+            "title": "BCAAs",
+            "collection_link": "shopify://products/bcaa"
+          }
+        },
+        "collection_item_UVzWNG": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "micellar-casein",
+            "title": "Micellar Casein",
+            "collection_link": "shopify://products/micellar-casein"
+          }
+        },
+        "collection_item_JCaEfn": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "vegan-protein",
+            "title": "Vegan Protein",
+            "collection_link": "shopify://products/all-natural-premium-vegan-protein-blend"
+          }
+        },
+        "collection_item_YrJWjt": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "omega-supplements",
+            "title": "Omega-3 Softgels",
+            "collection_link": "shopify://products/omega-3"
+          }
+        },
+        "collection_item_a7cmDa": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "grass-fed-new-zealand-whey-concentrate",
+            "title": "Grass-Fed New Zealand Whey Protein",
+            "collection_link": "shopify://products/grass-fed-new-zealand-whey-protein-concentrate"
+          }
+        },
+        "collection_item_Db84Ph": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "l-glutamine",
+            "title": "L-Glutamine",
+            "collection_link": "shopify://products/l-glutamine"
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_3jDXjf",
+        "collection_item_TxQm8w",
+        "collection_item_YfM8Pd",
+        "collection_item_qmeK9w",
+        "collection_item_Jg6gej",
+        "collection_item_UVzWNG",
+        "collection_item_JCaEfn",
+        "collection_item_YrJWjt",
+        "collection_item_a7cmDa",
+        "collection_item_Db84Ph"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-1",
+        "style": "normal",
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "padding_rate": 50
+      }
+    },
+    "top_heading_9deeyq": {
+      "type": "top-heading",
+      "blocks": {
+        "sub_heading_NfgDgC": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "<small>Some exclusions may apply. While supplies last. Not combinable with other promotions.</small>",
+            "sub_heading_fs": "base"
+          }
+        }
+      },
+      "block_order": [
+        "sub_heading_NfgDgC"
+      ],
+      "custom_css": [
+        "{line-height: 1;}"
+      ],
+      "settings": {
+        "spacing_item": 0,
+        "alignment": "center",
+        "alignment_mb": "center",
+        "fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "padding_rate": 40
+      }
+    },
+    "custom_line_gGhH7p": {
+      "type": "custom-line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 25,
+        "padding_rate": 75
+      }
+    },
+    "image_with_text_wkBbnV": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_6JMFhL": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Courtney",
+            "heading_fs": "h3"
+          }
+        },
+        "text_Te8emt": {
+          "type": "text",
+          "settings": {
+            "text": "<h6>Courtney is an IFBB Bikini Pro, posing coach, and online fitness coach who has dedicated over half her life to health, performance, and helping others achieve their fullest potential. Since partnering with Canadian Protein in 2016, she’s evolved from a passionate powerlifter and nutrition coach into a world-class athlete and mentor, guiding clients around the world to become stronger, more confident versions of themselves.</h6><h6>Now competing internationally at the professional level, Courtney’s coaching philosophy is built on integrity, discipline, and authenticity — values she shares with Canadian Protein. She believes that fueling your body with quality nutrition is the foundation for lasting success, both inside and outside the gym. Her go-to staples — <strong>Creatine Monohydrate</strong>, <strong>C-PRE (Watermelon)</strong>, and <strong>Vegan Protein Powder</strong> — power her performance and form the core of her exclusive <strong>Canadian Protein Bundles</strong>, designed to help others perform, recover, and thrive.</h6>"
+          }
+        },
+        "count_down_qAGtxd": {
+          "type": "count_down",
+          "disabled": true,
+          "settings": {
+            "color_scheme": "",
+            "title": "Hungry up ! Deals end in :",
+            "year": 2030,
+            "month": 4,
+            "day": 19,
+            "hour": 12,
+            "minute": 0,
+            "effect_cd": "move_top",
+            "uppercase": false,
+            "prepend_number": false,
+            "hide_on_complete": false,
+            "mess_complete": ""
+          }
+        },
+        "button_iNQ6Lc": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "btn_label": "Shop now",
+            "btn_link": "",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6JMFhL",
+        "text_Te8emt",
+        "count_down_qAGtxd",
+        "button_iNQ6Lc"
+      ],
+      "name": "t:sections.image_text.name",
+      "settings": {
+        "image": "shopify://shop_images/IndoorShoot-209.jpg",
+        "first_image": "shopify://shop_images/IndoorShoot-180.jpg",
+        "style_image": "2",
+        "image_effect": "lunc",
+        "color_scheme": "",
+        "image_last": false,
+        "content_position": "center",
+        "alignment": "center",
+        "content_pl": 0,
+        "image_last_mb": false,
+        "content_position_mb": "center",
+        "alignment_mb": "center",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_6jPgFD": {
+      "type": "custom-line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 25,
+        "padding_rate": 75
+      }
+    },
+    "image_with_tabs_content_4ftiXT": {
+      "type": "image-with-tabs-content",
+      "blocks": {
+        "tab_item_aFxPHi": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Pro Bundle",
+            "heading": " The Ultimate All-In-One Bundle",
+            "content_text": "Built for serious athletes and health enthusiasts, this bundle combines six proven supplements to maximize strength, recovery, and longevity. \n\n<br>\n<br>Creatine and taurine fuel performance, glutamine aids repair, omega-3s reduce inflammation, while vitamin D3 and zinc support immunity and hormones.",
+            "btn_label": "Get Yours Now",
+            "btn_link": "",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1"
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_aFxPHi"
+      ],
+      "settings": {
+        "heading_align": "start",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "xl",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 30,
+        "image_pos": "right",
+        "image_ratio": "adapt_image",
+        "custom_height": 270,
+        "custom_height_tb": 300,
+        "custom_height_mb": 300,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 72,
+        "padding_rate": 30
+      }
+    },
+    "image_with_tabs_content_PyetjE": {
+      "type": "image-with-tabs-content",
+      "blocks": {
+        "tab_item_NfGXFa": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Recharge Bundle",
+            "heading": "For deep recovery and long-term health benefits",
+            "content_text": "Recovery is where results are made. This bundle pairs glutamine for muscle repair, vitamin D3 for immunity and energy, and ZMA for better sleep, hormones, and recovery—helping you train stronger, longer.",
+            "btn_label": "Get Yours Now",
+            "btn_link": "",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1"
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_NfGXFa"
+      ],
+      "settings": {
+        "heading_align": "start",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "xl",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 30,
+        "image_pos": "left",
+        "image_ratio": "adapt_image",
+        "custom_height": 270,
+        "custom_height_tb": 300,
+        "custom_height_mb": 300,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 72,
+        "padding_rate": 30
+      }
+    },
+    "custom_line_grce69": {
+      "type": "custom-line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 25,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_hNgpay": {
+      "type": "custom-liquid",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"shopall\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "custom_liquid_D4LHax": {
+      "type": "custom-liquid",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<p id=\"all_collection\"></p>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "top_heading_WMTHQG": {
+      "type": "top-heading",
+      "blocks": {
+        "heading_iYiUGU": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop 'Bro Bundle' Supplements",
+            "heading_fs": "h4"
+          }
+        },
+        "sub_heading_j7VTqH": {
+          "type": "sub_heading",
+          "disabled": true,
+          "settings": {
+            "sub_heading": "<b>Choose from:</b> 1kg Protein Coffee, 1kg Vegan Protein Coffee, 1kg IsoLatte, Whey Protein Concentrate – Cappuccino Flavour (1kg & 2kg), Whey Protein Isolate – Cappuccino Flavour (1kg & 2kg)",
+            "sub_heading_fs": "lg"
+          }
+        }
+      },
+      "block_order": [
+        "heading_iYiUGU",
+        "sub_heading_j7VTqH"
+      ],
+      "settings": {
+        "spacing_item": 10,
+        "alignment": "left",
+        "alignment_mb": "left",
+        "fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 80,
+        "padding_bottom": 30,
+        "padding_rate": 40
+      }
+    },
+    "discount_collection_mRKRDf": {
+      "type": "discount-collection",
+      "blocks": {
+        "countdown_xajyWX": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "year": 2025,
+            "month": 10,
+            "day": 2,
+            "hour": 0,
+            "minute": 0
+          }
+        }
+      },
+      "block_order": [
+        "countdown_xajyWX"
+      ],
+      "name": "t:sections.collection_products.discount_name",
+      "settings": {
+        "heading_align": "start",
+        "sec_heading": "",
+        "heading_tag": "h2",
+        "heading_size": "h4",
+        "sec_heading_spacing": 60,
+        "collection": "",
+        "product_list": [
+          "creapure",
+          "l-glutamine",
+          "omega-3",
+          "taurine",
+          "vitamin-d3",
+          "zinc"
+        ],
+        "product_des": "2",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "products_count": 8,
+        "col_dk": "6",
+        "col_tb": "3",
+        "col_mb": "2",
+        "navUI": true,
+        "nav_des": "default",
+        "nav_pos": "middle_out",
+        "dotUI": true,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-1",
+        "box_layout": "1",
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "top_heading_pB3NFz": {
+      "type": "top-heading",
+      "blocks": {
+        "heading_pbDGeA": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop 'Recharge Bundle' Supplements",
+            "heading_fs": "h4"
+          }
+        },
+        "sub_heading_6KDzUj": {
+          "type": "sub_heading",
+          "disabled": true,
+          "settings": {
+            "sub_heading": "<b>Choose from:</b> 1kg Protein Coffee, 1kg Vegan Protein Coffee, 1kg IsoLatte, Whey Protein Concentrate – Cappuccino Flavour (1kg & 2kg), Whey Protein Isolate – Cappuccino Flavour (1kg & 2kg)",
+            "sub_heading_fs": "lg"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pbDGeA",
+        "sub_heading_6KDzUj"
+      ],
+      "settings": {
+        "spacing_item": 10,
+        "alignment": "right",
+        "alignment_mb": "left",
+        "fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 80,
+        "padding_bottom": 30,
+        "padding_rate": 40
+      }
+    },
+    "discount_collection_YXdCam": {
+      "type": "discount-collection",
+      "blocks": {
+        "countdown_6Hn4X9": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "year": 2025,
+            "month": 10,
+            "day": 2,
+            "hour": 0,
+            "minute": 0
+          }
+        }
+      },
+      "block_order": [
+        "countdown_6Hn4X9"
+      ],
+      "name": "t:sections.collection_products.discount_name",
+      "settings": {
+        "heading_align": "start",
+        "sec_heading": "",
+        "heading_tag": "h2",
+        "heading_size": "h4",
+        "sec_heading_spacing": 60,
+        "collection": "",
+        "product_list": [
+          "l-glutamine",
+          "vitamin-d3",
+          "zma"
+        ],
+        "product_des": "2",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "products_count": 8,
+        "col_dk": "3",
+        "col_tb": "3",
+        "col_mb": "2",
+        "navUI": true,
+        "nav_des": "default",
+        "nav_pos": "middle_out",
+        "dotUI": true,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-1",
+        "box_layout": "1",
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "main_heading_9yN8PP": {
+      "type": "main-heading",
+      "blocks": {
+        "1_ihbQgE": {
+          "type": "1",
+          "settings": {
+            "heading": "Shop all",
+            "heading_size": "h4"
+          }
+        }
+      },
+      "block_order": [
+        "1_ihbQgE"
+      ],
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "",
+        "spacing_hd": 5,
+        "padding_top": 30,
+        "padding_bottom": 8,
+        "padding_rate": 75
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "product_des": "1",
+        "image_ratio": "custom-pr",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 12,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "pagination_type": "links",
+        "paginate_pos": "center",
+        "dis_pagination": 60,
+        "enable_sorting": true,
+        "enable_filtering": false,
+        "enable_num_cols_selector": true,
+        "widget_heading": "Product categories",
+        "cat_source": "1",
+        "cat_link_list": "",
+        "count": true,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 30,
+        "padding_bottom": 70,
+        "padding_rate": 75,
+        "sidebar_position": "left",
+        "sidebar_size": "medium"
+      }
+    },
+    "custom_liquid_piD3Gx": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"faq\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "accordion_6hCrXz": {
+      "type": "accordion",
+      "blocks": {
+        "title_VreN3V": {
+          "type": "title",
+          "settings": {
+            "title": "Frequently Asked Questions"
+          }
+        },
+        "accordion_item_MLXrj9": {
+          "type": "accordion_item",
+          "disabled": true,
+          "settings": {
+            "title": "What discounts are available during the International Coffee Day Sale?",
+            "content": "Enjoy 30% off Protein Coffee, Vegan Protein Coffee, and select Cappuccino-flavoured proteins for a limited time."
+          }
+        },
+        "accordion_item_zdgNjx": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Do I need a discount code to take advantage of the sale?",
+            "content": "Yes — use the discount code COFFEE at checkout to apply the savings."
+          }
+        },
+        "accordion_item_WCjYAa": {
+          "type": "accordion_item",
+          "disabled": true,
+          "settings": {
+            "title": "Is there a gift with purchase or loyalty points during the sale?",
+            "content": "No, this promotion is strictly 30% off the selected coffee protein products."
+          }
+        },
+        "accordion_item_cUNmbE": {
+          "type": "accordion_item",
+          "disabled": true,
+          "settings": {
+            "title": "Are there any product exclusions in the sale?",
+            "content": "Yes, the sale only applies to the following products:\n<br>\n- 1kg Protein Coffee\n<br>\n- 1kg Vegan Protein Coffee\n<br>\n- 1kg IsoLatte\n<br>\n- Whey Protein Concentrate – Cappuccino (1kg & 2kg)\n<br>\n- Whey Protein Isolate – Cappuccino (1kg & 2kg)\n<br>\n<br>\nAll other products, bundles, clearance, and non-qualifying items are excluded."
+          }
+        },
+        "accordion_item_KnedXj": {
+          "type": "accordion_item",
+          "disabled": true,
+          "settings": {
+            "title": "When does the International Coffee Day Sale end?",
+            "content": "This is a limited-time event - 1 day only. Be sure to shop early while supplies last!"
+          }
+        },
+        "accordion_item_QKHhpN": {
+          "type": "accordion_item",
+          "disabled": true,
+          "settings": {
+            "title": "Are any products excluded from the 25% discount?",
+            "content": "Yes, some exclusions may apply. Final prices are shown on product pages or at checkout. Items already heavily discounted may not receive additional reductions."
+          }
+        },
+        "accordion_item_mMMYDT": {
+          "type": "accordion_item",
+          "disabled": true,
+          "settings": {
+            "title": "Does the sale apply to bulk items?",
+            "content": "no, bulk items are excluded from this sale."
+          }
+        },
+        "accordion_item_HYfx8z": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Will The Buy More, Save More Promotion Work With This Sale?",
+            "content": "No, the Buy More, Save More promotion will not work with this sale."
+          }
+        },
+        "accordion_item_3UKNWT": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Can I return or exchange items purchased in this promotion?",
+            "content": "Standard return and exchange policies apply. However, if you return an item that was part of the sale, your refund amount may be adjusted to reflect the promotion pricing."
+          }
+        }
+      },
+      "block_order": [
+        "title_VreN3V",
+        "accordion_item_MLXrj9",
+        "accordion_item_zdgNjx",
+        "accordion_item_WCjYAa",
+        "accordion_item_cUNmbE",
+        "accordion_item_KnedXj",
+        "accordion_item_QKHhpN",
+        "accordion_item_mMMYDT",
+        "accordion_item_HYfx8z",
+        "accordion_item_3UKNWT"
+      ],
+      "name": "t:sections.accordion.name",
+      "settings": {
+        "accordion_position": "start",
+        "accordion_icon": "1",
+        "open_first": false,
+        "enable_link_list": false,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 52,
+        "padding_bottom": 70,
+        "padding_rate": 75
+      }
+    },
+    "icon_with_text_jff4fE": {
+      "type": "icon_with_text",
+      "name": "t:sections.icon_text.name",
+      "settings": {
+        "color_scheme": "",
+        "text": "<p>Sales / Promotions Terms and Conditions</p>",
+        "btn_label": "Learn More",
+        "btn_link": "https://canadianprotein.com/pages/terms-and-conditions-for-promotions-and-sales",
+        "target": false,
+        "btn_size": "base",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "btn_icon": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "top_heading_74naTk",
+    "top_heading_KpPgyy",
+    "icon_with_text_2_E4fh46",
+    "featured_collection_carousel_UpcwG9",
+    "categories_section_WybXU9",
+    "top_heading_9deeyq",
+    "custom_line_gGhH7p",
+    "image_with_text_wkBbnV",
+    "custom_line_6jPgFD",
+    "image_with_tabs_content_4ftiXT",
+    "image_with_tabs_content_PyetjE",
+    "custom_line_grce69",
+    "custom_liquid_hNgpay",
+    "custom_liquid_D4LHax",
+    "top_heading_WMTHQG",
+    "discount_collection_mRKRDf",
+    "top_heading_pB3NFz",
+    "discount_collection_YXdCam",
+    "main_heading_9yN8PP",
+    "main",
+    "custom_liquid_piD3Gx",
+    "accordion_6hCrXz",
+    "icon_with_text_jff4fE"
+  ]
+}

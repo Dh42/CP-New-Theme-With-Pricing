@@ -1,0 +1,139 @@
+{
+  "sections": {
+    "cp_overlays": {
+      "type": "cp-overlays",
+      "settings": {
+        "popup_enabled": false
+      }
+    },
+    "cp_hero": {
+      "type": "cp-collection-hero",
+      "blocks": {
+        "trust_leaf": {
+          "type": "trust_pill",
+          "settings": {
+            "icon": "leaf",
+            "label": "Made in Canada"
+          }
+        },
+        "trust_flask": {
+          "type": "trust_pill",
+          "settings": {
+            "icon": "flask",
+            "label": "Batch lab-tested"
+          }
+        },
+        "trust_truck": {
+          "type": "trust_pill",
+          "settings": {
+            "icon": "truck",
+            "label": "Free shipping over $99"
+          }
+        },
+        "nav_all": {
+          "type": "quick_nav_chip",
+          "settings": {
+            "label": "All Products",
+            "url": "/collections/all"
+          }
+        },
+        "nav_whey": {
+          "type": "quick_nav_chip",
+          "settings": {
+            "label": "Whey Protein",
+            "url": "/collections/whey-protein"
+          }
+        },
+        "nav_plant": {
+          "type": "quick_nav_chip",
+          "settings": {
+            "label": "Plant Protein",
+            "url": "/collections/vegan-protein"
+          }
+        },
+        "nav_creatine": {
+          "type": "quick_nav_chip",
+          "settings": {
+            "label": "Creatine",
+            "url": "/collections/creatine"
+          }
+        },
+        "nav_bundles": {
+          "type": "quick_nav_chip",
+          "settings": {
+            "label": "Bundles",
+            "url": "/collections/bundles"
+          }
+        }
+      },
+      "block_order": [
+        "trust_leaf",
+        "trust_flask",
+        "trust_truck",
+        "nav_all",
+        "nav_whey",
+        "nav_plant",
+        "nav_creatine",
+        "nav_bundles"
+      ],
+      "settings": {
+        "heading": "Canada's best-priced protein, <em>made right here in Ontario.</em>",
+        "subtext": "Lab-tested whey, plant & performance supplements shipped fresh from Windsor — at a transparent price per serving, never marked up.",
+        "show_social_card": true,
+        "rating_number": "4.8",
+        "review_count_text": "48,200+ verified reviews",
+        "stat1_value": "~$0.71",
+        "stat1_label": "avg. price / serving",
+        "stat2_value": "1.2M+",
+        "stat2_label": "orders shipped",
+        "card_footer": "Rated #1 for value by Canadian lifters",
+        "padding_top": 56,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "product_des": "1",
+        "image_ratio": "custom-pr",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 24,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "pagination_type": "links",
+        "paginate_pos": "center",
+        "dis_pagination": 60,
+        "enable_sorting": true,
+        "enable_filtering": false,
+        "enable_num_cols_selector": false,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 30,
+        "padding_bottom": 70,
+        "padding_rate": 75
+      }
+    },
+    "cp_ingrid_quiz": {
+      "type": "cp-ingrid-block",
+      "settings": {
+        "insert_after": 8,
+        "block_type": "promo",
+        "eyebrow": "Not sure where to start?",
+        "heading": "Find your perfect protein in 30 seconds.",
+        "subtext": "Answer a few questions about your goal, diet and budget — we'll match you to the right formula and serving size.",
+        "cta_label": "Take the quiz",
+        "bg_color": "#111113",
+        "text_color": "light"
+      }
+    }
+  },
+  "order": [
+    "cp_overlays",
+    "cp_hero",
+    "main",
+    "cp_ingrid_quiz"
+  ]
+}

@@ -1,0 +1,522 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_section_3r3KUp": {
+      "type": "custom-section",
+      "blocks": {
+        "parent_gMbp4h": {
+          "type": "parent",
+          "settings": {
+            "column_lg": "hdt-col-lg-8",
+            "column_md": "hdt-col-md-9",
+            "column": "hdt-col-12",
+            "color_scheme": "",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": ""
+          }
+        },
+        "custom_liquid_TjnMxa": {
+          "type": "custom_liquid",
+          "name": "Standard 30% off label",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<center><span class=\"subscribe-pill\"><strong>Save 30% on Recurring Orders</strong></span>\n\n<style>\n  .subscribe-pill{\n    display:inline-block;\n    background:#000;\n    color:#fff;\n    padding:8px 14px;\n    border-radius:9999px;\n    font-size:16px;\n    line-height:1.2;\n    letter-spacing:0.2px;\n    white-space:nowrap;\n  }\n\n  @media (max-width: 768px){\n    .subscribe-pill{\n      font-size:14px;\n      padding:7px 12px;\n    }\n  }\n</style></center>"
+          }
+        },
+        "custom_liquid_bkywPn": {
+          "type": "custom_liquid",
+          "name": "Crossed out 30% off label",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<center>\n  <div class=\"pill-wrapper\">\n    <span class=\"subscribe-pill\"><strong>Save 30% on Recurring Orders</strong></span>\n    <div class=\"pill-strike\"></div>\n  </div>\n</center>\n\n<style>\n  .pill-wrapper {\n    position: relative;\n    display: inline-block;\n  }\n\n  .subscribe-pill {\n    display:inline-block;\n    background:#000;\n    color:#fff;\n    padding:8px 14px;\n    border-radius:9999px;\n    font-size:16px;\n    line-height:1.2;\n    letter-spacing:0.2px;\n    white-space:nowrap;\n    position: relative;\n    z-index: 1;\n  }\n\n  /* Red diagonal strike-through */\n  .pill-strike {\n    position: absolute;\n    top: 50%;\n    left: 0;\n    width: 100%;\n    height: 3px;\n    background: #EA002A;\n    transform: rotate(-12deg);\n    opacity: 0.9;\n    z-index: 2;\n  }\n\n  @media (max-width: 768px){\n    .subscribe-pill{\n      font-size:14px;\n      padding:7px 12px;\n    }\n    .pill-strike {\n      height: 2px;\n    }\n  }\n</style>"
+          }
+        },
+        "custom_liquid_8PEMbz": {
+          "type": "custom_liquid",
+          "name": "35% OFF during BFCM Only",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"bfcm-flash\">\n  35% OFF during OUR SUBSCRIPTION  SALE\n</div>\n\n<style>\n  .bfcm-flash{\n    margin-top: 8px;\n    text-align: center;\n    font-weight: 800;\n    letter-spacing: 0.5px;\n    font-size: 16px;\n    text-transform: uppercase;\n    animation: flashColor 1s infinite;\n  }\n\n  @keyframes flashColor {\n    0%   { color: #EA002A; } /* BioSteel red */\n    50%  { color: #000000; } /* black */\n    100% { color: #EA002A; }\n  }\n\n  @media (max-width: 768px){\n    .bfcm-flash{\n      font-size: 14px;\n      letter-spacing: 0.3px;\n    }\n  }\n</style>"
+          }
+        },
+        "spacer_RPMt6G": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 16
+          }
+        },
+        "image_yCAT8T": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Subscribe_and_Save_CP_Logo.svg",
+            "link": "",
+            "image_width": "custom",
+            "width": 200,
+            "width_mb": 360,
+            "alignment": "center"
+          }
+        },
+        "spacer_tN7rt4": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 16
+          }
+        },
+        "heading_ctJekQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Never Run Out.",
+            "tag": "h2",
+            "heading_size": "h1",
+            "alignment": "center"
+          }
+        },
+        "heading_za33HG": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Always Save.</strong>",
+            "tag": "h2",
+            "heading_size": "h1",
+            "alignment": "center"
+          }
+        },
+        "spacer_PDzLDL": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 16
+          }
+        },
+        "custom_liquid_99DFpJ": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"powered-by-wrap\">\n  <span>Powered by:</span>\n  <img \n    src=\"https://cdn.shopify.com/s/files/1/0249/3241/7583/files/recharge-logo.svg?v=1764000009\" \n    alt=\"Recharge Logo\"\n  >\n</div>\n\n<style>\n  .powered-by-wrap {\n    display: flex;\n    justify-content: center; /* center horizontally */\n    align-items: center;\n    gap: 6px;\n    font-size: 14px;\n    color: #777; /* grey text */\n    width: 100%;\n    margin: 0 auto;\n  }\n\n  .powered-by-wrap img {\n    height: 16px;\n    width: auto;\n    display: inline-block;\n  }\n\n  @media (max-width: 768px){\n    .powered-by-wrap {\n      font-size: 13px;\n      gap: 5px;\n    }\n    .powered-by-wrap img {\n      height: 15px;\n    }\n  }\n</style>"
+          }
+        },
+        "parent_RFiU7X": {
+          "type": "parent",
+          "settings": {
+            "column_lg": "hdt-col-lg-8",
+            "column_md": "hdt-col-md-8",
+            "column": "hdt-col-12",
+            "color_scheme": "",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": ""
+          }
+        },
+        "text_AE96Je": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Join Subscribe & Save and get <strong>30% off every subscription order</strong>, automatically. No re-ordering. No running out. Just guaranteed savings on your favourite proteins and supplements — with full control to swap flavours, skip a month, update quantities, or cancel after three orders.</p>",
+            "text_size": "lg",
+            "alignment": "center",
+            "alignment_mb": "center"
+          }
+        },
+        "spacer_AVdgBK": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 16,
+            "space_md": 16,
+            "space": 16
+          }
+        },
+        "button_eVXMFp": {
+          "type": "button",
+          "settings": {
+            "btn_label": "How Does It Work?",
+            "btn_link": "#FAQ",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "outline",
+            "btn_fw": "normal",
+            "btn_icon": "1",
+            "alignment": "center"
+          }
+        },
+        "spacer_wjq8ki": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 20,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "text_Hmx4KP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Please review all the <strong>FAQs</strong> carefully to understand the rules, eligibility requirements, and limitations of the Subscribe & Save Subscription program.</p>",
+            "text_size": "xs",
+            "alignment": "center",
+            "alignment_mb": "center"
+          }
+        }
+      },
+      "block_order": [
+        "parent_gMbp4h",
+        "custom_liquid_TjnMxa",
+        "custom_liquid_bkywPn",
+        "custom_liquid_8PEMbz",
+        "spacer_RPMt6G",
+        "image_yCAT8T",
+        "spacer_tN7rt4",
+        "heading_ctJekQ",
+        "heading_za33HG",
+        "spacer_PDzLDL",
+        "custom_liquid_99DFpJ",
+        "parent_RFiU7X",
+        "text_AE96Je",
+        "spacer_AVdgBK",
+        "button_eVXMFp",
+        "spacer_wjq8ki",
+        "text_Hmx4KP"
+      ],
+      "name": "Hero",
+      "settings": {
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "direction": "",
+        "justify": "hdt-justify-center",
+        "gap": false,
+        "space": 0,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "padding_rate": 75
+      }
+    },
+    "icon_box_6hbEMC": {
+      "type": "icon-box",
+      "blocks": {
+        "item_KTF368": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "smile2",
+            "custom_svg": "",
+            "icon_width": 60,
+            "icon_width_mb": 60,
+            "link": "",
+            "open_link": false,
+            "title": "Big Savings -- Always 30% OFF",
+            "content": "<p>Lock in <strong>30% savings</strong> on every recurring shipment. No codes. No promos. Just automatic discounts, forever (until you change or cancel).</p>",
+            "adding_border": false
+          }
+        },
+        "item_CVgNpz": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "box2",
+            "custom_svg": "",
+            "icon_width": 60,
+            "icon_width_mb": 60,
+            "link": "",
+            "open_link": false,
+            "title": "Zero-Hassle Auto-Delivery",
+            "content": "<p>Pick your delivery schedule — 30, 60, or 90 days — and your supplements show up right on time.</p>",
+            "adding_border": false
+          }
+        },
+        "item_RqCEV6": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "health",
+            "custom_svg": "",
+            "icon_width": 60,
+            "icon_width_mb": 60,
+            "link": "",
+            "open_link": false,
+            "title": "Total Flexibility & Control",
+            "content": "<p>Swap flavours, change sizes, skip a shipment, or cancel after 3 orders. No fees. No complications.</p>",
+            "adding_border": false
+          }
+        }
+      },
+      "block_order": [
+        "item_KTF368",
+        "item_CVgNpz",
+        "item_RqCEV6"
+      ],
+      "name": "t:sections.icon-box.name",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "",
+        "heading_tag": "h2",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 29,
+        "sec_heading_spacing": 30,
+        "icon_pos_center": true,
+        "icon_pos_center_mb": true,
+        "icon_circle": true,
+        "space_icon_heading": "medium",
+        "size_heading": "medium",
+        "heading_uppercase": false,
+        "space_heading_content": "small",
+        "col_dk": "3",
+        "col_tb": "3",
+        "col_mb": "1",
+        "carousel_mobile": false,
+        "border_style": "none",
+        "fullwidth": true,
+        "boxed_fullwidth": false,
+        "color_scheme": "scheme-4",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "padding_rate": 75
+      }
+    },
+    "banner_rpenTL": {
+      "type": "banner",
+      "blocks": {
+        "banner_3_BMwPEr": {
+          "type": "banner_3",
+          "settings": {
+            "image": "shopify://shop_images/Everyday_Athlete.jpg",
+            "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+            "banner_url": "",
+            "banner_target": false,
+            "sub_heading": "Who It's Best For",
+            "sub_heading_fs": "base",
+            "sub_heading_fw": "bold",
+            "sub_heading_space": 12,
+            "heading": "The Everyday Athlete",
+            "heading_fs": "h4",
+            "heading_fw": "normal",
+            "heading_space": 18,
+            "desc": "People who rely on protein daily and want consistent savings with zero effort.",
+            "des_space": 28,
+            "btn_label": "",
+            "btn_link": "",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "none",
+            "content_position": "center",
+            "alignment": "center",
+            "content_position_mb": "center",
+            "alignment_mb": "center"
+          }
+        },
+        "banner_3_PhVPaT": {
+          "type": "banner_3",
+          "settings": {
+            "image": "shopify://shop_images/Young_Professional.jpg",
+            "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+            "banner_url": "",
+            "banner_target": false,
+            "sub_heading": "Who It's Best For",
+            "sub_heading_fs": "base",
+            "sub_heading_fw": "bold",
+            "sub_heading_space": 12,
+            "heading": "The Busy Professional",
+            "heading_fs": "h4",
+            "heading_fw": "normal",
+            "heading_space": 18,
+            "desc": "You want nutrition handled automatically so you can focus on everything else.",
+            "des_space": 28,
+            "btn_label": "",
+            "btn_link": "",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "none",
+            "content_position": "center",
+            "alignment": "center",
+            "content_position_mb": "center",
+            "alignment_mb": "center"
+          }
+        },
+        "banner_3_KNNX8P": {
+          "type": "banner_3",
+          "settings": {
+            "image": "shopify://shop_images/Smart_Budget_Shopper.jpg",
+            "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+            "banner_url": "",
+            "banner_target": false,
+            "sub_heading": "Who It's Best For",
+            "sub_heading_fs": "base",
+            "sub_heading_fw": "bold",
+            "sub_heading_space": 12,
+            "heading": "The Budget-Smart Shopper",
+            "heading_fs": "h4",
+            "heading_fw": "normal",
+            "heading_space": 18,
+            "desc": "You want premium supplements at the lowest possible price — every single month.",
+            "des_space": 28,
+            "btn_label": "",
+            "btn_link": "",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "none",
+            "content_position": "center",
+            "alignment": "center",
+            "content_position_mb": "center",
+            "alignment_mb": "center"
+          }
+        }
+      },
+      "block_order": [
+        "banner_3_BMwPEr",
+        "banner_3_PhVPaT",
+        "banner_3_KNNX8P"
+      ],
+      "name": "t:sections.banner.name",
+      "settings": {
+        "full_width": false,
+        "boxed_fullwidth": false,
+        "col_dk": "3",
+        "row_height": 400,
+        "content_pd_y": 15,
+        "content_pd_x": 15,
+        "space_item": 30,
+        "col_tb": "3",
+        "row_height_tb": 350,
+        "space_item_tb": 15,
+        "row_height_mb": 250,
+        "space_item_mb": 15,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_FXnpmj": {
+      "type": "custom-liquid",
+      "name": "FAQ Anchor",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"FAQ\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "accordion_FNhC6e": {
+      "type": "accordion",
+      "blocks": {
+        "title_ey4CFh": {
+          "type": "title",
+          "settings": {
+            "title": "How it works / Frequently asked Questions:"
+          }
+        },
+        "accordion_item_bkbMKr": {
+          "type": "accordion_item",
+          "disabled": true,
+          "settings": {
+            "title": "If I subscribe during the Subscription sale, do I lock in the 35% discount forever?",
+            "content": "Customers who sign up during our Subscription promotion will receive the 35% subscription discount for as long as their subscription remains active, even if subscription pricing returns to 30% afterward.\nJust note that subscription pricing may still change if the base product price changes, as outlined in our Subscription Terms & Conditions — but the percentage discount you locked in stays applied."
+          }
+        },
+        "accordion_item_j3jL9e": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Do I really save 30% on every subscription order?",
+            "content": "Yes — every subscription shipment is automatically discounted by 30%. No code needed."
+          }
+        },
+        "accordion_item_jyVYgb": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Can I change flavours or sizes?",
+            "content": "Yep. Swap flavours, sizes, or products before your next charge date from your account dashboard."
+          }
+        },
+        "accordion_item_f7MBMg": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Why does the item price sometimes change?",
+            "content": "If the product’s regular retail price changes, your 30% discount still applies — but the base price may update."
+          }
+        },
+        "accordion_item_AMhFqb": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Is there a commitment?",
+            "content": "Only a small one: subscriptions can be cancelled anytime after 3 completed orders. No penalties."
+          }
+        },
+        "accordion_item_YzyF8Y": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Do discount codes work with subscriptions?",
+            "content": "No — because subscription pricing already gives you the maximum savings (30% off)."
+          }
+        }
+      },
+      "block_order": [
+        "title_ey4CFh",
+        "accordion_item_bkbMKr",
+        "accordion_item_j3jL9e",
+        "accordion_item_jyVYgb",
+        "accordion_item_f7MBMg",
+        "accordion_item_AMhFqb",
+        "accordion_item_YzyF8Y"
+      ],
+      "name": "t:sections.accordion.name",
+      "settings": {
+        "accordion_position": "start",
+        "accordion_icon": "1",
+        "open_first": false,
+        "enable_link_list": false,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 70,
+        "padding_rate": 75
+      }
+    },
+    "icon_with_text_Pnthdx": {
+      "type": "icon_with_text",
+      "name": "t:sections.icon_text.name",
+      "settings": {
+        "color_scheme": "",
+        "text": "<p>Read the full FAQ / Terms and Conditions</p>",
+        "btn_label": "Read more",
+        "btn_link": "https://canadianprotein.com/pages/subscription-terms-conditions",
+        "target": false,
+        "btn_size": "base",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "btn_icon": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    }
+  },
+  "order": [
+    "custom_section_3r3KUp",
+    "icon_box_6hbEMC",
+    "banner_rpenTL",
+    "custom_liquid_FXnpmj",
+    "accordion_FNhC6e",
+    "icon_with_text_Pnthdx"
+  ]
+}

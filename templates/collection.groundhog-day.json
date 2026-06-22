@@ -1,0 +1,1131 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-collection",
+      "blocks": {
+        "9a1347b4-da62-490d-9fd4-427a03686ac2": {
+          "type": "heading",
+          "settings": {
+            "heading": "Buy More, Save More"
+          }
+        },
+        "6df762d7-beda-4452-bcf6-1242b294077c": {
+          "type": "description",
+          "settings": {
+            "description": "Buy 2 get <b>20% off</b> | Buy 3 get <b>30% off</b>"
+          }
+        }
+      },
+      "block_order": [
+        "9a1347b4-da62-490d-9fd4-427a03686ac2",
+        "6df762d7-beda-4452-bcf6-1242b294077c"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacing_hd": 10,
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "custom_section_iP3znA": {
+      "type": "custom-section",
+      "blocks": {
+        "custom_liquid_tt7QQC": {
+          "type": "custom_liquid",
+          "name": "Early Access",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<span style=\"\n  font-size:12px;\n  font-weight:700;\n  letter-spacing:1.5px;\n  text-transform:uppercase;\n  background: linear-gradient(\n    90deg,\n    #b8860b,\n    #ffd700,\n    #fff4a3,\n    #ffd700,\n    #b8860b\n  );\n  background-size: 200% auto;\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  color: transparent;\n  animation: goldLoop 4s linear infinite;\n  display:inline-block;\n\">\n  VIP EARLY ACCESS\n</span>\n\n<style>\n@keyframes goldLoop {\n  0% { background-position: 0% center; }\n  100% { background-position: 200% center; }\n}\n</style>"
+          }
+        },
+        "parent_FkLpj4": {
+          "type": "parent",
+          "settings": {
+            "column_lg": "hdt-col-lg-12",
+            "column_md": "hdt-col-md-12",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": "bfcm-col-clear"
+          }
+        },
+        "spacer_D68WCw": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 6,
+            "space_md": 6,
+            "space": 10
+          }
+        },
+        "image_qetjhX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GH_2.png",
+            "link": "",
+            "image_width": "custom",
+            "width": 100,
+            "width_mb": 100,
+            "alignment": "start"
+          }
+        },
+        "heading_wQmKbf": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>25% Off Sitewide</strong>",
+            "tag": "h2",
+            "heading_size": "h1",
+            "alignment": "start"
+          }
+        },
+        "heading_LPXGKJ": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Select Supplements",
+            "tag": "h2",
+            "heading_size": "h3",
+            "alignment": "start"
+          }
+        },
+        "heading_9HWHDE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Use Code: <strong>GROUNDHOG25</strong>",
+            "tag": "h2",
+            "heading_size": "h3",
+            "alignment": "start"
+          }
+        },
+        "spacer_NgReVf": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "text_Bn9e73": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Groundhog didn’t see its shadow… and that’s your cue! Score <strong>25% off sitewide</strong> and get a head start on spring.</p>",
+            "text_size": "base",
+            "alignment": "start",
+            "alignment_mb": "start"
+          }
+        },
+        "custom_liquid_f7yeAT": {
+          "type": "custom_liquid",
+          "name": "Learn More",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<details class=\"bfcm-learn-more\" style=\"color:#fff;\">\n  <summary style=\"cursor:pointer; text-decoration:underline;\">Learn more</summary>\n  <div style=\"margin-top:10px; line-height:1.5;\">\n\n    <h6><strong>Your goals. Our quality. Canadian Protein delivers.</strong></h6><br>\n\n    <p>From high-quality protein powders to premium supplements, we’ve got every corner of your routine covered. Shop our full lineup, including:<br>\n    <strong>Whey Protein Isolate, Whey Protein Concentrate, Vegan Protein, Creatine Monohydrate (Creapure®), Essential Vitamins, Tested Supplements</strong> and more.</p>\n    <br>\n\n    <p>This <strong>Black Friday / Cyber Monday</strong>, unlock <strong>up to 70% off</strong> select products crafted to support strength, performance, recovery, and everyday wellness.</p>\n    <br>\n\n    <p><strong>Plus, we're stacking the extras:</strong><br>\n    – Every order is entered for a chance to <strong>win a full refund</strong> — <strong>2 winners</strong> chosen.<br>\n    – Every order is entered for a chance to <strong>win a pair of Meta Ray-Ban Glasses</strong>.<br>\n    – All orders include a <strong>free mystery gift</strong>.<br>\n    – <strong>Orders $150+</strong> receive a <strong>Canadian Protein Mystery Supplement</strong>.<br>\n    – <strong>More giveaways, surprises, and bonuses</strong> dropping throughout the event.</p>\n    <br>\n\n    <p>Fuel clean. Recover smarter. Train with confidence.</p>\n\n    <p><strong>For all giveaways and contests, terms and conditions apply.</strong>\n    <a href=\"https://canadianprotein.com/pages/bfcm-sale-terms-and-conditions\" target=\"_blank\" rel=\"noopener noreferrer\">Click here for terms and conditions.</a></p>\n\n<br/>\n\n  </div>\n</details>"
+          }
+        },
+        "spacer_BGLmeC": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 20,
+            "space_md": 20,
+            "space": 20
+          }
+        },
+        "parent_bnwibd": {
+          "type": "parent",
+          "name": "Button 1",
+          "settings": {
+            "column_lg": "hdt-col-lg-auto",
+            "column_md": "hdt-col-md-auto",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-b118462a-a4ac-4478-a927-bc3e753a2252",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": "bfcm-col-clear"
+          }
+        },
+        "button_6HVw6A": {
+          "type": "button",
+          "settings": {
+            "btn_label": "Shop now",
+            "btn_link": "#shopnow",
+            "target": false,
+            "btn_size": "lg",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "none",
+            "alignment": "start"
+          }
+        },
+        "spacer_A6dkYf": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 6,
+            "space": 6
+          }
+        },
+        "parent_ttQyPQ": {
+          "type": "parent",
+          "name": "Button 2",
+          "settings": {
+            "column_lg": "hdt-col-lg-3",
+            "column_md": "hdt-col-md-3",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-b118462a-a4ac-4478-a927-bc3e753a2252",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": "bfcm-col-clear"
+          }
+        },
+        "spacer_DW7HQa": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 6,
+            "space": 6
+          }
+        },
+        "custom_liquid_xwCQdK": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<small style=\"color:#fff;\">\n  Terms and conditions apply.<br>Some exclusions may apply. <br>\n  <strong style=\"color:#fff;\">\n    <a href=\"#faq\" style=\"color:#fff; text-decoration:underline;\">\n      Click here for FAQs.\n    </a>\n  </strong>\n</small>"
+          }
+        }
+      },
+      "block_order": [
+        "custom_liquid_tt7QQC",
+        "parent_FkLpj4",
+        "spacer_D68WCw",
+        "image_qetjhX",
+        "heading_wQmKbf",
+        "heading_LPXGKJ",
+        "heading_9HWHDE",
+        "spacer_NgReVf",
+        "text_Bn9e73",
+        "custom_liquid_f7yeAT",
+        "spacer_BGLmeC",
+        "parent_bnwibd",
+        "button_6HVw6A",
+        "spacer_A6dkYf",
+        "parent_ttQyPQ",
+        "spacer_DW7HQa",
+        "custom_liquid_xwCQdK"
+      ],
+      "custom_css": [
+        ".hdt-content_template--20005218746415\\_\\_custom_section\\_QHYYDb {background-image: url(\"https://cdn.shopify.com/s/files/1/0249/3241/7583/files/BFCM-2025-BG.jpg?v=1763856891\"); background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important;}",
+        ".bfcm-col-clear,.bfcm-col-clear * {background: transparent !important; background-color: transparent !important;}",
+        ".bfcm-col-clear .hdt-s-gradient,.bfcm-col-clear .hdt-s-gradient::before {background: transparent !important;}"
+      ],
+      "name": "25% Off - Header",
+      "settings": {
+        "section_fullwidth": false,
+        "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+        "direction": "",
+        "justify": "",
+        "gap": true,
+        "space": 0,
+        "padding_top": 76,
+        "padding_bottom": 76,
+        "padding_rate": 75
+      }
+    },
+    "custom_section_fbrQGd": {
+      "type": "custom-section",
+      "blocks": {
+        "custom_liquid_exD6Ec": {
+          "type": "custom_liquid",
+          "name": "Early Access",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<span style=\"\n  font-size:12px;\n  font-weight:700;\n  letter-spacing:1.5px;\n  text-transform:uppercase;\n  background: linear-gradient(\n    90deg,\n    #b8860b,\n    #ffd700,\n    #fff4a3,\n    #ffd700,\n    #b8860b\n  );\n  background-size: 200% auto;\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  color: transparent;\n  animation: goldLoop 4s linear infinite;\n  display:inline-block;\n\">\n  VIP EARLY ACCESS\n</span>\n\n<style>\n@keyframes goldLoop {\n  0% { background-position: 0% center; }\n  100% { background-position: 200% center; }\n}\n</style>"
+          }
+        },
+        "parent_dXHckk": {
+          "type": "parent",
+          "settings": {
+            "column_lg": "hdt-col-lg-12",
+            "column_md": "hdt-col-md-12",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": "bfcm-col-clear"
+          }
+        },
+        "spacer_EhDcka": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 6,
+            "space_md": 6,
+            "space": 10
+          }
+        },
+        "image_kcbRKw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GH_1.png",
+            "link": "",
+            "image_width": "custom",
+            "width": 100,
+            "width_mb": 100,
+            "alignment": "start"
+          }
+        },
+        "heading_VjpUg8": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Buy One Get One 50% Off Sitewide</strong>",
+            "tag": "h2",
+            "heading_size": "h1",
+            "alignment": "start"
+          }
+        },
+        "heading_iCPwWE": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Select Supplements",
+            "tag": "h2",
+            "heading_size": "h3",
+            "alignment": "start"
+          }
+        },
+        "heading_GNGWkf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Use Code: <strong>GROUNDHOG50</strong>",
+            "tag": "h2",
+            "heading_size": "h3",
+            "alignment": "start"
+          }
+        },
+        "spacer_xraa8V": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "text_CH6xmU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Groundhog saw his shadow, signaling more winter ahead.<br/>Stock up now with <strong>Buy One, Get One 50% Off sitewide</strong>.</p>",
+            "text_size": "base",
+            "alignment": "start",
+            "alignment_mb": "start"
+          }
+        },
+        "custom_liquid_Q49xEn": {
+          "type": "custom_liquid",
+          "name": "Learn More",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<details class=\"bfcm-learn-more\" style=\"color:#fff;\">\n  <summary style=\"cursor:pointer; text-decoration:underline;\">Learn more</summary>\n  <div style=\"margin-top:10px; line-height:1.5;\">\n\n    <h6><strong>Your goals. Our quality. Canadian Protein delivers.</strong></h6><br>\n\n    <p>From high-quality protein powders to premium supplements, we’ve got every corner of your routine covered. Shop our full lineup, including:<br>\n    <strong>Whey Protein Isolate, Whey Protein Concentrate, Vegan Protein, Creatine Monohydrate (Creapure®), Essential Vitamins, Tested Supplements</strong> and more.</p>\n    <br>\n\n    <p>This <strong>Black Friday / Cyber Monday</strong>, unlock <strong>up to 70% off</strong> select products crafted to support strength, performance, recovery, and everyday wellness.</p>\n    <br>\n\n    <p><strong>Plus, we're stacking the extras:</strong><br>\n    – Every order is entered for a chance to <strong>win a full refund</strong> — <strong>2 winners</strong> chosen.<br>\n    – Every order is entered for a chance to <strong>win a pair of Meta Ray-Ban Glasses</strong>.<br>\n    – All orders include a <strong>free mystery gift</strong>.<br>\n    – <strong>Orders $150+</strong> receive a <strong>Canadian Protein Mystery Supplement</strong>.<br>\n    – <strong>More giveaways, surprises, and bonuses</strong> dropping throughout the event.</p>\n    <br>\n\n    <p>Fuel clean. Recover smarter. Train with confidence.</p>\n\n    <p><strong>For all giveaways and contests, terms and conditions apply.</strong>\n    <a href=\"https://canadianprotein.com/pages/bfcm-sale-terms-and-conditions\" target=\"_blank\" rel=\"noopener noreferrer\">Click here for terms and conditions.</a></p>\n\n<br/>\n\n  </div>\n</details>"
+          }
+        },
+        "spacer_bqfG7y": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 20,
+            "space_md": 20,
+            "space": 20
+          }
+        },
+        "parent_rzqtp6": {
+          "type": "parent",
+          "name": "Button 1",
+          "settings": {
+            "column_lg": "hdt-col-lg-auto",
+            "column_md": "hdt-col-md-auto",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-b118462a-a4ac-4478-a927-bc3e753a2252",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": "bfcm-col-clear"
+          }
+        },
+        "button_nQQmYM": {
+          "type": "button",
+          "settings": {
+            "btn_label": "Shop now",
+            "btn_link": "#shopnow",
+            "target": false,
+            "btn_size": "lg",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "none",
+            "alignment": "start"
+          }
+        },
+        "spacer_9yNyU7": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 6,
+            "space": 6
+          }
+        },
+        "parent_fKQNFi": {
+          "type": "parent",
+          "name": "Button 2",
+          "settings": {
+            "column_lg": "hdt-col-lg-3",
+            "column_md": "hdt-col-md-3",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-b118462a-a4ac-4478-a927-bc3e753a2252",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": "bfcm-col-clear"
+          }
+        },
+        "spacer_pECbN3": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 6,
+            "space": 6
+          }
+        },
+        "custom_liquid_fmKf4h": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<small style=\"color:#fff;\">\n  Terms and conditions apply.<br>Some exclusions may apply. <br>\n  <strong style=\"color:#fff;\">\n    <a href=\"#faq\" style=\"color:#fff; text-decoration:underline;\">\n      Click here for FAQs.\n    </a>\n  </strong>\n</small>"
+          }
+        }
+      },
+      "block_order": [
+        "custom_liquid_exD6Ec",
+        "parent_dXHckk",
+        "spacer_EhDcka",
+        "image_kcbRKw",
+        "heading_VjpUg8",
+        "heading_iCPwWE",
+        "heading_GNGWkf",
+        "spacer_xraa8V",
+        "text_CH6xmU",
+        "custom_liquid_Q49xEn",
+        "spacer_bqfG7y",
+        "parent_rzqtp6",
+        "button_nQQmYM",
+        "spacer_9yNyU7",
+        "parent_fKQNFi",
+        "spacer_pECbN3",
+        "custom_liquid_fmKf4h"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".hdt-content_template--20005218746415\\_\\_custom_section\\_QHYYDb {background-image: url(\"https://cdn.shopify.com/s/files/1/0249/3241/7583/files/BFCM-2025-BG.jpg?v=1763856891\"); background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important;}",
+        ".bfcm-col-clear,.bfcm-col-clear * {background: transparent !important; background-color: transparent !important;}",
+        ".bfcm-col-clear .hdt-s-gradient,.bfcm-col-clear .hdt-s-gradient::before {background: transparent !important;}"
+      ],
+      "name": "BOGO 50% Off - Header",
+      "settings": {
+        "section_fullwidth": false,
+        "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+        "direction": "",
+        "justify": "",
+        "gap": true,
+        "space": 0,
+        "padding_top": 76,
+        "padding_bottom": 76,
+        "padding_rate": 75
+      }
+    },
+    "custom_section_kaEEGk": {
+      "type": "custom-section",
+      "blocks": {
+        "custom_liquid_iiMPAr": {
+          "type": "custom_liquid",
+          "name": "Early Access",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<span style=\"\n  font-size:12px;\n  font-weight:700;\n  letter-spacing:1.5px;\n  text-transform:uppercase;\n  background: linear-gradient(\n    90deg,\n    #b8860b,\n    #ffd700,\n    #fff4a3,\n    #ffd700,\n    #b8860b\n  );\n  background-size: 200% auto;\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  color: transparent;\n  animation: goldLoop 4s linear infinite;\n  display:inline-block;\n\">\n  VIP EARLY ACCESS\n</span>\n\n<style>\n@keyframes goldLoop {\n  0% { background-position: 0% center; }\n  100% { background-position: 200% center; }\n}\n</style>"
+          }
+        },
+        "parent_qf8p4t": {
+          "type": "parent",
+          "settings": {
+            "column_lg": "hdt-col-lg-10",
+            "column_md": "hdt-col-md-6",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": "bfcm-col-clear"
+          }
+        },
+        "spacer_k8TkMy": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 6,
+            "space_md": 6,
+            "space": 10
+          }
+        },
+        "heading_XdRUHD": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>25% Off Sitewide</strong>",
+            "tag": "h2",
+            "heading_size": "h1",
+            "alignment": "start"
+          }
+        },
+        "heading_F76p8A": {
+          "type": "heading",
+          "settings": {
+            "heading": "Or",
+            "tag": "h2",
+            "heading_size": "h4",
+            "alignment": "start"
+          }
+        },
+        "heading_CNLgAe": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Buy One Get One 50% Off</strong>",
+            "tag": "h2",
+            "heading_size": "h1",
+            "alignment": "start"
+          }
+        },
+        "spacer_F7pH8D": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 6,
+            "space": 6
+          }
+        },
+        "heading_VmrcEU": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Select Supplements",
+            "tag": "h2",
+            "heading_size": "h3",
+            "alignment": "start"
+          }
+        },
+        "heading_3Y6ha8": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Use Code: <strong>GROUNDHOG50</strong>",
+            "tag": "h2",
+            "heading_size": "h3",
+            "alignment": "start"
+          }
+        },
+        "spacer_xEzCFL": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "parent_4k66wH": {
+          "type": "parent",
+          "settings": {
+            "column_lg": "hdt-col-lg-6",
+            "column_md": "hdt-col-md-6",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": ""
+          }
+        },
+        "text_JcCmBk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tomorrow, the Groundhog decides your deal.<br/>No shadow means <strong>25% off</strong>. Shadow spotted means <strong>Buy One, Get One 50% Off</strong>.</p><p>Come back tomorrow to see which deal drops.</p>",
+            "text_size": "base",
+            "alignment": "start",
+            "alignment_mb": "start"
+          }
+        },
+        "spacer_VRyimR": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 20,
+            "space_md": 20,
+            "space": 20
+          }
+        },
+        "custom_liquid_jHj33T": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<small style=\"color:#fff;\">\n  Some exclusions may apply. <br>\n  <strong style=\"color:#fff;\">\n    <a href=\"#faq\" style=\"color:#fff; text-decoration:underline;\">\n      Click here for FAQs.\n    </a>\n  </strong>\n</small>"
+          }
+        },
+        "custom_liquid_7mGQ6U": {
+          "type": "custom_liquid",
+          "name": "Learn More",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<details class=\"bfcm-learn-more\" style=\"color:#fff;\">\n  <summary style=\"cursor:pointer; text-decoration:underline;\">Learn more</summary>\n  <div style=\"margin-top:10px; line-height:1.5;\">\n\n    <h6><strong>Your goals. Our quality. Canadian Protein delivers.</strong></h6><br>\n\n    <p>From high-quality protein powders to premium supplements, we’ve got every corner of your routine covered. Shop our full lineup, including:<br>\n    <strong>Whey Protein Isolate, Whey Protein Concentrate, Vegan Protein, Creatine Monohydrate (Creapure®), Essential Vitamins, Tested Supplements</strong> and more.</p>\n    <br>\n\n    <p>This <strong>Black Friday / Cyber Monday</strong>, unlock <strong>up to 70% off</strong> select products crafted to support strength, performance, recovery, and everyday wellness.</p>\n    <br>\n\n    <p><strong>Plus, we're stacking the extras:</strong><br>\n    – Every order is entered for a chance to <strong>win a full refund</strong> — <strong>2 winners</strong> chosen.<br>\n    – Every order is entered for a chance to <strong>win a pair of Meta Ray-Ban Glasses</strong>.<br>\n    – All orders include a <strong>free mystery gift</strong>.<br>\n    – <strong>Orders $150+</strong> receive a <strong>Canadian Protein Mystery Supplement</strong>.<br>\n    – <strong>More giveaways, surprises, and bonuses</strong> dropping throughout the event.</p>\n    <br>\n\n    <p>Fuel clean. Recover smarter. Train with confidence.</p>\n\n    <p><strong>For all giveaways and contests, terms and conditions apply.</strong>\n    <a href=\"https://canadianprotein.com/pages/bfcm-sale-terms-and-conditions\" target=\"_blank\" rel=\"noopener noreferrer\">Click here for terms and conditions.</a></p>\n\n<br/>\n\n  </div>\n</details>"
+          }
+        },
+        "parent_QEnNz4": {
+          "type": "parent",
+          "name": "Button 1",
+          "disabled": true,
+          "settings": {
+            "column_lg": "hdt-col-lg-auto",
+            "column_md": "hdt-col-md-auto",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-b118462a-a4ac-4478-a927-bc3e753a2252",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": "bfcm-col-clear"
+          }
+        },
+        "button_7pYfkD": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "btn_label": "Shop now",
+            "btn_link": "#shopnow",
+            "target": false,
+            "btn_size": "lg",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "none",
+            "alignment": "start"
+          }
+        },
+        "parent_fXUGtN": {
+          "type": "parent",
+          "name": "Button 2",
+          "settings": {
+            "column_lg": "hdt-col-lg-3",
+            "column_md": "hdt-col-md-3",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-b118462a-a4ac-4478-a927-bc3e753a2252",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": "bfcm-col-clear"
+          }
+        },
+        "spacer_yNXbrP": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 6,
+            "space": 6
+          }
+        },
+        "parent_EznjBk": {
+          "type": "parent",
+          "settings": {
+            "column_lg": "hdt-col-lg-3",
+            "column_md": "hdt-col-md-3",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 40,
+            "class": ""
+          }
+        },
+        "image_pm7X4D": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GH_3.png",
+            "link": "",
+            "image_width": "custom",
+            "width": 150,
+            "width_mb": 100,
+            "alignment": "end"
+          }
+        }
+      },
+      "block_order": [
+        "custom_liquid_iiMPAr",
+        "parent_qf8p4t",
+        "spacer_k8TkMy",
+        "heading_XdRUHD",
+        "heading_F76p8A",
+        "heading_CNLgAe",
+        "spacer_F7pH8D",
+        "heading_VmrcEU",
+        "heading_3Y6ha8",
+        "spacer_xEzCFL",
+        "parent_4k66wH",
+        "text_JcCmBk",
+        "spacer_VRyimR",
+        "custom_liquid_jHj33T",
+        "custom_liquid_7mGQ6U",
+        "parent_QEnNz4",
+        "button_7pYfkD",
+        "parent_fXUGtN",
+        "spacer_yNXbrP",
+        "parent_EznjBk",
+        "image_pm7X4D"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".hdt-content_template--20005218746415\\_\\_custom_section\\_QHYYDb {background-image: url(\"https://cdn.shopify.com/s/files/1/0249/3241/7583/files/BFCM-2025-BG.jpg?v=1763856891\"); background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important;}",
+        ".bfcm-col-clear,.bfcm-col-clear * {background: transparent !important; background-color: transparent !important;}",
+        ".bfcm-col-clear .hdt-s-gradient,.bfcm-col-clear .hdt-s-gradient::before {background: transparent !important;}"
+      ],
+      "name": "Day Before Groundhog Day - Header",
+      "settings": {
+        "section_fullwidth": false,
+        "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+        "direction": "",
+        "justify": "",
+        "gap": true,
+        "space": 0,
+        "padding_top": 76,
+        "padding_bottom": 76,
+        "padding_rate": 75
+      }
+    },
+    "marquee_xcTg8g": {
+      "type": "marquee",
+      "blocks": {
+        "item_dCqBqE": {
+          "type": "item",
+          "settings": {
+            "text": "<p>Welcome to our store</p>",
+            "icon_svg": "none",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        },
+        "item_kaUPF7": {
+          "type": "item",
+          "settings": {
+            "text": "<p>GROUNDHOG DAY SALE COMING FEBRUARY 2ND, 2025</p>",
+            "icon_svg": "flash",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        },
+        "item_hyYTBG": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "text": "<p>1-Day Only</p>",
+            "icon_svg": "none",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        }
+      },
+      "block_order": [
+        "item_dCqBqE",
+        "item_kaUPF7",
+        "item_hyYTBG"
+      ],
+      "disabled": true,
+      "settings": {
+        "space_item": 30,
+        "speed": 0.3,
+        "direction": "rtl",
+        "marquee_pause_when_hover": false,
+        "text_fs": "h5",
+        "text_fw": "normal",
+        "text_uppercase": false,
+        "adding_border": true,
+        "icon_position_between": true,
+        "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "marquee_dcdByk": {
+      "type": "marquee",
+      "blocks": {
+        "item_XNcNHH": {
+          "type": "item",
+          "settings": {
+            "text": "<p>?? Points</p>",
+            "icon_svg": "flash",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        }
+      },
+      "block_order": [
+        "item_XNcNHH"
+      ],
+      "disabled": true,
+      "name": "t:sections.marquee.name",
+      "settings": {
+        "space_item": 50,
+        "speed": 0.2,
+        "direction": "rtl",
+        "marquee_pause_when_hover": false,
+        "text_fs": "h5",
+        "text_fw": "normal",
+        "text_uppercase": false,
+        "adding_border": true,
+        "icon_position_between": true,
+        "color_scheme": "scheme-f7d24f70-a894-4d32-8154-25607c658d3d",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_rate": 20
+      }
+    },
+    "icon_box_bzhCti": {
+      "type": "icon-box",
+      "blocks": {
+        "item_m3BDf8": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "energy",
+            "custom_svg": "",
+            "icon_width": 30,
+            "icon_width_mb": 30,
+            "link": "",
+            "open_link": false,
+            "title": "Get More for Less!",
+            "content": "<p>For a limited time, buy any 2 products for 20% off or 3 products for 30% off. *Some exclusions may apply.</p>",
+            "adding_border": false
+          }
+        },
+        "item_LTC37e": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "return2",
+            "custom_svg": "",
+            "icon_width": 30,
+            "icon_width_mb": 30,
+            "link": "",
+            "open_link": false,
+            "title": "Mix & Match",
+            "content": "<p>Mix & match your favourite proteins or your essential supplements for extra savings. *Valid for products of equal or lesser value.</p>",
+            "adding_border": false
+          }
+        }
+      },
+      "block_order": [
+        "item_m3BDf8",
+        "item_LTC37e"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "",
+        "heading_tag": "h2",
+        "heading_size": "h5",
+        "sec_subheading": "",
+        "subheading_size": "xl",
+        "heading_reverse": false,
+        "heading_gap": 29,
+        "sec_heading_spacing": 30,
+        "icon_pos_center": false,
+        "icon_pos_center_mb": true,
+        "icon_circle": false,
+        "space_icon_heading": "medium",
+        "size_heading": "medium",
+        "heading_uppercase": false,
+        "space_heading_content": "small",
+        "col_dk": "3",
+        "col_tb": "3",
+        "col_mb": "2",
+        "carousel_mobile": true,
+        "border_style": "none",
+        "fullwidth": true,
+        "boxed_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "icon_with_text_LMTgLi": {
+      "type": "icon_with_text",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "text": "<p>Can't wait till tomorrow?</p>",
+        "btn_label": "Shop Buy More, Save More Now",
+        "btn_link": "shopify://collections/january-wellness-month",
+        "target": false,
+        "btn_size": "xl",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "btn_icon": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_gGhH7p": {
+      "type": "custom-line",
+      "disabled": true,
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 25,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_efiHYG": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"shopnow\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "product_des": "1",
+        "image_ratio": "custom-pr",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 12,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "pagination_type": "links",
+        "paginate_pos": "center",
+        "dis_pagination": 60,
+        "enable_sorting": true,
+        "enable_filtering": false,
+        "enable_num_cols_selector": true,
+        "widget_heading": "Groundhog Day",
+        "cat_source": "1",
+        "cat_link_list": "",
+        "count": true,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 30,
+        "padding_bottom": 70,
+        "padding_rate": 75,
+        "sidebar_position": "left",
+        "sidebar_size": "medium"
+      }
+    },
+    "custom_liquid_ehchGG": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"faq\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "accordion_UCAEC3": {
+      "type": "accordion",
+      "blocks": {
+        "title_8rd3Fa": {
+          "type": "title",
+          "settings": {
+            "title": "Frequently Asked Questions"
+          }
+        },
+        "accordion_item_HbG88i": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What is the Groundhog Day Flash Sale?",
+            "content": "The Groundhog Day Flash Sale offers 25% off sitewide on eligible items for a limited time."
+          }
+        },
+        "accordion_item_3C3MkB": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Do I need a promo code to receive the discount?",
+            "content": "Yes, the code GROUNDHOG25 will be required."
+          }
+        },
+        "accordion_item_d7Bhnj": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Are any products excluded from the sale?",
+            "content": "Yes. The following items are excluded:<br>\n- Bulk Protein<br>\n - Gift Cards<br>\n - Any items excluded at the sole discretion of Canadian Protein<br>\nSome product types may sell out or be unavailable during the sale period."
+          }
+        },
+        "accordion_item_9U63jh": {
+          "type": "accordion_item",
+          "disabled": true,
+          "settings": {
+            "title": "Will the sale prices appear immediately?",
+            "content": "Yes. Sale pricing will appear in your cart and at checkout.\n If you do not see a discount applied, the product may be excluded from the promotion."
+          }
+        },
+        "accordion_item_GwXBpx": {
+          "type": "accordion_item",
+          "disabled": true,
+          "settings": {
+            "title": "How do I enter the Order Refund Promotion?",
+            "content": "All you have to do is place an order during the Boxing Day Sale period, and you will be automatically entered!"
+          }
+        },
+        "accordion_item_kjPEex": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "How long does the Flash Sale last?",
+            "content": "This sale is available only for the limited promotional period on Groundhog Day.\n Once the flash sale ends, discounts cannot be applied to past or future orders."
+          }
+        },
+        "accordion_item_tVmhc9": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Will shipping times be affected?",
+            "content": "At the moment, shipping times are unlikely to be affected. Should anything change, we’ll be sure to email you with an update."
+          }
+        },
+        "accordion_item_7mgQP4": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What is the refund policy for sale items?",
+            "content": "Refunds on sale items will be processed based on the discounted sale price, not the original full price. For more information about our refund policy, please\n  <a href=\"https://canadianprotein.com/pages/terms-and-conditions\" target=\"_blank\" rel=\"noopener noreferrer\">\n    <strong>click here</strong></a>"
+          }
+        },
+        "accordion_item_WrRQNf": {
+          "type": "accordion_item",
+          "disabled": true,
+          "settings": {
+            "title": "How does the “Win Your Order Refunded” promotion work?",
+            "content": "During the Sale window:\n<br>\nEvery customer who places an order is automatically entered for a chance to win a refund.\n<br>\n\n - Canadian Protein will select 2 winners by random draw.\n<br>\n\n - Refund covers product value only, not shipping, taxes, or fees.\n<br>\n\n - Must be 18+ and a resident of Canada (excluding Quebec).\n<br>\n\n - Maximum refund amount is $350 CAD.\n<br>\n\n - Winners must respond within 7 days to claim their prize."
+          }
+        },
+        "accordion_item_jjPjXa": {
+          "type": "accordion_item",
+          "disabled": true,
+          "settings": {
+            "title": "How do I enter the Meta Glasses Giveaway?",
+            "content": "Every order placed during the Sale counts as one automatic entry.\n One winner will receive Meta Glasses.\n The winner will be chosen by random draw and contacted by email."
+          }
+        },
+        "accordion_item_h97bfe": {
+          "type": "accordion_item",
+          "disabled": true,
+          "settings": {
+            "title": "Should I expect delays with shipping?",
+            "content": "Yes.\n Due to high order volume during the Black Friday Cyber Monday Sale, shipping delays may occur."
+          }
+        }
+      },
+      "block_order": [
+        "title_8rd3Fa",
+        "accordion_item_HbG88i",
+        "accordion_item_3C3MkB",
+        "accordion_item_d7Bhnj",
+        "accordion_item_9U63jh",
+        "accordion_item_GwXBpx",
+        "accordion_item_kjPEex",
+        "accordion_item_tVmhc9",
+        "accordion_item_7mgQP4",
+        "accordion_item_WrRQNf",
+        "accordion_item_jjPjXa",
+        "accordion_item_h97bfe"
+      ],
+      "name": "t:sections.accordion.name",
+      "settings": {
+        "accordion_position": "start",
+        "accordion_icon": "1",
+        "open_first": false,
+        "enable_link_list": false,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 70,
+        "padding_rate": 75
+      }
+    },
+    "icon_with_text_h6nKPh": {
+      "type": "icon_with_text",
+      "settings": {
+        "color_scheme": "",
+        "text": "<p>Terms and Conditions for Promotions and Sales</p>",
+        "btn_label": "View Terms and Conditions",
+        "btn_link": "shopify://pages/terms-and-conditions-for-promotions-and-sales",
+        "target": false,
+        "btn_size": "xs",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "btn_icon": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "custom_section_iP3znA",
+    "custom_section_fbrQGd",
+    "custom_section_kaEEGk",
+    "marquee_xcTg8g",
+    "marquee_dcdByk",
+    "icon_box_bzhCti",
+    "icon_with_text_LMTgLi",
+    "custom_line_gGhH7p",
+    "custom_liquid_efiHYG",
+    "main",
+    "custom_liquid_ehchGG",
+    "accordion_UCAEC3",
+    "icon_with_text_h6nKPh"
+  ]
+}

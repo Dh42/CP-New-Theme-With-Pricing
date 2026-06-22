@@ -1,0 +1,174 @@
+{% raw %}
+  {%- assign image_size = '480x480' -%}
+  {%- assign no_image   = 'https://cdn.shopify.com/s/images/themes/product-1.png' -%}
+
+  {%- comment -%} Resolve featured image + price from selected/first available variant {%- endcomment -%}
+  {%- assign featured_image            = product.featured_image -%}
+  {%- assign product_price             = product.price -%}
+  {%- assign product_compare_at_price  = product.compare_at_price -%}
+
+  {%- assign selected_variant = product.selected_or_first_available_variant -%}
+  {%- if selected_variant -%}
+    {%- assign product_price            = selected_variant.price -%}
+    {%- assign product_compare_at_price = selected_variant.compare_at_price -%}
+    {%- if selected_variant.image -%}
+      {%- assign featured_image = selected_variant.image -%}
+    {%- endif -%}
+  {%- endif -%}
+
+  {%- assign variant_url = '' -%}
+  {%- if selected_variant -%}
+    {%- assign variant_url = '?variant=' | append: selected_variant.id -%}
+  {%- endif -%}
+
+  {%- comment -%} Tag string for badge detection — join first, then wrap with pipes {%- endcomment -%}
+  {%- assign tag_joined = product.tags | join: '|' | downcase -%}
+  {%- assign tag_pipe   = '|' | append: tag_joined | append: '|' -%}
+
+  {%- comment -%} Size option detection — store matching option name {%- endcomment -%}
+  {%- assign size_opt_name = '' -%}
+  {%- for option in product.options -%}
+    {%- assign opt_lower = option.name | downcase -%}
+    {%- if opt_lower contains 'size' or opt_lower contains 'weight' -%}
+      {%- assign size_opt_name = option.name -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  <div {% if showPageData %}data-page="{{page}}"{% endif %} class="spf-col-xl-3 spf-col-lg-3 spf-col-md-4 spf-col-sm-6 spf-col-6">
+    <article class="cp-cat-card{% unless product.available %} cp-cat-card--sold-out{% endunless %}">
+
+      {%- comment -%}────────── IMAGE WRAP ──────────{%- endcomment -%}
+      <div class="cp-cat-card__img-wrap">
+
+        {%- comment -%} Sold-out tag {%- endcomment -%}
+        {%- unless product.available -%}
+          <span class="cp-cat-card__sold-tag">Sold Out</span>
+        {%- endunless -%}
+
+        {%- comment -%} Badges from product tags {%- endcomment -%}
+        <div class="cp-cat-card__badges">
+          {%- if tag_pipe contains '|best-seller|' -%}
+            <span class="cp-cat-badge cp-cat-badge--accent">Best Seller</span>
+          {%- endif -%}
+          {%- if tag_pipe contains '|top-rated|' -%}
+            <span class="cp-cat-badge cp-cat-badge--accent">Top Rated</span>
+          {%- endif -%}
+          {%- if tag_pipe contains '|new|' -%}
+            <span class="cp-cat-badge cp-cat-badge--ink">New</span>
+          {%- endif -%}
+          {%- if tag_pipe contains '|vegan|' -%}
+            <span class="cp-cat-badge cp-cat-badge--green">Vegan</span>
+          {%- endif -%}
+          {%- if tag_pipe contains '|grass-fed|' -%}
+            <span class="cp-cat-badge cp-cat-badge--green">Grass-Fed</span>
+          {%- endif -%}
+          {%- if tag_pipe contains '|sale|' or tag_pipe contains '|on-sale|' -%}
+            {%- if product_compare_at_price > product_price -%}
+              <span class="cp-cat-badge cp-cat-badge--sale">Sale</span>
+            {%- endif -%}
+          {%- endif -%}
+        </div>
+
+        {%- comment -%} Product image {%- endcomment -%}
+        <a class="cp-cat-card__img-link" href="{{root_url}}{{product.url}}{{variant_url}}">
+          {%- if featured_image -%}
+            <img
+              class="gflazyload cp-cat-card__img"
+              srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              src="{{featured_image | img_url: image_size}}"
+              data-src="{{featured_image | img_lazyload_url}}"
+              data-sizes="auto"
+              data-aspectratio="{{featured_image.aspect_ratio}}"
+              alt="{{product.title | escape}}"
+            />
+          {%- else -%}
+            <img class="cp-cat-card__img" src="{{no_image}}" alt="{{product.title | escape}}" />
+          {%- endif -%}
+        </a>
+
+      </div>
+
+      {%- comment -%}────────── CARD BODY ──────────{%- endcomment -%}
+      <div class="cp-cat-card__body">
+
+        {%- comment -%} Junip star ratings — rendered client-side {%- endcomment -%}
+        <div class="cp-cat-card__rating">
+          <span class="junip-product-summary" data-product-id="{{product.id}}"></span>
+        </div>
+
+        {%- comment -%} Product title {%- endcomment -%}
+        <a class="cp-cat-card__title" href="{{root_url}}{{product.url}}{{variant_url}}">{{product.title}}</a>
+
+        {%- comment -%} Price {%- endcomment -%}
+        <div class="cp-cat-card__price-row">
+          {%- if product_compare_at_price > product_price -%}
+            <span class="cp-cat-price cp-cat-price--sale">{{product_price | money}}</span>
+            <span class="cp-cat-price__was">{{product_compare_at_price | money}}</span>
+          {%- else -%}
+            <span class="cp-cat-price">{{product_price | money}}</span>
+          {%- endif -%}
+        </div>
+
+        {%- comment -%} Size pills (first size/weight option only, max 3 values shown) {%- endcomment -%}
+        {%- unless size_opt_name == '' -%}
+          {%- for option in product.options -%}
+            {%- if option.name == size_opt_name -%}
+              {%- assign vals_size = option.values | size -%}
+              {%- if vals_size > 0 -%}
+                <div class="cp-cat-card__pills">
+                  {%- for val in option.values -%}
+                    {%- if forloop.index <= 3 -%}
+                      <span class="cp-cat-pill">{{val}}</span>
+                    {%- endif -%}
+                  {%- endfor -%}
+                  {%- if vals_size > 3 -%}
+                    {%- assign extra = vals_size | minus: 3 -%}
+                    <span class="cp-cat-pill cp-cat-pill--more">+{{extra}} more</span>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endunless -%}
+
+        {%- comment -%} Hidden variant select — kept for Globo internal compatibility {%- endcomment -%}
+        <select name="id" class="spf-product__variants" style="display:none">
+          {%- for variant in product.variants -%}
+            <option
+              data-option1="{{variant.option1 | escape}}"
+              data-option2="{{variant.option2 | escape}}"
+              data-option3="{{variant.option3 | escape}}"
+              data-price="{{variant.price}}"
+              data-compare_at_price="{{variant.compare_at_price}}"
+              data-available="{{variant.available}}"
+              {%- if variant.image.src -%}data-image="{{variant.image.src | img_url: image_size}}"{%- endif -%}
+              {%- if selected_variant and selected_variant.id == variant.id -%}selected="selected"{%- endif -%}
+              value="{{variant.id}}"
+            >{{variant.title}}</option>
+          {%- endfor -%}
+        </select>
+
+        {%- comment -%} CTA button {%- endcomment -%}
+        <div class="cp-cat-card__cta">
+          {%- if product.available -%}
+            <button class="cp-cat-card__add-btn" type="button" data-quick-add="{{product.handle}}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              Quick Add
+            </button>
+          {%- else -%}
+            <button
+              class="cp-cat-card__notify-btn"
+              type="button"
+              data-product-url="{{product.url}}"
+              data-variant-id="{{selected_variant.id}}"
+            >
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              Notify Me
+            </button>
+          {%- endif -%}
+        </div>
+
+      </div>
+    </article>
+  </div>
+{% endraw %}

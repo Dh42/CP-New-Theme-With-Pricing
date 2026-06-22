@@ -1,0 +1,1526 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_liquid_xKERRQ": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "Sticky Video",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"hdtStickyVidR\" class=\"hdt-sticky-vidR\" aria-label=\"Sticky video\">\n  <div class=\"hdt-sticky-vidR__clip\">\n    <!-- invisible drag handle (no bar shown) -->\n    <div class=\"hdt-sticky-vidR__bar\" id=\"hdtStickyVidRHandle\" aria-label=\"Drag\"></div>\n\n    <div class=\"hdt-sticky-vidR__body\">\n      <video\n        id=\"hdtStickyVideoEl\"\n        src=\"https://cdn.shopify.com/videos/c/o/v/6de45700fcae490a8d1b9206fce454e2.mp4\"\n        playsinline\n        loop\n        autoplay\n        muted\n        controls\n      ></video>\n\n      <!-- Sound pill (mobile centered) -->\n      <button type=\"button\" class=\"hdt-sticky-vidR__sound\" id=\"hdtStickySoundBtn\" aria-label=\"Turn sound on\">\n        <span class=\"hdt-snd-ic\" aria-hidden=\"true\"></span>\n        <span class=\"hdt-snd-txt\">Sound on</span>\n      </button>\n    </div>\n  </div>\n\n  <!-- Outside close button -->\n  <button type=\"button\" class=\"hdt-sticky-vidR__close\" id=\"hdtStickyRClose\" aria-label=\"Close video\">×</button>\n\n  <!-- Outside positioning tab (TOP-LEFT) -->\n  <div class=\"hdt-sticky-vidR__grab\" id=\"hdtStickyGrab\" aria-label=\"Drag video\">\n    <span class=\"hdt-grab-dots\" aria-hidden=\"true\"></span>\n  </div>\n</div>\n\n<style>\n  .hdt-sticky-vidR{\n    position:fixed;\n    right:12px; bottom:12px;\n    width:min(130px, calc(100vw - 24px)); /* 50% smaller on mobile */\n    border:2px solid #ea002a;\n    border-radius:16px;\n    overflow:visible;\n    background:transparent;\n    box-shadow:0 10px 30px rgba(0,0,0,.35);\n    z-index:999999;\n    user-select:none;\n    touch-action:none;\n  }\n  @media(min-width:990px){\n    .hdt-sticky-vidR{\n      width:196px; /* 30% smaller on desktop */\n      right:20px;\n      top:50%;\n      bottom:auto;\n      transform:translateY(-50%);\n    }\n  }\n\n  .hdt-sticky-vidR__clip{\n    position:relative;\n    border-radius:16px;\n    overflow:hidden;\n    background:#000;\n  }\n\n  /* INVISIBLE drag handle (no black bar) */\n  .hdt-sticky-vidR__bar{\n    position:absolute;\n    top:0; left:0; right:0;\n    height:42px;\n    cursor:grab;\n    background:transparent;\n    z-index:5;\n  }\n  .hdt-sticky-vidR__bar:active{ cursor:grabbing; }\n\n  .hdt-sticky-vidR__body{\n    position:relative;\n    aspect-ratio:9/16;\n    width:100%;\n    background:#000;\n  }\n  .hdt-sticky-vidR__body video{\n    width:100%;\n    height:100%;\n    object-fit:cover;\n    display:block;\n  }\n\n  /* Outside close */\n  .hdt-sticky-vidR__close{\n    position:absolute;\n    top:-14px;\n    right:-14px;\n    width:34px;\n    height:34px;\n    border-radius:50%;\n    border:1px solid rgba(255,255,255,.25);\n    background:rgba(0,0,0,.85);\n    color:#fff;\n    font-size:22px;\n    line-height:1;\n    cursor:pointer;\n    box-shadow:0 6px 16px rgba(0,0,0,.35);\n  }\n\n  /* Positioning tab — TOP-LEFT, slightly outside */\n  .hdt-sticky-vidR__grab{\n    position:absolute;\n    left:-10px;\n    top:-10px;\n    width:44px;\n    height:30px;\n    background:#ea002a;\n    border-radius:999px;\n    display:flex;\n    align-items:center;\n    justify-content:center;\n    box-shadow:0 8px 18px rgba(0,0,0,.25);\n    cursor:grab;\n  }\n  .hdt-sticky-vidR__grab:active{ cursor:grabbing; }\n\n  .hdt-grab-dots{\n    width:18px;\n    height:14px;\n    display:block;\n    background: radial-gradient(circle, #fff 2px, transparent 3px) 0 0/9px 7px;\n  }\n\n  /* Sound pill (mobile centered) */\n  .hdt-sticky-vidR__sound{\n    position:absolute;\n    left:10px;\n    right:10px;\n    bottom:10px;\n    display:flex;\n    align-items:center;\n    justify-content:center;\n    gap:8px;\n    padding:10px 12px;\n    border:0;\n    border-radius:999px;\n    background:rgba(234,0,42,.92);\n    color:#fff;\n    font-weight:800;\n    cursor:pointer;\n    box-shadow:0 8px 18px rgba(0,0,0,.25);\n  }\n\n  @media(max-width:989px){\n    .hdt-sticky-vidR__sound{\n      left:50%;\n      right:auto;\n      transform:translateX(-50%);\n      width:max-content;\n      max-width:calc(100% - 20px);\n      padding:9px 14px;\n      bottom:12px;\n      font-size:14px;\n    }\n    .hdt-snd-txt{ white-space:nowrap; }\n  }\n\n  /* Speaker icon (white) */\n  .hdt-snd-ic{\n    width:18px; height:18px; display:inline-block; position:relative;\n  }\n  .hdt-snd-ic:before{\n    content:\"\";\n    position:absolute;\n    left:0; top:4px;\n    width:8px; height:10px;\n    background:#fff;\n    clip-path: polygon(0 25%, 45% 25%, 100% 0, 100% 100%, 45% 75%, 0 75%);\n  }\n  .hdt-snd-ic:after{\n    content:\"\";\n    position:absolute;\n    left:9px; top:5px;\n    width:8px; height:8px;\n    border:2px solid #fff;\n    border-left-color:transparent;\n    border-bottom-color:transparent;\n    border-radius:50%;\n    transform:rotate(45deg);\n  }\n\n  /* When sound is ON, make pill darker */\n  .hdt-sticky-vidR.sound-on .hdt-sticky-vidR__sound{\n    background:rgba(0,0,0,.65);\n    border:1px solid rgba(255,255,255,.25);\n  }\n</style>\n\n<script>\n(()=> {\n  const wrap = document.getElementById('hdtStickyVidR');\n  const handle = document.getElementById('hdtStickyVidRHandle');\n  const grab = document.getElementById('hdtStickyGrab');\n  const closeBtn = document.getElementById('hdtStickyRClose');\n  const vid = document.getElementById('hdtStickyVideoEl');\n  const soundBtn = document.getElementById('hdtStickySoundBtn');\n  const soundTxt = soundBtn?.querySelector('.hdt-snd-txt');\n  if(!wrap || !vid || !handle || !soundBtn) return;\n\n  /* ---------- Autoplay (muted) = highest play rate ---------- */\n  const tryPlayMuted = async () => {\n    try {\n      vid.muted = true;\n      vid.volume = 1;\n      const p = vid.play();\n      if (p && typeof p.then === 'function') await p;\n    } catch(e) {}\n  };\n\n  /* ---------- Sound UX that makes sense ---------- */\n  const SOUND_KEY = 'hdtStickyVideoSound_pref_v3';\n\n  const syncSoundUI = () => {\n    const isMuted = vid.muted === true;\n    // If muted -> show \"Sound on\". If unmuted -> show \"Sound off\".\n    if (isMuted) {\n      wrap.classList.remove('sound-on');\n      if (soundTxt) soundTxt.textContent = 'Sound on';\n      soundBtn.setAttribute('aria-label','Turn sound on');\n    } else {\n      wrap.classList.add('sound-on');\n      if (soundTxt) soundTxt.textContent = 'Sound off';\n      soundBtn.setAttribute('aria-label','Turn sound off');\n    }\n  };\n\n  // Start muted always (because autoplay w/ sound is blocked anyway)\n  tryPlayMuted().finally(syncSoundUI);\n\n  // If user previously chose sound ON, we’ll *attempt* to enable sound\n  // on the first user interaction anywhere (tap/scroll/click) — that’s the earliest it can succeed.\n  let prefWantsSound = false;\n  try { prefWantsSound = localStorage.getItem(SOUND_KEY) === '1'; } catch(e) {}\n\n  const tryEnableSoundFromGesture = async () => {\n    if (!prefWantsSound) return;\n    if (!vid.muted) return;\n    vid.muted = false;\n    vid.volume = 1;\n    try { await vid.play(); } catch(e) {\n      // If it still fails for some reason, stay muted and keep the \"Sound on\" pill.\n      vid.muted = true;\n    }\n    syncSoundUI();\n    // run once\n    removeGestureListeners();\n  };\n\n  const addGestureListeners = () => {\n    // capture=true so we catch it early\n    window.addEventListener('pointerdown', tryEnableSoundFromGesture, {capture:true, passive:true});\n    window.addEventListener('touchstart', tryEnableSoundFromGesture, {capture:true, passive:true});\n    window.addEventListener('wheel', tryEnableSoundFromGesture, {capture:true, passive:true});\n    window.addEventListener('keydown', tryEnableSoundFromGesture, {capture:true});\n  };\n  const removeGestureListeners = () => {\n    window.removeEventListener('pointerdown', tryEnableSoundFromGesture, {capture:true});\n    window.removeEventListener('touchstart', tryEnableSoundFromGesture, {capture:true});\n    window.removeEventListener('wheel', tryEnableSoundFromGesture, {capture:true});\n    window.removeEventListener('keydown', tryEnableSoundFromGesture, {capture:true});\n  };\n  addGestureListeners();\n\n  // Button toggles sound (always works because it's a gesture)\n  soundBtn.addEventListener('click', async (e)=>{\n    e.stopPropagation();\n    if (vid.muted) {\n      vid.muted = false;\n      vid.volume = 1;\n      try { await vid.play(); } catch(_) {}\n      prefWantsSound = true;\n      try { localStorage.setItem(SOUND_KEY,'1'); } catch(_) {}\n    } else {\n      vid.muted = true;\n      prefWantsSound = false;\n      try { localStorage.setItem(SOUND_KEY,'0'); } catch(_) {}\n    }\n    syncSoundUI();\n  });\n\n  closeBtn?.addEventListener('click', ()=> wrap.remove());\n\n  /* ---------- Snap-to-sides + vertical drag (viewport-based) ---------- */\n  const POS_KEY='hdtStickyVidSnapSides_v9';\n  const clamp=(n,min,max)=>Math.max(min,Math.min(max,n));\n\n  const applyPos=(side,y)=>{\n    const pad=12;\n    const maxY=window.innerHeight - wrap.offsetHeight - 8;\n    const ty=clamp(y,8,maxY);\n\n    wrap.style.top = ty+'px';\n    wrap.style.bottom = 'auto';\n    wrap.style.transform = 'none';\n\n    wrap.style.left = 'auto';\n    wrap.style.right = 'auto';\n    if(side==='left') wrap.style.left = pad+'px';\n    else wrap.style.right = pad+'px';\n\n    try{ localStorage.setItem(POS_KEY, JSON.stringify({side,y:ty})); }catch(e){}\n  };\n\n  let side='right';\n  let y = Math.round(window.innerHeight*0.5 - wrap.offsetHeight/2);\n\n  try{\n    const p=JSON.parse(localStorage.getItem(POS_KEY)||'null');\n    if(p && (p.side==='left'||p.side==='right') && typeof p.y==='number'){\n      side=p.side; y=p.y;\n    }\n  }catch(e){}\n\n  requestAnimationFrame(()=>applyPos(side,y));\n\n  let dragging=false, startY=0, startTop=0;\n\n  const begin=(x,yc)=>{\n    dragging=true;\n    const r=wrap.getBoundingClientRect();\n    startY=yc;\n    startTop=r.top;\n    side = (x < window.innerWidth/2) ? 'left' : 'right';\n  };\n  const move=(x,yc)=>{\n    if(!dragging) return;\n    side = (x < window.innerWidth/2) ? 'left' : 'right';\n    applyPos(side, startTop + (yc - startY));\n  };\n  const end=()=> dragging=false;\n\n  [handle, grab].forEach(el=>{\n    if(!el) return;\n    el.addEventListener('mousedown', e=> begin(e.clientX, e.clientY));\n    el.addEventListener('touchstart', e=>{\n      const t=e.touches[0]; if(t) begin(t.clientX, t.clientY);\n    }, {passive:true});\n  });\n\n  window.addEventListener('mousemove', e=> move(e.clientX, e.clientY));\n  window.addEventListener('mouseup', end);\n\n  window.addEventListener('touchmove', e=>{\n    const t=e.touches[0]; if(t) move(t.clientX, t.clientY);\n  }, {passive:true});\n  window.addEventListener('touchend', end);\n\n  // do not re-anchor on scroll; only clamp on resize\n  window.addEventListener('resize', ()=> applyPos(side, y));\n})();\n</script>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "heading": {
+      "type": "heading-collection",
+      "blocks": {
+        "9a1347b4-da62-490d-9fd4-427a03686ac2": {
+          "type": "heading",
+          "settings": {
+            "heading": "<b>BLACK FRIDAY</b> / CYBER MONDAY"
+          }
+        },
+        "6df762d7-beda-4452-bcf6-1242b294077c": {
+          "type": "description",
+          "settings": {
+            "description": "Up to 70% OFF | Some exclusions my apply.*"
+          }
+        }
+      },
+      "block_order": [
+        "9a1347b4-da62-490d-9fd4-427a03686ac2",
+        "6df762d7-beda-4452-bcf6-1242b294077c"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacing_hd": 10,
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "custom_section_QHYYDb": {
+      "type": "custom-section",
+      "blocks": {
+        "custom_liquid_fnVAtz": {
+          "type": "custom_liquid",
+          "name": "Early Access",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<span style=\"\n  font-size:12px;\n  font-weight:700;\n  letter-spacing:1.5px;\n  text-transform:uppercase;\n  background: linear-gradient(\n    90deg,\n    #b8860b,\n    #ffd700,\n    #fff4a3,\n    #ffd700,\n    #b8860b\n  );\n  background-size: 200% auto;\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  color: transparent;\n  animation: goldLoop 4s linear infinite;\n  display:inline-block;\n\">\n  VIP EARLY ACCESS\n</span>\n\n<style>\n@keyframes goldLoop {\n  0% { background-position: 0% center; }\n  100% { background-position: 200% center; }\n}\n</style>"
+          }
+        },
+        "parent_YYU8GP": {
+          "type": "parent",
+          "settings": {
+            "column_lg": "hdt-col-lg-12",
+            "column_md": "hdt-col-md-12",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": "bfcm-col-clear"
+          }
+        },
+        "spacer_9inPEj": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 6,
+            "space_md": 6,
+            "space": 10
+          }
+        },
+        "image_icebpp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/NYNY.png",
+            "link": "",
+            "image_width": "custom",
+            "width": 200,
+            "width_mb": 100,
+            "alignment": "start"
+          }
+        },
+        "spacer_BwG6pY": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 20,
+            "space_md": 20,
+            "space": 20
+          }
+        },
+        "heading_J88cq7": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>30% OFF</strong>",
+            "tag": "h2",
+            "heading_size": "h1",
+            "alignment": "start"
+          }
+        },
+        "heading_4artEM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Almost Everything",
+            "tag": "h2",
+            "heading_size": "h1",
+            "alignment": "start"
+          }
+        },
+        "spacer_piFhMy": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "text_WcPBFm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From proteins to supplements, find your favourites <strong>at huge discounts, only for a limited time.</strong><br/>No code needed, discounts applied at checkout.</p>",
+            "text_size": "base",
+            "alignment": "start",
+            "alignment_mb": "start"
+          }
+        },
+        "custom_liquid_rB7Wyn": {
+          "type": "custom_liquid",
+          "name": "Learn More",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<details class=\"bfcm-learn-more\" style=\"color:#fff;\">\n  <summary style=\"cursor:pointer; text-decoration:underline;\">Learn more</summary>\n  <div style=\"margin-top:10px; line-height:1.5;\">\n\n    <h6><strong>Your goals. Our quality. Canadian Protein delivers.</strong></h6><br>\n\n    <p>From high-quality protein powders to premium supplements, we’ve got every corner of your routine covered. Shop our full lineup, including:<br>\n    <strong>Whey Protein Isolate, Whey Protein Concentrate, Vegan Protein, Creatine Monohydrate (Creapure®), Essential Vitamins, Tested Supplements</strong> and more.</p>\n    <br>\n\n    <p>This <strong>Black Friday / Cyber Monday</strong>, unlock <strong>up to 70% off</strong> select products crafted to support strength, performance, recovery, and everyday wellness.</p>\n    <br>\n\n    <p><strong>Plus, we're stacking the extras:</strong><br>\n    – Every order is entered for a chance to <strong>win a full refund</strong> — <strong>2 winners</strong> chosen.<br>\n    – Every order is entered for a chance to <strong>win a pair of Meta Ray-Ban Glasses</strong>.<br>\n    – All orders include a <strong>free mystery gift</strong>.<br>\n    – <strong>Orders $150+</strong> receive a <strong>Canadian Protein Mystery Supplement</strong>.<br>\n    – <strong>More giveaways, surprises, and bonuses</strong> dropping throughout the event.</p>\n    <br>\n\n    <p>Fuel clean. Recover smarter. Train with confidence.</p>\n\n    <p><strong>For all giveaways and contests, terms and conditions apply.</strong>\n    <a href=\"https://canadianprotein.com/pages/bfcm-sale-terms-and-conditions\" target=\"_blank\" rel=\"noopener noreferrer\">Click here for terms and conditions.</a></p>\n\n<br/>\n\n  </div>\n</details>"
+          }
+        },
+        "spacer_ihmqig": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 20,
+            "space_md": 20,
+            "space": 20
+          }
+        },
+        "parent_8wDt6e": {
+          "type": "parent",
+          "name": "Button 1",
+          "settings": {
+            "column_lg": "hdt-col-lg-auto",
+            "column_md": "hdt-col-md-auto",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-b118462a-a4ac-4478-a927-bc3e753a2252",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": "bfcm-col-clear"
+          }
+        },
+        "button_GDTiHh": {
+          "type": "button",
+          "settings": {
+            "btn_label": "Shop now",
+            "btn_link": "#shopall",
+            "target": false,
+            "btn_size": "lg",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "none",
+            "alignment": "start"
+          }
+        },
+        "spacer_gr39yP": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 6,
+            "space": 6
+          }
+        },
+        "parent_kEqwXF": {
+          "type": "parent",
+          "name": "Button 2",
+          "settings": {
+            "column_lg": "hdt-col-lg-3",
+            "column_md": "hdt-col-md-3",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-b118462a-a4ac-4478-a927-bc3e753a2252",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": "bfcm-col-clear"
+          }
+        },
+        "spacer_m9aTMR": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 6,
+            "space": 6
+          }
+        },
+        "custom_liquid_BNaEdV": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<small style=\"color:#fff;\">\n  Some exclusions may apply. <br>\n  <strong style=\"color:#fff;\">\n    <a href=\"#faq\" style=\"color:#fff; text-decoration:underline;\">\n      Click here for FAQs.\n    </a>\n  </strong>\n</small>"
+          }
+        }
+      },
+      "block_order": [
+        "custom_liquid_fnVAtz",
+        "parent_YYU8GP",
+        "spacer_9inPEj",
+        "image_icebpp",
+        "spacer_BwG6pY",
+        "heading_J88cq7",
+        "heading_4artEM",
+        "spacer_piFhMy",
+        "text_WcPBFm",
+        "custom_liquid_rB7Wyn",
+        "spacer_ihmqig",
+        "parent_8wDt6e",
+        "button_GDTiHh",
+        "spacer_gr39yP",
+        "parent_kEqwXF",
+        "spacer_m9aTMR",
+        "custom_liquid_BNaEdV"
+      ],
+      "custom_css": [
+        ".hdt-content_template--20005218746415\\_\\_custom_section\\_QHYYDb {background-image: url(\"https://cdn.shopify.com/s/files/1/0249/3241/7583/files/BFCM-2025-BG.jpg?v=1763856891\"); background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important;}",
+        ".bfcm-col-clear,.bfcm-col-clear * {background: transparent !important; background-color: transparent !important;}",
+        ".bfcm-col-clear .hdt-s-gradient,.bfcm-col-clear .hdt-s-gradient::before {background: transparent !important;}"
+      ],
+      "name": "BFCM25 - Header",
+      "settings": {
+        "section_fullwidth": false,
+        "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+        "direction": "",
+        "justify": "",
+        "gap": true,
+        "space": 0,
+        "padding_top": 76,
+        "padding_bottom": 76,
+        "padding_rate": 75
+      }
+    },
+    "marquee_RiRCfe": {
+      "type": "marquee",
+      "blocks": {
+        "item_RKJzEX": {
+          "type": "item",
+          "settings": {
+            "text": "<p><a href=\"/collections/new-year-new-you\" title=\"New Year, New You\"><strong>2X Rewards Points</strong></a></p>",
+            "icon_svg": "dividing_icon",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        },
+        "item_egBGMi": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "text": "<p><a href=\"/collections/boxing-day-2025\" title=\"Boxing Day 2025\"><strong>3X Rewards Points</strong></a></p>",
+            "icon_svg": "dividing_icon",
+            "custom_svg": "",
+            "image": "shopify://shop_images/Boxing_Day_White_and_Red.svg",
+            "icon_width": 60,
+            "icon_width_mb": 60
+          }
+        }
+      },
+      "block_order": [
+        "item_RKJzEX",
+        "item_egBGMi"
+      ],
+      "custom_css": [
+        ".hdt-marquee__item-content:has(a[href*=\"/collections/boxing-day-2025\"]) .hdt-marquee__item-icon--image img {width: 120px !important; max-width: 170px !important; height: auto !important;}"
+      ],
+      "name": "Scrolling text / Free Gift",
+      "settings": {
+        "space_item": 40,
+        "speed": 0.3,
+        "direction": "rtl",
+        "marquee_pause_when_hover": false,
+        "text_fs": "h5",
+        "text_fw": "normal",
+        "text_uppercase": false,
+        "adding_border": false,
+        "icon_position_between": true,
+        "color_scheme": "scheme-dea2a141-c4a8-41c6-8079-fb3ee810a1b8",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_rate": 75
+      }
+    },
+    "custom_section_tc7HUn": {
+      "type": "custom-section",
+      "blocks": {
+        "parent_Ympa7U": {
+          "type": "parent",
+          "settings": {
+            "column_lg": "hdt-col-lg-6",
+            "column_md": "hdt-col-md-6",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": ""
+          }
+        },
+        "image_3VkbUx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Subscribe_and_Save_-_WHT.svg",
+            "link": "shopify://pages/subscribe-and-save",
+            "image_width": "custom",
+            "width": 200,
+            "width_mb": 200,
+            "alignment": "start"
+          }
+        },
+        "spacer_cHDAjn": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "custom_liquid_h6b3Dn": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<h1 style=\"\n  font-size: 36px;\n  line-height: 1.1;\n  font-weight: 400;\n  margin: 0;\n\">\n  Lock In <span style=\"font-weight:600;\">New Year, New You </span>Discounts\n</h1>"
+          }
+        },
+        "spacer_bRRXja": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "custom_liquid_PyU4Uz": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<h5>All Year Long | <b>🔒 30% OFF + extra 5% OFF</b></h2>"
+          }
+        },
+        "spacer_7izqc4": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 20,
+            "space_md": 20,
+            "space": 20
+          }
+        },
+        "text_w9t4eT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unlock <strong>30% off + extra 5% off</strong> and keep it all year long. With Subscribe & Save, you get the New Year, New You sale pricing on every order, automatic deliveries, and full control to skip, swap, or cancel anytime. It’s the easiest way to stay stocked on your favourites — and never miss a deal again.</p>",
+            "text_size": "base",
+            "alignment": "start",
+            "alignment_mb": "start"
+          }
+        },
+        "spacer_B4Qb3r": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "button_PK4JP7": {
+          "type": "button",
+          "settings": {
+            "btn_label": "Learn more",
+            "btn_link": "shopify://pages/subscribe-and-save",
+            "target": false,
+            "btn_size": "xl",
+            "btn_style": "link",
+            "btn_fw": "normal",
+            "btn_icon": "none",
+            "alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "parent_Ympa7U",
+        "image_3VkbUx",
+        "spacer_cHDAjn",
+        "custom_liquid_h6b3Dn",
+        "spacer_bRRXja",
+        "custom_liquid_PyU4Uz",
+        "spacer_7izqc4",
+        "text_w9t4eT",
+        "spacer_B4Qb3r",
+        "button_PK4JP7"
+      ],
+      "name": "Custom section",
+      "settings": {
+        "section_fullwidth": false,
+        "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+        "direction": "",
+        "justify": "",
+        "gap": false,
+        "space": 0,
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "custom_section_G9dgUx": {
+      "type": "custom-section",
+      "blocks": {
+        "parent_8UJENW": {
+          "type": "parent",
+          "settings": {
+            "column_lg": "hdt-col-lg-12",
+            "column_md": "hdt-col-md-12",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-c4883d1b-ef0d-432c-8b91-5440621a5983",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 8,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": ""
+          }
+        },
+        "image_qMGqKp": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Boxing_Day_Perks_and_Benefits.svg",
+            "link": "",
+            "image_width": "custom",
+            "width": 300,
+            "width_mb": 300,
+            "alignment": "start"
+          }
+        },
+        "heading_LXaEaU": {
+          "type": "heading",
+          "settings": {
+            "heading": "New Year, New You | Perks & Benefits",
+            "tag": "h5",
+            "heading_size": "h5",
+            "alignment": "start"
+          }
+        },
+        "spacer_zAjCcd": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 6,
+            "space_md": 6,
+            "space": 6
+          }
+        },
+        "custom_liquid_APXJjH": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<small>Terms and conditions apply. <a href=\"https://canadianprotein.com/pages/terms-and-conditions-for-promotions-and-sales\" target=\"_blank\" style=\"text-decoration:underline;\">Click here for more information.</a></small>"
+          }
+        },
+        "parent_VejjCe": {
+          "type": "parent",
+          "name": "Refund",
+          "disabled": true,
+          "settings": {
+            "column_lg": "hdt-col-lg-3",
+            "column_md": "hdt-col-md-3",
+            "column": "hdt-col-6",
+            "color_scheme": "scheme-c4883d1b-ef0d-432c-8b91-5440621a5983",
+            "padding_top": 0,
+            "padding_right": 12,
+            "padding_bottom": 0,
+            "padding_left": 12,
+            "padding_rate": 100,
+            "class": ""
+          }
+        },
+        "custom_liquid_i8mFME": {
+          "type": "custom_liquid",
+          "name": "Refund Anchor",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div id=\"REFUND\"></div>"
+          }
+        },
+        "spacer_Yh3jjY": {
+          "type": "spacer",
+          "disabled": true,
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "image_BXhLC3": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Refund.svg",
+            "link": "",
+            "image_width": "custom",
+            "width": 100,
+            "width_mb": 100,
+            "alignment": "start"
+          }
+        },
+        "spacer_7UxmRa": {
+          "type": "spacer",
+          "disabled": true,
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "heading_VqEPmz": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "<strong>Win a Full Refund</strong>",
+            "tag": "p",
+            "heading_size": "h5",
+            "alignment": "start"
+          }
+        },
+        "spacer_aAzBE7": {
+          "type": "spacer",
+          "disabled": true,
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 8
+          }
+        },
+        "text_rW4xaw": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Shop during Boxing Day and automatically <strong>get entered for a chance to win a full refund</strong>!</p>",
+            "text_size": "base",
+            "alignment": "start",
+            "alignment_mb": "start"
+          }
+        },
+        "custom_liquid_MNQfrV": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<small><a href=\"https://biosteel.ca/pages/bfcm-sale-terms-and-conditions\">\n    Read Terms & Conditions\n  </a></small>"
+          }
+        },
+        "spacer_H4e68P": {
+          "type": "spacer",
+          "disabled": true,
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "parent_jyj898": {
+          "type": "parent",
+          "name": "Rewards Points",
+          "settings": {
+            "column_lg": "hdt-col-lg-4",
+            "column_md": "hdt-col-md-4",
+            "column": "hdt-col-6",
+            "color_scheme": "scheme-c4883d1b-ef0d-432c-8b91-5440621a5983",
+            "padding_top": 0,
+            "padding_right": 12,
+            "padding_bottom": 0,
+            "padding_left": 12,
+            "padding_rate": 75,
+            "class": ""
+          }
+        },
+        "custom_liquid_ajHxew": {
+          "type": "custom_liquid",
+          "name": "Rewards Anchor",
+          "settings": {
+            "custom_liquid": "<div id=\"3xPOINTS\"></div>"
+          }
+        },
+        "spacer_P7YnBb": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "image_PDKJVn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shopping_bag_ecommerce_retail_purchase_online_shopping.svg",
+            "link": "",
+            "image_width": "custom",
+            "width": 100,
+            "width_mb": 100,
+            "alignment": "start"
+          }
+        },
+        "spacer_QVcndx": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "heading_nxnjYR": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>2X Rewards Points</strong>",
+            "tag": "p",
+            "heading_size": "h5",
+            "alignment": "start"
+          }
+        },
+        "spacer_BkTRjj": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 6
+          }
+        },
+        "text_NgNPDa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Shop during the New Year, New You sale and <strong>earn 2X rewards points </strong>to use towards your next order!</p>",
+            "text_size": "base",
+            "alignment": "start",
+            "alignment_mb": "start"
+          }
+        },
+        "custom_liquid_rKgTTr": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<small><a href=\"https://canadianprotein.com/pages/terms-and-conditions-for-promotions-and-sales\">\n    Read Terms & Conditions\n  </a></small>"
+          }
+        },
+        "spacer_BX6D4A": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "parent_fnrDJa": {
+          "type": "parent",
+          "name": "Subscriptions",
+          "settings": {
+            "column_lg": "hdt-col-lg-4",
+            "column_md": "hdt-col-md-4",
+            "column": "hdt-col-6",
+            "color_scheme": "scheme-c4883d1b-ef0d-432c-8b91-5440621a5983",
+            "padding_top": 0,
+            "padding_right": 12,
+            "padding_bottom": 0,
+            "padding_left": 12,
+            "padding_rate": 75,
+            "class": ""
+          }
+        },
+        "custom_liquid_3V48Bi": {
+          "type": "custom_liquid",
+          "name": "Subscription Anchor",
+          "settings": {
+            "custom_liquid": "<div id=\"subscribe\"></div>"
+          }
+        },
+        "spacer_GWxG4C": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "image_zKbfc3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Subscription.svg",
+            "link": "",
+            "image_width": "custom",
+            "width": 100,
+            "width_mb": 100,
+            "alignment": "start"
+          }
+        },
+        "spacer_hmNLmG": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "heading_pmc7Fi": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Subscribe & Save</strong>",
+            "tag": "p",
+            "heading_size": "h5",
+            "alignment": "start"
+          }
+        },
+        "spacer_fdp9Lc": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 6
+          }
+        },
+        "text_pVCyeP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Subscribe during our New Year, New You sale to lock-in 30% OFF + extra 5% OFF, every recurring order!</p>",
+            "text_size": "base",
+            "alignment": "start",
+            "alignment_mb": "start"
+          }
+        },
+        "custom_liquid_E3XRwM": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<small><a href=\"https://canadianprotein.com/pages/terms-and-conditions-for-promotions-and-sales\">\n    Read Terms & Conditions\n  </a></small>"
+          }
+        },
+        "spacer_fjgQmK": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "parent_BBy7AA": {
+          "type": "parent",
+          "name": "FREE shipping",
+          "settings": {
+            "column_lg": "hdt-col-lg-4",
+            "column_md": "hdt-col-md-4",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-c4883d1b-ef0d-432c-8b91-5440621a5983",
+            "padding_top": 0,
+            "padding_right": 12,
+            "padding_bottom": 0,
+            "padding_left": 12,
+            "padding_rate": 75,
+            "class": ""
+          }
+        },
+        "custom_liquid_KKF4aL": {
+          "type": "custom_liquid",
+          "name": "Shipping Anchor",
+          "settings": {
+            "custom_liquid": "<div id=\"shipping\"></div>"
+          }
+        },
+        "spacer_r9Va77": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "image_PYYCKU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Truck_ecommerce_delivery_shipping_logistics.svg",
+            "link": "",
+            "image_width": "custom",
+            "width": 100,
+            "width_mb": 100,
+            "alignment": "start"
+          }
+        },
+        "spacer_xaRmE7": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "heading_GjqAeU": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Free Shipping</strong>",
+            "tag": "p",
+            "heading_size": "h5",
+            "alignment": "start"
+          }
+        },
+        "spacer_EHGRf6": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 6
+          }
+        },
+        "text_CFwNXf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Get free shipping on orders $99+ in Canada or $149+ in the US.</p>",
+            "text_size": "base",
+            "alignment": "start",
+            "alignment_mb": "start"
+          }
+        },
+        "custom_liquid_TrWXLC": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<small><a href=\"https://canadianprotein.com/pages/terms-and-conditions-for-promotions-and-sales\">\n    Read Terms & Conditions\n  </a></small>"
+          }
+        },
+        "spacer_RT88Wf": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        }
+      },
+      "block_order": [
+        "parent_8UJENW",
+        "image_qMGqKp",
+        "heading_LXaEaU",
+        "spacer_zAjCcd",
+        "custom_liquid_APXJjH",
+        "parent_VejjCe",
+        "custom_liquid_i8mFME",
+        "spacer_Yh3jjY",
+        "image_BXhLC3",
+        "spacer_7UxmRa",
+        "heading_VqEPmz",
+        "spacer_aAzBE7",
+        "text_rW4xaw",
+        "custom_liquid_MNQfrV",
+        "spacer_H4e68P",
+        "parent_jyj898",
+        "custom_liquid_ajHxew",
+        "spacer_P7YnBb",
+        "image_PDKJVn",
+        "spacer_QVcndx",
+        "heading_nxnjYR",
+        "spacer_BkTRjj",
+        "text_NgNPDa",
+        "custom_liquid_rKgTTr",
+        "spacer_BX6D4A",
+        "parent_fnrDJa",
+        "custom_liquid_3V48Bi",
+        "spacer_GWxG4C",
+        "image_zKbfc3",
+        "spacer_hmNLmG",
+        "heading_pmc7Fi",
+        "spacer_fdp9Lc",
+        "text_pVCyeP",
+        "custom_liquid_E3XRwM",
+        "spacer_fjgQmK",
+        "parent_BBy7AA",
+        "custom_liquid_KKF4aL",
+        "spacer_r9Va77",
+        "image_PYYCKU",
+        "spacer_xaRmE7",
+        "heading_GjqAeU",
+        "spacer_EHGRf6",
+        "text_CFwNXf",
+        "custom_liquid_TrWXLC",
+        "spacer_RT88Wf"
+      ],
+      "name": "Perks",
+      "settings": {
+        "section_fullwidth": false,
+        "color_scheme": "scheme-c4883d1b-ef0d-432c-8b91-5440621a5983",
+        "direction": "",
+        "justify": "",
+        "gap": true,
+        "space": 0,
+        "padding_top": 40,
+        "padding_bottom": 72,
+        "padding_rate": 75
+      }
+    },
+    "marquee_qwbHpr": {
+      "type": "marquee",
+      "blocks": {
+        "item_fyJB8c": {
+          "type": "item",
+          "settings": {
+            "text": "<p><strong>FEATURED PRODUCTS</strong></p>",
+            "icon_svg": "flash",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        },
+        "item_LGDimh": {
+          "type": "item",
+          "settings": {
+            "text": "<p>Limited Time Deals</p>",
+            "icon_svg": "flash",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        }
+      },
+      "block_order": [
+        "item_fyJB8c",
+        "item_LGDimh"
+      ],
+      "disabled": true,
+      "name": "Limited Time Deals",
+      "settings": {
+        "space_item": 30,
+        "speed": 0.3,
+        "direction": "rtl",
+        "marquee_pause_when_hover": false,
+        "text_fs": "h5",
+        "text_fw": "normal",
+        "text_uppercase": false,
+        "adding_border": true,
+        "icon_position_between": true,
+        "color_scheme": "scheme-b118462a-a4ac-4478-a927-bc3e753a2252",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_rate": 75
+      }
+    },
+    "featured_collection_grid_dt7Hjx": {
+      "type": "featured-collection-grid",
+      "disabled": true,
+      "name": "t:sections.collection_products.grid_name",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "Door Crashers | Extra 20% OFF",
+        "heading_tag": "h3",
+        "heading_size": "h3",
+        "sec_subheading": "<p>Creatine Monohydrate | All Unflavoured & Unsweetened Proteins | All Vegan Proteins | All Naturally Sweetened Proteins | All discounts applied at checkout.</p>",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 30,
+        "collection": "black-friday-door-crashers",
+        "product_list": [],
+        "product_des": "1",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 50,
+        "col_dk": "4",
+        "col_tb": "4",
+        "col_mb": "2",
+        "pagination_type": "none",
+        "paginate_pos": "center",
+        "dis_pagination": 30,
+        "btn_label": "View all",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "section_fullwidth": false,
+        "boxed_fullwidth": false,
+        "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "padding_rate": 75
+      }
+    },
+    "featured_collection_grid_FKBXPX": {
+      "type": "featured-collection-grid",
+      "disabled": true,
+      "name": "t:sections.collection_products.grid_name",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "Premium new formulas, unbeatable value.",
+        "heading_tag": "h3",
+        "heading_size": "h3",
+        "sec_subheading": "<p>From ultra-clean ISO to sweet, limited-edition vegan flavors — made to level up your routine.</p>",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 30,
+        "collection": "",
+        "product_list": [
+          "iso90",
+          "limited-edition-banana-cream-pie-vegan-protein",
+          "limited-edition-blueberry-cobbler-vegan-protein",
+          "limited-edition-cinnamon-bun-vegan-protein"
+        ],
+        "product_des": "1",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 4,
+        "col_dk": "4",
+        "col_tb": "4",
+        "col_mb": "2",
+        "pagination_type": "none",
+        "paginate_pos": "center",
+        "dis_pagination": 30,
+        "btn_label": "View all",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "section_fullwidth": false,
+        "boxed_fullwidth": false,
+        "color_scheme": "scheme-4",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "padding_rate": 75
+      }
+    },
+    "tab_variant_collections_C8dGLQ": {
+      "type": "tab-variant-collections",
+      "blocks": {
+        "tab_item_deXC7Q": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Extra 20% OFF",
+            "match_key": "tab1",
+            "collection": "bfcm-2025",
+            "product_list": []
+          }
+        },
+        "tab_item_AXPgfg": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Extra 30% OFF",
+            "match_key": "tab2",
+            "collection": "",
+            "product_list": [
+              "limited-edition-mixed-berry-super-greens-powder",
+              "egg-white-protein-powder",
+              "all-natural-premium-vegan-protein-blend"
+            ]
+          }
+        },
+        "tab_item_yqYfgm": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Extra 40% OFF",
+            "match_key": "tab3",
+            "collection": "bfcm70",
+            "product_list": []
+          }
+        },
+        "tab_item_6wWdRA": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Extra 10% OFF",
+            "match_key": "tab4",
+            "collection": "",
+            "product_list": [
+              "limited-edition-cinnamon-bun-vegan-protein",
+              "limited-edition-banana-cream-pie-vegan-protein",
+              "limited-edition-blueberry-cobbler-vegan-protein"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_deXC7Q",
+        "tab_item_AXPgfg",
+        "tab_item_yqYfgm",
+        "tab_item_6wWdRA"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "/* TARGETS SVG STARS */#template--20005218746415__tab_variant_collections_C8dGLQ .stamped-svg-star path {fill: #f6ff01 !important;}",
+        " /* TARGETS FONT-ICON STARS */#template--20005218746415__tab_variant_collections_C8dGLQ .stamped-fa-star {color: #f6ff01 !important;}",
+        " /* TARGETS STAR PSEUDO-ELEMENT VARIANTS */#template--20005218746415__tab_variant_collections_C8dGLQ .stamped-fa-star:before,#template--20005218746415__tab_variant_collections_C8dGLQ .stamped-fa-star:after {color: #f6ff01 !important;}"
+      ],
+      "name": "Tabs Collections (Variants)",
+      "settings": {
+        "tabs_heading": "30% OFF +",
+        "heading_size": "h3",
+        "heading_inline": true,
+        "tabs_head_spacing": 20,
+        "tabs_des": "outline",
+        "tab_item_size": "lg",
+        "tab_item_weight": "medium",
+        "text_transform": false,
+        "border_width": 2,
+        "spacing_items": 20,
+        "product_des": "1",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "products_count": 8,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "navUI": true,
+        "nav_des": "outline",
+        "nav_pos": "middle_out",
+        "dotUI": true,
+        "use_pagination": "none",
+        "paginate_pos": "center",
+        "dis_pagination": 45,
+        "btn_label": "View all",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "section_fullwidth": false,
+        "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_MifaJw": {
+      "type": "custom-liquid",
+      "name": "Shop All Anchor",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"shopall\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "categories_section_iieiPP": {
+      "type": "categories-section",
+      "blocks": {
+        "collection_item_TKJfeA": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/30.svg",
+            "title": "",
+            "collection_link": "https://canadianprotein.com/collections/bfcm-2025?filter.574572=BFCM30"
+          }
+        },
+        "collection_item_UeeEQ7": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/35.svg",
+            "title": "",
+            "collection_link": "https://canadianprotein.com/collections/bfcm-2025?filter.574572=BFCM35"
+          }
+        },
+        "collection_item_3VpeaJ": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/40.svg",
+            "title": "",
+            "collection_link": "https://canadianprotein.com/collections/bfcm-2025?filter.574572=bfcm40"
+          }
+        },
+        "collection_item_pBxMQe": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/50.svg",
+            "title": "",
+            "collection_link": "https://canadianprotein.com/collections/bfcm-2025?filter.574572=BFCM50"
+          }
+        },
+        "collection_item_HJzREE": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/70.svg",
+            "title": "",
+            "collection_link": "https://canadianprotein.com/collections/bfcm-2025?filter.574572=BFCM70"
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_TKJfeA",
+        "collection_item_UeeEQ7",
+        "collection_item_3VpeaJ",
+        "collection_item_pBxMQe",
+        "collection_item_HJzREE"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "Discount Navigation",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "style": "small",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "padding_rate": 50
+      }
+    },
+    "marquee_MEbekx": {
+      "type": "marquee",
+      "blocks": {
+        "item_rkqdbN": {
+          "type": "item",
+          "settings": {
+            "text": "<p><a href=\"/pages/subscribe-and-save\" title=\"Subscribe and Save | Subscription Program\"><strong>🔒 35% OFF</strong></a></p>",
+            "icon_svg": "none",
+            "custom_svg": "",
+            "image": "shopify://shop_images/Subscribe_and_Save_CP_Logo.svg",
+            "icon_width": 60,
+            "icon_width_mb": 60
+          }
+        },
+        "item_KRjmXx": {
+          "type": "item",
+          "settings": {
+            "text": "<p><a href=\"/pages/subscribe-and-save\" title=\"Subscribe and Save | Subscription Program\">Lock in Cyber Monday Discounts</a></p>",
+            "icon_svg": "none",
+            "custom_svg": "",
+            "image": "shopify://shop_images/Subscribe_and_Save_CP_Logo.svg",
+            "icon_width": 60,
+            "icon_width_mb": 60
+          }
+        }
+      },
+      "block_order": [
+        "item_rkqdbN",
+        "item_KRjmXx"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "/* Target ONLY the Subscribe & Save marquee logo */.hdt-marquee__item-content:has(a[href*=\"/pages/subscribe-and-save\"]) .hdt-marquee__item-icon--image img {width: 170px !important; max-width: 170px !important; height: auto !important;}"
+      ],
+      "name": "t:sections.marquee.name",
+      "settings": {
+        "space_item": 30,
+        "speed": 0.3,
+        "direction": "rtl",
+        "marquee_pause_when_hover": false,
+        "text_fs": "h5",
+        "text_fw": "normal",
+        "text_uppercase": false,
+        "adding_border": false,
+        "icon_position_between": true,
+        "color_scheme": "scheme-b118462a-a4ac-4478-a927-bc3e753a2252",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_VmnEqw": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div class=\"promo-button-grid yellow-pills\">\n  <a href=\"https://canadianprotein.com/collections/bfcm-2025?filter.574572=BFCM30#shopall\" class=\"promo-btn-pill\">30% OFF</a>\n\n  <a href=\"https://canadianprotein.com/collections/bfcm-2025?filter.574572=BFCM35#shopall\" class=\"promo-btn-pill\">up to 35% OFF</a>\n\n  <a href=\"https://canadianprotein.com/collections/bfcm-2025?filter.574572=bfcm40#shopall\" class=\"promo-btn-pill\">up to 40% OFF</a>\n\n  <a href=\"https://canadianprotein.com/collections/bfcm-2025?filter.574572=BFCM50#shopall\" class=\"promo-btn-pill\">up to 50% OFF</a>\n\n  <a href=\"https://canadianprotein.com/collections/bfcm-2025?filter.574572=BFCM60#shopall\" class=\"promo-btn-pill\">up to 60% OFF</a>\n\n  <a href=\"https://canadianprotein.com/collections/bfcm-2025?filter.574572=BFCM70#shopall\" class=\"promo-btn-pill\">up to 70% OFF</a>\n</div>\n\n<style>\n  .yellow-pills {\n    display: grid;\n    grid-template-columns: repeat(6, 1fr);\n    gap: 12px;\n    margin: 22px 0;\n  }\n\n  .promo-btn-pill {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    background: #000;               /* BLACK pill */\n    color: #F6FF00;                 /* BRIGHT yellow text */\n    padding: 10px 0;\n    font-size: 15px;\n    font-weight: 700;\n    border-radius: 9999px;\n    text-align: center;\n    text-decoration: none;\n    letter-spacing: 0.2px;\n    transition: 0.2s ease;\n    line-height: 1;\n  }\n\n  .promo-btn-pill:hover {\n    background: #F6FF00;           /* Yellow on hover */\n    color: #000;                   /* Black text on hover */\n  }\n\n  @media (max-width: 992px) {\n    .yellow-pills {\n      grid-template-columns: repeat(2, 1fr);\n    }\n  }\n\n  @media (max-width: 480px) {\n    .promo-btn-pill {\n      font-size: 14px;\n      padding: 9px 0;\n    }\n  }\n</style>",
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_YX7gVq": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<center><div class=\"product-discount-note\" style=\"margin-bottom:6px;\">\n  <span style=\"color:#ff0000; font-size:14px; font-weight:500;\">\n    <b>30% OFF</b> and any eligible additional discounts applied at checkout\n  </span>\n</div></center>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "product_des": "1",
+        "image_ratio": "custom-pr",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 12,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "pagination_type": "infinite",
+        "paginate_pos": "center",
+        "dis_pagination": 60,
+        "enable_sorting": false,
+        "enable_filtering": false,
+        "enable_num_cols_selector": false,
+        "widget_heading": "Product categories",
+        "cat_source": "1",
+        "cat_link_list": "",
+        "count": false,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 70,
+        "padding_rate": 75,
+        "sidebar_position": "left",
+        "sidebar_size": "medium"
+      }
+    },
+    "custom_liquid_D4LHax": {
+      "type": "custom-liquid",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"faq\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "accordion_JYiMAQ": {
+      "type": "accordion",
+      "blocks": {
+        "title_KtAttM": {
+          "type": "title",
+          "settings": {
+            "title": "Frequently Asked Questions"
+          }
+        },
+        "accordion_item_T9cB3Q": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What is included in the New Year, New You Sale?",
+            "content": "The sale offers 30% off sitewide and 35% off all subscription products."
+          }
+        },
+        "accordion_item_g8w4wQ": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Do I need a discount code?",
+            "content": "No. Discounts are automatically applied at checkout on all eligible items."
+          }
+        },
+        "accordion_item_aTG3Aq": {
+          "type": "accordion_item",
+          "disabled": true,
+          "settings": {
+            "title": "Can I combine discount codes with Sale prices?",
+            "content": "No. Sale discounts cannot be combined with promo codes, referral codes, loyalty rewards, point redemptions, or third-party offers unless Canadian Protein explicitly states otherwise."
+          }
+        },
+        "accordion_item_nW3Nnd": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Are subscriptions included in the New Year, New You Sale?",
+            "content": "Yes.\n Eligible subscription products receive 30% + and additional 5% off during the Sale.\n Some products may be excluded at Canadian Protein’s discretion.\n Subscription discounts cannot be stacked with other offers."
+          }
+        },
+        "accordion_item_aP9Ffw": {
+          "type": "accordion_item",
+          "disabled": true,
+          "settings": {
+            "title": "How do I enter the Order Refund Promotion?",
+            "content": "All you have to do is place an order during the Boxing Day Sale period, and you will be automatically entered!"
+          }
+        },
+        "accordion_item_yjjb7Y": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Are there free gifts during this sale?",
+            "content": "No, there are no fee gifts with this sale."
+          }
+        },
+        "accordion_item_kpRB9U": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Are there any exclusions in this sale?",
+            "content": "Yes. exclusions include but are not limited to :\n<br>\n - Protein Coffee Original Blend\n<br>\n- Bulk Protein\n<br>\n- Gift Cards\n<br>\n- Super-Men and Super Women Vitamins\n<br>\nCanadian Protein reserves the right to modify this list any time without notice."
+          }
+        },
+        "accordion_item_74cqU4": {
+          "type": "accordion_item",
+          "disabled": true,
+          "settings": {
+            "title": "How does the “Win Your Order Refunded” promotion work?",
+            "content": "During the Sale window:\n<br>\nEvery customer who places an order is automatically entered for a chance to win a refund.\n<br>\n\n - Canadian Protein will select 2 winners by random draw.\n<br>\n\n - Refund covers product value only, not shipping, taxes, or fees.\n<br>\n\n - Must be 18+ and a resident of Canada (excluding Quebec).\n<br>\n\n - Maximum refund amount is $350 CAD.\n<br>\n\n - Winners must respond within 7 days to claim their prize."
+          }
+        },
+        "accordion_item_PmBHC7": {
+          "type": "accordion_item",
+          "disabled": true,
+          "settings": {
+            "title": "How do I enter the Meta Glasses Giveaway?",
+            "content": "Every order placed during the Sale counts as one automatic entry.\n One winner will receive Meta Glasses.\n The winner will be chosen by random draw and contacted by email."
+          }
+        },
+        "accordion_item_Wn4rgx": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What is the return policy for Sale items?",
+            "content": "Sale purchases follow Canadian Protein’s standard Return Policy, with the following notes:\n<br>\n - Refunds are based on the discounted price, not regular retail value."
+          }
+        },
+        "accordion_item_mXh97p": {
+          "type": "accordion_item",
+          "disabled": true,
+          "settings": {
+            "title": "Should I expect delays with shipping?",
+            "content": "Yes.\n Due to high order volume during the Black Friday Cyber Monday Sale, shipping delays may occur."
+          }
+        }
+      },
+      "block_order": [
+        "title_KtAttM",
+        "accordion_item_T9cB3Q",
+        "accordion_item_g8w4wQ",
+        "accordion_item_aTG3Aq",
+        "accordion_item_nW3Nnd",
+        "accordion_item_aP9Ffw",
+        "accordion_item_yjjb7Y",
+        "accordion_item_kpRB9U",
+        "accordion_item_74cqU4",
+        "accordion_item_PmBHC7",
+        "accordion_item_Wn4rgx",
+        "accordion_item_mXh97p"
+      ],
+      "name": "t:sections.accordion.name",
+      "settings": {
+        "accordion_position": "start",
+        "accordion_icon": "1",
+        "open_first": false,
+        "enable_link_list": false,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 70,
+        "padding_rate": 75
+      }
+    },
+    "icon_with_text_LMTgLi": {
+      "type": "icon_with_text",
+      "settings": {
+        "color_scheme": "",
+        "text": "<p>Terms and Conditions for Promotions and Sales</p>",
+        "btn_label": "View Terms and Conditions",
+        "btn_link": "shopify://pages/terms-and-conditions-for-promotions-and-sales",
+        "target": false,
+        "btn_size": "xs",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "btn_icon": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_wQQeaN": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<script>\n(function () {\n  function whenGtagReady(cb, attempts) {\n    attempts = attempts || 0;\n    if (typeof window.gtag === \"function\") return cb();\n    if (attempts > 60) {\n      console.warn(\"[StickyVideo][GA] gtag not found after ~6s\");\n      return;\n    }\n    setTimeout(function(){ whenGtagReady(cb, attempts + 1); }, 100);\n  }\n\n  function bindSoundTracking() {\n    console.log(\"[StickyVideo][GA] Sound tracking bound.\");\n\n    function sendEvent(name, params) {\n      console.log(\"[StickyVideo][GA] ✅ Sending:\", name, params);\n      try { window.gtag(\"event\", name, params || {}); } catch(e) {\n        console.error(\"[StickyVideo][GA] gtag error:\", e);\n      }\n    }\n\n    function handler(evt) {\n      var btn = evt.target.closest && evt.target.closest(\"#hdtStickySoundBtn\");\n      if (!btn) return;\n\n      var vid = document.getElementById(\"hdtStickyVideoEl\");\n      if (!vid) return;\n\n      // Capture state BEFORE your click handler toggles it\n      var beforeMuted = vid.muted;\n\n      console.log(\"[StickyVideo][GA] Click detected. beforeMuted =\", beforeMuted);\n\n      // Wait for your click handler to run, then read state AFTER\n      setTimeout(function () {\n        var afterMuted = vid.muted;\n        console.log(\"[StickyVideo][GA] After click. afterMuted =\", afterMuted);\n\n        // Fire ONLY if user turned sound ON (muted -> unmuted)\n        var turnedOn = (beforeMuted === true && afterMuted === false);\n\n        if (turnedOn) {\n          sendEvent(\"Sticky Sound On\", {\n            video_src: vid.currentSrc || vid.getAttribute(\"src\") || \"\",\n            page_path: location.pathname,\n            page_location: location.href\n          });\n        } else {\n          console.log(\"[StickyVideo][GA] ⛔ Not sending (not a muted→unmuted transition).\");\n        }\n      }, 0);\n    }\n\n    // Capture phase so we reliably detect the click even if propagation changes\n    document.addEventListener(\"click\", handler, true);\n  }\n\n  whenGtagReady(bindSoundTracking);\n})();\n</script>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_VWXB7E": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<script>\n  (function () {\n    const params = new URLSearchParams(window.location.search);\n    const show = params.get(\"video\") === \"true\";\n\n    const wrap = document.getElementById(\"hdtStickyVidR\");\n    if (!wrap) return;\n\n    if (show) {\n      wrap.style.display = \"block\";\n    } else {\n      // Optional: remove it entirely so it can't load or run handlers\n      wrap.remove();\n    }\n  })();\n</script>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_rate": 75
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_xKERRQ",
+    "heading",
+    "custom_section_QHYYDb",
+    "marquee_RiRCfe",
+    "custom_section_tc7HUn",
+    "custom_section_G9dgUx",
+    "marquee_qwbHpr",
+    "featured_collection_grid_dt7Hjx",
+    "featured_collection_grid_FKBXPX",
+    "tab_variant_collections_C8dGLQ",
+    "custom_liquid_MifaJw",
+    "categories_section_iieiPP",
+    "marquee_MEbekx",
+    "custom_liquid_VmnEqw",
+    "custom_liquid_YX7gVq",
+    "main",
+    "custom_liquid_D4LHax",
+    "accordion_JYiMAQ",
+    "icon_with_text_LMTgLi",
+    "custom_liquid_wQQeaN",
+    "custom_liquid_VWXB7E"
+  ]
+}

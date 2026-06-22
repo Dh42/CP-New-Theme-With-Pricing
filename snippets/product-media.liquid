@@ -1,0 +1,913 @@
+{%- comment -%}
+  Renders product media list.
+  Accepts:
+  - product: {Object} product object.
+  - class: {String} a class list
+  - un_no_pick
+  - selected_variant
+
+  Usage:
+  {%- render 'product-media' -%}
+{%- endcomment -%}
+
+{%- liquid
+  #assign selected_variant = product.selected_or_first_available_variant
+  assign selected_variant_featured_media = selected_variant.featured_media
+  assign group_media_obj = product.metafields.theme.group_media_obj.value
+  assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src'
+  assign desktop_media_layout = section.settings.desktop_media_layout
+  assign mobile_media_layout = section.settings.mobile_media_layout
+  if product.media.size < 1
+    assign desktop_media_layout = 'no_media_size'
+  elsif product.media.size == 1
+    assign desktop_media_layout = 'one_media_size'
+  endif
+  if desktop_media_layout == '2_columns'
+    assign desktop_columns = 2
+  else
+    assign desktop_columns = 1
+  endif
+  if mobile_media_layout == '2_columns'
+    assign mobile_columns = 2
+  else
+    assign mobile_columns = 1
+  endif
+  if section.settings.image != blank
+    assign desktop_media_layout = 'no_media_size'
+  endif
+  assign media_width = section.settings.media_width | divided_by: 100.0
+  assign models = product.media | where: 'media_type', 'model'
+  assign first_3d_model = models | first
+  assign cp_img_front = product.metafields.custom.front_image
+  assign cp_img_back = product.metafields.custom.back_image
+  assign cp_img_scoop = product.metafields.custom.scoop_image
+  assign cp_img_lifestyle = product.metafields.custom.lifestyle_image
+  assign cp_has_all_images = false
+  if cp_img_front != blank and cp_img_back != blank and cp_img_scoop != blank and cp_img_lifestyle != blank
+    assign cp_has_all_images = true
+  endif
+-%}
+
+{%- capture sizes -%}
+  (min-width: 1150px) {{ settings.page_width | minus: 100 | times: media_width | divided_by: desktop_columns | round }}px, (min-width: 768px) calc((100vw - 10rem) / 2), calc(100vw / {{ mobile_columns }} - 4rem)
+{%- endcapture -%}
+
+{%- if first_3d_model -%}
+  <link rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css" media="print" onload="this.media='all'; this.onload = null">
+{%- endif -%}
+
+{% comment %} nemo {% endcomment %}
+
+{% assign v = product.selected_or_first_available_variant %}
+{% assign nutrition = v.metafields.nutrify_nutrition_info.nutrify_nutrition_info_variant.value %}
+{% assign initial_serving_size = nutrition.ssize | plus: 0 %}
+{% assign initial_container_grams = 0 %}
+{% if v.option1 contains '10 kg' or v.option2 contains '10 kg' or v.option3 contains '10 kg' or v.title contains '10 kg' %}
+  {% assign initial_container_grams = 10000 %}
+{% elsif v.option1 contains '6 kg' or v.option2 contains '6 kg' or v.option3 contains '6 kg' or v.title contains '6 kg' %}
+  {% assign initial_container_grams = 6000 %}
+{% elsif v.option1 contains '2 kg' or v.option2 contains '2 kg' or v.option3 contains '2 kg' or v.title contains '2 kg' %}
+  {% assign initial_container_grams = 2000 %}
+{% elsif v.option1 contains '1 kg' or v.option2 contains '1 kg' or v.option3 contains '1 kg' or v.title contains '1 kg' %}
+  {% assign initial_container_grams = 1000 %}
+{% elsif v.option1 contains '454 g' or v.option2 contains '454 g' or v.option3 contains '454 g' or v.title contains '454 g' %}
+  {% assign initial_container_grams = 454 %}
+{% elsif v.option1 contains '100 g' or v.option2 contains '100 g' or v.option3 contains '100 g' or v.title contains '100 g' %}
+  {% assign initial_container_grams = 100 %}
+{% endif %}
+{% assign initial_servings = nutrition.servingsPerContainer | round %}
+{% if initial_serving_size > 0 and initial_container_grams > 0 %}
+  {% assign initial_servings = initial_container_grams | divided_by: initial_serving_size | round %}
+{% endif %}
+{% assign initial_cost_cents = 0 %}
+{% if initial_servings > 0 %}
+  {% assign initial_cost_cents = v.price | times: 1.0 | divided_by: initial_servings | round %}
+{% endif %}
+
+<div id="nutrition-data" data-product-form="{{ product_form_id }}" style="display:none;">
+  {% for variant in product.variants %}
+    {% assign n = variant.metafields.nutrify_nutrition_info.nutrify_nutrition_info_variant.value %}
+    {% assign container_grams = 0 %}
+    {% if variant.option1 contains '10 kg' or variant.option2 contains '10 kg' or variant.option3 contains '10 kg' or variant.title contains '10 kg' %}
+      {% assign container_grams = 10000 %}
+    {% elsif variant.option1 contains '6 kg' or variant.option2 contains '6 kg' or variant.option3 contains '6 kg' or variant.title contains '6 kg' %}
+      {% assign container_grams = 6000 %}
+    {% elsif variant.option1 contains '2 kg' or variant.option2 contains '2 kg' or variant.option3 contains '2 kg' or variant.title contains '2 kg' %}
+      {% assign container_grams = 2000 %}
+    {% elsif variant.option1 contains '1 kg' or variant.option2 contains '1 kg' or variant.option3 contains '1 kg' or variant.title contains '1 kg' %}
+      {% assign container_grams = 1000 %}
+    {% elsif variant.option1 contains '454 g' or variant.option2 contains '454 g' or variant.option3 contains '454 g' or variant.title contains '454 g' %}
+      {% assign container_grams = 454 %}
+    {% elsif variant.option1 contains '100 g' or variant.option2 contains '100 g' or variant.option3 contains '100 g' or variant.title contains '100 g' %}
+      {% assign container_grams = 100 %}
+    {% endif %}
+    {% if n %}
+      {%- assign _sub_price = variant.price -%}
+      {%- for allocation in variant.selling_plan_allocations -%}
+        {%- assign _sub_price = allocation.price -%}
+        {%- break -%}
+      {%- endfor -%}
+      <div
+              data-variant-id="{{ variant.id }}"
+              data-options='{{ variant.options | json | escape }}'
+              data-protein="{{ n.protein }}"
+              data-serving-size="{{ n.ssize }}"
+              data-servings-fallback="{{ n.servingsPerContainer }}"
+              data-container-grams="{{ container_grams }}"
+              data-price="{{ variant.price }}"
+              data-price-formatted="{{ variant.price | money | strip_html }}"
+              data-subscription-price="{{ _sub_price }}"
+              data-subscription-price-formatted="{{ _sub_price | money | strip_html }}">
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<script>
+  (function() {
+    const root = document.getElementById('nutrition-data');
+    if (!root) return;
+
+    function numberFrom(value) {
+      const number = parseFloat(String(value || '').replace(/[^0-9.]/g, ''));
+      return Number.isFinite(number) ? number : 0;
+    }
+
+    function getVariantData(variantId) {
+      if (!variantId) return null;
+      return root.querySelector('[data-variant-id="' + variantId + '"]');
+    }
+
+    function getOptions(data) {
+      if (!data) return [];
+      try { return JSON.parse(data.dataset.options || '[]'); }
+      catch (error) { return []; }
+    }
+
+    function servingsFor(data) {
+      if (!data) return 0;
+      const containerGrams = numberFrom(data.dataset.containerGrams);
+      const servingSize = numberFrom(data.dataset.servingSize);
+      const fallbackServings = numberFrom(data.dataset.servingsFallback);
+
+      if (containerGrams > 0 && servingSize > 0) return Math.round(containerGrams / servingSize);
+      {%- if template.suffix == 'creatine-monohydrate' -%}
+      if (containerGrams > 0) return Math.round(containerGrams / 5);
+      {%- endif -%}
+      if (fallbackServings > 0) return Math.round(fallbackServings);
+      return 0;
+    }
+
+    function isSubscriptionActive() {
+      var sp = document.querySelector('input[name="selling_plan"]');
+      return sp && sp.value && sp.value !== '0' && sp.value !== '';
+    }
+
+    function activePriceCents(data) {
+      if (isSubscriptionActive()) {
+        var subPrice = numberFrom(data.dataset.subscriptionPrice);
+        if (subPrice > 0) return subPrice;
+      }
+      return numberFrom(data.dataset.price);
+    }
+
+    function costFor(data) {
+      const servings = servingsFor(data);
+      const priceCents = activePriceCents(data);
+      if (!servings || !priceCents) return '—';
+      return '$' + (priceCents / 100 / servings).toFixed(2);
+    }
+
+    function findVariantByOptions(options) {
+      return Array.from(root.querySelectorAll('[data-variant-id]')).find(function(data) {
+        const variantOptions = getOptions(data);
+        return options.length === variantOptions.length && options.every(function(option, index) {
+          return String(option) === String(variantOptions[index]);
+        });
+      });
+    }
+
+    function getMainForm() {
+      return document.getElementById(root.dataset.productForm) || document.querySelector('form[action$="/cart/add"]');
+    }
+
+    function getCurrentVariantId() {
+      const form = getMainForm();
+      const formVariant = form && form.querySelector('[name="id"]');
+      if (formVariant && formVariant.value) return formVariant.value;
+
+      const selectedOption = document.querySelector('select[name="id"] option:checked');
+      if (selectedOption) return selectedOption.value;
+
+      return null;
+    }
+
+    function updateSizeOptionCosts(currentData) {
+      const picker = document.querySelector('hdt-variant-picker[form="' + root.dataset.productForm + '"]') || document.querySelector('hdt-variant-picker');
+      if (!picker || !currentData) return;
+
+      const currentOptions = getOptions(currentData);
+      if (!currentOptions.length) return;
+
+      picker.querySelectorAll('fieldset[data-index]').forEach(function(fieldset) {
+        const legend = fieldset.querySelector('legend');
+        const isSizeField = legend && /size/i.test(legend.textContent || '');
+        if (!isSizeField) return;
+
+        const optionIndex = parseInt(fieldset.dataset.index, 10);
+        fieldset.querySelectorAll('input[type="radio"]').forEach(function(input) {
+          const label = input.nextElementSibling;
+          const costLabel = label && label.querySelector('.size-label-cost');
+          const nameLabel = label && label.querySelector('.size-label-name');
+          if (!costLabel) return;
+
+          const options = currentOptions.slice();
+          options[optionIndex] = input.value;
+          const variantData = findVariantByOptions(options);
+          costLabel.textContent = variantData ? costFor(variantData) + '/serving' : '—/serving';
+
+          if (nameLabel) {
+            const baseName = input.value.split('(')[0].trim();
+            if (variantData) {
+              const servings = servingsFor(variantData);
+              nameLabel.textContent = servings > 0 ? baseName + ' \u00b7 ' + servings + ' servings' : baseName;
+            } else {
+              nameLabel.textContent = baseName;
+            }
+          }
+        });
+      });
+    }
+
+    function updateBoxes(variantId) {
+      const data = getVariantData(variantId);
+      if (!data) return;
+
+      const boxRoot = document.getElementById('nutrition-boxes');
+      if (!boxRoot) return;
+
+      const protein = boxRoot.querySelector('[data-protein]');
+      const servings = boxRoot.querySelector('[data-servings]');
+      const cost = boxRoot.querySelector('[data-cost]');
+      const calculatedServings = servingsFor(data);
+
+      if (protein) protein.textContent = data.dataset.protein ? data.dataset.protein + 'g' : '—';
+      if (servings) servings.textContent = calculatedServings || '—';
+      if (cost) cost.textContent = costFor(data);
+
+      // Update price-per-serving display (both desktop and mobile)
+      const priceServingsCost = costFor(data);
+      document.querySelectorAll('.cp-price-servings-count').forEach(function(el) {
+        el.textContent = calculatedServings > 0 ? calculatedServings + ' servings' : '—';
+      });
+      document.querySelectorAll('.cp-price-servings-cost').forEach(function(el) {
+        el.textContent = priceServingsCost !== '—' ? priceServingsCost + '/serving' : '—/serving';
+      });
+
+      updateSizeOptionCosts(data);
+    }
+
+    function updateFromCurrentVariant() {
+      const id = getCurrentVariantId();
+      if (id) updateBoxes(id);
+    }
+
+    function observeVariantField() {
+      const form = getMainForm();
+      const variantField = form && form.querySelector('[name="id"]');
+      if (variantField) {
+        new MutationObserver(updateFromCurrentVariant).observe(variantField, {
+          attributes: true,
+          attributeFilter: ['value']
+        });
+      }
+    }
+
+    function watchSellingPlan() {
+      var sp = document.querySelector('input[name="selling_plan"]');
+      if (sp) {
+        new MutationObserver(updateFromCurrentVariant).observe(sp, {
+          attributes: true, attributeFilter: ['value']
+        });
+        sp.addEventListener('change', updateFromCurrentVariant);
+        return;
+      }
+      var attempts = 0;
+      var interval = setInterval(function() {
+        attempts++;
+        var sp = document.querySelector('input[name="selling_plan"]');
+        if (sp) {
+          clearInterval(interval);
+          new MutationObserver(updateFromCurrentVariant).observe(sp, {
+            attributes: true, attributeFilter: ['value']
+          });
+          sp.addEventListener('change', updateFromCurrentVariant);
+        } else if (attempts >= 50) {
+          clearInterval(interval); // stop after 15 s
+        }
+      }, 300);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      updateFromCurrentVariant();
+      observeVariantField();
+      watchSellingPlan();
+    });
+
+    document.addEventListener('variant:change', function(event) {
+      const variant = event.detail && event.detail.variant;
+      if (variant && variant.id) {
+        updateBoxes(String(variant.id));
+        var boxes = document.getElementById('nutrition-boxes');
+        // Only show boxes if this is a real flavor change (different variant)
+        // seekSlider can fire variant:change spuriously with the same variant ID
+        var variantChanged = window._cpThumbFlagVariantId !== String(variant.id);
+        if (!window._cpCustomThumbActive || variantChanged) {
+          window._cpCustomThumbActive = false;
+          window._cpThumbFlagVariantId = null;
+          if (boxes) boxes.classList.remove('cp-boxes-hidden');
+        }
+      }
+    });
+
+    document.addEventListener('change', function(event) {
+      if (event.target.name === 'id' || event.target.closest('hdt-variant-picker')) {
+        setTimeout(updateFromCurrentVariant, 0);
+      }
+    });
+
+    document.addEventListener('rc:optionchange', updateFromCurrentVariant);
+  })();
+</script>
+
+<style>
+  .nemo-media-wrapper {
+    display: block;
+  }
+  {%- if template.suffix == 'default-protein' or template.suffix == 'dfltprdct-exclusion' or template.suffix == 'creatine-monohydrate' -%}
+  .hdt-product-media__main {
+    position: relative;
+  }
+  .nutrition-boxes {
+    position: absolute;
+    bottom: 16px;
+    left: 12px;
+    right: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+  }
+  .nutrition-boxes.cp-boxes-hidden {
+    opacity: 0;
+  }
+  .nutrition-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2px;
+    padding: 12px 12px;
+    min-width: 58px;
+    max-width:108px;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+    pointer-events: auto;
+  }
+  .nutrition-box .value {
+    display: block;
+    font-size: 24px;
+    font-weight: 800;
+    color: #1A1A18;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .nutrition-box .label {
+    display: block;
+    font-size: 11px;
+    color: #777;
+    text-transform: capitalize;
+    letter-spacing: 0.03em;
+    text-align: left;
+    line-height: 1.35;
+  }
+  .nutrition-box--protein {
+    background: rgb(0, 186, 219);
+    padding: 16px 14px;
+  }
+  .nutrition-box--protein .value {
+    color: #fff;
+    font-size: 32px;
+  }
+  .nutrition-box--protein .label {
+    color: rgba(255, 255, 255, 0.88);
+  }
+  .nutrition-box-right {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    pointer-events: auto;
+  }
+  .cp-image-top-badges {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    z-index: 3;
+    pointer-events: none;
+  }
+  .cp-image-top-badges__left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    pointer-events: auto;
+  }
+  .cp-bestseller-badge {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    background: #1A1A18;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-family: 'Albert Sans', sans-serif;
+    gap: 4px;
+  }
+  .cp-sold-count {
+    font-size: 13px;
+    color: #1A1A18;
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 600;
+    padding-left: 2px;
+  }
+  .cp-sold-count strong {
+    font-weight: 800;
+  }
+  .cp-lab-tested-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #fff;
+    border: 1.5px solid #22c55e;
+    color: #16a34a;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 20px;
+    pointer-events: auto;
+    font-family: 'Albert Sans', sans-serif;
+  }
+  .cp-custom-thumbs-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    padding: 10px 0 4px;
+    /* Force it onto its own line inside the flex container */
+    width: 100%;
+    order: 99;
+    flex-shrink: 0;
+  }
+  /* Allow hdt-product-media to wrap so our row goes below main+thumb */
+  hdt-product-media:has(.cp-custom-thumbs-row) {
+    flex-wrap: wrap;
+  }
+  .cp-custom-thumb {
+    border: 1.5px solid #E8E6DF;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #f8f8f6;
+    transition: border-color 0.15s;
+  }
+  .cp-custom-thumb img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+  }
+  .cp-custom-thumb:hover {
+    border-color: #1A1A18;
+  }
+  .cp-shipping-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: #f0fdf4;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #166534;
+    margin: 6px 0 10px;
+    font-family: 'Albert Sans', sans-serif;
+  }
+  .cp-shipping-bar__dot {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  {%- endif -%}
+</style>
+
+{%- if template.suffix == 'default-protein' or template.suffix == 'dfltprdct-exclusion' or template.suffix == 'creatine-monohydrate' -%}
+<script>
+(function() {
+  var SLIDER_ID = 'slider-{{ section.id }}-{{ product.id }}';
+
+  function seekSlider(index) {
+    var el = document.getElementById(SLIDER_ID);
+    if (!el) return;
+    // hdt-slider exposes scrollToIndex(index) as its public navigation method
+    if (typeof el.scrollToIndex === 'function') {
+      el.scrollToIndex(index);
+    }
+  }
+
+  // Finds the current Embla index of a custom slide by its ordinal position (0-3)
+  // among .cp-custom-media-slide elements. Needed because Embla re-inits on variant
+  // change and the absolute slide index stored in data-slide-index becomes stale.
+  function seekToCustomSlide(customIndex) {
+    var el = document.getElementById(SLIDER_ID);
+    if (!el) return;
+    var allSlides = Array.from(el.querySelectorAll('.hdt-slider__slide:not([hidden])'));
+    var customSlides = allSlides.filter(function(s) { return s.classList.contains('cp-custom-media-slide'); });
+    if (customIndex >= customSlides.length) return;
+    var emblaIdx = allSlides.indexOf(customSlides[customIndex]);
+    if (emblaIdx >= 0 && typeof el.scrollToIndex === 'function') {
+      el.scrollToIndex(emblaIdx);
+    }
+  }
+
+  function initCustomThumbs() {
+    var container = document.getElementById('cp-custom-thumbs');
+    if (!container) return;
+    var thumbs = container.querySelectorAll('.cp-custom-thumb');
+
+    thumbs.forEach(function(thumb) {
+      thumb.addEventListener('click', function() {
+        var customIndex = parseInt(this.dataset.customIndex, 10);
+        thumbs.forEach(function(t) { t.classList.remove('active'); });
+        this.classList.add('active');
+        // Hide boxes first — before seek so it runs even if seek throws
+        var boxes = document.getElementById('nutrition-boxes');
+        if (boxes) boxes.classList.add('cp-boxes-hidden');
+        // Store current variant ID so variant:change can tell if flavor actually changed
+        var variantInput = document.querySelector('[name="id"]');
+        window._cpThumbFlagVariantId = variantInput ? String(variantInput.value) : null;
+        window._cpCustomThumbActive = true;
+        seekToCustomSlide(customIndex);
+      });
+    });
+
+    // Remove active state from custom thumbs when slider moves to a product slide
+    var sliderEl = document.getElementById(SLIDER_ID);
+    if (sliderEl) {
+      sliderEl.addEventListener('scroll', function() {
+        // Timeout lets the slider settle before checking index
+        clearTimeout(sliderEl._cpScrollTimer);
+        sliderEl._cpScrollTimer = setTimeout(function() {
+          var embla = sliderEl._embla || sliderEl.embla || sliderEl.slider;
+          if (!embla || typeof embla.selectedScrollSnap !== 'function') return;
+          var currentIndex = embla.selectedScrollSnap();
+          var customStart = {{ product.media.size }};
+          if (currentIndex < customStart) {
+            thumbs.forEach(function(t) { t.classList.remove('active'); });
+            window._cpCustomThumbActive = false;
+            window._cpThumbFlagVariantId = null;
+            var boxes = document.getElementById('nutrition-boxes');
+            if (boxes) boxes.classList.remove('cp-boxes-hidden');
+          }
+        }, 100);
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCustomThumbs);
+  } else {
+    initCustomThumbs();
+  }
+})();
+</script>
+{%- endif -%}
+
+{% comment %} endnemo {% endcomment %}
+
+<div class="nemo-media-wrapper">
+  <div class="nemo-slider-col">
+    {%- if template.suffix == 'default-protein' or template.suffix == 'dfltprdct-exclusion' or template.suffix == 'creatine-monohydrate' -%}
+      {%- if cp_has_all_images -%}
+        {%- assign cp_slide0 = product.media.size -%}
+        {%- assign cp_slide1 = product.media.size | plus: 1 -%}
+        {%- assign cp_slide2 = product.media.size | plus: 2 -%}
+        {%- assign cp_slide3 = product.media.size | plus: 3 -%}
+        {%- capture cp_custom_slides_html -%}
+          <div class="hdt-slider__slide cp-custom-media-slide">
+            <div class="hdt-product__media" style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;">
+              {{ cp_img_front | image_url: width: 1200 | image_tag: alt: 'Front', loading: 'lazy', style: 'max-width:100%;max-height:100%;object-fit:contain;' }}
+            </div>
+          </div>
+          <div class="hdt-slider__slide cp-custom-media-slide">
+            <div class="hdt-product__media" style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;">
+              {{ cp_img_back | image_url: width: 1200 | image_tag: alt: 'Back', loading: 'lazy', style: 'max-width:100%;max-height:100%;object-fit:contain;' }}
+            </div>
+          </div>
+          <div class="hdt-slider__slide cp-custom-media-slide">
+            <div class="hdt-product__media" style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;">
+              {{ cp_img_scoop | image_url: width: 1200 | image_tag: alt: 'Scoop', loading: 'lazy', style: 'max-width:100%;max-height:100%;object-fit:contain;' }}
+            </div>
+          </div>
+          <div class="hdt-slider__slide cp-custom-media-slide">
+            <div class="hdt-product__media" style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;">
+              {{ cp_img_lifestyle | image_url: width: 1200 | image_tag: alt: 'Lifestyle', loading: 'lazy', style: 'max-width:100%;max-height:100%;object-fit:contain;' }}
+            </div>
+          </div>
+        {%- endcapture -%}
+        {%- capture cp_custom_block_html -%}
+          <div class="cp-custom-thumbs-row" id="cp-custom-thumbs">
+            <div class="cp-custom-thumb" data-slide-index="{{ cp_slide0 }}" data-custom-index="0">
+              {{ cp_img_front | image_url: width: 160 | image_tag: alt: 'Front', loading: 'lazy' }}
+            </div>
+            <div class="cp-custom-thumb" data-slide-index="{{ cp_slide1 }}" data-custom-index="1">
+              {{ cp_img_back | image_url: width: 160 | image_tag: alt: 'Back', loading: 'lazy' }}
+            </div>
+            <div class="cp-custom-thumb" data-slide-index="{{ cp_slide2 }}" data-custom-index="2">
+              {{ cp_img_scoop | image_url: width: 160 | image_tag: alt: 'Scoop', loading: 'lazy' }}
+            </div>
+            <div class="cp-custom-thumb" data-slide-index="{{ cp_slide3 }}" data-custom-index="3">
+              {{ cp_img_lifestyle | image_url: width: 160 | image_tag: alt: 'Lifestyle', loading: 'lazy' }}
+            </div>
+          </div>
+        {%- endcapture -%}
+      {%- endif -%}
+      {%- liquid
+        assign cp_is_bestseller = false
+        assign cp_sold_count = ''
+        assign cp_bs_map = "bestseller-1:10000,bestseller-2:9000,bestseller-3:8000,bestseller-4:7000,bestseller-5:6000,bestseller-6:5000,bestseller-7:4000,bestseller-8:3000,bestseller-9:2000,bestseller-10:1000" | split: ","
+        for bs_entry in cp_bs_map
+          assign bs_parts = bs_entry | strip | split: ":"
+          assign bs_tag = bs_parts[0]
+          assign bs_num = bs_tag | remove: 'bestseller-' | plus: 0
+          if product.tags contains bs_tag
+            assign cp_sold_count = bs_parts[1]
+            if bs_num <= 4
+              assign cp_is_bestseller = true
+            endif
+            break
+          endif
+        endfor
+      -%}
+      {%- capture nutrition_boxes_html -%}
+        <div class="cp-image-top-badges">
+          <div class="cp-image-top-badges__left">
+            {%- if cp_is_bestseller -%}
+              <span class="cp-bestseller-badge">&#9733; BESTSELLER</span>
+            {%- endif -%}
+            {%- if cp_sold_count != '' -%}
+              <span class="cp-sold-count"><strong>{{ cp_sold_count }}+</strong> sold this month</span>
+            {%- endif -%}
+          </div>
+          <span class="cp-lab-tested-badge">&#10003; LAB-TESTED</span>
+        </div>
+        <div class="nutrition-boxes" id="nutrition-boxes">
+          <div class="nutrition-box nutrition-box--protein">
+            <span class="value" data-cost>{% if initial_cost_cents > 0 %}{{ initial_cost_cents | money | strip_html }}{% else %}—{% endif %}</span>
+            <span class="label">Cost per<br>Serving</span>
+          </div>
+          {%- if template.suffix == 'creatine-monohydrate' -%}
+            {%- assign creatine_servings = initial_container_grams | divided_by: 5.0 | round -%}
+            <div class="nutrition-box-right">
+              <div class="nutrition-box">
+                <span class="value" data-servings>{{ creatine_servings }}</span>
+                <span class="label">Servings per Container</span>
+              </div>
+            </div>
+          {%- else -%}
+            <div class="nutrition-box-right">
+              <div class="nutrition-box">
+                <span class="value" data-protein>{{ nutrition.protein }}g</span>
+                <span class="label">Protein Per Serving</span>
+              </div>
+              <div class="nutrition-box">
+                <span class="value" data-servings>{{ initial_servings }}</span>
+                <span class="label">Servings per Container</span>
+              </div>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endcapture -%}
+    {%- endif -%}
+
+    <hdt-product-media section-id="{{ section.id }}" class="hdt-product-media hdt-product-media__layout-{{ desktop_media_layout }} hdt-mobile-media-layout--{{ mobile_media_layout }}" form="{{ product_form_id }}"{% if section.settings.enable_media_autoplay %} autoplay-media{% endif %}{% if variant_images.size > 0 and product.images.size > 1 and section.settings.use_select_varaint_change_media %} update-when-variant-change{% endif %} image-zoom="{{ section.settings.image_zoom }}" max-zoom="{{ section.settings.max_zoom_lightbox }}" zoom-options='{"type": "{{ section.settings.image_zoom_type }}","magnify": {{ section.settings.zoom_level }}}'{% if group_media_obj.size > 0 %} can-has-media-group{% endif %}>
+      {%- case desktop_media_layout -%}
+        {%- when 'no_media_size' -%}
+          {%- assign image = section.settings.image | default: settings.placeholder_img -%}
+          {%- if image != blank -%}
+            <div class="hdt-product-media__main hdt-ratio--{{ section.settings.image_ratio }}{% unless section.settings.image_size %} hdt-ratio--contain{% endunless %}">
+              <div class="hdt-ratio hdt-product__media" style="{% if section.settings.image_ratio == 'adapt_image' %}--aspect-ratioapt:{{ image.aspect_ratio }};{% endif %}--mw-media:{{ image.width }}px">
+                {{ image | image_url: width: image.width | image_tag: sizes: sizes, widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946' }}
+              </div>
+            </div>
+          {%- endif -%}
+        {%- when 'one_media_size' -%}
+          <div class="hdt-product-media__main hdt-ratio--{{ section.settings.image_ratio }}{% unless section.settings.image_size %} hdt-ratio--contain{% endunless %}">
+            {{ nutrition_boxes_html }}
+            {%- render 'media', media: product.media.first, lazy_load: false, sizes: sizes -%}
+          </div>
+
+        {%- when 'thumbnail_bottom' or 'thumbnail_left' or 'thumbnail_right' or 'without_thumbnails' -%}
+          <div class="hdt-product-media__main">
+            {{ nutrition_boxes_html }}
+            <hdt-slider id="slider-{{ section.id }}-{{ product.id }}" aria-controls="slider-thumb-{{ section.id }}-{{ product.id }}" autoheight class="hdt-slider hdt-slider-parent hdt-relative hdt-ratio--{{ section.settings.image_ratio }}{% unless section.settings.image_size %} hdt-ratio--contain{% endunless %} {% if section.settings.navUI %} hdt-slider-has-nav hdt-nav-btns-{{ section.settings.nav_des }} hdt-nav-middle_in{% endif %}" config='{ "autoHeight": true, "slidesToScroll": 1, "watchDrag": "onlyTypeImage", "navUI": {{ section.settings.navUI }} ,"slides": ".hdt-slider__slide:not([hidden])"{% unless group_media_obj.size > 0 %}, "startIndex": {% if section.settings.show_first_media or un_no_pick == false %}0{% else %}{{ selected_variant_featured_media.position | default: 1 | minus: 1 }}{% endif %}{% endunless %} }'>
+              <div class="hdt-slider__viewport">
+                <div class="hdt-slider__container">
+                  {%- liquid
+                    for media in product.media
+                      assign lazy_load = false
+                      if media.position > 1
+                        assign lazy_load = true
+                      endif
+                      render 'media', media: media, selected_variant: selected_variant, un_no_pick: un_no_pick, position: media.position, group_media_obj: group_media_obj, variant_images: variant_images, class: 'hdt-slider__slide', autoplay: section.settings.enable_media_autoplay, loop: section.settings.enable_video_looping, lazy_load: lazy_load, sizes: sizes
+                    endfor
+                  -%}
+                  {{ cp_custom_slides_html }}
+                </div>
+              </div>
+              {%- if section.settings.navUI -%}
+                <button class="hdt-slider__button hdt-slider-nav hdt-slider-btn_{{ section.settings.nav_des }} hdt-inline-flex hdt-align-center hdt-justify-center hdt-slider__button--prev hdt-absolute" type="button" aria-controls="slider-{{ section.id }}-{{ product.id }}" name="previous">
+                  {%- if section.settings.nav_des != "simple" -%}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" fill="none"><path d="M5.5 11L0 5.5L5.5 0L6.47625 0.97625L1.9525 5.5L6.47625 10.0238L5.5 11Z" fill="currentColor"/></svg>
+                  {%- else -%}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none"><path d="M7.00033 14L8.63366 12.3083L4.49199 8.16667H18.667V5.83333H4.49199L8.63366 1.69167L7.00033 0L0.000326157 7L7.00033 14Z" fill="currentColor"/></svg>
+                  {%- endif -%}
+                </button>
+                <button class="hdt-slider__button hdt-slider-nav hdt-slider-btn_{{ section.settings.nav_des }} hdt-inline-flex hdt-align-center hdt-justify-center hdt-slider__button--next hdt-absolute" type="button" aria-controls="slider-{{ section.id }}-{{ product.id }}" name="next">
+                  {%- if section.settings.nav_des != "simple" -%}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" fill="none"><path d="M1.5 11L7 5.5L1.5 0L0.52375 0.97625L5.0475 5.5L0.52375 10.0238L1.5 11Z" fill="currentColor"/></svg>
+                  {%- else -%}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none"><path d="M11.6667 14L10.0333 12.3083L14.175 8.16667H0V5.83333H14.175L10.0333 1.69167L11.6667 0L18.6667 7L11.6667 14Z" fill="currentColor"/></svg>
+                  {%- endif -%}
+                </button>
+              {%- endif -%}
+            </hdt-slider>
+          </div>
+          <div class="hdt-product-media__thumb hdt-text-center">
+            <hdt-slider-thumb {% if section.settings.enable_thumb_efect %} stagger {% endif %} id="slider-thumb-{{ section.id }}-{{ product.id }}" aria-controls="slider-{{ section.id }}-{{ product.id }}" autoheight class="hdt-slider hdt-ratio--{{ section.settings.image_ratio }}{% unless section.settings.image_size %} hdt-ratio--contain{% endunless %} hdt-slides-5 hdt-slide-spacing-10{% if mobile_media_layout != 'thumbnails' %} hdt-hidden lg:hdt-block{% endif %}" config='{ "active": {% if mobile_media_layout != 'thumbnails' %}false{% else %}true{% endif %}, "autoHeight": false, "classNames": false, "dragFree": false, "slidesToScroll": 1, "align": "center", "axis": "x", "slides": ".hdt-slider__slide:not([hidden])"{% if desktop_media_layout contains 'thumbnail' %}, "breakpoints": { "(min-width: 1150px)": { "active": true{% if desktop_media_layout == 'thumbnail_left' or desktop_media_layout == 'thumbnail_right' %}, "axis": "y", "watchSlides": false{% endif %} } }{% endif %} }'>
+              <div class="hdt-slider__viewport">
+                <div class="hdt-slider__container">
+                  {%- liquid
+                    for media in product.media
+                      render 'media-thumb', media: media, selected_variant: selected_variant, un_no_pick: un_no_pick, group_media_obj: group_media_obj, variant_images: variant_images, class: 'hdt-slider__slide', autoplay: section.settings.enable_media_autoplay, loop: section.settings.enable_video_looping, lazy_load: lazy_load
+                    endfor
+                  -%}
+                </div>
+              </div>
+            </hdt-slider-thumb>
+            {%- if mobile_media_layout != 'thumbnails' -%}
+              <hdt-slider-counter class="hdt-slider-counter hdt-slider-fraction hdt-inline-flex hdt-align-center lg:hdt-hidden" slider="slider-{{ section.id }}-{{ product.id }}">
+                <button disabled name="previous" aria-controls="slider-{{ section.id }}-{{ product.id }}" class="no-js-hidden">
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path></svg>
+                </button>
+                <span>
+                  <span update-current class="hdt-slider-counter--current">1</span>
+                  <span aria-hidden="true"> / </span>
+                  <span class="sr-only">{{ 'general.slider.of' | t }}</span>
+                  <span update-total class="hdt-slider-counter--total">{{ product.media.size }}</span>
+                </span>
+                <button disabled name="next" aria-controls="slider-{{ section.id }}-{{ product.id }}" class="no-js-hidden">
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path></svg>
+                </button>
+              </hdt-slider-counter>
+            {%- endif -%}
+          </div>
+          {{ cp_custom_block_html }}
+
+        {%- else -%}
+          <div class="hdt-product-media__main">
+            {{ nutrition_boxes_html }}
+            <hdt-slider id="slider-{{ section.id }}-{{ product.id }}" aria-controls="slider-thumb-{{ section.id }}-{{ product.id }}" autoheight class="hdt-slider hdt-ratio--{{ section.settings.image_ratio }}{% unless section.settings.image_size %} hdt-ratio--contain{% endunless %}" config='{ "active": true, "autoHeight": true, "slidesToScroll": 1, "watchDrag": "onlyTypeImage", "slides": ".hdt-slider__slide:not([hidden])"{% unless group_media_obj.size > 0 %}, "startIndex": {% if section.settings.show_first_media or un_no_pick == false %}0{% else %}{{ selected_variant_featured_media.position | default: 1 | minus: 1 }}{% endif %}{% endunless %}, "breakpoints": { "(min-width: 1150px)": { "active": false } } }'>
+              <div class="hdt-slider__viewport">
+                <div class="hdt-slider__container">
+                  {%- liquid
+                    for media in product.media
+                      assign lazy_load = false
+                      if media.position > 1
+                        assign lazy_load = true
+                      endif
+                      render 'media', media: media, selected_variant: selected_variant, un_no_pick: un_no_pick, position: media.position, group_media_obj: group_media_obj, variant_images: variant_images, class: 'hdt-slider__slide', autoplay: section.settings.enable_media_autoplay, loop: section.settings.enable_video_looping, lazy_load: lazy_load, sizes: sizes
+                    endfor
+                  -%}
+                  {{ cp_custom_slides_html }}
+                </div>
+              </div>
+            </hdt-slider>
+          </div>
+          <div class="hdt-product-media__thumb hdt-text-center lg:hdt-hidden">
+            {%- if mobile_media_layout == 'thumbnails' -%}
+              <hdt-slider-thumb {% if section.settings.enable_thumb_efect %} stagger {% endif %} id="slider-thumb-{{ section.id }}-{{ product.id }}" aria-controls="slider-{{ section.id }}-{{ product.id }}" autoheight class="hdt-slider hdt-ratio--{{ section.settings.image_ratio }}{% unless section.settings.image_size %} hdt-ratio--contain{% endunless %} hdt-slides-5 hdt-slide-spacing-10" config='{ "active": true, "autoHeight": false, "classNames": false, "containScroll": "trimSnaps", "dragFree": false, "slidesToScroll": 1, "align": "center", "axis": "x", "slides": ".hdt-slider__slide:not([hidden])", "breakpoints": { "(min-width: 1150px)": { "active": false } } }'>
+                <div class="hdt-slider__viewport">
+                  <div class="hdt-slider__container">
+                    {%- liquid
+                      for media in product.media
+                        render 'media-thumb', media: media, selected_variant: selected_variant, un_no_pick: un_no_pick, group_media_obj: group_media_obj, variant_images: variant_images, class: 'hdt-slider__slide', autoplay: section.settings.enable_media_autoplay, loop: section.settings.enable_video_looping, lazy_load: lazy_load
+                      endfor
+                    -%}
+                  </div>
+                </div>
+              </hdt-slider-thumb>
+            {%- else -%}
+              <hdt-slider-counter class="hdt-slider-counter hdt-slider-fraction hdt-inline-flex hdt-align-center" slider="slider-{{ section.id }}-{{ product.id }}">
+                <button disabled name="previous" aria-controls="slider-{{ section.id }}-{{ product.id }}" class="no-js-hidden">
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path></svg>
+                </button>
+                <span>
+                  <span update-current class="hdt-slider-counter--current">1</span>
+                  <span aria-hidden="true"> / </span>
+                  <span class="sr-only">{{ 'general.slider.of' | t }}</span>
+                  <span update-total class="hdt-slider-counter--total">{{ product.media.size }}</span>
+                </span>
+                <button disabled name="next" aria-controls="slider-{{ section.id }}-{{ product.id }}" class="no-js-hidden">
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path></svg>
+                </button>
+              </hdt-slider-counter>
+            {%- endif -%}
+          </div>
+          {{ cp_custom_block_html }}
+
+      {%- endcase -%}
+
+    </hdt-product-media>
+  </div><!-- end .nemo-slider-col -->
+
+</div><!-- end .nemo-media-wrapper -->
+
+{%- if first_3d_model -%}<script type="application/json" id="ModelJson-{{ section.id }}">{{ models | json }}</script>{% endif -%}
+<div class="groupAtribuild clearfix hide-on-desktop" style="margin-top:20px">
+  {% if product.type ==  'Bulk Protein Powders' %}
+    {% if product.tags contains "JWM-Exc" %}
+
+    {% else %}
+      {% if product.tags contains "No Stack" %}
+      {%  else %}
+        <div class="shappify-qty-msg">
+          <div class="h4">
+            Buy More Save More!
+            <span style="font-weight: normal; font-size: 13px;">Discount taken at checkout</span>
+          </div>
+          <table class="shappify_qb_grid">
+            <tbody>
+            <tr>
+              <td>Buy 2</td>
+              <td>5% Off</td>
+            </tr>
+            <tr>
+              <td>Buy 3</td>
+              <td>10% Off</td>
+            </tr>
+            </tbody>
+          </table>
+          <style>
+            table.shappify_qb_grid{ width:auto; } div.bold_qb_grid{ width: 100%; }table.shappify_qb_grid{ width:100%;font-size:15px;} table.shappify_qb_grid thead, table.shappify_qb_grid thead tr, table.shappify_qb_grid thead th, table.shappify_qb_grid thead td{background:#D6D6D6 ;color:#000;font-weight:bold;} table.shappify_qb_grid tbody tr:nth-child(odd) {background-color:#FFF;} table.shappify_qb_grid tbody tr:nth-child(even) {background-color:#EFEFEF;} table.shappify_qb_grid tbody {color:#677279;} table.shappify_qb_grid, table.shappify_qb_grid th, table.shappify_qb_grid td { text-align:left;padding:5px;border: 1px solid #ccc;border-collapse: collapse;} table.shappify_qb_grid {margin: 0px;}.shappify_qb_grid { width:100%; } .shappify-qty-msg { margin-bottom: 15px;}
+          </style>
+        </div>
+      {% endif %}
+    {% endif %}
+  {% endif %}
+</div>
+
+<script>
+(function() {
+  if (window._cpYtFacadeInit) return;
+  window._cpYtFacadeInit = true;
+  document.addEventListener('click', function(e) {
+    var facade = e.target.closest('.cp-yt-facade');
+    if (!facade) return;
+    var id = facade.dataset.videoId;
+    if (!id) return;
+    var iframe = document.createElement('iframe');
+    iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+    iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
+    iframe.allowFullscreen = true;
+    facade.innerHTML = '';
+    facade.appendChild(iframe);
+  });
+})();
+</script>

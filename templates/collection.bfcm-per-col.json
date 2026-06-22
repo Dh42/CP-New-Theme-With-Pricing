@@ -1,0 +1,885 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-collection",
+      "blocks": {
+        "9a1347b4-da62-490d-9fd4-427a03686ac2": {
+          "type": "heading",
+          "settings": {
+            "heading": "<b>BLACK FRIDAY</b> / CYBER MONDAY"
+          }
+        },
+        "6df762d7-beda-4452-bcf6-1242b294077c": {
+          "type": "description",
+          "settings": {
+            "description": "Up to 70% OFF | Some exclusions my apply.*"
+          }
+        }
+      },
+      "block_order": [
+        "9a1347b4-da62-490d-9fd4-427a03686ac2",
+        "6df762d7-beda-4452-bcf6-1242b294077c"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacing_hd": 10,
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "marquee_RiRCfe": {
+      "type": "marquee",
+      "blocks": {
+        "item_RKJzEX": {
+          "type": "item",
+          "settings": {
+            "text": "<p><a href=\"/collections/boxing-day-2025\" title=\"Boxing Day 2025\"><strong>3X REWARDS POINTS</strong></a></p>",
+            "icon_svg": "flash",
+            "custom_svg": "",
+            "image": "shopify://shop_images/Boxing_Day_White_and_Red.svg",
+            "icon_width": 60,
+            "icon_width_mb": 60
+          }
+        },
+        "item_zccwqk": {
+          "type": "item",
+          "settings": {
+            "text": "<p><a href=\"/collections/boxing-day-2025\" title=\"Boxing Day 2025\"><strong>3X REWARDS POINTS</strong></a></p>",
+            "icon_svg": "flash",
+            "custom_svg": "",
+            "image": "shopify://shop_images/Boxing_Day_White_and_Red.svg",
+            "icon_width": 60,
+            "icon_width_mb": 60
+          }
+        }
+      },
+      "block_order": [
+        "item_RKJzEX",
+        "item_zccwqk"
+      ],
+      "custom_css": [
+        ".hdt-marquee__item-content:has(a[href*=\"/collections/boxing-day-2025\"]) .hdt-marquee__item-icon--image img {width: 170px !important; max-width: 170px !important; height: auto !important;}"
+      ],
+      "name": "Scrolling text / Free Gift",
+      "settings": {
+        "space_item": 30,
+        "speed": 0.3,
+        "direction": "rtl",
+        "marquee_pause_when_hover": false,
+        "text_fs": "h5",
+        "text_fw": "normal",
+        "text_uppercase": false,
+        "adding_border": false,
+        "icon_position_between": true,
+        "color_scheme": "scheme-dea2a141-c4a8-41c6-8079-fb3ee810a1b8",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_rate": 75
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "product_des": "1",
+        "image_ratio": "custom-pr",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 12,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "pagination_type": "infinite",
+        "paginate_pos": "center",
+        "dis_pagination": 60,
+        "enable_sorting": false,
+        "enable_filtering": false,
+        "enable_num_cols_selector": false,
+        "widget_heading": "Product categories",
+        "cat_source": "1",
+        "cat_link_list": "",
+        "count": false,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-4",
+        "padding_top": 20,
+        "padding_bottom": 70,
+        "padding_rate": 75,
+        "sidebar_position": "left",
+        "sidebar_size": "medium"
+      }
+    },
+    "tab_variant_collections_C8dGLQ": {
+      "type": "tab-variant-collections",
+      "blocks": {
+        "tab_item_deXC7Q": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Extra 20% OFF",
+            "match_key": "tab1",
+            "collection": "bfcm-2025",
+            "product_list": []
+          }
+        },
+        "tab_item_AXPgfg": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Extra 30% OFF",
+            "match_key": "tab2",
+            "collection": "",
+            "product_list": [
+              "limited-edition-mixed-berry-super-greens-powder",
+              "egg-white-protein-powder",
+              "all-natural-premium-vegan-protein-blend"
+            ]
+          }
+        },
+        "tab_item_yqYfgm": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Extra 40% OFF",
+            "match_key": "tab3",
+            "collection": "bfcm70",
+            "product_list": []
+          }
+        },
+        "tab_item_6wWdRA": {
+          "type": "tab_item",
+          "settings": {
+            "title": "Extra 10% OFF",
+            "match_key": "tab4",
+            "collection": "",
+            "product_list": [
+              "limited-edition-cinnamon-bun-vegan-protein",
+              "limited-edition-banana-cream-pie-vegan-protein",
+              "limited-edition-blueberry-cobbler-vegan-protein"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_deXC7Q",
+        "tab_item_AXPgfg",
+        "tab_item_yqYfgm",
+        "tab_item_6wWdRA"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "/* TARGETS SVG STARS */#template--20005218746415__tab_variant_collections_C8dGLQ .stamped-svg-star path {fill: #f6ff01 !important;}",
+        " /* TARGETS FONT-ICON STARS */#template--20005218746415__tab_variant_collections_C8dGLQ .stamped-fa-star {color: #f6ff01 !important;}",
+        " /* TARGETS STAR PSEUDO-ELEMENT VARIANTS */#template--20005218746415__tab_variant_collections_C8dGLQ .stamped-fa-star:before,#template--20005218746415__tab_variant_collections_C8dGLQ .stamped-fa-star:after {color: #f6ff01 !important;}"
+      ],
+      "name": "Tabs Collections (Variants)",
+      "settings": {
+        "tabs_heading": "30% OFF +",
+        "heading_size": "h3",
+        "heading_inline": true,
+        "tabs_head_spacing": 20,
+        "tabs_des": "outline",
+        "tab_item_size": "lg",
+        "tab_item_weight": "medium",
+        "text_transform": false,
+        "border_width": 2,
+        "spacing_items": 20,
+        "product_des": "1",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "products_count": 8,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "navUI": true,
+        "nav_des": "outline",
+        "nav_pos": "middle_out",
+        "dotUI": true,
+        "use_pagination": "none",
+        "paginate_pos": "center",
+        "dis_pagination": 45,
+        "btn_label": "View all",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "section_fullwidth": false,
+        "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+        "padding_top": 70,
+        "padding_bottom": 70,
+        "padding_rate": 75
+      }
+    },
+    "categories_section_iieiPP": {
+      "type": "categories-section",
+      "blocks": {
+        "collection_item_TKJfeA": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/30.svg",
+            "title": "",
+            "collection_link": "https://canadianprotein.com/collections/bfcm-2025?filter.574572=BFCM30"
+          }
+        },
+        "collection_item_UeeEQ7": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/35.svg",
+            "title": "",
+            "collection_link": "https://canadianprotein.com/collections/bfcm-2025?filter.574572=BFCM35"
+          }
+        },
+        "collection_item_3VpeaJ": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/40.svg",
+            "title": "",
+            "collection_link": "https://canadianprotein.com/collections/bfcm-2025?filter.574572=bfcm40"
+          }
+        },
+        "collection_item_pBxMQe": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/50.svg",
+            "title": "",
+            "collection_link": "https://canadianprotein.com/collections/bfcm-2025?filter.574572=BFCM50"
+          }
+        },
+        "collection_item_HJzREE": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/70.svg",
+            "title": "",
+            "collection_link": "https://canadianprotein.com/collections/bfcm-2025?filter.574572=BFCM70"
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_TKJfeA",
+        "collection_item_UeeEQ7",
+        "collection_item_3VpeaJ",
+        "collection_item_pBxMQe",
+        "collection_item_HJzREE"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "Discount Navigation",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "style": "small",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "padding_rate": 50
+      }
+    },
+    "marquee_MEbekx": {
+      "type": "marquee",
+      "blocks": {
+        "item_rkqdbN": {
+          "type": "item",
+          "settings": {
+            "text": "<p><a href=\"/pages/subscribe-and-save\" title=\"Subscribe and Save | Subscription Program\"><strong>🔒 35% OFF</strong></a></p>",
+            "icon_svg": "none",
+            "custom_svg": "",
+            "image": "shopify://shop_images/Subscribe_and_Save_-_WHT.svg",
+            "icon_width": 60,
+            "icon_width_mb": 60
+          }
+        },
+        "item_KRjmXx": {
+          "type": "item",
+          "settings": {
+            "text": "<p><a href=\"/pages/subscribe-and-save\" title=\"Subscribe and Save | Subscription Program\">Lock in Boxing Day Discounts</a></p>",
+            "icon_svg": "none",
+            "custom_svg": "",
+            "image": "shopify://shop_images/Subscribe_and_Save_-_WHT.svg",
+            "icon_width": 60,
+            "icon_width_mb": 60
+          }
+        }
+      },
+      "block_order": [
+        "item_rkqdbN",
+        "item_KRjmXx"
+      ],
+      "custom_css": [
+        "/* Target ONLY the Subscribe & Save marquee logo */.hdt-marquee__item-content:has(a[href*=\"/pages/subscribe-and-save\"]) .hdt-marquee__item-icon--image img {width: 170px !important; max-width: 170px !important; height: auto !important;}"
+      ],
+      "name": "t:sections.marquee.name",
+      "settings": {
+        "space_item": 30,
+        "speed": 0.3,
+        "direction": "rtl",
+        "marquee_pause_when_hover": false,
+        "text_fs": "h5",
+        "text_fw": "normal",
+        "text_uppercase": false,
+        "adding_border": false,
+        "icon_position_between": true,
+        "color_scheme": "scheme-dea2a141-c4a8-41c6-8079-fb3ee810a1b8",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_rate": 75
+      }
+    },
+    "featured_collection_grid_FKBXPX": {
+      "type": "featured-collection-grid",
+      "name": "t:sections.collection_products.grid_name",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "Door Crashers | Extra 20% OFF",
+        "heading_tag": "h3",
+        "heading_size": "h3",
+        "sec_subheading": "<p>Creatine Monohydrate | All Unflavoured & Unsweetened Proteins | All Vegan Proteins | All Naturally Sweetened Proteins | All discounts applied at checkout.</p>",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 30,
+        "collection": "black-friday-door-crashers",
+        "product_list": [],
+        "product_des": "1",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 50,
+        "col_dk": "4",
+        "col_tb": "4",
+        "col_mb": "2",
+        "pagination_type": "none",
+        "paginate_pos": "center",
+        "dis_pagination": 30,
+        "btn_label": "View all",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "section_fullwidth": false,
+        "boxed_fullwidth": false,
+        "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "padding_rate": 75
+      }
+    },
+    "custom_section_4bqm7h": {
+      "type": "custom-section",
+      "blocks": {
+        "parent_KQpBeC": {
+          "type": "parent",
+          "settings": {
+            "column_lg": "hdt-col-lg-12",
+            "column_md": "hdt-col-md-12",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-c4883d1b-ef0d-432c-8b91-5440621a5983",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 8,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": ""
+          }
+        },
+        "image_Wy7EtG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Boxing_Day_Perks_and_Benefits.svg",
+            "link": "",
+            "image_width": "custom",
+            "width": 300,
+            "width_mb": 300,
+            "alignment": "start"
+          }
+        },
+        "spacer_YziNdQ": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 6,
+            "space_md": 6,
+            "space": 6
+          }
+        },
+        "custom_liquid_GbEqwb": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<small>Terms and conditions apply. <a href=\"https://canadianprotein.com/pages/bfcm-sale-terms-and-conditions\" target=\"_blank\" style=\"text-decoration:underline;\">Click here for more information.</a></small>"
+          }
+        },
+        "parent_EqDpJP": {
+          "type": "parent",
+          "name": "Refund",
+          "settings": {
+            "column_lg": "hdt-col-lg-4",
+            "column_md": "hdt-col-md-3",
+            "column": "hdt-col-6",
+            "color_scheme": "scheme-c4883d1b-ef0d-432c-8b91-5440621a5983",
+            "padding_top": 0,
+            "padding_right": 12,
+            "padding_bottom": 0,
+            "padding_left": 12,
+            "padding_rate": 100,
+            "class": ""
+          }
+        },
+        "custom_liquid_98GVzn": {
+          "type": "custom_liquid",
+          "name": "Refund Anchor",
+          "settings": {
+            "custom_liquid": "<div id=\"REFUND\"></div>"
+          }
+        },
+        "spacer_wayhdP": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "image_MLMqJG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Refund.svg",
+            "link": "",
+            "image_width": "custom",
+            "width": 100,
+            "width_mb": 100,
+            "alignment": "start"
+          }
+        },
+        "spacer_btDLWt": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "heading_ApaPi9": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Win a Full Refund</strong>",
+            "tag": "p",
+            "heading_size": "h5",
+            "alignment": "start"
+          }
+        },
+        "spacer_J6BkxX": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 8
+          }
+        },
+        "text_9PcMNn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Shop during Boxing Day and automatically <strong>get entered for a chance to win a full refund</strong>!</p>",
+            "text_size": "base",
+            "alignment": "start",
+            "alignment_mb": "start"
+          }
+        },
+        "custom_liquid_3MXr8R": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<small><a href=\"https://biosteel.ca/pages/bfcm-sale-terms-and-conditions\">\n    Read Terms & Conditions\n  </a></small>"
+          }
+        },
+        "spacer_XNnmJc": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "parent_zD6g4C": {
+          "type": "parent",
+          "name": "Free Gifts",
+          "settings": {
+            "column_lg": "hdt-col-lg-4",
+            "column_md": "hdt-col-md-4",
+            "column": "hdt-col-6",
+            "color_scheme": "scheme-c4883d1b-ef0d-432c-8b91-5440621a5983",
+            "padding_top": 0,
+            "padding_right": 12,
+            "padding_bottom": 0,
+            "padding_left": 12,
+            "padding_rate": 75,
+            "class": ""
+          }
+        },
+        "custom_liquid_89h7BD": {
+          "type": "custom_liquid",
+          "name": "Gift Anchor",
+          "settings": {
+            "custom_liquid": "<div id=\"FREEGIFT\"></div>"
+          }
+        },
+        "spacer_BqbHLQ": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "image_6F9L9d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Gift_ecommerce_present_promotion_online_shopping.svg",
+            "link": "",
+            "image_width": "custom",
+            "width": 100,
+            "width_mb": 100,
+            "alignment": "start"
+          }
+        },
+        "spacer_XQ4g6D": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "heading_KXgdLC": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Free Gifts</strong>",
+            "tag": "p",
+            "heading_size": "h5",
+            "alignment": "start"
+          }
+        },
+        "spacer_EBLdjQ": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 8
+          }
+        },
+        "text_Xbd3mB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Get a <strong>free mystery gift in every order</strong> + a free Canadian Protein <strong>Electric Mixer </strong>on orders <strong>$150+</strong></p>",
+            "text_size": "base",
+            "alignment": "start",
+            "alignment_mb": "start"
+          }
+        },
+        "custom_liquid_QPyyTn": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<small><a href=\"https://biosteel.ca/pages/bfcm-sale-terms-and-conditions\">\n    Read Terms & Conditions\n  </a></small>"
+          }
+        },
+        "spacer_hPLmDW": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "parent_6ATMm7": {
+          "type": "parent",
+          "name": "Rewards Points",
+          "settings": {
+            "column_lg": "hdt-col-lg-4",
+            "column_md": "hdt-col-md-4",
+            "column": "hdt-col-6",
+            "color_scheme": "scheme-c4883d1b-ef0d-432c-8b91-5440621a5983",
+            "padding_top": 0,
+            "padding_right": 12,
+            "padding_bottom": 0,
+            "padding_left": 12,
+            "padding_rate": 75,
+            "class": ""
+          }
+        },
+        "custom_liquid_6qRNPA": {
+          "type": "custom_liquid",
+          "name": "Rewards Anchor",
+          "settings": {
+            "custom_liquid": "<div id=\"3xPOINTS\"></div>"
+          }
+        },
+        "spacer_TKyyCh": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "image_cGdnFQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Shopping_bag_ecommerce_retail_purchase_online_shopping.svg",
+            "link": "",
+            "image_width": "custom",
+            "width": 100,
+            "width_mb": 100,
+            "alignment": "start"
+          }
+        },
+        "spacer_qAqjBn": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "heading_eec9KQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>3X Rewards Points</strong>",
+            "tag": "p",
+            "heading_size": "h5",
+            "alignment": "start"
+          }
+        },
+        "spacer_mkBMgT": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 6
+          }
+        },
+        "text_Q3d8Cz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Shop during Boxing Day and <strong>earn 3X rewards points </strong>to use towards your next order!</p>",
+            "text_size": "base",
+            "alignment": "start",
+            "alignment_mb": "start"
+          }
+        },
+        "custom_liquid_Gwa9Px": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<small><a href=\"https://biosteel.ca/pages/bfcm-sale-terms-and-conditions\">\n    Read Terms & Conditions\n  </a></small>"
+          }
+        },
+        "spacer_Dhtz4P": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        }
+      },
+      "block_order": [
+        "parent_KQpBeC",
+        "image_Wy7EtG",
+        "spacer_YziNdQ",
+        "custom_liquid_GbEqwb",
+        "parent_EqDpJP",
+        "custom_liquid_98GVzn",
+        "spacer_wayhdP",
+        "image_MLMqJG",
+        "spacer_btDLWt",
+        "heading_ApaPi9",
+        "spacer_J6BkxX",
+        "text_9PcMNn",
+        "custom_liquid_3MXr8R",
+        "spacer_XNnmJc",
+        "parent_zD6g4C",
+        "custom_liquid_89h7BD",
+        "spacer_BqbHLQ",
+        "image_6F9L9d",
+        "spacer_XQ4g6D",
+        "heading_KXgdLC",
+        "spacer_EBLdjQ",
+        "text_Xbd3mB",
+        "custom_liquid_QPyyTn",
+        "spacer_hPLmDW",
+        "parent_6ATMm7",
+        "custom_liquid_6qRNPA",
+        "spacer_TKyyCh",
+        "image_cGdnFQ",
+        "spacer_qAqjBn",
+        "heading_eec9KQ",
+        "spacer_mkBMgT",
+        "text_Q3d8Cz",
+        "custom_liquid_Gwa9Px",
+        "spacer_Dhtz4P"
+      ],
+      "name": "Perks",
+      "settings": {
+        "section_fullwidth": false,
+        "color_scheme": "scheme-c4883d1b-ef0d-432c-8b91-5440621a5983",
+        "direction": "",
+        "justify": "",
+        "gap": true,
+        "space": 0,
+        "padding_top": 40,
+        "padding_bottom": 72,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_D4LHax": {
+      "type": "custom-liquid",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"faq\"></div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_rate": 75
+      }
+    },
+    "accordion_JYiMAQ": {
+      "type": "accordion",
+      "blocks": {
+        "title_KtAttM": {
+          "type": "title",
+          "settings": {
+            "title": "Frequently Asked Questions"
+          }
+        },
+        "accordion_item_T9cB3Q": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What is the Canadian Protein Cyber Monday Sale?",
+            "content": "The Sale is a limited-time event on CanadianProtein.com offering major discounts, free gifts, and special giveaways.\n All promotional offers are valid only during the Sale period and while supplies last."
+          }
+        },
+        "accordion_item_g8w4wQ": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What does “Up to 70% Off” mean?",
+            "content": "“Up to 70% Off” refers to the highest possible discount available on select products during the Sale. Not all products will reach 70% off."
+          }
+        },
+        "accordion_item_aTG3Aq": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Can I combine discount codes with Sale prices?",
+            "content": "No. Sale discounts cannot be combined with promo codes, referral codes, loyalty rewards, point redemptions, or third-party offers unless Canadian Protein explicitly states otherwise."
+          }
+        },
+        "accordion_item_nW3Nnd": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Are subscriptions included in the Cyber Monday Sale?",
+            "content": "Yes.\n Eligible subscription products receive 35% off during the Sale.\n Some products may be excluded at Canadian Protein’s discretion.\n Subscription discounts cannot be stacked with other offers."
+          }
+        },
+        "accordion_item_yjjb7Y": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What free gifts can I receive during the Sale?",
+            "content": "While supplies last:\n<br>\nA Mystery Product is included with every order over $1.\n<br>\n\nA Free Electric Mixer is included with orders of $150+ (before taxes and after discounts).\n<br> Free gifts cannot be substituted, exchanged, or refunded."
+          }
+        },
+        "accordion_item_kpRB9U": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Are there any exclusions in this sale?",
+            "content": "Yes. exclusions include but are not limited to :\n<br>\n\n - Protein Coffee Original Blend\n<br>\nCanadian Protein reserves the right to modify this list any time without notice."
+          }
+        },
+        "accordion_item_74cqU4": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "How does the “Win Your Order Refunded” promotion work?",
+            "content": "During the Sale window:\n<br>\nEvery customer who places an order is automatically entered for a chance to win a refund.\n<br>\n\n - Canadian Protein will select 2 winners by random draw.\n<br>\n\n - Refund covers product value only, not shipping, taxes, or fees.\n<br>\n\n - Must be 18+ and a resident of Canada (excluding Quebec).\n<br>\n\n - Maximum refund amount is $350 CAD.\n<br>\n\n - Winners must respond within 7 days to claim their prize."
+          }
+        },
+        "accordion_item_PmBHC7": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "How do I enter the Meta Glasses Giveaway?",
+            "content": "Every order placed during the Sale counts as one automatic entry.\n One winner will receive Meta Glasses.\n The winner will be chosen by random draw and contacted by email."
+          }
+        },
+        "accordion_item_Wn4rgx": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What is the return policy for Sale items?",
+            "content": "Sale purchases follow Canadian Protein’s standard Return Policy, with the following notes:\n<br>\n - Refunds are based on the discounted price, not regular retail value.\n<br>\n\n - Free gifts cannot be returned for a refund.\n<br>\n\n - Short shelf-life items that are discounted are considered final sale, unless damaged upon arrival."
+          }
+        },
+        "accordion_item_mXh97p": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Should I expect delays with shipping?",
+            "content": "Yes.\n Due to high order volume during the Black Friday Cyber Monday Sale, shipping delays may occur.\n Customers in the United States may experience longer-than-usual delays."
+          }
+        }
+      },
+      "block_order": [
+        "title_KtAttM",
+        "accordion_item_T9cB3Q",
+        "accordion_item_g8w4wQ",
+        "accordion_item_aTG3Aq",
+        "accordion_item_nW3Nnd",
+        "accordion_item_yjjb7Y",
+        "accordion_item_kpRB9U",
+        "accordion_item_74cqU4",
+        "accordion_item_PmBHC7",
+        "accordion_item_Wn4rgx",
+        "accordion_item_mXh97p"
+      ],
+      "name": "t:sections.accordion.name",
+      "settings": {
+        "accordion_position": "start",
+        "accordion_icon": "1",
+        "open_first": false,
+        "enable_link_list": false,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 70,
+        "padding_rate": 75
+      }
+    },
+    "icon_with_text_LMTgLi": {
+      "type": "icon_with_text",
+      "settings": {
+        "color_scheme": "",
+        "text": "<p>Terms and Conditions for Promotions and Sales</p>",
+        "btn_label": "View Terms and Conditions",
+        "btn_link": "shopify://pages/bfcm-sale-terms-and-conditions",
+        "target": false,
+        "btn_size": "xs",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "btn_icon": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "marquee_RiRCfe",
+    "main",
+    "tab_variant_collections_C8dGLQ",
+    "categories_section_iieiPP",
+    "marquee_MEbekx",
+    "featured_collection_grid_FKBXPX",
+    "custom_section_4bqm7h",
+    "custom_liquid_D4LHax",
+    "accordion_JYiMAQ",
+    "icon_with_text_LMTgLi"
+  ]
+}

@@ -1,0 +1,709 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-collection",
+      "blocks": {
+        "6df762d7-beda-4452-bcf6-1242b294077c": {
+          "type": "description",
+          "settings": {
+            "description": "🇨🇦 Canada Day Sale 🇨🇦"
+          }
+        },
+        "9a1347b4-da62-490d-9fd4-427a03686ac2": {
+          "type": "heading",
+          "settings": {
+            "heading": "Up To 70% Off | Sitewide Sale"
+          }
+        }
+      },
+      "block_order": [
+        "6df762d7-beda-4452-bcf6-1242b294077c",
+        "9a1347b4-da62-490d-9fd4-427a03686ac2"
+      ],
+      "settings": {
+        "spacing_hd": 10,
+        "color_scheme": "",
+        "padding_top": 52,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "top_heading_CF4rBy": {
+      "type": "top-heading",
+      "blocks": {
+        "sub_heading_nxTzjd": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "<small>Some exclusions & discounts may apply.</small>",
+            "sub_heading_fs": "base"
+          }
+        }
+      },
+      "block_order": [
+        "sub_heading_nxTzjd"
+      ],
+      "name": "t:sections.section_title.name",
+      "settings": {
+        "spacing_item": 30,
+        "alignment": "center",
+        "alignment_mb": "center",
+        "fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "marquee_xcTg8g": {
+      "type": "marquee",
+      "blocks": {
+        "item_kaUPF7": {
+          "type": "item",
+          "settings": {
+            "text": "<p>2X Rewards Points</p>",
+            "icon_svg": "flash",
+            "custom_svg": "",
+            "icon_width": 10,
+            "icon_width_mb": 10
+          }
+        }
+      },
+      "block_order": [
+        "item_kaUPF7"
+      ],
+      "settings": {
+        "space_item": 30,
+        "speed": 0.1,
+        "direction": "rtl",
+        "marquee_pause_when_hover": false,
+        "text_fs": "base",
+        "text_fw": "normal",
+        "text_uppercase": false,
+        "adding_border": true,
+        "icon_position_between": true,
+        "color_scheme": "scheme-4",
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "padding_rate": 75
+      }
+    },
+    "image_gallery_kbpGeb": {
+      "type": "image-gallery",
+      "blocks": {
+        "gallery_item_bPteD9": {
+          "type": "gallery_item",
+          "settings": {
+            "image": "shopify://shop_images/up_to_70_off-cp-2025.png",
+            "item_link": "shopify://collections/canada-day-sale-2025-extra-40-off",
+            "product_item": ""
+          }
+        },
+        "gallery_item_yT6UKk": {
+          "type": "gallery_item",
+          "settings": {
+            "image": "shopify://shop_images/up_to_50_off-cp-2025.png",
+            "item_link": "shopify://collections/canada-day-sale-2025-extra-20-off",
+            "product_item": ""
+          }
+        },
+        "gallery_item_ecwRNf": {
+          "type": "gallery_item",
+          "settings": {
+            "image": "shopify://shop_images/30_off-cp-2025_b211b9b4-950f-4651-a525-46f0addddc93.png",
+            "item_link": "shopify://collections/canada-day-sale-2025-30-off",
+            "product_item": ""
+          }
+        },
+        "gallery_item_MJepyN": {
+          "type": "gallery_item",
+          "settings": {
+            "image": "shopify://shop_images/shop_all-cp-2025_c4a29389-2fb8-4304-91ba-65b62235e804.png",
+            "item_link": "#shopall",
+            "product_item": ""
+          }
+        }
+      },
+      "block_order": [
+        "gallery_item_bPteD9",
+        "gallery_item_yT6UKk",
+        "gallery_item_ecwRNf",
+        "gallery_item_MJepyN"
+      ],
+      "name": "t:sections.gallery.name",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 60,
+        "sec_heading_spacing": 100,
+        "image_ratio": "square",
+        "image_size": true,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "3",
+        "spacing_items": 10,
+        "navUI": false,
+        "nav_des": "default",
+        "dotUI": false,
+        "dots_pos": "outline",
+        "section_fullwidth": false,
+        "boxed_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 20,
+        "padding_rate": 75
+      }
+    },
+    "icon_box_bzhCti": {
+      "type": "icon-box",
+      "blocks": {
+        "item_MfCyeb": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "smile",
+            "custom_svg": "",
+            "image": "shopify://shop_images/039-badge.svg",
+            "icon_width": 60,
+            "icon_width_mb": 60,
+            "link": "",
+            "open_link": false,
+            "title": "Double Rewards Points",
+            "content": "<p>Get 2X the rewards points, stack them for more savings</p>",
+            "adding_border": false
+          }
+        },
+        "item_LTC37e": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "payment",
+            "custom_svg": "",
+            "image": "shopify://shop_images/009-mobile_banking.svg",
+            "icon_width": 60,
+            "icon_width_mb": 60,
+            "link": "",
+            "open_link": false,
+            "title": "Flexible Payments",
+            "content": "<p>Stock up and check out with Sezzle to pay in instalments</p>",
+            "adding_border": false
+          }
+        },
+        "item_m3BDf8": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "box",
+            "custom_svg": "",
+            "image": "shopify://shop_images/025-package.svg",
+            "icon_width": 60,
+            "icon_width_mb": 60,
+            "link": "",
+            "open_link": false,
+            "title": "Free Shipping on $99+",
+            "content": "<p>Spend $100+ and get FREE & FAST shipping anywhere in Canada!</p>",
+            "adding_border": false
+          }
+        }
+      },
+      "block_order": [
+        "item_MfCyeb",
+        "item_LTC37e",
+        "item_m3BDf8"
+      ],
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "",
+        "heading_tag": "h2",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "xl",
+        "heading_reverse": false,
+        "heading_gap": 60,
+        "sec_heading_spacing": 30,
+        "icon_pos_center": false,
+        "icon_pos_center_mb": true,
+        "icon_circle": false,
+        "space_icon_heading": "medium",
+        "size_heading": "medium",
+        "heading_uppercase": false,
+        "space_heading_content": "small",
+        "col_dk": "3",
+        "col_tb": "3",
+        "col_mb": "2",
+        "carousel_mobile": true,
+        "border_style": "2",
+        "fullwidth": true,
+        "boxed_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_aTEaWt": {
+      "type": "custom-line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 35,
+        "padding_rate": 75
+      }
+    },
+    "main_heading_CxWnwC": {
+      "type": "main-heading",
+      "blocks": {
+        "1_kWA6V3": {
+          "type": "1",
+          "settings": {
+            "heading": "Shop By Product",
+            "heading_size": "h4"
+          }
+        }
+      },
+      "block_order": [
+        "1_kWA6V3"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "spacing_hd": 5,
+        "padding_top": 52,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "categories_section_WybXU9": {
+      "type": "categories-section",
+      "blocks": {
+        "collection_item_M8bwAN": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "protein-powders",
+            "title": "Protein Powders",
+            "collection_link": "shopify://collections/protein-powders"
+          }
+        },
+        "collection_item_mVfQqJ": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "vegan",
+            "title": "Vegan Products",
+            "collection_link": "shopify://collections/vegan"
+          }
+        },
+        "collection_item_3jDXjf": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "creatine-supplements",
+            "title": "Creatine Products",
+            "collection_link": "shopify://collections/creatine-supplements"
+          }
+        },
+        "collection_item_6dG4ai": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "supplements",
+            "title": "Supplements",
+            "collection_link": "shopify://collections/supplements"
+          }
+        },
+        "collection_item_tXxF9V": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "apparel",
+            "title": "Apparel",
+            "collection_link": "shopify://collections/apparel"
+          }
+        },
+        "collection_item_GyeHUL": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "pre-workout-supplements",
+            "title": "Pre Workout Supplements",
+            "collection_link": "shopify://collections/pre-workout-supplements"
+          }
+        },
+        "collection_item_a7cmDa": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "vitamin-mineral-supplements",
+            "title": "Vitamins",
+            "collection_link": "shopify://collections/vitamin-mineral-supplements"
+          }
+        },
+        "collection_item_Yfk3yM": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "bulk-protein",
+            "title": "Bulk Proteins",
+            "collection_link": "shopify://collections/bulk-protein"
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_M8bwAN",
+        "collection_item_mVfQqJ",
+        "collection_item_3jDXjf",
+        "collection_item_6dG4ai",
+        "collection_item_tXxF9V",
+        "collection_item_GyeHUL",
+        "collection_item_a7cmDa",
+        "collection_item_Yfk3yM"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "style": "normal",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_rate": 50
+      }
+    },
+    "custom_line_y6VrFj": {
+      "type": "custom-line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 35,
+        "padding_rate": 75
+      }
+    },
+    "main_heading_GcYRnT": {
+      "type": "main-heading",
+      "blocks": {
+        "1_Y8znYL": {
+          "type": "1",
+          "settings": {
+            "heading": "Protein Deals",
+            "heading_size": "h4"
+          }
+        }
+      },
+      "block_order": [
+        "1_Y8znYL"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "spacing_hd": 5,
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "featured_collection_carousel_7rjWCm": {
+      "type": "featured-collection-carousel",
+      "name": "t:sections.collection_products.carousel_name",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "btn_heading": false,
+        "nav_heading": "disable",
+        "heading_gap": 18,
+        "sec_heading_spacing": 30,
+        "collection": "",
+        "product_list": [
+          "100-whey-protein-isolate",
+          "whey-protein-concentrate",
+          "all-natural-premium-vegan-protein-blend",
+          "grass-fed-new-zealand-whey-protein-concentrate",
+          "grass-fed-new-zealand-whey-protein-isolate",
+          "premium-whey-protein-isolate",
+          "premium-whey-protein-blend"
+        ],
+        "product_des": "1",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 8,
+        "col_dk": "6",
+        "col_tb": "4",
+        "col_mb": "2",
+        "half_item": false,
+        "navUI": false,
+        "nav_des": "default",
+        "nav_pos": "middle_in",
+        "dotUI": false,
+        "pagination_type": "none",
+        "paginate_pos": "center",
+        "dis_pagination": 30,
+        "btn_label": "View all",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "icon_with_text_dMcQeP": {
+      "type": "icon_with_text",
+      "settings": {
+        "color_scheme": "",
+        "text": "<h5>Discover more protein options 30% off</h5>",
+        "btn_label": "Shop All Proteins",
+        "btn_link": "shopify://collections/protein-powders",
+        "target": false,
+        "btn_size": "xl",
+        "btn_style": "outline",
+        "btn_fw": "normal",
+        "btn_icon": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_XQAMEg": {
+      "type": "custom-line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 35,
+        "padding_rate": 75
+      }
+    },
+    "main_heading_zJmDDJ": {
+      "type": "main-heading",
+      "blocks": {
+        "1_BGyAa9": {
+          "type": "1",
+          "settings": {
+            "heading": "Supplements Deals",
+            "heading_size": "h4"
+          }
+        }
+      },
+      "block_order": [
+        "1_BGyAa9"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "spacing_hd": 5,
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "featured_collection_carousel_j8b7Vt": {
+      "type": "featured-collection-carousel",
+      "name": "t:sections.collection_products.carousel_name",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "btn_heading": false,
+        "nav_heading": "disable",
+        "heading_gap": 18,
+        "sec_heading_spacing": 30,
+        "collection": "",
+        "product_list": [
+          "magnesium-glycinate",
+          "creatine-monohydrate",
+          "creapure",
+          "bcaa",
+          "l-glutamine",
+          "beta-alanine",
+          "omega-3",
+          "citrulline-malate",
+          "zma"
+        ],
+        "product_des": "1",
+        "image_ratio": "adapt_image",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 8,
+        "col_dk": "6",
+        "col_tb": "4",
+        "col_mb": "2",
+        "half_item": false,
+        "navUI": false,
+        "nav_des": "default",
+        "nav_pos": "middle_in",
+        "dotUI": false,
+        "pagination_type": "none",
+        "paginate_pos": "center",
+        "dis_pagination": 30,
+        "btn_label": "View all",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "icon_with_text_rndPDx": {
+      "type": "icon_with_text",
+      "settings": {
+        "color_scheme": "",
+        "text": "<h5>Discover more supplement options up to 50% off</h5>",
+        "btn_label": "Shop All Supplements",
+        "btn_link": "shopify://collections/supplements",
+        "target": false,
+        "btn_size": "xl",
+        "btn_style": "outline",
+        "btn_fw": "normal",
+        "btn_icon": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_Hx8wKY": {
+      "type": "custom-line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_rate": 75
+      }
+    },
+    "main_heading_9yN8PP": {
+      "type": "main-heading",
+      "blocks": {
+        "1_ihbQgE": {
+          "type": "1",
+          "settings": {
+            "heading": "Shop all",
+            "heading_size": "h4"
+          }
+        }
+      },
+      "block_order": [
+        "1_ihbQgE"
+      ],
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "",
+        "spacing_hd": 5,
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_n4TaAM": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"shopall\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "product_des": "1",
+        "image_ratio": "custom-pr",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 12,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "pagination_type": "links",
+        "paginate_pos": "center",
+        "dis_pagination": 60,
+        "enable_sorting": true,
+        "enable_filtering": false,
+        "enable_num_cols_selector": true,
+        "widget_heading": "Product categories",
+        "cat_source": "1",
+        "cat_link_list": "",
+        "count": true,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 30,
+        "padding_bottom": 70,
+        "padding_rate": 75,
+        "sidebar_position": "left",
+        "sidebar_size": "medium"
+      }
+    },
+    "icon_with_text_LMTgLi": {
+      "type": "icon_with_text",
+      "settings": {
+        "color_scheme": "",
+        "text": "<p>Terms and Conditions for Promotions and Sales</p>",
+        "btn_label": "View Terms and Conditions",
+        "btn_link": "shopify://pages/terms-and-conditions-for-promotions-and-sales",
+        "target": false,
+        "btn_size": "xs",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "btn_icon": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "top_heading_CF4rBy",
+    "marquee_xcTg8g",
+    "image_gallery_kbpGeb",
+    "icon_box_bzhCti",
+    "custom_line_aTEaWt",
+    "main_heading_CxWnwC",
+    "categories_section_WybXU9",
+    "custom_line_y6VrFj",
+    "main_heading_GcYRnT",
+    "featured_collection_carousel_7rjWCm",
+    "icon_with_text_dMcQeP",
+    "custom_line_XQAMEg",
+    "main_heading_zJmDDJ",
+    "featured_collection_carousel_j8b7Vt",
+    "icon_with_text_rndPDx",
+    "custom_line_Hx8wKY",
+    "main_heading_9yN8PP",
+    "custom_liquid_n4TaAM",
+    "main",
+    "icon_with_text_LMTgLi"
+  ]
+}

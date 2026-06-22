@@ -1,0 +1,30 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "pf-6e9ef193": {
+      "type": "pf-6e9ef193",
+      "settings": {
+        "pf_0806bf64_value": "Find the best deals on proteins +&nbsp;more",
+        "pf_aeaf64ea_value": "Tested for Athletes, Trusted by Athletes",
+        "pf_670446c1_value": "OFFICIAL PARTNER OF THE WINDSOR LANCERS",
+        "pf_692890e5_value": "Isolate, Concentrate, Vegan + more",
+        "pf_0d723cce_value": "Pre Workout, Vitamins + more",
+        "pf_f4f00806_value": "Budget-friendly",
+        "pf_ec59aeaf_value": "For Athletes",
+        "pf_fc370d72_value": "Supplements",
+        "pf_12066928_value": "Proteins"
+      }
+    }
+  },
+  "order": [
+    "pf-6e9ef193"
+  ]
+}

@@ -1,0 +1,66 @@
+{{ 'cp-homepage.css' | asset_url | stylesheet_tag }}
+
+{%- assign msg_blocks = section.blocks | where: 'type', 'message' -%}
+
+{%- if msg_blocks.size > 0 -%}
+<div class="cp-section cp-ann" id="cp-ann">
+  {%- for block in msg_blocks -%}
+    <div class="cp-ann-msg-item"{% unless forloop.first %} style="display:none"{% endunless %} {{ block.shopify_attributes }}>
+      {{- block.settings.text -}}
+    </div>
+  {%- endfor -%}
+  {%- if msg_blocks.size > 1 -%}
+    <div class="cp-ann-dots">
+      {%- for block in msg_blocks -%}
+        <button class="cp-ann-dot{% if forloop.first %} active{% endif %}" aria-label="Message {{ forloop.index }}"></button>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+</div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "CP Announcement Bar",
+  "max_blocks": 8,
+  "blocks": [
+    {
+      "type": "message",
+      "name": "Message",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "Message text",
+          "info": "Supports bold, italic, and inline links."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CP Announcement Bar",
+      "blocks": [
+        {
+          "type": "message",
+          "settings": {
+            "text": "Free shipping in Canada over <strong>$99</strong> · US over $149"
+          }
+        },
+        {
+          "type": "message",
+          "settings": {
+            "text": "<strong>NEW — Iso90:</strong> whey isolate fortified with collagen →"
+          }
+        },
+        {
+          "type": "message",
+          "settings": {
+            "text": "<strong>Stack &amp; Save:</strong> buy 2 save 10% · buy 3 save 15% · buy 4+ save 25%"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

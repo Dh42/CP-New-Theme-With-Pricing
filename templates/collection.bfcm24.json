@@ -1,0 +1,1198 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-collection",
+      "blocks": {
+        "9a1347b4-da62-490d-9fd4-427a03686ac2": {
+          "type": "heading",
+          "settings": {
+            "heading": "<b>BLACK FRIDAY</b> / CYBER MONDAY"
+          }
+        },
+        "6df762d7-beda-4452-bcf6-1242b294077c": {
+          "type": "description",
+          "settings": {
+            "description": "Up to 70% OFF | Some exclusions my apply.*"
+          }
+        }
+      },
+      "block_order": [
+        "9a1347b4-da62-490d-9fd4-427a03686ac2",
+        "6df762d7-beda-4452-bcf6-1242b294077c"
+      ],
+      "settings": {
+        "spacing_hd": 10,
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "marquee_xcTg8g": {
+      "type": "marquee",
+      "blocks": {
+        "item_kaUPF7": {
+          "type": "item",
+          "settings": {
+            "text": "<p>FREE SHAKER CUP ON ORDERS $150+</p>",
+            "icon_svg": "none",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        },
+        "item_hyYTBG": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "text": "<p>1-Day Only</p>",
+            "icon_svg": "none",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        }
+      },
+      "block_order": [
+        "item_kaUPF7",
+        "item_hyYTBG"
+      ],
+      "disabled": true,
+      "settings": {
+        "space_item": 30,
+        "speed": 0.3,
+        "direction": "rtl",
+        "marquee_pause_when_hover": false,
+        "text_fs": "h5",
+        "text_fw": "normal",
+        "text_uppercase": false,
+        "adding_border": true,
+        "icon_position_between": true,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "image_gallery_manual_tWM8Nz": {
+      "type": "image-gallery-manual",
+      "blocks": {
+        "gallery_item_Q66FMx": {
+          "type": "gallery_item",
+          "settings": {
+            "image": "shopify://shop_images/main_ecf7533e-a69f-4b4a-a4df-9c67b048e9a5.jpg",
+            "item_link": "#all_collection",
+            "product_item": ""
+          }
+        },
+        "gallery_item_3z6BFB": {
+          "type": "gallery_item",
+          "settings": {
+            "image": "shopify://shop_images/20.jpg",
+            "item_link": "shopify://collections/boxingday-20-off",
+            "product_item": ""
+          }
+        },
+        "gallery_item_pgxMQC": {
+          "type": "gallery_item",
+          "settings": {
+            "image": "shopify://shop_images/30_d1a1419d-95f9-42e8-879f-24b4cdae8e55.jpg",
+            "item_link": "shopify://collections/boxingday-30-off",
+            "product_item": ""
+          }
+        },
+        "gallery_item_zDKCLJ": {
+          "type": "gallery_item",
+          "settings": {
+            "image": "shopify://shop_images/40.jpg",
+            "item_link": "shopify://collections/boxingday-40-off",
+            "product_item": ""
+          }
+        },
+        "gallery_item_pXyfqz": {
+          "type": "gallery_item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/50_c3617f30-1ffa-4efb-805d-cf9f6b025aa1.jpg",
+            "item_link": "shopify://collections/creatine-supplements",
+            "product_item": ""
+          }
+        },
+        "gallery_item_EVNryn": {
+          "type": "gallery_item",
+          "settings": {
+            "image": "shopify://shop_images/70_ad8c3ff9-e994-46ba-bd70-6e95383d0164.jpg",
+            "item_link": "shopify://collections/boxingday-70-off",
+            "product_item": ""
+          }
+        },
+        "gallery_item_aBUCzg": {
+          "type": "gallery_item",
+          "settings": {
+            "image": "shopify://shop_images/LE.jpg",
+            "item_link": "shopify://collections/limited-edition-flavours",
+            "product_item": ""
+          }
+        }
+      },
+      "block_order": [
+        "gallery_item_Q66FMx",
+        "gallery_item_3z6BFB",
+        "gallery_item_pgxMQC",
+        "gallery_item_zDKCLJ",
+        "gallery_item_pXyfqz",
+        "gallery_item_EVNryn",
+        "gallery_item_aBUCzg"
+      ],
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 30,
+        "image_ratio": "square",
+        "image_size": true,
+        "row_height": 280,
+        "row_height_tb": 230,
+        "row_height_mb": 180,
+        "spacing_items": 10,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "icon_box_bzhCti": {
+      "type": "icon-box",
+      "blocks": {
+        "item_m3BDf8": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "box",
+            "custom_svg": "",
+            "icon_width": 30,
+            "icon_width_mb": 30,
+            "link": "",
+            "open_link": false,
+            "title": "Free Shaker Cup",
+            "content": "<p>Spend $150+ and get a FREE Canadian Protein Shaker Cup with your order | Colour may vary*</p>",
+            "adding_border": false
+          }
+        },
+        "item_LTC37e": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "payment",
+            "custom_svg": "",
+            "icon_width": 30,
+            "icon_width_mb": 30,
+            "link": "",
+            "open_link": false,
+            "title": "Flexible Payments",
+            "content": "<p>Check out with Sezzle and pay in instalments</p>",
+            "adding_border": false
+          }
+        },
+        "item_MfCyeb": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "smile",
+            "custom_svg": "",
+            "icon_width": 30,
+            "icon_width_mb": 30,
+            "link": "",
+            "open_link": false,
+            "title": "Double Rewards Points",
+            "content": "<p>Get 2X the rewards points, stack them for more savings</p>",
+            "adding_border": false
+          }
+        }
+      },
+      "block_order": [
+        "item_m3BDf8",
+        "item_LTC37e",
+        "item_MfCyeb"
+      ],
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "Black Friday Benefits*",
+        "heading_tag": "h2",
+        "heading_size": "h5",
+        "sec_subheading": "",
+        "subheading_size": "xl",
+        "heading_reverse": false,
+        "heading_gap": 29,
+        "sec_heading_spacing": 30,
+        "icon_pos_center": false,
+        "icon_pos_center_mb": true,
+        "icon_circle": false,
+        "space_icon_heading": "medium",
+        "size_heading": "medium",
+        "heading_uppercase": false,
+        "space_heading_content": "small",
+        "col_dk": "3",
+        "col_tb": "3",
+        "col_mb": "1",
+        "carousel_mobile": true,
+        "border_style": "none",
+        "fullwidth": true,
+        "boxed_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_gGhH7p": {
+      "type": "custom-line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 25,
+        "padding_rate": 75
+      }
+    },
+    "main_heading_kbTqAd": {
+      "type": "main-heading",
+      "blocks": {
+        "1_7rEnGd": {
+          "type": "1",
+          "settings": {
+            "heading": "Shop By Discount",
+            "heading_size": "h4"
+          }
+        }
+      },
+      "block_order": [
+        "1_7rEnGd"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "spacing_hd": 5,
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "categories_section_iieiPP": {
+      "type": "categories-section",
+      "blocks": {
+        "collection_item_tHirJe": {
+          "type": "collection_item",
+          "disabled": true,
+          "settings": {
+            "collection": "protein-powders",
+            "title": "Protein Powders",
+            "collection_link": "shopify://collections/protein-powders"
+          }
+        },
+        "collection_item_dDBatE": {
+          "type": "collection_item",
+          "disabled": true,
+          "settings": {
+            "collection": "whey-isolate",
+            "title": "B2GO Isolate",
+            "collection_link": "shopify://collections/bogo-isolate"
+          }
+        },
+        "collection_item_TKJfeA": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "supplements",
+            "image": "shopify://shop_images/20_off.jpg",
+            "title": "Shop Now",
+            "collection_link": ""
+          }
+        },
+        "collection_item_p3LjMx": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "vitamin-mineral-supplements",
+            "image": "shopify://shop_images/30_off.jpg",
+            "title": "Shop Now",
+            "collection_link": ""
+          }
+        },
+        "collection_item_RRnJcb": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "creatine-supplements",
+            "image": "shopify://shop_images/40_off.jpg",
+            "title": "Shop Now",
+            "collection_link": ""
+          }
+        },
+        "collection_item_WjUJD9": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "pre-workout-supplements",
+            "image": "shopify://shop_images/50_off2.jpg",
+            "title": "Shop Now",
+            "collection_link": ""
+          }
+        },
+        "collection_item_hYTnG9": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "weight-loss-supplements",
+            "image": "shopify://shop_images/Up_to_70_OFF.jpg",
+            "title": "SHOP NOW",
+            "collection_link": "shopify://collections/boxingday-70-off"
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_tHirJe",
+        "collection_item_dDBatE",
+        "collection_item_TKJfeA",
+        "collection_item_p3LjMx",
+        "collection_item_RRnJcb",
+        "collection_item_WjUJD9",
+        "collection_item_hYTnG9"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "style": "normal",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_rate": 50
+      }
+    },
+    "main_heading_CxWnwC": {
+      "type": "main-heading",
+      "blocks": {
+        "1_kWA6V3": {
+          "type": "1",
+          "settings": {
+            "heading": "Shop By Product",
+            "heading_size": "h4"
+          }
+        }
+      },
+      "block_order": [
+        "1_kWA6V3"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "spacing_hd": 5,
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "categories_section_WybXU9": {
+      "type": "categories-section",
+      "blocks": {
+        "collection_item_M8bwAN": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "protein-powders",
+            "title": "Protein Powders",
+            "collection_link": "shopify://collections/protein-powders"
+          }
+        },
+        "collection_item_3jDXjf": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "creatine-supplements",
+            "title": "Creatine Products",
+            "collection_link": "shopify://collections/creatine-supplements"
+          }
+        },
+        "collection_item_TxQm8w": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "vitamin-mineral-supplements",
+            "title": "Super Greens",
+            "collection_link": "shopify://products/super-greens"
+          }
+        },
+        "collection_item_6dG4ai": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "supplements",
+            "title": "Supplements",
+            "collection_link": "shopify://collections/supplements"
+          }
+        },
+        "collection_item_a7cmDa": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "vitamin-mineral-supplements",
+            "title": "Vitamins",
+            "collection_link": "shopify://collections/vitamin-mineral-supplements"
+          }
+        },
+        "collection_item_Yfk3yM": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "bulk-protein",
+            "title": "Bulk Proteins",
+            "collection_link": "shopify://collections/bulk-protein"
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_M8bwAN",
+        "collection_item_3jDXjf",
+        "collection_item_TxQm8w",
+        "collection_item_6dG4ai",
+        "collection_item_a7cmDa",
+        "collection_item_Yfk3yM"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "style": "normal",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_rate": 50
+      }
+    },
+    "custom_line_xMEByG": {
+      "type": "custom-line",
+      "disabled": true,
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 35,
+        "padding_rate": 75
+      }
+    },
+    "image_with_tabs_content_9hbpjb": {
+      "type": "image-with-tabs-content",
+      "blocks": {
+        "tab_item_iFTwVk": {
+          "type": "tab_item",
+          "settings": {
+            "title": "50% OFF",
+            "heading": "Creatine Monohydrate & Creatine Creapure",
+            "content_text": "TODAY ONLY: Stock up on Creatine Monohydrate & Creatine Monohydrate by Creapure with a massive 50% discount.",
+            "btn_label": "Shop Creatine",
+            "btn_link": "shopify://collections/creatine-supplements",
+            "target": true,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1"
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_iFTwVk"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "50% OFF Creatine Monohydrate",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "<p>Limited Time Offer Ends November 29th 11:59pm EST</p>",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 10,
+        "sec_heading_spacing": 49,
+        "main_img": "shopify://shop_images/military-image.png",
+        "image_pos": "left",
+        "image_ratio": "adapt_image",
+        "custom_height": 860,
+        "custom_height_tb": 300,
+        "custom_height_mb": 300,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_y6VrFj": {
+      "type": "custom-line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 35,
+        "padding_rate": 75
+      }
+    },
+    "main_heading_GcYRnT": {
+      "type": "main-heading",
+      "blocks": {
+        "1_Y8znYL": {
+          "type": "1",
+          "settings": {
+            "heading": "Protein Deals",
+            "heading_size": "h4"
+          }
+        }
+      },
+      "block_order": [
+        "1_Y8znYL"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "spacing_hd": 5,
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "banner_ErNDC3": {
+      "type": "banner",
+      "blocks": {
+        "banner_3_f3nPcM": {
+          "type": "banner_3",
+          "settings": {
+            "image": "shopify://shop_images/orange_creamV3.jpg",
+            "color_scheme": "scheme-f7d24f70-a894-4d32-8154-25607c658d3d",
+            "banner_url": "shopify://products/limited-edition-orange-creamsicle-whey-protein-concentrate",
+            "banner_target": false,
+            "sub_heading": "20% off",
+            "sub_heading_fs": "h3",
+            "sub_heading_fw": "bold",
+            "sub_heading_space": 12,
+            "heading": "Orange Creamsicle",
+            "heading_fs": "h4",
+            "heading_fw": "normal",
+            "heading_space": 18,
+            "desc": "Flavoured Whey Protein Concentrate",
+            "des_space": 28,
+            "btn_label": "Shop Whey Concentrate",
+            "btn_link": "shopify://products/limited-edition-orange-creamsicle-whey-protein-concentrate",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1",
+            "content_position": "end-start",
+            "alignment": "left",
+            "content_position_mb": "center",
+            "alignment_mb": "left"
+          }
+        },
+        "banner_3_tfhpwh": {
+          "type": "banner_3",
+          "settings": {
+            "image": "shopify://shop_images/brown_sugarV3.jpg",
+            "color_scheme": "scheme-f7d24f70-a894-4d32-8154-25607c658d3d",
+            "banner_url": "shopify://products/limited-edition-brown-sugar-bubble-tea-whey-protein-concentrate",
+            "banner_target": false,
+            "sub_heading": "20% off",
+            "sub_heading_fs": "h3",
+            "sub_heading_fw": "bold",
+            "sub_heading_space": 12,
+            "heading": "Brown Sugar Bubble Tea",
+            "heading_fs": "h4",
+            "heading_fw": "normal",
+            "heading_space": 18,
+            "desc": "Flavoured Whey Protein Concentrate",
+            "des_space": 28,
+            "btn_label": "Shop Whey Concentrate",
+            "btn_link": "shopify://products/limited-edition-brown-sugar-bubble-tea-whey-protein-concentrate",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1",
+            "content_position": "end-start",
+            "alignment": "left",
+            "content_position_mb": "center",
+            "alignment_mb": "left"
+          }
+        },
+        "banner_3_N4Efah": {
+          "type": "banner_3",
+          "settings": {
+            "image": "shopify://shop_images/isolatev4.jpg",
+            "color_scheme": "scheme-f7d24f70-a894-4d32-8154-25607c658d3d",
+            "banner_url": "",
+            "banner_target": false,
+            "sub_heading": "30% off",
+            "sub_heading_fs": "h3",
+            "sub_heading_fw": "bold",
+            "sub_heading_space": 12,
+            "heading": "Whey Isolate",
+            "heading_fs": "h4",
+            "heading_fw": "normal",
+            "heading_space": 18,
+            "desc": "All Whey Protein Isolate Products",
+            "des_space": 28,
+            "btn_label": "Shop Whey Isolate",
+            "btn_link": "shopify://collections/whey-isolate",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1",
+            "content_position": "end-start",
+            "alignment": "left",
+            "content_position_mb": "center",
+            "alignment_mb": "left"
+          }
+        },
+        "banner_3_Ld3X83": {
+          "type": "banner_3",
+          "settings": {
+            "image": "shopify://shop_images/veganv4.jpg",
+            "color_scheme": "scheme-f7d24f70-a894-4d32-8154-25607c658d3d",
+            "banner_url": "",
+            "banner_target": false,
+            "sub_heading": "40% off",
+            "sub_heading_fs": "h3",
+            "sub_heading_fw": "bold",
+            "sub_heading_space": 12,
+            "heading": "Select Vegan Proteins",
+            "heading_fs": "h4",
+            "heading_fw": "normal",
+            "heading_space": 18,
+            "desc": "Chocolate, Vanilla & Unflavoured",
+            "des_space": 28,
+            "btn_label": "Shop Vegan Proteins",
+            "btn_link": "shopify://products/all-natural-premium-vegan-protein-blend",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1",
+            "content_position": "end-start",
+            "alignment": "left",
+            "content_position_mb": "center",
+            "alignment_mb": "left"
+          }
+        },
+        "banner_3_d9HBnf": {
+          "type": "banner_3",
+          "settings": {
+            "image": "shopify://shop_images/bulkv4.jpg",
+            "color_scheme": "scheme-f7d24f70-a894-4d32-8154-25607c658d3d",
+            "banner_url": "",
+            "banner_target": false,
+            "sub_heading": "30% off",
+            "sub_heading_fs": "h3",
+            "sub_heading_fw": "bold",
+            "sub_heading_space": 12,
+            "heading": "Select Bulk Proteins",
+            "heading_fs": "h4",
+            "heading_fw": "normal",
+            "heading_space": 18,
+            "desc": "Stock up on select bulk proteins for extra savings",
+            "des_space": 28,
+            "btn_label": "Shop Bulk Proteins",
+            "btn_link": "shopify://collections/bulk-protein",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1",
+            "content_position": "end-start",
+            "alignment": "left",
+            "content_position_mb": "center",
+            "alignment_mb": "left"
+          }
+        },
+        "banner_3_c8z3W8": {
+          "type": "banner_3",
+          "settings": {
+            "image": "shopify://shop_images/v4.jpg",
+            "color_scheme": "scheme-f7d24f70-a894-4d32-8154-25607c658d3d",
+            "banner_url": "",
+            "banner_target": false,
+            "sub_heading": "20% off",
+            "sub_heading_fs": "h3",
+            "sub_heading_fw": "bold",
+            "sub_heading_space": 12,
+            "heading": "Whey Concentrate",
+            "heading_fs": "h4",
+            "heading_fw": "normal",
+            "heading_space": 18,
+            "desc": "Choose from over a dozen flavours",
+            "des_space": 28,
+            "btn_label": "Shop Whey Concentrate",
+            "btn_link": "shopify://collections/whey-concentrate",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1",
+            "content_position": "end-start",
+            "alignment": "left",
+            "content_position_mb": "center",
+            "alignment_mb": "left"
+          }
+        }
+      },
+      "block_order": [
+        "banner_3_f3nPcM",
+        "banner_3_tfhpwh",
+        "banner_3_N4Efah",
+        "banner_3_Ld3X83",
+        "banner_3_d9HBnf",
+        "banner_3_c8z3W8"
+      ],
+      "settings": {
+        "full_width": false,
+        "boxed_fullwidth": true,
+        "col_dk": "3",
+        "row_height": 500,
+        "content_pd_y": 35,
+        "content_pd_x": 35,
+        "space_item": 30,
+        "col_tb": "3",
+        "row_height_tb": 500,
+        "space_item_tb": 30,
+        "row_height_mb": 300,
+        "space_item_mb": 10,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_rate": 75
+      }
+    },
+    "icon_with_text_dMcQeP": {
+      "type": "icon_with_text",
+      "settings": {
+        "color_scheme": "",
+        "text": "<h2>Discover more protein options, up to 40% off</h2>",
+        "btn_label": "Shop All Proteins",
+        "btn_link": "shopify://collections/protein-powders",
+        "target": false,
+        "btn_size": "xl",
+        "btn_style": "outline",
+        "btn_fw": "bold",
+        "btn_icon": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_XQAMEg": {
+      "type": "custom-line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 35,
+        "padding_rate": 75
+      }
+    },
+    "main_heading_zJmDDJ": {
+      "type": "main-heading",
+      "blocks": {
+        "1_BGyAa9": {
+          "type": "1",
+          "settings": {
+            "heading": "Supplements Deals",
+            "heading_size": "h4"
+          }
+        }
+      },
+      "block_order": [
+        "1_BGyAa9"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "spacing_hd": 5,
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "banner_apfAzV": {
+      "type": "banner",
+      "blocks": {
+        "banner_3_gexm9x": {
+          "type": "banner_3",
+          "settings": {
+            "image": "shopify://shop_images/pineapple_strawberry_greensV4.jpg",
+            "color_scheme": "scheme-f7d24f70-a894-4d32-8154-25607c658d3d",
+            "banner_url": "https://canadianprotein.com/products/coming-soon-limited-edition-pineapple-strawberry-super-greens-powder?variant=43321245958191",
+            "banner_target": false,
+            "sub_heading": "30% OFF",
+            "sub_heading_fs": "h3",
+            "sub_heading_fw": "bold",
+            "sub_heading_space": 12,
+            "heading": "Pineapple Strawberry",
+            "heading_fs": "h4",
+            "heading_fw": "normal",
+            "heading_space": 18,
+            "desc": "Flavoured Super Greens - <b>NEW</b>",
+            "des_space": 28,
+            "btn_label": "Shop Super Greens",
+            "btn_link": "https://canadianprotein.com/products/coming-soon-limited-edition-pineapple-strawberry-super-greens-powder?variant=43321245958191",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1",
+            "content_position": "end-start",
+            "alignment": "left",
+            "content_position_mb": "center",
+            "alignment_mb": "left"
+          }
+        },
+        "banner_3_89bPDU": {
+          "type": "banner_3",
+          "settings": {
+            "image": "shopify://shop_images/strawberry_daquariV4.jpg",
+            "color_scheme": "scheme-f7d24f70-a894-4d32-8154-25607c658d3d",
+            "banner_url": "https://canadianprotein.com/products/limited-edition-strawberry-daiquiri-super-greens-powder?variant=43321241960495",
+            "banner_target": false,
+            "sub_heading": "30% OFF",
+            "sub_heading_fs": "h3",
+            "sub_heading_fw": "bold",
+            "sub_heading_space": 12,
+            "heading": "Strawberry Daiquiri",
+            "heading_fs": "h4",
+            "heading_fw": "normal",
+            "heading_space": 18,
+            "desc": "Flavoured Super Greens - <b>NEW</b>",
+            "des_space": 28,
+            "btn_label": "Shop Super Greens",
+            "btn_link": "https://canadianprotein.com/products/limited-edition-strawberry-daiquiri-super-greens-powder?variant=43321241960495",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1",
+            "content_position": "end-start",
+            "alignment": "left",
+            "content_position_mb": "center",
+            "alignment_mb": "left"
+          }
+        },
+        "banner_3_4hTG4L": {
+          "type": "banner_3",
+          "settings": {
+            "image": "shopify://shop_images/super_greensV4.jpg",
+            "color_scheme": "scheme-f7d24f70-a894-4d32-8154-25607c658d3d",
+            "banner_url": "shopify://products/super-greens",
+            "banner_target": false,
+            "sub_heading": "30% OFF",
+            "sub_heading_fs": "h3",
+            "sub_heading_fw": "bold",
+            "sub_heading_space": 12,
+            "heading": "Super Greens",
+            "heading_fs": "h4",
+            "heading_fw": "normal",
+            "heading_space": 18,
+            "desc": "Choose from 4 flavours | <b>2-NEW FLAVOURS*</b>",
+            "des_space": 28,
+            "btn_label": "Shop Super Greens",
+            "btn_link": "shopify://products/super-greens",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1",
+            "content_position": "end-start",
+            "alignment": "left",
+            "content_position_mb": "center",
+            "alignment_mb": "left"
+          }
+        },
+        "banner_3_7VeWD4": {
+          "type": "banner_3",
+          "settings": {
+            "image": "shopify://shop_images/creatineV4.jpg",
+            "color_scheme": "scheme-f7d24f70-a894-4d32-8154-25607c658d3d",
+            "banner_url": "shopify://collections/creatine-supplements",
+            "banner_target": false,
+            "sub_heading": "40% OFF",
+            "sub_heading_fs": "h3",
+            "sub_heading_fw": "bold",
+            "sub_heading_space": 12,
+            "heading": "Creatine / Creapure",
+            "heading_fs": "h4",
+            "heading_fw": "normal",
+            "heading_space": 18,
+            "desc": "Choose from Creatine Monohydrate or Creapure",
+            "des_space": 28,
+            "btn_label": "Shop Creatine",
+            "btn_link": "shopify://collections/creatine-supplements",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1",
+            "content_position": "end-start",
+            "alignment": "left",
+            "content_position_mb": "center",
+            "alignment_mb": "left"
+          }
+        },
+        "banner_3_K8DgQA": {
+          "type": "banner_3",
+          "settings": {
+            "image": "shopify://shop_images/bcaasV4.jpg",
+            "color_scheme": "scheme-f7d24f70-a894-4d32-8154-25607c658d3d",
+            "banner_url": "shopify://collections/amino-acid-supplements",
+            "banner_target": false,
+            "sub_heading": "30% OFF",
+            "sub_heading_fs": "h3",
+            "sub_heading_fw": "bold",
+            "sub_heading_space": 12,
+            "heading": "BCAAs",
+            "heading_fs": "h4",
+            "heading_fw": "normal",
+            "heading_space": 18,
+            "desc": "Choose from 7 delicious flavours",
+            "des_space": 28,
+            "btn_label": "Shop BCAAs",
+            "btn_link": "shopify://collections/amino-acid-supplements",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1",
+            "content_position": "end-start",
+            "alignment": "left",
+            "content_position_mb": "center",
+            "alignment_mb": "left"
+          }
+        },
+        "banner_3_A3bkxf": {
+          "type": "banner_3",
+          "settings": {
+            "image": "shopify://shop_images/supermenV4.jpg",
+            "color_scheme": "scheme-f7d24f70-a894-4d32-8154-25607c658d3d",
+            "banner_url": "shopify://products/super-men-multivitamin",
+            "banner_target": false,
+            "sub_heading": "30% OFF",
+            "sub_heading_fs": "h3",
+            "sub_heading_fw": "bold",
+            "sub_heading_space": 12,
+            "heading": "Super-Men Multivitamin",
+            "heading_fs": "h4",
+            "heading_fw": "normal",
+            "heading_space": 18,
+            "desc": "All essential vitamins in one capsule",
+            "des_space": 28,
+            "btn_label": "Shop Super-Men Multivitamin",
+            "btn_link": "shopify://products/super-men-multivitamin",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1",
+            "content_position": "end-start",
+            "alignment": "left",
+            "content_position_mb": "center",
+            "alignment_mb": "left"
+          }
+        }
+      },
+      "block_order": [
+        "banner_3_gexm9x",
+        "banner_3_89bPDU",
+        "banner_3_4hTG4L",
+        "banner_3_7VeWD4",
+        "banner_3_K8DgQA",
+        "banner_3_A3bkxf"
+      ],
+      "settings": {
+        "full_width": false,
+        "boxed_fullwidth": false,
+        "col_dk": "3",
+        "row_height": 500,
+        "content_pd_y": 35,
+        "content_pd_x": 35,
+        "space_item": 30,
+        "col_tb": "3",
+        "row_height_tb": 500,
+        "space_item_tb": 30,
+        "row_height_mb": 300,
+        "space_item_mb": 10,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_rate": 75
+      }
+    },
+    "icon_with_text_rndPDx": {
+      "type": "icon_with_text",
+      "settings": {
+        "color_scheme": "",
+        "text": "<h2>Discover more supplement options, up to 40% off</h2>",
+        "btn_label": "Shop All Supplements",
+        "btn_link": "shopify://collections/supplements",
+        "target": false,
+        "btn_size": "xl",
+        "btn_style": "outline",
+        "btn_fw": "bold",
+        "btn_icon": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_pyDTCh": {
+      "type": "custom-line",
+      "disabled": true,
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 35,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_Hx8wKY": {
+      "type": "custom-line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_rate": 75
+      }
+    },
+    "main_heading_9yN8PP": {
+      "type": "main-heading",
+      "blocks": {
+        "1_ihbQgE": {
+          "type": "1",
+          "settings": {
+            "heading": "Shop all",
+            "heading_size": "h4"
+          }
+        }
+      },
+      "block_order": [
+        "1_ihbQgE"
+      ],
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "",
+        "spacing_hd": 5,
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_D4LHax": {
+      "type": "custom-liquid",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<p id=\"all_collection\"></p>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_rate": 75
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "product_des": "1",
+        "image_ratio": "custom-pr",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 12,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "pagination_type": "links",
+        "paginate_pos": "center",
+        "dis_pagination": 60,
+        "enable_sorting": true,
+        "enable_filtering": false,
+        "enable_num_cols_selector": true,
+        "widget_heading": "Product categories",
+        "cat_source": "1",
+        "cat_link_list": "",
+        "count": true,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 30,
+        "padding_bottom": 70,
+        "padding_rate": 75,
+        "sidebar_position": "left",
+        "sidebar_size": "medium"
+      }
+    },
+    "icon_with_text_LMTgLi": {
+      "type": "icon_with_text",
+      "settings": {
+        "color_scheme": "",
+        "text": "<p>Terms and Conditions for Promotions and Sales</p>",
+        "btn_label": "View Terms and Conditions",
+        "btn_link": "shopify://pages/terms-and-conditions-for-promotions-and-sales",
+        "target": false,
+        "btn_size": "xs",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "btn_icon": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "marquee_xcTg8g",
+    "image_gallery_manual_tWM8Nz",
+    "icon_box_bzhCti",
+    "custom_line_gGhH7p",
+    "main_heading_kbTqAd",
+    "categories_section_iieiPP",
+    "main_heading_CxWnwC",
+    "categories_section_WybXU9",
+    "custom_line_xMEByG",
+    "image_with_tabs_content_9hbpjb",
+    "custom_line_y6VrFj",
+    "main_heading_GcYRnT",
+    "banner_ErNDC3",
+    "icon_with_text_dMcQeP",
+    "custom_line_XQAMEg",
+    "main_heading_zJmDDJ",
+    "banner_apfAzV",
+    "icon_with_text_rndPDx",
+    "custom_line_pyDTCh",
+    "custom_line_Hx8wKY",
+    "main_heading_9yN8PP",
+    "custom_liquid_D4LHax",
+    "main",
+    "icon_with_text_LMTgLi"
+  ]
+}

@@ -1,0 +1,269 @@
+<!doctype html>
+  {%- liquid
+    assign iso_code  = request.locale.iso_code
+    assign config_rtl  = settings.right_to_left | default: 'enable-with-list'
+    assign isRTL = false
+    assign dir = 'ltr'
+    if config_rtl == 'enable-with-list'
+      assign iso_code_ck = iso_code | split: '-' | first | append: ';' | prepend: ';'
+      assign lis_rtl = ';ae;ar;arc;bqi;ckb;dv;fa;glk;ha;he;kwh;ks;ku;mzn;nqo;pnb;ps;sd;ug;ur;yi;'
+      if lis_rtl contains iso_code_ck
+        assign isRTL = true
+        assign dir = 'rtl'
+      endif
+    elsif config_rtl == 'enable'
+      assign isRTL = true
+      assign dir = 'rtl'
+    endif
+  -%}
+<html class="no-js hdt-pr-img__effect-{{ settings.effect_secondary_image }} hdt-badge__shape-{{ settings.badge_shape }} dir--{{ dir }}{% if request.design_mode %} shopify-design-mode{% endif %}{% if settings.minimal_products %} hdt-minimal-products{% endif %}{% if settings.hidden_badges %} hdt-hidden-pr-badges{% endif %}{% if settings.hidden_quickview %} hdt-hidden-products-quickview{% endif %}{% if settings.hidden_wishlist %} hdt-hidden-products-wishlist{% endif %}{% if settings.hidden_compare %} hdt-hidden-products-compare{% endif %}{% if settings.uppercase_title %} hdt-pr-uppercase_title{% endif %}" lang="{{ request.locale.iso_code }}" dir="{{ dir }}">
+  <head>
+  {% include 'shop-sheriff-amp' %}
+    {%- unless template == 'product.only_config' and request.design_mode == false -%}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+      <link rel="apple-touch-icon" href="{{ settings.favicon | image_url: width: 48, height: 48 }}">
+    {%- endif -%}
+    {%- if settings.library_font == "shopify" -%}
+      {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
+        <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+      {%- endunless -%}
+    {%- endif -%}
+
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; {{ 'general.meta.tag' | t }} "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; {{ 'general.meta.page' | t }} {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    {%- if page_description %}<meta name="description" content="{{ page_description | escape }}">{% endif %}
+
+    {%- liquid
+      render 'social-meta-tags'
+      render 'js-head'
+      render 'css-variables', isRTL: isRTL
+      echo 'theme.css' | asset_url | stylesheet_tag
+      if request.page_type == "policy"
+      echo 'hdt-policy.css' | asset_url | stylesheet_tag
+      endif
+    -%}
+    {{ content_for_header }}
+    <script>
+      (function(){
+        var params = new URLSearchParams(location.search);
+        var HEX = /^#[0-9a-fA-F]{3,6}$/;
+        function cpSetVar(param, cookie, prop) {
+          var v = params.get(param);
+          if (v && HEX.test(v)) {
+            document.cookie = cookie + '=' + encodeURIComponent(v) + ';max-age=604800;path=/;SameSite=Lax';
+          } else {
+            var m = document.cookie.match(new RegExp('(?:^|;\\s*)' + cookie + '=([^;]+)'));
+            if (m) v = decodeURIComponent(m[1]);
+          }
+          if (v && HEX.test(v)) document.documentElement.style.setProperty(prop, v);
+        }
+        cpSetVar('accent', 'cp_accent', '--cp-brand-accent');
+        cpSetVar('cta',    'cp_cta',    '--cp-brand-cta');
+      })();
+    </script>
+    {%- if template.name == 'collection' -%}
+      <style>
+        /* Hide native product grid before first paint so Globo's async render
+           doesn't flash the un-filtered server-side products. Revealed by
+           cp-category.js once Globo fires its first render event, or after an
+           800 ms safety timeout on pages that use the native grid. */
+        .hdt-collection-products { opacity: 0; transition: opacity 0.2s ease; }
+        .cp-grid-ready .hdt-collection-products { opacity: 1; }
+      </style>
+    {%- endif -%}
+    {%- endunless -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "WebSite",
+    "url": "{{ shop.url }}",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "{{ shop.url }}/search?resources%5Blimit_scope%5D=each&q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "{{ shop.name }}",
+  "image": "https://cdn.shopify.com/s/files/1/0249/3241/7583/files/Canadian_Protein_Logo.svg?v=1721935245",
+  "url": "{{ shop.url }}",
+  "logo": "https://cdn.shopify.com/s/files/1/0249/3241/7583/files/Canadian_Protein_Logo.svg?v=1721935245",
+  "description": "Canadian Protein is a leading company specializing in high-quality sports nutrition products.",
+  "telephone": "+1 647-493-3727",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "13455 Sylvestre Drive",
+    "addressLocality": "Windsor",
+    "addressRegion": "ON",
+    "postalCode": "N9K 0C2",
+    "addressCountry": "CA"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "09:00",
+    "closes": "15:00"
+  },
+  "priceRange": "$$",
+  "sameAs": [
+    "https://www.facebook.com/CanadianProtein/",
+    "https://x.com/CanadianProtein",
+    "https://www.instagram.com/canadianprotein",
+    "https://www.tiktok.com/@canadianprotein"
+  ]
+}
+</script>
+
+    
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "k1vznlcpbn");
+</script>
+  {% include 'pagefly-app-header' %}</head>
+
+  <body class="hdt-page-type-{{ request.page_type }}{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %} template-{{ template.name }}">
+    {%- unless template == 'product.only_config' and request.design_mode == false -%}{%- sections 'header-group' -%}{%- endunless -%}
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {%- if request.page_type == "policy" -%}
+        {%- section 'main-heading' -%}
+      {%- endif -%}
+      {{ content_for_layout }}
+    </main>
+
+    {%- unless template == 'product.only_config' and request.design_mode == false -%}
+    {%- sections 'footer-group' -%}
+    {%- if request.page_type == "index" or request.page_type == "policy" -%}
+    <h1 class="hdt-hidden">{{ page_title | default: shop.name }}</h1>
+    {%- endif -%}
+    {%- render 's-dom-temp' -%}
+    <a class="skip-to-content-link button sr-only" href="#MainContent">
+      {{ 'accessibility.skip_to_text' | t }}
+    </a>
+
+    {%- liquid
+      sections 'system-group'
+      if settings.enable_compare_popup
+        render 'compare-offcanvas'
+      endif
+      # theme-check-disable NestedSnippet
+      render 'system-bottom'
+      # theme-check-enable NestedSnippet
+      render 'structured-data'
+    -%}
+    {%- endunless -%}
+
+  <!-- Eesel AI Chat Widget -->
+  <style>
+    /* Base font size for the eesel widget — overrides inherited 10px root size (0.875rem = 8.75px) */
+    .eesel-widget-v2 {
+      font-size: 14px !important;
+    }
+    /* Hide eesel's built-in launcher on mobile — controlled by our toolbar Chat button instead */
+    @media (max-width: 1149px) {
+      #eesel-widget-launcher,
+      [id^="eesel"] iframe[title*="launcher" i],
+      [id^="eesel"] > div:first-child {
+        display: none !important;
+      }
+      /* Position the chat panel above the mobile toolbar (67px tall) */
+      #eesel-widget-container > div:last-child,
+      [id^="eesel"] iframe:not([title*="launcher" i]) {
+        bottom: 77px !important;
+        right: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: 0 !important;
+      }
+    }
+    .prose-sm {font-size:1.4rem!important}
+  </style>
+  <script>
+    window.__EESEL_CUSTOM_ERROR='Sorry, I\'m unable to answer that. Try rephrasing your question or reach out to support.';
+    window.__EESEL_WIDGET_V2_CONFIG__={
+      EESEL_NAMESPACE:'ed35d7f6-9332-4ae3-aef9-3ea39a1c98ac',
+      EESEL_BOT_NAME:'Canadian Protein Support',
+      EESEL_WELCOME_MSG:'Hi there! 👋 I\'m here to help with orders, products, subscriptions, and more. What can I help you with?',
+      EESEL_LOGO_URL:'https://support.canadianprotein.com/hc/theming_assets/01HZPJYG33PDBTKMXY304N7F2Y',
+      EESEL_COLOR_PALETTE:{primary:'#000000'},
+      EESEL_DEFAULT_OPEN:false,
+      EESEL_SUGGEST_QUESTION:true,
+      EESEL_HIDE_BRANDING:true,
+      EESEL_AUTOMATIC_SUGGESTED_QUESTION:true,
+      EESEL_SUGGESTED_QUESTIONS:['Where\'s my order?','How do I manage my subscription?','What is your return and refund policy'],
+      EESEL_CONNECTION_ID:'6171d3a1-aede-4d31-af75-ca34f9226bbd',
+      EESEL_AUTO_TRANSLATE_ENABLED:true
+    };
+    function loadEesel() {
+      if (window._eeselLoaded) return;
+      window._eeselLoaded = true;
+      var e = document.createElement('script');
+      e.src = 'https://cdn.eesel.ai/EeselWidgetV2.0b2e1cc069.js';
+      document.body.appendChild(e);
+    }
+    ['scroll', 'click', 'touchstart', 'keydown'].forEach(function(ev) {
+      window.addEventListener(ev, loadEesel, { once: true, passive: true });
+    });
+
+    // Toggle eesel widget open/close from the mobile toolbar Chat button
+    function cpToggleEesel() {
+      // Try the official API first, fall back to clicking the hidden launcher button
+      if (window.EeselWidget && typeof window.EeselWidget.toggle === 'function') {
+        window.EeselWidget.toggle();
+      } else if (window.Eesel && typeof window.Eesel.toggle === 'function') {
+        window.Eesel.toggle();
+      } else {
+        // Find and click eesel's own launcher button (works even when visually hidden)
+        var launcher = document.querySelector('[id^="eesel"] button, #eesel-widget-launcher button, #eesel-widget-launcher');
+        if (launcher) launcher.click();
+      }
+    }
+  </script>
+    {%- capture productTemplate -%}{% render 'globo.filter.product', themeTranslation: shop.metafields.globoFilter.themeTranslation.value[request.locale.iso_code] %}{%- endcapture -%}{%- unless productTemplate contains 'Liquid error' -%}<script id="gspfProduct" type="template/html">{{- productTemplate | replace: "script>", "scripttag>" -}}</script>{%- endunless -%}
+    {%- comment -%}
+      Load CP card assets on all collection pages.
+      globo.filter.product uses cp-category.css/js globally.
+      The cp-collection template already loads everything via cp-overlays,
+      so only render the drawer on other collection templates.
+    {%- endcomment -%}
+    {%- if template.name == 'collection' -%}
+      {{ 'cp-category.css' | asset_url | stylesheet_tag }}
+      {{ 'cp-category.js'  | asset_url | script_tag }}
+      {{ 'cp-homepage.js'  | asset_url | script_tag }}
+      {%- for col_prod in collection.products -%}
+        {%- render 'cp-qa-data', product: col_prod -%}
+      {%- endfor -%}
+      {%- if template.suffix != blank and template.suffix != 'cp-collection' -%}
+        <span class="junip-store-key" data-store-key="{{ shop.metafields.junip.store_key }}" style="display:none"></span>
+        {%- render 'cp-quick-add-drawer' -%}
+      {%- endif -%}
+    {%- endif -%}
+  </body>
+</html>

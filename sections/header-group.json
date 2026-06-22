@@ -1,0 +1,176 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "cp_announcement_bar_HQrgqf": {
+      "type": "cp-announcement-bar",
+      "name": "CP Announcement Bar",
+      "settings": {
+        "ship_threshold": 99
+      }
+    },
+    "top": {
+      "type": "top-bar",
+      "blocks": {
+        "liquid_WDNncm": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "",
+            "hide": true
+          }
+        },
+        "text_4Y37eK": {
+          "type": "text",
+          "settings": {
+            "text1": "Free Shipping in Canada over $99 and US over $149",
+            "text2": "",
+            "text3": "",
+            "adding_border": true,
+            "au_time": 3.5,
+            "pause_when_hover": false,
+            "hide": false
+          }
+        },
+        "cur_JYbLE6": {
+          "type": "cur",
+          "settings": {
+            "html": "",
+            "show_currency": true,
+            "show_language": false,
+            "hide": true
+          }
+        }
+      },
+      "block_order": [
+        "liquid_WDNncm",
+        "text_4Y37eK",
+        "cur_JYbLE6"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "scheme-f7d24f70-a894-4d32-8154-25607c658d3d",
+        "show_line_separator": true,
+        "fullwidth": true
+      }
+    },
+    "9b10b379-41cf-46f0-aad5-17298b1f2795": {
+      "type": "header-inline",
+      "blocks": {
+        "2c1ddb9c-38e1-45c1-b21d-0684c4e4f177": {
+          "type": "html",
+          "settings": {
+            "title": "Home",
+            "html": "",
+            "page": "demos-short",
+            "mega_menu_colors": "",
+            "mega_position": "default",
+            "mega_width": "full",
+            "mega_custom_width": 1200
+          }
+        },
+        "eafd7f45-2a3c-4901-be8c-f2c2b743e290": {
+          "type": "mega_shop",
+          "settings": {
+            "title": "Shop",
+            "collection_list": [
+              "high-technology",
+              "headphone"
+            ],
+            "image_ratio": "square",
+            "image_size": true,
+            "mega_menu_colors": "scheme-2",
+            "mega_position": "center_on_screen",
+            "mega_width": "full",
+            "mega_custom_width": 1200
+          }
+        },
+        "9780d2e2-2a92-4800-a602-ebd753f5f041": {
+          "type": "mega_product",
+          "settings": {
+            "title": "Products",
+            "product_list_title": "BEST SELLER",
+            "product_list": [
+              "ecomus20-bape®",
+              "ier-m7-hi-res-studio-monitor-in-ear-headphones",
+              "inzone-h9-wireless-noise-canceling-gaming-headset",
+              "linkbuds-s-truly-wireless-noise-canceling-earbuds"
+            ],
+            "image_ratio": "square",
+            "image_size": true,
+            "mega_menu_colors": "scheme-2",
+            "mega_position": "default",
+            "mega_width": "full",
+            "mega_custom_width": 1450
+          }
+        },
+        "02d8190a-5229-4e9d-8905-20891b375a4d": {
+          "type": "mega_page",
+          "settings": {
+            "title": "Pages",
+            "mega_menu_colors": "",
+            "mega_position": "default",
+            "mega_width": "custom",
+            "mega_custom_width": 910
+          }
+        }
+      },
+      "block_order": [
+        "2c1ddb9c-38e1-45c1-b21d-0684c4e4f177",
+        "eafd7f45-2a3c-4901-be8c-f2c2b743e290",
+        "9780d2e2-2a92-4800-a602-ebd753f5f041",
+        "02d8190a-5229-4e9d-8905-20891b375a4d"
+      ],
+      "custom_css": [
+        ".hdt-count-box {color: #fff; background-color: #000;}"
+      ],
+      "settings": {
+        "header_layout": "logo_left",
+        "header_fullwidth": false,
+        "header_height": 88,
+        "logo": "shopify://shop_images/Canadian_Protein_-_Logo_-_Horizontal.svg",
+        "logo_width": 200,
+        "header_colors": "",
+        "main_menu": "newthemetop",
+        "lazy_mn": true,
+        "menu_position": "center",
+        "menu_size": "lg",
+        "menu_weight": "medium",
+        "text_transform": false,
+        "dropdown_arrow": true,
+        "active_link": false,
+        "spacing_nav": 30,
+        "open_event": "hover",
+        "header_menu_colors": "",
+        "enabled_user": true,
+        "enabled_compare": false,
+        "enabled_wishlist": false,
+        "header_height_mb": 60,
+        "logo_width_mb": 160,
+        "main_menu_mobile": "newthemetop",
+        "lazy_mn_mb": true,
+        "only_click_icon": true,
+        "header_mobile_colors": "",
+        "note_mobile": "<span class=\"hdt-inline-flex hdt-text-base hdt-font-medium\" style=\"color: rgb(var(--color-foreground));border-bottom: solid 1px rgb(var(--color-foreground));margin-bottom: 11px;\"><a href=\"https://support.canadianprotein.com/hc/en-us\">Need help ?</a></span><span class=\"hdt-flex hdt-flex-col hdt-text-base hdt-font-normal\" style=\"line-height: 24px;\"><span>Address: 13455 Sylvestre Dr.,<br> Windsor, ON,  </span><span>Email: <b><a href=\"mailto:support@canadianprotein.com\">support@canadianprotein.com </a></b></span>",
+        "header_transparent": false,
+        "header_transparent_colors": "",
+        "sticky_type": "on_scroll_up",
+        "sticky_glass": false
+      }
+    }
+  },
+  "order": [
+    "cp_announcement_bar_HQrgqf",
+    "top",
+    "9b10b379-41cf-46f0-aad5-17298b1f2795"
+  ]
+}

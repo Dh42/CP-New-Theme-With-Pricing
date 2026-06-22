@@ -1,0 +1,368 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_image_FP7Ya8": {
+      "type": "hero-image",
+      "blocks": {
+        "heading_zPER3t": {
+          "type": "heading",
+          "settings": {
+            "heading": "Super Greens, Super Clean",
+            "heading_fs": "h3",
+            "heading_fw": "normal"
+          }
+        },
+        "text_yTVRE3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Flavour-packed. Canadian-made. No fluff. Trusted by Canadians since 2011.</p>",
+            "adding_border": false
+          }
+        },
+        "button_ydW4mq": {
+          "type": "button",
+          "settings": {
+            "btn_label": "Shop now",
+            "btn_link": "#shopall",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1"
+          }
+        },
+        "button_f8hf47": {
+          "type": "button",
+          "settings": {
+            "btn_label": "Learn More",
+            "btn_link": "#learnmore",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zPER3t",
+        "text_yTVRE3",
+        "button_ydW4mq",
+        "button_f8hf47"
+      ],
+      "name": "t:sections.hero-image.name",
+      "settings": {
+        "image_height": "fixed",
+        "fixed_height": 600,
+        "image_height_mb": "fixed",
+        "fixed_height_mb": 560,
+        "image": "shopify://shop_images/Super-Greens-Banner-desktopv4.jpg",
+        "image_mb": "shopify://shop_images/Super-Greens-Banner-mobilev2.jpg",
+        "link_img": "#shopall",
+        "target": false,
+        "image_behavior": "none",
+        "use_overlay": false,
+        "use_bg_content": false,
+        "content_position": "center",
+        "content_align": "center",
+        "content_position_mb": "center",
+        "content_align_mb": "center",
+        "full_width": true,
+        "boxed_fullwidth": false,
+        "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "icon_box_jLgg3D": {
+      "type": "icon-box",
+      "blocks": {
+        "item_BhQHXt": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "box",
+            "custom_svg": "",
+            "image": "shopify://shop_images/8679710_leaf_fill_icon_8b0af7ee-d86f-43bf-a61d-ad9f9a8f4008.svg",
+            "icon_width": 40,
+            "icon_width_mb": 45,
+            "link": "",
+            "open_link": false,
+            "title": "Straightforward Ingredients",
+            "content": "<p>No hidden blends here. Every superfood, herb, and antioxidant is clearly listed with real amounts — no guesswork.</p>",
+            "adding_border": false
+          }
+        },
+        "item_EErCtR": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "payment",
+            "custom_svg": "",
+            "image": "shopify://shop_images/8666136_canadian_maple_leaf_icon_7a3f25f7-b254-4ec5-9c9c-5c98c6caf767.svg",
+            "icon_width": 50,
+            "icon_width_mb": 45,
+            "link": "",
+            "open_link": false,
+            "title": "Made in Canada, Eh.",
+            "content": "<p>Crafted under Canada’s strict quality standards, not mass-produced like some trending U.S. brands.</p>",
+            "adding_border": false
+          }
+        },
+        "item_7H8bhi": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "support",
+            "custom_svg": "",
+            "image": "shopify://shop_images/6030781_bump_conflict_fight_fighting_fist_icon_7fd6203d-30d4-4096-846a-728785b42fb8.svg",
+            "icon_width": 60,
+            "icon_width_mb": 60,
+            "link": "",
+            "open_link": false,
+            "title": "No Fluff. Just Function.",
+            "content": "<p>No overpromising. Just a clean, nutrient-dense greens formula that gets the job done.</p>",
+            "adding_border": false
+          }
+        },
+        "item_NpaEjE": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "return",
+            "custom_svg": "",
+            "image": "shopify://shop_images/11931763_benefits_dollar_plant_money_business_icon_dbae3495-1379-4dcb-810f-1472d3ac1cdc.svg",
+            "icon_width": 60,
+            "icon_width_mb": 60,
+            "link": "",
+            "open_link": false,
+            "title": "Cost-Effective Nutrition",
+            "content": "<p>Premium greens without the premium price tag. We keep packaging simple to cut costs and pass the savings on to you — no gimmicks, just quality.</p>",
+            "adding_border": false
+          }
+        }
+      },
+      "block_order": [
+        "item_BhQHXt",
+        "item_EErCtR",
+        "item_7H8bhi",
+        "item_NpaEjE"
+      ],
+      "name": "t:sections.icon-box.name",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 15,
+        "sec_heading_spacing": 87,
+        "icon_pos_center": false,
+        "icon_pos_center_mb": true,
+        "icon_circle": false,
+        "space_icon_heading": "medium",
+        "size_heading": "medium",
+        "heading_uppercase": false,
+        "space_heading_content": "small",
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "1",
+        "carousel_mobile": true,
+        "border_style": "none",
+        "fullwidth": true,
+        "boxed_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_Cqyx4U": {
+      "type": "custom-line",
+      "name": "Custom line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 1,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_UmFYYQ": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"learnmore\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "pagefly_section_qkqKqK": {
+      "type": "pagefly-section",
+      "name": "PageFly Section",
+      "settings": {
+        "section_id": "pf-e524f98d"
+      }
+    },
+    "image_with_tabs_content_FiRtYU": {
+      "type": "image-with-tabs-content",
+      "blocks": {
+        "tab_item_r4a8mA": {
+          "type": "tab_item",
+          "settings": {
+            "title": "",
+            "heading": "Why Canadian Protein Super Greens?",
+            "content_text": "Because clean nutrition shouldn’t cost a fortune. We’ve stripped away the hype, the overpriced packaging, and the hidden blends — and focused on what matters: high-quality, plant-based ingredients that support real wellness goals like energy, digestion, and recovery.",
+            "btn_label": "Shop now",
+            "btn_link": "",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1"
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_r4a8mA"
+      ],
+      "name": "t:sections.image_with_tabs.name",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 18,
+        "sec_heading_spacing": 30,
+        "main_img": "shopify://shop_images/Super-Greens---Canadian-Proteinv2.jpg",
+        "image_pos": "left",
+        "image_ratio": "adapt_image",
+        "custom_height": 1000,
+        "custom_height_tb": 300,
+        "custom_height_mb": 300,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_J77yPE": {
+      "type": "custom-line",
+      "name": "Custom line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 1,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "heading": {
+      "type": "heading-collection",
+      "blocks": {
+        "9a1347b4-da62-490d-9fd4-427a03686ac2": {
+          "type": "heading",
+          "settings": {
+            "heading": ""
+          }
+        },
+        "6df762d7-beda-4452-bcf6-1242b294077c": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "9a1347b4-da62-490d-9fd4-427a03686ac2",
+        "6df762d7-beda-4452-bcf6-1242b294077c"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacing_hd": 10,
+        "color_scheme": "",
+        "padding_top": 65,
+        "padding_bottom": 65,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_WxnnLj": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"shopall\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "product_des": "1",
+        "image_ratio": "custom-pr",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 12,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "pagination_type": "links",
+        "paginate_pos": "center",
+        "dis_pagination": 60,
+        "enable_sorting": true,
+        "enable_filtering": false,
+        "enable_num_cols_selector": true,
+        "widget_heading": "Product categories",
+        "cat_source": "1",
+        "cat_link_list": "",
+        "count": true,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 30,
+        "padding_bottom": 70,
+        "padding_rate": 75,
+        "sidebar_position": "left",
+        "sidebar_size": "medium"
+      }
+    }
+  },
+  "order": [
+    "hero_image_FP7Ya8",
+    "icon_box_jLgg3D",
+    "custom_line_Cqyx4U",
+    "custom_liquid_UmFYYQ",
+    "pagefly_section_qkqKqK",
+    "image_with_tabs_content_FiRtYU",
+    "custom_line_J77yPE",
+    "heading",
+    "custom_liquid_WxnnLj",
+    "main"
+  ]
+}

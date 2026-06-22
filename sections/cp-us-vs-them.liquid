@@ -1,0 +1,321 @@
+<style>
+  .cp-uvt {
+    background: #EEECEA;
+    padding: 72px 20px;
+    font-family: 'Albert Sans', sans-serif;
+  }
+  .cp-uvt__inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .cp-uvt__eyebrow {
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #999;
+    margin: 0 0 10px;
+  }
+  .cp-uvt__heading {
+    text-align: center;
+    font-size: clamp(34px, 5vw, 48px);
+    font-weight: 700;
+    color: #1A1A18;
+    margin: 0 0 40px;
+    line-height: 1.1;
+  }
+  .cp-uvt__heading em {
+    font-style: italic;
+    color: {{ section.settings.highlight_color }};
+  }
+  .cp-uvt__table {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  }
+  .cp-uvt__row {
+    display: grid;
+    grid-template-columns: 1fr 200px 200px;
+    border-bottom: 1px solid #f2f1ef;
+  }
+  .cp-uvt__row:last-child {
+    border-bottom: none;
+  }
+  .cp-uvt__cell {
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #1A1A18;
+    font-weight: 500;
+  }
+  .cp-uvt__cell--us {
+    background: #ddf0f5;
+    justify-content: center;
+  }
+  .cp-uvt__cell--them {
+    justify-content: center;
+  }
+  .cp-uvt__cell--head {
+    padding: 22px 24px;
+    font-size: 13px;
+    color: #777;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+  }
+  .cp-uvt__cell--head.cp-uvt__cell--us {
+    color: #1A1A18;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .cp-uvt__cell--head img {
+    max-height: 44px;
+    width: auto;
+    display: block;
+  }
+  .cp-uvt__icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+  }
+  .cp-uvt__disclaimer {
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    margin: 20px 0 0;
+    line-height: 1.6;
+  }
+  @media (max-width: 640px) {
+    .cp-uvt__row {
+      grid-template-columns: 1fr 90px 90px;
+    }
+    .cp-uvt__cell {
+      padding: 14px 10px;
+      font-size: 13px;
+    }
+    .cp-uvt__cell--head {
+      padding: 16px 10px;
+    }
+    .cp-uvt__icon {
+      width: 22px;
+      height: 22px;
+    }
+  }
+</style>
+
+<section class="cp-uvt" {{ section.shopify_attributes }}>
+  <div class="cp-uvt__inner">
+
+    {%- if section.settings.eyebrow != blank -%}
+      <p class="cp-uvt__eyebrow">{{ section.settings.eyebrow }}</p>
+    {%- endif -%}
+
+    <h2 class="cp-uvt__heading">
+      <em>{{ section.settings.heading_highlight }}</em> {{ section.settings.heading_plain }}
+    </h2>
+
+    <div class="cp-uvt__table">
+
+      {%- comment -%} Header row {%- endcomment -%}
+      <div class="cp-uvt__row">
+        <div class="cp-uvt__cell cp-uvt__cell--feature cp-uvt__cell--head"></div>
+        <div class="cp-uvt__cell cp-uvt__cell--us cp-uvt__cell--head">
+          {%- if section.settings.col2_logo != blank -%}
+            {{ section.settings.col2_logo | image_url: width: 120 | image_tag: loading: 'lazy', alt: section.settings.col2_label }}
+          {%- else -%}
+            {{ section.settings.col2_label }}
+          {%- endif -%}
+        </div>
+        <div class="cp-uvt__cell cp-uvt__cell--them cp-uvt__cell--head">
+          {{ section.settings.col3_label }}
+        </div>
+      </div>
+
+      {%- for block in section.blocks -%}
+        <div class="cp-uvt__row" {{ block.shopify_attributes }}>
+          <div class="cp-uvt__cell cp-uvt__cell--feature">{{ block.settings.feature }}</div>
+          <div class="cp-uvt__cell cp-uvt__cell--us">
+            {%- if block.settings.us_has -%}
+              <svg class="cp-uvt__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="12" fill="#22c55e"/>
+                <path d="M7 12.5l3.5 3.5L17 9" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            {%- else -%}
+              <svg class="cp-uvt__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="11" stroke="#ccc" stroke-width="1.5"/>
+                <path d="M8.5 8.5l7 7M15.5 8.5l-7 7" stroke="#bbb" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            {%- endif -%}
+          </div>
+          <div class="cp-uvt__cell cp-uvt__cell--them">
+            {%- if block.settings.them_has -%}
+              <svg class="cp-uvt__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="12" fill="#22c55e"/>
+                <path d="M7 12.5l3.5 3.5L17 9" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            {%- else -%}
+              <svg class="cp-uvt__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="11" stroke="#ccc" stroke-width="1.5"/>
+                <path d="M8.5 8.5l7 7M15.5 8.5l-7 7" stroke="#bbb" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+
+    </div>
+
+    {%- if section.settings.disclaimer != blank -%}
+      <p class="cp-uvt__disclaimer">{{ section.settings.disclaimer }}</p>
+    {%- endif -%}
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Us vs Them",
+  "tag": "div",
+  "class": "cp-section-us-vs-them",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow label",
+      "default": "THE DIFFERENCE"
+    },
+    {
+      "type": "text",
+      "id": "heading_highlight",
+      "label": "Heading — highlighted word",
+      "default": "Us"
+    },
+    {
+      "type": "text",
+      "id": "heading_plain",
+      "label": "Heading — plain part",
+      "default": "vs Them"
+    },
+    {
+      "type": "color",
+      "id": "highlight_color",
+      "label": "Heading highlight colour",
+      "default": "#5BC4D9"
+    },
+    {
+      "type": "image_picker",
+      "id": "col2_logo",
+      "label": "Our brand logo (column 2 header)"
+    },
+    {
+      "type": "text",
+      "id": "col2_label",
+      "label": "Our brand label (shown if no logo)",
+      "default": "Canadian Protein"
+    },
+    {
+      "type": "text",
+      "id": "col3_label",
+      "label": "Competitor column label",
+      "default": "Other Brands"
+    },
+    {
+      "type": "textarea",
+      "id": "disclaimer",
+      "label": "Disclaimer text",
+      "default": "Based on publicly listed product specifications and ingredient panels of leading whey protein brands."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Comparison row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "feature",
+          "label": "Feature name",
+          "default": "Feature"
+        },
+        {
+          "type": "checkbox",
+          "id": "us_has",
+          "label": "We have this",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "them_has",
+          "label": "They have this",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Us vs Them",
+      "blocks": [
+        {
+          "type": "row",
+          "settings": {
+            "feature": "100% Whey Protein",
+            "us_has": true,
+            "them_has": true
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "feature": "Batch-Tested for Safety",
+            "us_has": true,
+            "them_has": false
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "feature": "No Artificial Fillers",
+            "us_has": true,
+            "them_has": false
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "feature": "Made in Canada",
+            "us_has": true,
+            "them_has": false
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "feature": "Mixes Smooth, No Clumps",
+            "us_has": true,
+            "them_has": false
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "feature": "Transparent Lab Results",
+            "us_has": true,
+            "them_has": false
+          }
+        },
+        {
+          "type": "row",
+          "settings": {
+            "feature": "No Aftertaste",
+            "us_has": true,
+            "them_has": false
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

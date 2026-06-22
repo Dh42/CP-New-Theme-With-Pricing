@@ -1,0 +1,133 @@
+{%- comment -%}
+  VARIANT CARD — based on card-product1
+  Shows:
+  - Variant image
+  - Variant flavour (option1)
+  - Variant size (option2)
+  - Variant price
+  - Links to product URL with variant preselected (?variant=ID)
+{%- endcomment -%}
+
+{%- liquid
+  assign card_product = product
+  assign v = variant
+
+  unless product_url
+    assign product_url = card_product.url | append: '?variant=' | append: v.id
+  endunless
+
+  assign featured_media = v.featured_media | default: v.image | default: card_product.featured_media | default: settings.placeholder_img
+
+  assign flavour_text = v.option1
+  assign size_text = v.option2
+-%}
+
+<hdt-card-product class="hdt-card-product {{ class }}{% if v.available == false %} hdt-pr-sold_out{% endif %}">
+
+  <script>
+    setTimeout(function() {
+      {% for group in shop.metafields.dhpromo_groups %}
+        {% for prod in group[1].value.products %}
+          {% assign theID = prod.id | plus: 0 %}
+          {% if theID == card_product.id %}
+            var startDate = parseInt({{ group[1].value.startDate }} / 1000)
+            var endDate   = parseInt({{ group[1].value.endDate }} / 1000)
+            var timestamp = "{{ 'now' | date: "%s"}}";
+
+            if(timestamp > startDate && timestamp < endDate)
+            {
+              if("{{ group[1].value.bottomtext }}") {
+                $("*[data-pid='{{ card_product.id }}'] .hdt-card-product__media")
+                  .append('<p id="specialdiscount" class="specialdiscountgrid"><b style="padding-left:5px;font-variant:uppercase">{{ group[1].value.toptext }}</b><br><b>{{ group[1].value.bottomtext }}</b></p>');
+              } else {
+                $("*[data-pid='{{ card_product.id }}'] .hdt-card-product__media")
+                  .append('<p id="specialdiscount" class="specialdiscountgrid"><img src="{{ "tag_icon.svg" | asset_url }}"/><b style="padding-left:5px;font-variant:uppercase">{{ group[1].value.toptext }}</b><br>USE CODE: <b>{{ group[1].value.code }}</b></p>');
+              }
+            }
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    }, 2000)
+  </script>
+
+  <div class="hdt-card-product__wrapper" data-pid="{{ card_product.id }}">
+    <div class="hdt-card-product__media hdt-relative hdt-oh">
+
+      {% for tag in card_product.tags %}
+        {% if tag contains 'coupon-' %}
+          <div class="product-label bogo-label">{{ tag | replace: 'coupon-', '' }}</div>
+        {% endif %}
+      {% endfor %}
+
+      {%- if featured_media -%}
+        <a data-pr-url
+           href="{{ product_url }}"
+           data-instant
+           class="hdt-card-product__media-wrapp hdt-ratio"
+           {% if image_ratio == 'adapt_image' and featured_media.aspect_ratio %}
+             style="--aspect-ratioapt: {{ featured_media.aspect_ratio }}"
+           {% endif %}>
+
+          {%- assign img_width = featured_media.width | default: 1200 -%}
+          {{ featured_media
+            | image_url: width: img_width
+            | image_tag:
+                loading: 'lazy',
+                sizes: sizes,
+                widths: '165, 360, 533, 668, 720, 940, 1066, 1200, 1450',
+                class: 'hdt-card-product__media--main'
+          }}
+        </a>
+      {%- endif -%}
+
+      {%- render 'badges', product: card_product, use_variant: false -%}
+
+    </div>
+
+    <div class="hdt-card-product__info hdt-card-align-{{ settings.pr_card_alignment }}">
+
+      {%- if settings.show_rating -%}
+        {% render 'hdt-pr-card-rating', product: card_product %}
+      {%- endif -%}
+
+      {%- if card_product.vendor.size > 0 and show_vendor -%}
+        {% render 'vendor' with card_product.vendor, class: 'hdt-inline-block hdt-text-base hdt-font-normal' %}
+      {%- endif %}
+
+      <a data-pr-url
+         href="{{ product_url }}"
+         class="hdt-card-product__title hdt-text-{{ settings.pr_title_size }} hdt-font-{{ settings.pr_title_weight }} hdt-line-clamp"
+         data-instant>
+        {{ card_product.title | escape }}
+      </a>
+
+      <div class="hdt-text-sm hdt-font-normal hdt-mt-1 hdt-line-clamp">
+        {%- if flavour_text != blank -%}
+          <span>{{ flavour_text }}</span>
+        {%- endif -%}
+        {%- if size_text != blank -%}
+          <span> / {{ size_text }}</span>
+        {%- endif -%}
+      </div>
+
+      <span
+        class="stamped-product-reviews-badge"
+        data-id="{{ card_product.id }}"
+        data-product-sku="{{ card_product.handle }}"
+        data-product-type="{{ card_product.type }}"
+        data-product-title="{{ card_product.title }}"
+        style="display:block;">
+      </span>
+
+      <div class="hdt-card-product__price hdt-text-base hdt-font-semibold hdt-mt-1">
+        {%- if v.compare_at_price > v.price -%}
+          <span class="hdt-price hdt-price--sale">{{ v.price | money }}</span>
+          <span class="hdt-price hdt-price--compare hdt-ml-1">{{ v.compare_at_price | money }}</span>
+        {%- else -%}
+          <span class="hdt-price">{{ v.price | money }}</span>
+        {%- endif %}
+      </div>
+
+    </div>
+  </div>
+</hdt-card-product>

@@ -1,0 +1,26 @@
+{{ 'cp-homepage.css' | asset_url | stylesheet_tag }}
+
+<div class="cp-shop-bar" id="cp-shop-bar" aria-hidden="true">
+  <div class="cp-wrap cp-shop-bar__inner">
+    <div class="cp-shop-bar__text">
+      <div>Canada's #1 whey protein</div>
+      <div class="cp-shop-bar__sub">4.6★ · 21,000+ reviews · Free ship $99+</div>
+    </div>
+    <a href="{{ section.settings.cta_link | default: '/collections/best-selling-collection' }}"
+       class="cp-btn-primary cp-shop-bar__cta"
+       style="font-size:13px;padding:9px 18px">
+      {{ section.settings.cta_label | default: 'Shop Now' }}
+    </a>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CP Mobile Shop Bar",
+  "settings": [
+    { "type": "text", "id": "cta_label", "label": "CTA label", "default": "Shop Now" },
+    { "type": "url",  "id": "cta_link",  "label": "CTA link" }
+  ],
+  "presets": [{ "name": "CP Mobile Shop Bar" }]
+}
+{% endschema %}
