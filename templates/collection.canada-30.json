@@ -15,8 +15,8 @@
         "parent_PEqULp": {
           "type": "parent",
           "settings": {
-            "column_lg": "hdt-col-lg-6",
-            "column_md": "hdt-col-md-6",
+            "column_lg": "hdt-col-lg-12",
+            "column_md": "hdt-col-md-12",
             "column": "hdt-col-12",
             "color_scheme": "scheme-1",
             "padding_top": 0,
@@ -41,7 +41,7 @@
             "heading": "🇨🇦 Canada Day Sale 🇨🇦",
             "tag": "h2",
             "heading_size": "h2",
-            "alignment": "start"
+            "alignment": "center"
           }
         },
         "spacer_qXKRmH": {
@@ -57,8 +57,8 @@
           "settings": {
             "text": "<h2>30% off proteins & supplements </h2>",
             "text_size": "base",
-            "alignment": "start",
-            "alignment_mb": "start"
+            "alignment": "center",
+            "alignment_mb": "center"
           }
         },
         "spacer_axWfRL": {
@@ -79,7 +79,7 @@
             "btn_style": "solid",
             "btn_fw": "normal",
             "btn_icon": "none",
-            "alignment": "start"
+            "alignment": "center"
           }
         }
       },
