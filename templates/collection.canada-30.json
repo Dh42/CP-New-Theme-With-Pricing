@@ -590,6 +590,13 @@
             "title": "I signed up for Early Access — where are my rewards points?",
             "content": "Points may take a short time to appear in your account. If they haven't shown up after 24 hours, please contact Canadian Protein customer support."
           }
+        },
+        "accordion_item_Md6JYm": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "My discount isn't showing at checkout — what should I do?",
+            "content": "Make sure you're shopping for eligible products (bulk products are excluded). If the discount still isn't appearing, try refreshing your cart or contact Canadian Protein customer support for help."
+          }
         }
       },
       "block_order": [
@@ -600,7 +607,8 @@
         "accordion_item_anYHhY",
         "accordion_item_QcmfXb",
         "accordion_item_yXDAPE",
-        "accordion_item_NAxYRT"
+        "accordion_item_NAxYRT",
+        "accordion_item_Md6JYm"
       ],
       "name": "t:sections.accordion.name",
       "settings": {
