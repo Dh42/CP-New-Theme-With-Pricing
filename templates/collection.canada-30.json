@@ -35,6 +35,22 @@
             "space": 10
           }
         },
+        "spacer_rBPDnA": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 50,
+            "space_md": 50,
+            "space": 50
+          }
+        },
+        "spacer_DpC77e": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 50,
+            "space_md": 50,
+            "space": 50
+          }
+        },
         "heading_iVj3m9": {
           "type": "heading",
           "settings": {
@@ -86,6 +102,8 @@
       "block_order": [
         "parent_PEqULp",
         "spacer_wnaC6a",
+        "spacer_rBPDnA",
+        "spacer_DpC77e",
         "heading_iVj3m9",
         "spacer_qXKRmH",
         "text_FrjNWt",
