@@ -179,7 +179,12 @@
       document.querySelectorAll('.hdt-product__price, .cp-mobile-price').forEach(function (container) {
         var priceEl   = container.querySelector('hdt-price');
         var compareEl = container.querySelector('hdt-compare-at-price');
-        if (priceEl) delete priceEl.dataset.cpSaleOverride;
+        if (priceEl) {
+          delete priceEl.dataset.cpSaleOverride;
+          // Actively write the correct price so no stale discounted value lingers
+          var moneyEl = priceEl.querySelector('.hdt-money');
+          if (moneyEl && data.originalFormatted) moneyEl.textContent = data.originalFormatted;
+        }
         if (compareEl && compareEl.dataset.cpSaleOverride) {
           compareEl.setAttribute('hidden', '');
           delete compareEl.dataset.cpSaleOverride;
@@ -226,10 +231,14 @@
     initRc();
   });
 
+  // Scope the change listener to the hidden variant ID input only — not quantity
+  // fields, subscription selectors, or other form elements — to avoid firing
+  // with a stale variant ID before the picker has updated the hidden input.
   document.addEventListener('change', function (e) {
+    if (e.target.name !== 'id') return;
     var form = e.target.closest && e.target.closest('form[action^="/cart/add"]');
     if (!form) return;
-    var id = currentVariantId();
+    var id = e.target.value;
     if (!id) return;
     var vData = variantData[String(id)];
     window[saleFlag] = !!(vData && vData.salePercent > 0);
