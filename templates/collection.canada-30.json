@@ -569,6 +569,13 @@
             "title": "Do I need a discount code?",
             "content": "No. All Sale discounts are applied automatically at checkout. You do not need to enter a code."
           }
+        },
+        "accordion_item_QcmfXb": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Are there any products excluded from the Sale?",
+            "content": "Yes. Bulk protein in 6kg and 10kg sizes does not qualify for Sale pricing and is excluded from all discounts. Some other exclusions may apply and will be noted on the product page."
+          }
         }
       },
       "block_order": [
@@ -576,7 +583,8 @@
         "accordion_item_JyAcMi",
         "accordion_item_aqRHxt",
         "accordion_item_HYtk9r",
-        "accordion_item_anYHhY"
+        "accordion_item_anYHhY",
+        "accordion_item_QcmfXb"
       ],
       "name": "t:sections.accordion.name",
       "settings": {
