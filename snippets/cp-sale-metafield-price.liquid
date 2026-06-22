@@ -106,6 +106,46 @@
     if (moneyEl) moneyEl.textContent = currentData.originalFormatted;
   }
 
+  // ── ReCharge one-time price ──────────────────────────────────────────────
+  // The widget uses an open shadow root, so we can reach inside with shadowRoot.
+  // We observe the onetime container (not the span itself) because Lit may
+  // re-render the span's content node on variant change.
+
+  function getRcWidget() {
+    var w = document.querySelector('recharge-subscription-widget');
+    return (w && w.shadowRoot) ? w : null;
+  }
+
+  function applyRcDiscount(discountedFormatted) {
+    var widget = getRcWidget();
+    if (!widget) return;
+    var onetimeEl = widget.shadowRoot.querySelector('.rc-purchase-option__onetime');
+    if (!onetimeEl) return;
+    var priceEl = onetimeEl.querySelector('[part="rc-purchase-option__price"]');
+    if (priceEl) priceEl.textContent = discountedFormatted;
+  }
+
+  function watchRcEl(discountedFormatted) {
+    var widget = getRcWidget();
+    if (!widget) return;
+    var onetimeEl = widget.shadowRoot.querySelector('.rc-purchase-option__onetime');
+    if (!onetimeEl) return;
+
+    var obs = new MutationObserver(function () {
+      if (!currentData || currentData.salePercent <= 0) return;
+      var priceEl = onetimeEl.querySelector('[part="rc-purchase-option__price"]');
+      if (!priceEl || priceEl.textContent.trim() === currentData.discountedFormatted) return;
+      obs.disconnect();
+      priceEl.textContent = currentData.discountedFormatted;
+      setTimeout(function () {
+        obs.observe(onetimeEl, { childList: true, subtree: true, characterData: true });
+      }, 0);
+    });
+    obs.observe(onetimeEl, { childList: true, subtree: true, characterData: true });
+    activeObservers.push(obs);
+  }
+  // ────────────────────────────────────────────────────────────────────────
+
   function applyDiscount(variantId) {
     disconnectAll();
 
@@ -145,6 +185,10 @@
       watchPriceEl(priceEl, compareEl);
       if (compareEl) watchCompareEl(compareEl);
     });
+
+    // Update the ReCharge one-time purchase price
+    applyRcDiscount(data.discountedFormatted);
+    watchRcEl(data.discountedFormatted);
   }
 
   function currentVariantId() {
