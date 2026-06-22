@@ -59,6 +59,22 @@
   unless un_no_pick
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price_min
   endunless
+  if use_variant and target
+    assign cp_sale_pct = target.metafields.custom.sale_percentage | plus: 0
+    if cp_sale_pct > 0
+      assign cp_remaining_pct = 100 | minus: cp_sale_pct
+      assign compare_at_price = price
+      assign price = price | times: cp_remaining_pct | divided_by: 100
+      assign on_sale = true
+      if settings.currency_code_enabled
+        assign money_price = price | money_with_currency
+        assign money_compare_at_price = compare_at_price | money_with_currency
+      else
+        assign money_price = price | money
+        assign money_compare_at_price = compare_at_price | money
+      endif
+    endif
+  endif
 -%}
 
 <div class="hdt-price-wrapp {{ price_class }}{% if show_badges %} hdt-price--show-badge{% endif %}">

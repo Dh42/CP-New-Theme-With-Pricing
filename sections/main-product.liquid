@@ -1522,6 +1522,8 @@
         }
 
         function updateMainPrice(data) {
+            // Don't override when the sale metafield discount is active
+            if (window['cpSaleActive_{{ product.id }}']) return;
             var priceEl = document.querySelector('.hdt-product__price hdt-price .hdt-money');
             var compareEl = document.querySelector('.hdt-product__price hdt-compare-at-price');
             if (!priceEl) return;

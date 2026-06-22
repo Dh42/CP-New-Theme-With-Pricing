@@ -7,6 +7,15 @@
   Include once per product inside the price block.
 {%- endcomment -%}
 
+{%- liquid
+  assign cp_init_variant = product.selected_or_first_available_variant
+  assign cp_init_sale_pct = cp_init_variant.metafields.custom.sale_percentage | plus: 0
+-%}
+
+<script>
+  window['cpSaleActive_{{ product.id }}'] = {{ cp_init_sale_pct > 0 }};
+</script>
+
 <script type="application/json" id="cp-sale-data-{{ product.id }}">
 {
   "variants": {
@@ -14,10 +23,17 @@
       {%- assign sale_pct = v.metafields.custom.sale_percentage | plus: 0 -%}
       {%- assign remaining_pct = 100 | minus: sale_pct -%}
       {%- assign discounted_cents = v.price | times: remaining_pct | divided_by: 100 -%}
+      {%- if settings.currency_code_enabled -%}
+        {%- assign cp_orig_fmt = v.price | money_with_currency | strip_html -%}
+        {%- assign cp_disc_fmt = discounted_cents | money_with_currency | strip_html -%}
+      {%- else -%}
+        {%- assign cp_orig_fmt = v.price | money | strip_html -%}
+        {%- assign cp_disc_fmt = discounted_cents | money | strip_html -%}
+      {%- endif -%}
       "{{ v.id }}": {
         "salePercent": {{ sale_pct }},
-        "originalFormatted": {{ v.price | money | json }},
-        "discountedFormatted": {% if sale_pct > 0 %}{{ discounted_cents | money | json }}{% else %}""{% endif %}
+        "originalFormatted": {{ cp_orig_fmt | json }},
+        "discountedFormatted": {% if sale_pct > 0 %}{{ cp_disc_fmt | json }}{% else %}""{% endif %}
       }{% unless forloop.last %},{% endunless %}
     {%- endfor -%}
   }
@@ -26,7 +42,10 @@
 
 <script>
 (function () {
-  var dataEl = document.getElementById('cp-sale-data-{{ product.id }}');
+  var productId = '{{ product.id }}';
+  var saleFlag = 'cpSaleActive_' + productId;
+
+  var dataEl = document.getElementById('cp-sale-data-' + productId);
   if (!dataEl) return;
 
   var variantData;
@@ -39,6 +58,9 @@
     var salePercent = data.salePercent;
     var originalFormatted = data.originalFormatted;
     var discountedFormatted = data.discountedFormatted;
+
+    // Update the global flag so updateMainPrice() in main-product.liquid backs off
+    window[saleFlag] = salePercent > 0;
 
     // Update both desktop (.hdt-product__price) and mobile (.cp-mobile-price) containers
     var containers = document.querySelectorAll('.hdt-product__price, .cp-mobile-price');
@@ -61,10 +83,7 @@
           compareEl.dataset.cpSaleOverride = '1';
         }
       } else {
-        // No sale on this variant — clear overrides we set (theme will restore its own price)
-        if (priceEl.dataset.cpSaleOverride) {
-          delete priceEl.dataset.cpSaleOverride;
-        }
+        if (priceEl.dataset.cpSaleOverride) delete priceEl.dataset.cpSaleOverride;
         if (compareEl && compareEl.dataset.cpSaleOverride) {
           compareEl.setAttribute('hidden', '');
           delete compareEl.dataset.cpSaleOverride;
@@ -84,23 +103,36 @@
     if (id) applyDiscount(String(id));
   }
 
-  // Run 60ms after variant change — just after the theme's own 50ms price update — so we win.
+  // Set the flag synchronously on variant:change so the nutrition code's
+  // 50ms updateMainPrice() sees it before it runs — our applyDiscount still
+  // runs at 60ms to update the DOM.
   document.addEventListener('variant:change', function (e) {
     if (e.detail && e.detail.variant) {
+      var vData = variantData[String(e.detail.variant.id)];
+      window[saleFlag] = !!(vData && vData.salePercent > 0);
       setTimeout(function () { applyDiscount(String(e.detail.variant.id)); }, 60);
     }
   });
 
-  // Fallback: also catch raw form change events (covers edge cases where variant:change isn't fired)
   document.addEventListener('change', function (e) {
     var form = e.target.closest && e.target.closest('form[action^="/cart/add"]');
-    if (form) setTimeout(refresh, 60);
+    if (form) {
+      var id = currentVariantId();
+      if (id) {
+        var vData = variantData[String(id)];
+        window[saleFlag] = !!(vData && vData.salePercent > 0);
+      }
+      setTimeout(refresh, 60);
+    }
   });
 
+  // Safety fallback on initial load — runs at 70ms (after the nutrition
+  // code's 50ms updateMainPrice) in case price.liquid's server render
+  // was overwritten before our flag took effect.
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', refresh);
+    document.addEventListener('DOMContentLoaded', function () { setTimeout(refresh, 70); });
   } else {
-    refresh();
+    setTimeout(refresh, 70);
   }
 })();
 </script>
