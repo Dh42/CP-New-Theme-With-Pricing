@@ -576,6 +576,13 @@
             "title": "Are there any products excluded from the Sale?",
             "content": "Yes. Bulk protein in 6kg and 10kg sizes does not qualify for Sale pricing and is excluded from all discounts. Some other exclusions may apply and will be noted on the product page."
           }
+        },
+        "accordion_item_yXDAPE": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "",
+            "content": "During the Sale, you'll earn triple the usual rewards points on every order. Points are added to your account automatically and can be used toward future purchases through the Canadian Protein rewards program."
+          }
         }
       },
       "block_order": [
@@ -584,7 +591,8 @@
         "accordion_item_aqRHxt",
         "accordion_item_HYtk9r",
         "accordion_item_anYHhY",
-        "accordion_item_QcmfXb"
+        "accordion_item_QcmfXb",
+        "accordion_item_yXDAPE"
       ],
       "name": "t:sections.accordion.name",
       "settings": {
