@@ -98,14 +98,6 @@
             "alignment": "center"
           }
         },
-        "spacer_tBWpTY": {
-          "type": "spacer",
-          "settings": {
-            "space_lg": 10,
-            "space_md": 10,
-            "space": 10
-          }
-        },
         "custom_liquid_QB47Gd": {
           "type": "custom_liquid",
           "settings": {
@@ -123,7 +115,6 @@
         "text_FrjNWt",
         "spacer_axWfRL",
         "button_ACGL8Y",
-        "spacer_tBWpTY",
         "custom_liquid_QB47Gd"
       ],
       "custom_css": [
