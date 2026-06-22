@@ -1,10 +1,12 @@
 {%- comment -%}
   cp-sale-metafield-price.liquid
   Reads variant metafield custom.sale_percentage (integer, e.g. 15 = 15% off).
-  If set, overrides the displayed price with the discounted amount and shows the
-  original Shopify price as a strikethrough compare-at — matching what the
-  automatic discount will charge in the cart.
-  Uses MutationObserver to hold the discount in place against any theme re-renders.
+  Overrides the displayed price with the discounted amount and shows the original
+  Shopify price as a strikethrough compare-at — matching what the automatic
+  discount will charge in the cart.
+
+  hdt-price replaces .hdt-money via outerHTML on variant change, so we observe
+  the hdt-price element itself (not .hdt-money) to survive that replacement.
 {%- endcomment -%}
 
 {%- liquid
@@ -13,7 +15,7 @@
 -%}
 
 <script>
-  window['cpSaleActive_{{ product.id }}'] = {{ cp_init_sale_pct > 0 }};
+  window['cpSaleActive_{{ product.id }}'] = {% if cp_init_sale_pct > 0 %}true{% else %}false{% endif %};
 </script>
 
 <script type="application/json" id="cp-sale-data-{{ product.id }}">
@@ -51,7 +53,6 @@
   var variantData;
   try { variantData = JSON.parse(dataEl.textContent).variants; } catch (e) { return; }
 
-  // Active MutationObservers — disconnected and replaced on every variant change.
   var activeObservers = [];
   var currentData = null;
 
@@ -60,36 +61,49 @@
     activeObservers = [];
   }
 
-  // Watch a single element. When anything changes it away from `expected`,
-  // immediately restore it. Uses disconnect/reconnect to avoid triggering itself.
-  function watchText(el, expected, onRestore) {
+  // Observe the hdt-price element itself (not .hdt-money) because hdt-price
+  // replaces .hdt-money via outerHTML — which destroys any observer on the old node.
+  function watchPriceEl(priceEl, compareEl) {
     var obs = new MutationObserver(function () {
-      if (el.textContent === expected) return;
+      if (!currentData || currentData.salePercent <= 0) return;
+      var moneyEl = priceEl.querySelector('.hdt-money');
+      if (!moneyEl || moneyEl.textContent === currentData.discountedFormatted) return;
       obs.disconnect();
-      el.textContent = expected;
-      if (onRestore) onRestore();
+      moneyEl.textContent = currentData.discountedFormatted;
+      if (compareEl) restoreCompareAt(compareEl);
       setTimeout(function () {
-        obs.observe(el, { childList: true, subtree: true, characterData: true });
+        obs.observe(priceEl, { childList: true, subtree: true, characterData: true });
       }, 0);
     });
-    obs.observe(el, { childList: true, subtree: true, characterData: true });
+    obs.observe(priceEl, { childList: true, subtree: true, characterData: true });
     activeObservers.push(obs);
   }
 
-  // Watch for the hidden attribute being re-added to compareEl.
-  function watchHidden(compareEl, originalText) {
+  // Watch hdt-compare-at-price for the hidden attribute being re-added,
+  // or its .hdt-money text being replaced.
+  function watchCompareEl(compareEl) {
     var obs = new MutationObserver(function () {
-      if (!compareEl.hasAttribute('hidden')) return;
+      if (!currentData || currentData.salePercent <= 0) return;
+      var hidden = compareEl.hasAttribute('hidden');
+      var moneyEl = compareEl.querySelector('.hdt-money');
+      var textWrong = moneyEl && moneyEl.textContent !== currentData.originalFormatted;
+      if (!hidden && !textWrong) return;
       obs.disconnect();
-      compareEl.removeAttribute('hidden');
-      var cm = compareEl.querySelector('.hdt-money');
-      if (cm && currentData) cm.textContent = currentData.originalFormatted;
+      restoreCompareAt(compareEl);
       setTimeout(function () {
-        obs.observe(compareEl, { attributes: true, attributeFilter: ['hidden'] });
+        obs.observe(compareEl, { attributes: true, attributeFilter: ['hidden'], childList: true, subtree: true, characterData: true });
       }, 0);
     });
-    obs.observe(compareEl, { attributes: true, attributeFilter: ['hidden'] });
+    obs.observe(compareEl, { attributes: true, attributeFilter: ['hidden'], childList: true, subtree: true, characterData: true });
     activeObservers.push(obs);
+  }
+
+  function restoreCompareAt(compareEl) {
+    if (!currentData) return;
+    compareEl.removeAttribute('hidden');
+    compareEl.dataset.cpSaleOverride = '1';
+    var moneyEl = compareEl.querySelector('.hdt-money');
+    if (moneyEl) moneyEl.textContent = currentData.originalFormatted;
   }
 
   function applyDiscount(variantId) {
@@ -102,11 +116,10 @@
     currentData = data;
 
     if (data.salePercent <= 0 || !data.discountedFormatted) {
-      // No sale on this variant — clear any overrides we set
       document.querySelectorAll('.hdt-product__price, .cp-mobile-price').forEach(function (container) {
         var priceEl   = container.querySelector('hdt-price');
         var compareEl = container.querySelector('hdt-compare-at-price');
-        if (priceEl && priceEl.dataset.cpSaleOverride) delete priceEl.dataset.cpSaleOverride;
+        if (priceEl) delete priceEl.dataset.cpSaleOverride;
         if (compareEl && compareEl.dataset.cpSaleOverride) {
           compareEl.setAttribute('hidden', '');
           delete compareEl.dataset.cpSaleOverride;
@@ -123,33 +136,14 @@
       var moneyEl = priceEl.querySelector('.hdt-money');
       if (!moneyEl) return;
 
-      // Apply immediately
       moneyEl.textContent = data.discountedFormatted;
       priceEl.dataset.cpSaleOverride = '1';
 
-      if (compareEl) {
-        var compareMoneyEl = compareEl.querySelector('.hdt-money');
-        if (compareMoneyEl) compareMoneyEl.textContent = data.originalFormatted;
-        compareEl.removeAttribute('hidden');
-        compareEl.dataset.cpSaleOverride = '1';
+      if (compareEl) restoreCompareAt(compareEl);
 
-        // Hold the compare-at text in place
-        if (compareMoneyEl) {
-          watchText(compareMoneyEl, data.originalFormatted);
-        }
-        // Re-show if the element gets hidden again
-        watchHidden(compareEl, data.originalFormatted);
-      }
-
-      // Hold the discounted price in place against any theme re-renders
-      watchText(moneyEl, data.discountedFormatted, function () {
-        // Also restore compare-at whenever hdt-price overwrites the main price
-        if (compareEl) {
-          var cm = compareEl.querySelector('.hdt-money');
-          if (cm && currentData) cm.textContent = currentData.originalFormatted;
-          compareEl.removeAttribute('hidden');
-        }
-      });
+      // Observe the parent elements so we survive outerHTML replacement of .hdt-money
+      watchPriceEl(priceEl, compareEl);
+      if (compareEl) watchCompareEl(compareEl);
     });
   }
 
@@ -159,8 +153,7 @@
     return el ? el.value : null;
   }
 
-  // Set the global flag synchronously on variant:change so updateMainPrice()
-  // in main-product.liquid (which fires at 50ms) sees it before it runs.
+  // Set the global flag synchronously so updateMainPrice() (fires at 50ms) sees it in time.
   document.addEventListener('variant:change', function (e) {
     if (!(e.detail && e.detail.variant)) return;
     var vData = variantData[String(e.detail.variant.id)];
