@@ -4,7 +4,7 @@
   If set, overrides the displayed price with the discounted amount and shows the
   original Shopify price as a strikethrough compare-at — matching what the
   automatic discount will charge in the cart.
-  Include once per product inside the price block.
+  Uses MutationObserver to hold the discount in place against any theme re-renders.
 {%- endcomment -%}
 
 {%- liquid
@@ -24,16 +24,16 @@
       {%- assign remaining_pct = 100 | minus: sale_pct -%}
       {%- assign discounted_cents = v.price | times: remaining_pct | divided_by: 100 -%}
       {%- if settings.currency_code_enabled -%}
-        {%- assign cp_orig_fmt = v.price | money_with_currency | strip_html -%}
-        {%- assign cp_disc_fmt = discounted_cents | money_with_currency | strip_html -%}
+        {%- assign cp_orig = v.price | money_with_currency | strip_html -%}
+        {%- assign cp_disc = discounted_cents | money_with_currency | strip_html -%}
       {%- else -%}
-        {%- assign cp_orig_fmt = v.price | money | strip_html -%}
-        {%- assign cp_disc_fmt = discounted_cents | money | strip_html -%}
+        {%- assign cp_orig = v.price | money | strip_html -%}
+        {%- assign cp_disc = discounted_cents | money | strip_html -%}
       {%- endif -%}
       "{{ v.id }}": {
         "salePercent": {{ sale_pct }},
-        "originalFormatted": {{ cp_orig_fmt | json }},
-        "discountedFormatted": {% if sale_pct > 0 %}{{ cp_disc_fmt | json }}{% else %}""{% endif %}
+        "originalFormatted": {{ cp_orig | json }},
+        "discountedFormatted": {% if sale_pct > 0 %}{{ cp_disc | json }}{% else %}""{% endif %}
       }{% unless forloop.last %},{% endunless %}
     {%- endfor -%}
   }
@@ -43,7 +43,7 @@
 <script>
 (function () {
   var productId = '{{ product.id }}';
-  var saleFlag = 'cpSaleActive_' + productId;
+  var saleFlag  = 'cpSaleActive_' + productId;
 
   var dataEl = document.getElementById('cp-sale-data-' + productId);
   if (!dataEl) return;
@@ -51,88 +51,142 @@
   var variantData;
   try { variantData = JSON.parse(dataEl.textContent).variants; } catch (e) { return; }
 
+  // Active MutationObservers — disconnected and replaced on every variant change.
+  var activeObservers = [];
+  var currentData = null;
+
+  function disconnectAll() {
+    activeObservers.forEach(function (o) { o.disconnect(); });
+    activeObservers = [];
+  }
+
+  // Watch a single element. When anything changes it away from `expected`,
+  // immediately restore it. Uses disconnect/reconnect to avoid triggering itself.
+  function watchText(el, expected, onRestore) {
+    var obs = new MutationObserver(function () {
+      if (el.textContent === expected) return;
+      obs.disconnect();
+      el.textContent = expected;
+      if (onRestore) onRestore();
+      setTimeout(function () {
+        obs.observe(el, { childList: true, subtree: true, characterData: true });
+      }, 0);
+    });
+    obs.observe(el, { childList: true, subtree: true, characterData: true });
+    activeObservers.push(obs);
+  }
+
+  // Watch for the hidden attribute being re-added to compareEl.
+  function watchHidden(compareEl, originalText) {
+    var obs = new MutationObserver(function () {
+      if (!compareEl.hasAttribute('hidden')) return;
+      obs.disconnect();
+      compareEl.removeAttribute('hidden');
+      var cm = compareEl.querySelector('.hdt-money');
+      if (cm && currentData) cm.textContent = currentData.originalFormatted;
+      setTimeout(function () {
+        obs.observe(compareEl, { attributes: true, attributeFilter: ['hidden'] });
+      }, 0);
+    });
+    obs.observe(compareEl, { attributes: true, attributeFilter: ['hidden'] });
+    activeObservers.push(obs);
+  }
+
   function applyDiscount(variantId) {
+    disconnectAll();
+
     var data = variantData[String(variantId)];
     if (!data) return;
 
-    var salePercent = data.salePercent;
-    var originalFormatted = data.originalFormatted;
-    var discountedFormatted = data.discountedFormatted;
+    window[saleFlag] = data.salePercent > 0;
+    currentData = data;
 
-    // Update the global flag so updateMainPrice() in main-product.liquid backs off
-    window[saleFlag] = salePercent > 0;
+    if (data.salePercent <= 0 || !data.discountedFormatted) {
+      // No sale on this variant — clear any overrides we set
+      document.querySelectorAll('.hdt-product__price, .cp-mobile-price').forEach(function (container) {
+        var priceEl   = container.querySelector('hdt-price');
+        var compareEl = container.querySelector('hdt-compare-at-price');
+        if (priceEl && priceEl.dataset.cpSaleOverride) delete priceEl.dataset.cpSaleOverride;
+        if (compareEl && compareEl.dataset.cpSaleOverride) {
+          compareEl.setAttribute('hidden', '');
+          delete compareEl.dataset.cpSaleOverride;
+        }
+      });
+      return;
+    }
 
-    // Update both desktop (.hdt-product__price) and mobile (.cp-mobile-price) containers
-    var containers = document.querySelectorAll('.hdt-product__price, .cp-mobile-price');
-    containers.forEach(function (container) {
-      var priceEl = container.querySelector('hdt-price');
+    document.querySelectorAll('.hdt-product__price, .cp-mobile-price').forEach(function (container) {
+      var priceEl   = container.querySelector('hdt-price');
       var compareEl = container.querySelector('hdt-compare-at-price');
       if (!priceEl) return;
 
       var moneyEl = priceEl.querySelector('.hdt-money');
       if (!moneyEl) return;
 
-      if (salePercent > 0 && discountedFormatted) {
-        moneyEl.textContent = discountedFormatted;
-        priceEl.dataset.cpSaleOverride = '1';
+      // Apply immediately
+      moneyEl.textContent = data.discountedFormatted;
+      priceEl.dataset.cpSaleOverride = '1';
 
-        if (compareEl) {
-          var compareMoneyEl = compareEl.querySelector('.hdt-money');
-          if (compareMoneyEl) compareMoneyEl.textContent = originalFormatted;
-          compareEl.removeAttribute('hidden');
-          compareEl.dataset.cpSaleOverride = '1';
+      if (compareEl) {
+        var compareMoneyEl = compareEl.querySelector('.hdt-money');
+        if (compareMoneyEl) compareMoneyEl.textContent = data.originalFormatted;
+        compareEl.removeAttribute('hidden');
+        compareEl.dataset.cpSaleOverride = '1';
+
+        // Hold the compare-at text in place
+        if (compareMoneyEl) {
+          watchText(compareMoneyEl, data.originalFormatted);
         }
-      } else {
-        if (priceEl.dataset.cpSaleOverride) delete priceEl.dataset.cpSaleOverride;
-        if (compareEl && compareEl.dataset.cpSaleOverride) {
-          compareEl.setAttribute('hidden', '');
-          delete compareEl.dataset.cpSaleOverride;
-        }
+        // Re-show if the element gets hidden again
+        watchHidden(compareEl, data.originalFormatted);
       }
+
+      // Hold the discounted price in place against any theme re-renders
+      watchText(moneyEl, data.discountedFormatted, function () {
+        // Also restore compare-at whenever hdt-price overwrites the main price
+        if (compareEl) {
+          var cm = compareEl.querySelector('.hdt-money');
+          if (cm && currentData) cm.textContent = currentData.originalFormatted;
+          compareEl.removeAttribute('hidden');
+        }
+      });
     });
   }
 
   function currentVariantId() {
-    var f = document.querySelector('form[action^="/cart/add"]');
+    var f  = document.querySelector('form[action^="/cart/add"]');
     var el = f && f.querySelector('[name="id"]');
     return el ? el.value : null;
   }
 
-  function refresh() {
-    var id = currentVariantId();
-    if (id) applyDiscount(String(id));
-  }
-
-  // Set the flag synchronously on variant:change so the nutrition code's
-  // 50ms updateMainPrice() sees it before it runs — our applyDiscount still
-  // runs at 60ms to update the DOM.
+  // Set the global flag synchronously on variant:change so updateMainPrice()
+  // in main-product.liquid (which fires at 50ms) sees it before it runs.
   document.addEventListener('variant:change', function (e) {
-    if (e.detail && e.detail.variant) {
-      var vData = variantData[String(e.detail.variant.id)];
-      window[saleFlag] = !!(vData && vData.salePercent > 0);
-      setTimeout(function () { applyDiscount(String(e.detail.variant.id)); }, 60);
-    }
+    if (!(e.detail && e.detail.variant)) return;
+    var vData = variantData[String(e.detail.variant.id)];
+    window[saleFlag] = !!(vData && vData.salePercent > 0);
+    applyDiscount(String(e.detail.variant.id));
   });
 
   document.addEventListener('change', function (e) {
     var form = e.target.closest && e.target.closest('form[action^="/cart/add"]');
-    if (form) {
-      var id = currentVariantId();
-      if (id) {
-        var vData = variantData[String(id)];
-        window[saleFlag] = !!(vData && vData.salePercent > 0);
-      }
-      setTimeout(refresh, 60);
-    }
+    if (!form) return;
+    var id = currentVariantId();
+    if (!id) return;
+    var vData = variantData[String(id)];
+    window[saleFlag] = !!(vData && vData.salePercent > 0);
+    applyDiscount(String(id));
   });
 
-  // Safety fallback on initial load — runs at 70ms (after the nutrition
-  // code's 50ms updateMainPrice) in case price.liquid's server render
-  // was overwritten before our flag took effect.
+  function init() {
+    var id = currentVariantId();
+    if (id) applyDiscount(String(id));
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function () { setTimeout(refresh, 70); });
+    document.addEventListener('DOMContentLoaded', init);
   } else {
-    setTimeout(refresh, 70);
+    init();
   }
 })();
 </script>
