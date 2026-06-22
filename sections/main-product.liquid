@@ -286,6 +286,7 @@
                                 show_volume_note: false,
                                 un_no_pick: un_no_pick
                         -%}
+                        {%- render 'cp-sale-metafield-price', product: product -%}
                         {%- if _mp_servings and _mp_servings > 0 -%}
                             <div class="cp-price-servings">
                                 <span class="cp-price-servings-count">{{ _mp_servings }} servings</span>

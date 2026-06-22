@@ -1,0 +1,106 @@
+{%- comment -%}
+  cp-sale-metafield-price.liquid
+  Reads variant metafield custom.sale_percentage (integer, e.g. 15 = 15% off).
+  If set, overrides the displayed price with the discounted amount and shows the
+  original Shopify price as a strikethrough compare-at — matching what the
+  automatic discount will charge in the cart.
+  Include once per product inside the price block.
+{%- endcomment -%}
+
+<script type="application/json" id="cp-sale-data-{{ product.id }}">
+{
+  "variants": {
+    {%- for v in product.variants -%}
+      {%- assign sale_pct = v.metafields.custom.sale_percentage | plus: 0 -%}
+      {%- assign remaining_pct = 100 | minus: sale_pct -%}
+      {%- assign discounted_cents = v.price | times: remaining_pct | divided_by: 100 -%}
+      "{{ v.id }}": {
+        "salePercent": {{ sale_pct }},
+        "originalFormatted": {{ v.price | money | json }},
+        "discountedFormatted": {% if sale_pct > 0 %}{{ discounted_cents | money | json }}{% else %}""{% endif %}
+      }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  }
+}
+</script>
+
+<script>
+(function () {
+  var dataEl = document.getElementById('cp-sale-data-{{ product.id }}');
+  if (!dataEl) return;
+
+  var variantData;
+  try { variantData = JSON.parse(dataEl.textContent).variants; } catch (e) { return; }
+
+  function applyDiscount(variantId) {
+    var data = variantData[String(variantId)];
+    if (!data) return;
+
+    var salePercent = data.salePercent;
+    var originalFormatted = data.originalFormatted;
+    var discountedFormatted = data.discountedFormatted;
+
+    // Update both desktop (.hdt-product__price) and mobile (.cp-mobile-price) containers
+    var containers = document.querySelectorAll('.hdt-product__price, .cp-mobile-price');
+    containers.forEach(function (container) {
+      var priceEl = container.querySelector('hdt-price');
+      var compareEl = container.querySelector('hdt-compare-at-price');
+      if (!priceEl) return;
+
+      var moneyEl = priceEl.querySelector('.hdt-money');
+      if (!moneyEl) return;
+
+      if (salePercent > 0 && discountedFormatted) {
+        moneyEl.textContent = discountedFormatted;
+        priceEl.dataset.cpSaleOverride = '1';
+
+        if (compareEl) {
+          var compareMoneyEl = compareEl.querySelector('.hdt-money');
+          if (compareMoneyEl) compareMoneyEl.textContent = originalFormatted;
+          compareEl.removeAttribute('hidden');
+          compareEl.dataset.cpSaleOverride = '1';
+        }
+      } else {
+        // No sale on this variant — clear overrides we set (theme will restore its own price)
+        if (priceEl.dataset.cpSaleOverride) {
+          delete priceEl.dataset.cpSaleOverride;
+        }
+        if (compareEl && compareEl.dataset.cpSaleOverride) {
+          compareEl.setAttribute('hidden', '');
+          delete compareEl.dataset.cpSaleOverride;
+        }
+      }
+    });
+  }
+
+  function currentVariantId() {
+    var f = document.querySelector('form[action^="/cart/add"]');
+    var el = f && f.querySelector('[name="id"]');
+    return el ? el.value : null;
+  }
+
+  function refresh() {
+    var id = currentVariantId();
+    if (id) applyDiscount(String(id));
+  }
+
+  // Run 60ms after variant change — just after the theme's own 50ms price update — so we win.
+  document.addEventListener('variant:change', function (e) {
+    if (e.detail && e.detail.variant) {
+      setTimeout(function () { applyDiscount(String(e.detail.variant.id)); }, 60);
+    }
+  });
+
+  // Fallback: also catch raw form change events (covers edge cases where variant:change isn't fired)
+  document.addEventListener('change', function (e) {
+    var form = e.target.closest && e.target.closest('form[action^="/cart/add"]');
+    if (form) setTimeout(refresh, 60);
+  });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', refresh);
+  } else {
+    refresh();
+  }
+})();
+</script>
