@@ -73,7 +73,7 @@
           "type": "button",
           "settings": {
             "btn_label": "Shop now",
-            "btn_link": "",
+            "btn_link": "#shopall",
             "target": false,
             "btn_size": "base",
             "btn_style": "solid",
