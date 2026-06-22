@@ -9,6 +9,107 @@
  */
 {
   "sections": {
+    "custom_section_zcd47U": {
+      "type": "custom-section",
+      "blocks": {
+        "parent_PEqULp": {
+          "type": "parent",
+          "settings": {
+            "column_lg": "hdt-col-lg-6",
+            "column_md": "hdt-col-md-6",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-1",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": ""
+          }
+        },
+        "spacer_wnaC6a": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "heading_iVj3m9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Heading",
+            "tag": "h2",
+            "heading_size": "h2",
+            "alignment": "start"
+          }
+        },
+        "spacer_qXKRmH": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "text_FrjNWt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "text_size": "base",
+            "alignment": "start",
+            "alignment_mb": "start"
+          }
+        },
+        "spacer_axWfRL": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "button_ACGL8Y": {
+          "type": "button",
+          "settings": {
+            "btn_label": "Shop now",
+            "btn_link": "",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "none",
+            "alignment": "start"
+          }
+        }
+      },
+      "block_order": [
+        "parent_PEqULp",
+        "spacer_wnaC6a",
+        "heading_iVj3m9",
+        "spacer_qXKRmH",
+        "text_FrjNWt",
+        "spacer_axWfRL",
+        "button_ACGL8Y"
+      ],
+      "custom_css": [
+        "[class*=\"__custom_section_\"] {background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2)), #48873e url(https://cdn.shopify.com/s/files/1/0249/3241/7583/files/30_off.png?v=1781715425) 90% 70% / cover no-repeat !important; min-height: 500px; color: #fff !important;}",
+        "[class*=\"__custom_section_\"] * {color: #fff !important;}",
+        "[class*=\"__custom_section_\"] .hdt-s-gradient,[class*=\"__custom_section_\"] .hdt-s-gradient:before {background: 0 !important;}"
+      ],
+      "name": "Custom section",
+      "settings": {
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "direction": "",
+        "justify": "",
+        "gap": false,
+        "space": 0,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_rate": 75
+      }
+    },
     "heading": {
       "type": "heading-collection",
       "blocks": {
@@ -29,6 +130,7 @@
         "6df762d7-beda-4452-bcf6-1242b294077c",
         "9a1347b4-da62-490d-9fd4-427a03686ac2"
       ],
+      "disabled": true,
       "settings": {
         "spacing_hd": 10,
         "color_scheme": "",
@@ -413,6 +515,7 @@
     }
   },
   "order": [
+    "custom_section_zcd47U",
     "heading",
     "top_heading_NDhT9y",
     "marquee_xcTg8g",
