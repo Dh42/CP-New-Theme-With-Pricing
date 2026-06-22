@@ -597,6 +597,13 @@
             "title": "My discount isn't showing at checkout — what should I do?",
             "content": "Make sure you're shopping for eligible products (bulk products are excluded). If the discount still isn't appearing, try refreshing your cart or contact Canadian Protein customer support for help."
           }
+        },
+        "accordion_item_chAmcj": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Can I return or exchange a Sale item?",
+            "content": "Please refer to the Canadian Protein returns policy for full details on returns and exchanges during the Sale period."
+          }
         }
       },
       "block_order": [
@@ -608,7 +615,8 @@
         "accordion_item_QcmfXb",
         "accordion_item_yXDAPE",
         "accordion_item_NAxYRT",
-        "accordion_item_Md6JYm"
+        "accordion_item_Md6JYm",
+        "accordion_item_chAmcj"
       ],
       "name": "t:sections.accordion.name",
       "settings": {
