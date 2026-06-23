@@ -871,6 +871,13 @@
             "content": "Every order of $1 or more includes a free gift while supplies last. Possible gifts include Glutamine, Leucine, or BCAAs+ in Berry Fusion or Citrus Twist flavours. Your gift is chosen at random and is subject to availability."
           }
         },
+        "accordion_item_jKr3C3": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Do I need a discount code?",
+            "content": "No. All Sale discounts are applied automatically at checkout. You do not need to enter a code."
+          }
+        },
         "accordion_item_GEqfzr": {
           "type": "accordion_item",
           "settings": {
@@ -884,6 +891,7 @@
         "accordion_item_8cC9NG",
         "accordion_item_zgqGCL",
         "accordion_item_dtbhVW",
+        "accordion_item_jKr3C3",
         "accordion_item_GEqfzr"
       ],
       "name": "t:sections.accordion.name",
