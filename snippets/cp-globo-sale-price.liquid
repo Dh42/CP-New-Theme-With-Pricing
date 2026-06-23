@@ -3,8 +3,8 @@
   Embeds variant sale data (Shopify Liquid, metafield-aware) as a JS lookup table,
   then applies discounted prices to Globo Product Filter cards via MutationObserver.
 
-  Include on collection and search pages. Works around the fact that Globo's own
-  Liquid engine (used inside the {% raw %} block) does not expose metafields.
+  Include on collection and search pages. Works around Globo's Liquid engine
+  not exposing Shopify metafields in its product card template.
 {%- endcomment -%}
 
 {%- liquid
