@@ -9,6 +9,141 @@
  */
 {
   "sections": {
+    "custom_section_PMytYg": {
+      "type": "custom-section",
+      "blocks": {
+        "parent_A8HydF": {
+          "type": "parent",
+          "settings": {
+            "column_lg": "hdt-col-lg-12",
+            "column_md": "hdt-col-md-12",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-1",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": ""
+          }
+        },
+        "spacer_M8zFGM": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "spacer_GryTrF": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 50,
+            "space_md": 50,
+            "space": 50
+          }
+        },
+        "spacer_ECkgA9": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 50,
+            "space_md": 50,
+            "space": 50
+          }
+        },
+        "heading_bKPhdb": {
+          "type": "heading",
+          "settings": {
+            "heading": "🇨🇦 Canada Day Sale 🇨🇦",
+            "tag": "h2",
+            "heading_size": "h2",
+            "alignment": "center"
+          }
+        },
+        "spacer_qpfgMN": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "text_LfUNdq": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Up to 70% Off Sitewide</h2>",
+            "text_size": "4xl",
+            "alignment": "center",
+            "alignment_mb": "center"
+          }
+        },
+        "spacer_waWghM": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "button_xHNR8b": {
+          "type": "button",
+          "settings": {
+            "btn_label": "Shop now",
+            "btn_link": "#shopall",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "none",
+            "alignment": "center"
+          }
+        },
+        "spacer_6xAHP6": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "custom_liquid_pQQJid": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div style=\"text-align:center;\">\n  <small style=\"color:#fff;\">\n    Some exclusions may apply. <br>\n    <strong style=\"color:#fff;\">\n      <a href=\"#faq\" style=\"color:#fff; text-decoration:underline;\">\n        Click here for FAQs.\n      </a>\n    </strong>\n  </small>\n</div>"
+          }
+        }
+      },
+      "block_order": [
+        "parent_A8HydF",
+        "spacer_M8zFGM",
+        "spacer_GryTrF",
+        "spacer_ECkgA9",
+        "heading_bKPhdb",
+        "spacer_qpfgMN",
+        "text_LfUNdq",
+        "spacer_waWghM",
+        "button_xHNR8b",
+        "spacer_6xAHP6",
+        "custom_liquid_pQQJid"
+      ],
+      "custom_css": [
+        "[class*=\"__custom_section_\"] {background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2)), #48873e url(https://cdn.shopify.com/s/files/1/0249/3241/7583/files/Main_8f102465-2f44-4244-a7c2-c1cfff9db194.jpg?v=1781713643) 90% 70% / cover no-repeat !important; min-height: 500px; color: #fff !important;}",
+        "[class*=\"__custom_section_\"] * {color: #fff !important;}",
+        "[class*=\"__custom_section_\"] .hdt-s-gradient,[class*=\"__custom_section_\"] .hdt-s-gradient:before {background: 0 !important;}"
+      ],
+      "name": "Custom section",
+      "settings": {
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "direction": "",
+        "justify": "",
+        "gap": false,
+        "space": 0,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_rate": 75
+      }
+    },
     "heading": {
       "type": "heading-collection",
       "blocks": {
@@ -29,6 +164,7 @@
         "6df762d7-beda-4452-bcf6-1242b294077c",
         "9a1347b4-da62-490d-9fd4-427a03686ac2"
       ],
+      "disabled": true,
       "settings": {
         "spacing_hd": 10,
         "color_scheme": "",
@@ -51,6 +187,7 @@
       "block_order": [
         "sub_heading_nxTzjd"
       ],
+      "disabled": true,
       "name": "t:sections.section_title.name",
       "settings": {
         "spacing_item": 30,
@@ -69,7 +206,7 @@
         "item_kaUPF7": {
           "type": "item",
           "settings": {
-            "text": "<p>2X Rewards Points</p>",
+            "text": "<p>3X Rewards Points</p>",
             "icon_svg": "flash",
             "custom_svg": "",
             "icon_width": 10,
@@ -138,6 +275,7 @@
         "gallery_item_ecwRNf",
         "gallery_item_MJepyN"
       ],
+      "disabled": true,
       "name": "t:sections.gallery.name",
       "settings": {
         "heading_align": "center",
@@ -167,6 +305,18 @@
         "padding_rate": 75
       }
     },
+    "custom_liquid_iKCKQG": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<style>\n  .cp-sale-grid {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    gap: 8px;\n  }\n  .cp-sale-card {\n    position: relative;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    text-decoration: none;\n    background-color: #1a1a1a;\n    padding: 18px 22px;\n    border-radius: 4px;\n    overflow: hidden;\n    transition: background-color .2s ease;\n  }\n  .cp-sale-card:hover {\n    background-color: #c8102e;\n  }\n  .cp-sale-img {\n    position: absolute;\n    inset: 0;\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n    opacity: 0.18;\n    transition: opacity .2s ease;\n  }\n  .cp-sale-card:hover .cp-sale-img {\n    opacity: 0.25;\n  }\n  .cp-sale-text {\n    position: relative;\n    z-index: 1;\n    font-size: clamp(13px, 1.2vw, 16px);\n    font-weight: 700;\n    letter-spacing: .18em;\n    text-transform: uppercase;\n    color: #ffffff;\n  }\n  .cp-sale-arrow {\n    position: relative;\n    z-index: 1;\n    color: #ffffff;\n    font-size: 20px;\n    line-height: 1;\n    transition: transform .2s ease;\n  }\n  .cp-sale-card:hover .cp-sale-arrow {\n    transform: translateX(4px);\n  }\n  @media (max-width: 640px) {\n    .cp-sale-grid {\n      grid-template-columns: 1fr;\n    }\n  }\n</style>\n\n<div class=\"cp-sale-grid\">\n\n  <a class=\"cp-sale-card\" href=\"https://canadianprotein.com/collections/canada-day-sale-2026-30-off\">\n    <img class=\"cp-sale-img\" src=\"https://cdn.shopify.com/s/files/1/0249/3241/7583/files/30_off.png?v=1781715425\" alt=\"\" loading=\"lazy\">\n    <span class=\"cp-sale-text\">Shop 30% Off</span>\n    <span class=\"cp-sale-arrow\">→</span>\n  </a>\n\n  <a class=\"cp-sale-card\" href=\"https://canadianprotein.com/collections/canada-day-sale-2026-50-off\">\n    <img class=\"cp-sale-img\" src=\"https://cdn.shopify.com/s/files/1/0249/3241/7583/files/50_off.png?v=1781719822\" alt=\"\" loading=\"lazy\">\n    <span class=\"cp-sale-text\">Shop 50% Off</span>\n    <span class=\"cp-sale-arrow\">→</span>\n  </a>\n\n  <a class=\"cp-sale-card\" href=\"https://canadianprotein.com/collections/canada-day-sale-2026-60-off\">\n    <img class=\"cp-sale-img\" src=\"https://cdn.shopify.com/s/files/1/0249/3241/7583/files/60_off.png?v=1781720329\" alt=\"\" loading=\"lazy\">\n    <span class=\"cp-sale-text\">Shop 60% Off</span>\n    <span class=\"cp-sale-arrow\">→</span>\n  </a>\n\n  <a class=\"cp-sale-card\" href=\"https://canadianprotein.com/collections/canada-day-sale-2026-70-off\">\n    <img class=\"cp-sale-img\" src=\"https://cdn.shopify.com/s/files/1/0249/3241/7583/files/70_off_2.png?v=1781721326\" alt=\"\" loading=\"lazy\">\n    <span class=\"cp-sale-text\">Shop 70% Off</span>\n    <span class=\"cp-sale-arrow\">→</span>\n  </a>\n\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_rate": 75
+      }
+    },
     "icon_box_bzhCti": {
       "type": "icon-box",
       "blocks": {
@@ -180,8 +330,8 @@
             "icon_width_mb": 60,
             "link": "",
             "open_link": false,
-            "title": "Double Rewards Points",
-            "content": "<p>Get 2X the rewards points, stack them for more savings</p>",
+            "title": "Triple Rewards Points",
+            "content": "<p>Get 3X the rewards points, stack them for more savings</p>",
             "adding_border": false
           }
         },
@@ -263,6 +413,18 @@
         "padding_top": 25,
         "padding_bottom": 35,
         "padding_rate": 75
+      }
+    },
+    "custom_liquid_bjqjVb": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"shopall\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
       }
     },
     "main_heading_CxWnwC": {
@@ -684,12 +846,15 @@
     }
   },
   "order": [
+    "custom_section_PMytYg",
     "heading",
     "top_heading_CF4rBy",
     "marquee_xcTg8g",
     "image_gallery_kbpGeb",
+    "custom_liquid_iKCKQG",
     "icon_box_bzhCti",
     "custom_line_aTEaWt",
+    "custom_liquid_bjqjVb",
     "main_heading_CxWnwC",
     "categories_section_WybXU9",
     "custom_line_y6VrFj",
