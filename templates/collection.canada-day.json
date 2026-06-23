@@ -401,20 +401,6 @@
         "padding_rate": 75
       }
     },
-    "custom_line_aTEaWt": {
-      "type": "custom-line",
-      "settings": {
-        "line_style": "solid",
-        "line_width": 100,
-        "line_height": 2,
-        "line_cl": "#ebebeb",
-        "line_pos": "center",
-        "section_fullwidth": false,
-        "padding_top": 25,
-        "padding_bottom": 35,
-        "padding_rate": 75
-      }
-    },
     "custom_liquid_bjqjVb": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -441,6 +427,7 @@
       "block_order": [
         "1_kWA6V3"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "spacing_hd": 5,
@@ -527,6 +514,7 @@
         "collection_item_a7cmDa",
         "collection_item_Yfk3yM"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "style": "normal",
@@ -948,7 +936,6 @@
     "image_gallery_kbpGeb",
     "custom_liquid_iKCKQG",
     "icon_box_bzhCti",
-    "custom_line_aTEaWt",
     "custom_liquid_bjqjVb",
     "main_heading_CxWnwC",
     "categories_section_WybXU9",
