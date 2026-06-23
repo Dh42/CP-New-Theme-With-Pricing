@@ -81,7 +81,10 @@
 {% endif %}
 {% assign initial_cost_cents = 0 %}
 {% if initial_servings > 0 %}
-  {% assign initial_cost_cents = v.price | times: 1.0 | divided_by: initial_servings | round %}
+  {% assign _init_sale_pct = v.metafields.custom.sale_percentage | plus: 0 %}
+  {% assign _init_remaining_pct = 100 | minus: _init_sale_pct %}
+  {% assign _init_price = v.price | times: _init_remaining_pct | divided_by: 100 %}
+  {% assign initial_cost_cents = _init_price | times: 1.0 | divided_by: initial_servings | round %}
 {% endif %}
 
 <div id="nutrition-data" data-product-form="{{ product_form_id }}" style="display:none;">
@@ -115,6 +118,7 @@
               data-servings-fallback="{{ n.servingsPerContainer }}"
               data-container-grams="{{ container_grams }}"
               data-price="{{ variant.price }}"
+              data-sale-percentage="{{ variant.metafields.custom.sale_percentage | plus: 0 }}"
               data-price-formatted="{{ variant.price | money | strip_html }}"
               data-subscription-price="{{ _sub_price }}"
               data-subscription-price-formatted="{{ _sub_price | money | strip_html }}">
@@ -168,7 +172,12 @@
         var subPrice = numberFrom(data.dataset.subscriptionPrice);
         if (subPrice > 0) return subPrice;
       }
-      return numberFrom(data.dataset.price);
+      var basePrice = numberFrom(data.dataset.price);
+      var salePct = parseInt(data.dataset.salePercentage || '0', 10);
+      if (salePct > 0 && salePct < 100) {
+        basePrice = Math.round(basePrice * (100 - salePct) / 100);
+      }
+      return basePrice;
     }
 
     function costFor(data) {

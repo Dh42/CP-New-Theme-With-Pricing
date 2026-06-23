@@ -43,6 +43,11 @@
     endunless
     if _mp_servings > 0
         assign _mp_cost = selected_variant.price | divided_by: 100.0 | divided_by: _mp_servings
+        assign _mp_sale_pct = selected_variant.metafields.custom.sale_percentage | plus: 0
+        if _mp_sale_pct > 0
+            assign _mp_remaining_pct = 100 | minus: _mp_sale_pct
+            assign _mp_cost = _mp_cost | times: _mp_remaining_pct | divided_by: 100.0
+        endif
     endif
     assign cp_coupon_label = ''
     for tag in product.tags
@@ -1558,8 +1563,12 @@
             var servingSize = parseFloat(data.dataset.servingSize) || 0;
             var fallback = parseFloat(data.dataset.servingsFallback) || 0;
             var basePrice = parseFloat(data.dataset.price) || 0;
+            var salePct = parseInt(data.dataset.salePercentage || '0', 10);
             var subPrice  = parseFloat(data.dataset.subscriptionPrice) || basePrice;
             var price = isSubscriptionActive() ? subPrice : basePrice;
+            if (salePct > 0 && salePct < 100) {
+                price = Math.round(price * (100 - salePct) / 100);
+            }
             var servings = (containerGrams > 0 && servingSize > 0)
                 ? Math.round(containerGrams / servingSize)
                 : Math.round(fallback);

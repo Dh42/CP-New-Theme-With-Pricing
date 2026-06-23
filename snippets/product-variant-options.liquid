@@ -190,7 +190,10 @@
             assign size_servings = size_nutrition.servingsPerContainer | round
             assign size_cost_cents = 0
             if size_servings > 0
-              assign size_cost_cents = size_variant.price | times: 1.0 | divided_by: size_servings | round
+              assign _sv_sale_pct = size_variant.metafields.custom.sale_percentage | plus: 0
+              assign _sv_remaining_pct = 100 | minus: _sv_sale_pct
+              assign _sv_price = size_variant.price | times: _sv_remaining_pct | divided_by: 100
+              assign size_cost_cents = _sv_price | times: 1.0 | divided_by: size_servings | round
             endif
             assign size_name_base = value | split: '(' | first | strip
           -%}
@@ -242,7 +245,10 @@
           assign size_servings = size_nutrition.servingsPerContainer | round
           assign size_cost_cents = 0
           if size_servings > 0
-            assign size_cost_cents = size_variant.price | times: 1.0 | divided_by: size_servings | round
+            assign _sv_sale_pct = size_variant.metafields.custom.sale_percentage | plus: 0
+            assign _sv_remaining_pct = 100 | minus: _sv_sale_pct
+            assign _sv_price = size_variant.price | times: _sv_remaining_pct | divided_by: 100
+            assign size_cost_cents = _sv_price | times: 1.0 | divided_by: size_servings | round
           endif
           assign size_name_base = value | split: '(' | first | strip
         -%}
