@@ -260,6 +260,9 @@
       {%- for col_prod in collection.products -%}
         {%- render 'cp-qa-data', product: col_prod -%}
       {%- endfor -%}
+      {%- render 'cp-globo-sale-price' -%}
+    {%- elsif template.name == 'search' -%}
+      {%- render 'cp-globo-sale-price' -%}
       {%- if template.suffix != blank and template.suffix != 'cp-collection' -%}
         <span class="junip-store-key" data-store-key="{{ shop.metafields.junip.store_key }}" style="display:none"></span>
         {%- render 'cp-quick-add-drawer' -%}

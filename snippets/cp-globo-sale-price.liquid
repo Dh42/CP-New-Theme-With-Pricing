@@ -1,0 +1,110 @@
+{%- comment -%}
+  cp-globo-sale-price.liquid
+  Embeds variant sale data (Shopify Liquid, metafield-aware) as a JS lookup table,
+  then applies discounted prices to Globo Product Filter cards via MutationObserver.
+
+  Include on collection and search pages. Works around the fact that Globo's own
+  Liquid engine (used inside the {% raw %} block) does not expose metafields.
+{%- endcomment -%}
+
+{%- liquid
+  assign cp_gp_items = nil
+  if collection
+    assign cp_gp_items = collection.products
+  elsif search and search.results.size > 0
+    assign cp_gp_items = search.results
+  endif
+-%}
+
+<script>
+window.cpGloboSaleData = window.cpGloboSaleData || {};
+{%- if cp_gp_items -%}
+  {%- for cp_gp in cp_gp_items -%}
+    {%- assign cp_gp_variants = cp_gp.variants -%}
+    {%- if cp_gp_variants == nil -%}{%- continue -%}{%- endif -%}
+    {%- for v in cp_gp_variants -%}
+      {%- assign sp = v.metafields.custom.sale_percentage | plus: 0 -%}
+      {%- if sp > 0 -%}
+        {%- assign _remaining = 100 | minus: sp -%}
+        {%- assign _disc_cents = v.price | times: _remaining | divided_by: 100 -%}
+        {%- if settings.currency_code_enabled -%}
+          {%- assign _orig_fmt = v.price | money_with_currency | strip_html -%}
+          {%- assign _disc_fmt = _disc_cents | money_with_currency | strip_html -%}
+        {%- else -%}
+          {%- assign _orig_fmt = v.price | money | strip_html -%}
+          {%- assign _disc_fmt = _disc_cents | money | strip_html -%}
+        {%- endif -%}
+window.cpGloboSaleData[{{ v.id | json }}] = { d: {{ _disc_fmt | json }}, o: {{ _orig_fmt | json }} };
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endfor -%}
+{%- endif -%}
+</script>
+
+<script>
+(function () {
+  var saleData = window.cpGloboSaleData || {};
+
+  function applyToCard(card) {
+    if (card.dataset.cpSaleApplied) return;
+
+    var select = card.querySelector('select.spf-product__variants');
+    if (!select) return;
+
+    // The rendered option with selected="selected" is the displayed variant
+    var selectedOpt = select.querySelector('option[selected]') || select.options[select.selectedIndex];
+    if (!selectedOpt) return;
+
+    var data = saleData[String(selectedOpt.value)];
+    if (!data) return;
+
+    var priceRow = card.querySelector('.cp-cat-card__price-row');
+    if (!priceRow) return;
+
+    priceRow.innerHTML =
+      '<span class="cp-cat-price cp-cat-price--sale">' + data.d + '</span>' +
+      '<span class="cp-cat-price__was">' + data.o + '</span>';
+
+    // Add Sale badge if not already present
+    var badges = card.querySelector('.cp-cat-card__badges');
+    if (badges && !badges.querySelector('.cp-cat-badge--sale')) {
+      var badge = document.createElement('span');
+      badge.className = 'cp-cat-badge cp-cat-badge--sale';
+      badge.textContent = 'Sale';
+      badges.insertBefore(badge, badges.firstChild);
+    }
+
+    card.dataset.cpSaleApplied = '1';
+  }
+
+  function applyAll() {
+    document.querySelectorAll('.cp-cat-card').forEach(applyToCard);
+  }
+
+  // Initial run
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', applyAll);
+  } else {
+    applyAll();
+  }
+
+  // Globo fires this event after each product render (pagination, filter change)
+  document.addEventListener('gf:productsLoaded', applyAll);
+
+  // MutationObserver fallback — catches any Globo re-render that doesn't fire the event
+  var debounceTimer;
+  new MutationObserver(function (mutations) {
+    var hasNewCards = mutations.some(function (m) {
+      return Array.from(m.addedNodes).some(function (n) {
+        return n.nodeType === 1 && (
+          (n.classList && n.classList.contains('cp-cat-card')) ||
+          (n.querySelector && n.querySelector('.cp-cat-card'))
+        );
+      });
+    });
+    if (!hasNewCards) return;
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(applyAll, 60);
+  }).observe(document.body, { childList: true, subtree: true });
+})();
+</script>
