@@ -537,6 +537,7 @@
     },
     "custom_line_y6VrFj": {
       "type": "custom-line",
+      "disabled": true,
       "settings": {
         "line_style": "solid",
         "line_width": 100,
@@ -563,6 +564,7 @@
       "block_order": [
         "1_Y8znYL"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "spacing_hd": 5,
@@ -573,6 +575,7 @@
     },
     "featured_collection_carousel_7rjWCm": {
       "type": "featured-collection-carousel",
+      "disabled": true,
       "name": "t:sections.collection_products.carousel_name",
       "settings": {
         "heading_align": "center",
@@ -625,6 +628,7 @@
     },
     "icon_with_text_dMcQeP": {
       "type": "icon_with_text",
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "text": "<h5>Discover more protein options 30% off</h5>",
@@ -642,6 +646,7 @@
     },
     "custom_line_XQAMEg": {
       "type": "custom-line",
+      "disabled": true,
       "settings": {
         "line_style": "solid",
         "line_width": 100,
@@ -668,6 +673,7 @@
       "block_order": [
         "1_BGyAa9"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "spacing_hd": 5,
@@ -678,6 +684,7 @@
     },
     "featured_collection_carousel_j8b7Vt": {
       "type": "featured-collection-carousel",
+      "disabled": true,
       "name": "t:sections.collection_products.carousel_name",
       "settings": {
         "heading_align": "center",
@@ -732,6 +739,7 @@
     },
     "icon_with_text_rndPDx": {
       "type": "icon_with_text",
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "text": "<h5>Discover more supplement options up to 50% off</h5>",
@@ -827,6 +835,18 @@
         "sidebar_size": "medium"
       }
     },
+    "custom_liquid_rxthzb": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"faq\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
     "icon_with_text_LMTgLi": {
       "type": "icon_with_text",
       "settings": {
@@ -869,6 +889,7 @@
     "main_heading_9yN8PP",
     "custom_liquid_n4TaAM",
     "main",
+    "custom_liquid_rxthzb",
     "icon_with_text_LMTgLi"
   ]
 }
