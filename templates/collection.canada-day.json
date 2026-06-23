@@ -867,15 +867,22 @@
         "accordion_item_dtbhVW": {
           "type": "accordion_item",
           "settings": {
-            "title": "Pellentesque habitant morbi tristique senectus et netus?",
-            "content": "The perfect way to enjoy brewing tea on low hanging fruit to identify. Duis autem vel eum iriure dolor in hendrerit vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. For me, the most important part of improving at photography has been sharing it. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            "title": "What is the free gift?",
+            "content": "Every order of $1 or more includes a free gift while supplies last. Possible gifts include Glutamine, Leucine, or BCAAs+ in Berry Fusion or Citrus Twist flavours. Your gift is chosen at random and is subject to availability."
           }
         },
         "accordion_item_GEqfzr": {
           "type": "accordion_item",
           "settings": {
-            "title": "Pellentesque habitant morbi tristique senectus et netus?",
-            "content": "The perfect way to enjoy brewing tea on low hanging fruit to identify. Duis autem vel eum iriure dolor in hendrerit vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. For me, the most important part of improving at photography has been sharing it. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            "title": "Do I need a discount code?",
+            "content": "No. All Sale discounts are applied automatically at checkout. You do not need to enter a code."
+          }
+        },
+        "accordion_item_TabMqL": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "",
+            "content": ""
           }
         }
       },
@@ -884,7 +891,8 @@
         "accordion_item_8cC9NG",
         "accordion_item_zgqGCL",
         "accordion_item_dtbhVW",
-        "accordion_item_GEqfzr"
+        "accordion_item_GEqfzr",
+        "accordion_item_TabMqL"
       ],
       "name": "t:sections.accordion.name",
       "settings": {
