@@ -16,6 +16,14 @@
     {%- endif -%}
   {%- endif -%}
 
+  {%- comment -%} Apply sale_percentage discount if set on the displayed variant {%- endcomment -%}
+  {%- assign cp_sale_pct = selected_variant.metafields.custom.sale_percentage | plus: 0 -%}
+  {%- if cp_sale_pct > 0 -%}
+    {%- assign cp_remaining_pct = 100 | minus: cp_sale_pct -%}
+    {%- assign product_compare_at_price = product_price -%}
+    {%- assign product_price = product_price | times: cp_remaining_pct | divided_by: 100 -%}
+  {%- endif -%}
+
   {%- assign variant_url = '' -%}
   {%- if selected_variant -%}
     {%- assign variant_url = '?variant=' | append: selected_variant.id -%}
@@ -62,8 +70,8 @@
           {%- if tag_pipe contains '|grass-fed|' -%}
             <span class="cp-cat-badge cp-cat-badge--green">Grass-Fed</span>
           {%- endif -%}
-          {%- if tag_pipe contains '|sale|' or tag_pipe contains '|on-sale|' -%}
-            {%- if product_compare_at_price > product_price -%}
+          {%- if product_compare_at_price > product_price -%}
+            {%- if cp_sale_pct > 0 or tag_pipe contains '|sale|' or tag_pipe contains '|on-sale|' -%}
               <span class="cp-cat-badge cp-cat-badge--sale">Sale</span>
             {%- endif -%}
           {%- endif -%}
