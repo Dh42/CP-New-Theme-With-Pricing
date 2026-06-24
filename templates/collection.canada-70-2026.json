@@ -135,6 +135,204 @@
         "padding_rate": 75
       }
     },
+    "custom_section_QVGaQ8": {
+      "type": "custom-section",
+      "blocks": {
+        "custom_liquid_daGAJR": {
+          "type": "custom_liquid",
+          "name": "Early Access",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<span style=\"\n  font-size:12px;\n  font-weight:700;\n  letter-spacing:1.5px;\n  text-transform:uppercase;\n  background: linear-gradient(\n    90deg,\n    #b8860b,\n    #ffd700,\n    #fff4a3,\n    #ffd700,\n    #b8860b\n  );\n  background-size: 200% auto;\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  color: transparent;\n  animation: goldLoop 4s linear infinite;\n  display:inline-block;\n\">\n  VIP EARLY ACCESS\n</span>\n\n<style>\n@keyframes goldLoop {\n  0% { background-position: 0% center; }\n  100% { background-position: 200% center; }\n}\n</style>"
+          }
+        },
+        "parent_kAywHb": {
+          "type": "parent",
+          "settings": {
+            "column_lg": "hdt-col-lg-12",
+            "column_md": "hdt-col-md-12",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-67a7ca9f-3333-4245-b79f-2e9849d7e615",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": "bfcm-col-clear"
+          }
+        },
+        "spacer_dWKphX": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 6,
+            "space_md": 6,
+            "space": 10
+          }
+        },
+        "heading_3i4QjE": {
+          "type": "heading",
+          "settings": {
+            "heading": "🇨🇦 Canada Day Sale 🇨🇦",
+            "tag": "h2",
+            "heading_size": "h5",
+            "alignment": "start"
+          }
+        },
+        "heading_6KR389": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>30% off proteins & supplements</strong>",
+            "tag": "h2",
+            "heading_size": "h1",
+            "alignment": "start"
+          }
+        },
+        "heading_b9abqL": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>No Code Needed</strong>",
+            "tag": "h6",
+            "heading_size": "h5",
+            "alignment": "start"
+          }
+        },
+        "spacer_Fgprkk": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "text_FVfkfr": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Shop Proteins, Supplements, &  More For 70% Off!</p>",
+            "text_size": "base",
+            "alignment": "start",
+            "alignment_mb": "start"
+          }
+        },
+        "custom_liquid_TLa4bJ": {
+          "type": "custom_liquid",
+          "name": "Learn More",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<details class=\"bfcm-learn-more\" style=\"color:#fff;\">\n  <summary style=\"cursor:pointer; text-decoration:underline;\">Learn more</summary>\n  <div style=\"margin-top:10px; line-height:1.5;\">\n\n    <h6><strong>Your goals. Our quality. Canadian Protein delivers.</strong></h6><br>\n\n    <p>From high-quality protein powders to premium supplements, we've got every corner of your routine covered. Shop our full lineup, including:<br>\n    <strong>Whey Protein Isolate, Whey Protein Concentrate, Vegan Protein, Creatine Monohydrate (Creapure®), Essential Vitamins, Tested Supplements</strong> and more.</p>\n    <br>\n\n    <p>This <strong>Black Friday / Cyber Monday</strong>, unlock <strong>up to 70% off</strong> select products crafted to support strength, performance, recovery, and everyday wellness.</p>\n    <br>\n\n    <p><strong>Plus, we're stacking the extras:</strong><br>\n    – Every order is entered for a chance to <strong>win a full refund</strong> — <strong>2 winners</strong> chosen.<br>\n    – Every order is entered for a chance to <strong>win a pair of Meta Ray-Ban Glasses</strong>.<br>\n    – All orders include a <strong>free mystery gift</strong>.<br>\n    – <strong>Orders $150+</strong> receive a <strong>Canadian Protein Mystery Supplement</strong>.<br>\n    – <strong>More giveaways, surprises, and bonuses</strong> dropping throughout the event.</p>\n    <br>\n\n    <p>Fuel clean. Recover smarter. Train with confidence.</p>\n\n    <p><strong>For all giveaways and contests, terms and conditions apply.</strong>\n    <a href=\"https://canadianprotein.com/pages/bfcm-sale-terms-and-conditions\" target=\"_blank\" rel=\"noopener noreferrer\">Click here for terms and conditions.</a></p>\n\n<br/>\n\n  </div>\n</details>"
+          }
+        },
+        "spacer_LRx4wB": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 20,
+            "space_md": 20,
+            "space": 20
+          }
+        },
+        "parent_DW3pEV": {
+          "type": "parent",
+          "name": "Button 1",
+          "settings": {
+            "column_lg": "hdt-col-lg-auto",
+            "column_md": "hdt-col-md-auto",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-b118462a-a4ac-4478-a927-bc3e753a2252",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": "bfcm-col-clear"
+          }
+        },
+        "button_3zKJDJ": {
+          "type": "button",
+          "settings": {
+            "btn_label": "Shop now",
+            "btn_link": "#shopall",
+            "target": false,
+            "btn_size": "lg",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "none",
+            "alignment": "start"
+          }
+        },
+        "spacer_7yw9Rq": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 6,
+            "space": 6
+          }
+        },
+        "parent_fMhMwM": {
+          "type": "parent",
+          "name": "Button 2",
+          "settings": {
+            "column_lg": "hdt-col-lg-3",
+            "column_md": "hdt-col-md-3",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-b118462a-a4ac-4478-a927-bc3e753a2252",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": "bfcm-col-clear"
+          }
+        },
+        "spacer_bReXkG": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 6,
+            "space": 6
+          }
+        },
+        "custom_liquid_8kaRAM": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<small style=\"color:#fff;\">\n  Some exclusions may apply. <br>\n  <strong style=\"color:#fff;\">\n    <a href=\"#faq\" style=\"color:#fff; text-decoration:underline;\">\n      Click here for FAQs.\n    </a>\n  </strong>\n</small>"
+          }
+        }
+      },
+      "block_order": [
+        "custom_liquid_daGAJR",
+        "parent_kAywHb",
+        "spacer_dWKphX",
+        "heading_3i4QjE",
+        "heading_6KR389",
+        "heading_b9abqL",
+        "spacer_Fgprkk",
+        "text_FVfkfr",
+        "custom_liquid_TLa4bJ",
+        "spacer_LRx4wB",
+        "parent_DW3pEV",
+        "button_3zKJDJ",
+        "spacer_7yw9Rq",
+        "parent_fMhMwM",
+        "spacer_bReXkG",
+        "custom_liquid_8kaRAM"
+      ],
+      "custom_css": [
+        "[class*=\"__custom_section_\"] {background: linear-gradient( to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.15) 100% ), #48873e url(https://cdn.shopify.com/s/files/1/0249/3241/7583/files/30_off.png?v=1781715425) center/cover no-repeat !important;}",
+        "[class*=\"__custom_section_\"] .hdt-s-gradient,[class*=\"__custom_section_\"] .hdt-s-gradient:before {background: 0 !important;}"
+      ],
+      "name": "BFCM25 - Header",
+      "settings": {
+        "section_fullwidth": false,
+        "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
+        "direction": "",
+        "justify": "",
+        "gap": true,
+        "space": 0,
+        "padding_top": 76,
+        "padding_bottom": 76,
+        "padding_rate": 75
+      }
+    },
     "heading": {
       "type": "heading-collection",
       "blocks": {
@@ -676,6 +874,7 @@
   },
   "order": [
     "custom_section_zcd47U",
+    "custom_section_QVGaQ8",
     "heading",
     "top_heading_NDhT9y",
     "marquee_xcTg8g",
