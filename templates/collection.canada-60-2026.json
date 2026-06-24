@@ -482,7 +482,6 @@
         "item_LTC37e",
         "item_m3BDf8"
       ],
-      "disabled": true,
       "settings": {
         "heading_align": "center",
         "sec_heading": "",
@@ -576,7 +575,6 @@
     },
     "custom_line_Hx8wKY": {
       "type": "custom-line",
-      "disabled": true,
       "settings": {
         "line_style": "solid",
         "line_width": 100,
