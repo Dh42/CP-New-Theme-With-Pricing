@@ -1,0 +1,683 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_section_zcd47U": {
+      "type": "custom-section",
+      "blocks": {
+        "parent_PEqULp": {
+          "type": "parent",
+          "settings": {
+            "column_lg": "hdt-col-lg-12",
+            "column_md": "hdt-col-md-12",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-1",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": ""
+          }
+        },
+        "spacer_wnaC6a": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "spacer_rBPDnA": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 50,
+            "space_md": 50,
+            "space": 50
+          }
+        },
+        "spacer_DpC77e": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 50,
+            "space_md": 50,
+            "space": 50
+          }
+        },
+        "heading_iVj3m9": {
+          "type": "heading",
+          "settings": {
+            "heading": "🇨🇦 Canada Day Sale 🇨🇦",
+            "tag": "h2",
+            "heading_size": "h2",
+            "alignment": "center"
+          }
+        },
+        "spacer_qXKRmH": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "text_FrjNWt": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Up to 50% off select proteins & apparels </h2>",
+            "text_size": "base",
+            "alignment": "center",
+            "alignment_mb": "center"
+          }
+        },
+        "spacer_axWfRL": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          }
+        },
+        "button_ACGL8Y": {
+          "type": "button",
+          "settings": {
+            "btn_label": "Shop now",
+            "btn_link": "#shopall",
+            "target": false,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "none",
+            "alignment": "center"
+          }
+        },
+        "custom_liquid_QB47Gd": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div style=\"text-align:center;\">\n  <small style=\"color:#fff;\">\n    Some exclusions may apply. <br>\n    <strong style=\"color:#fff;\">\n      <a href=\"#faq\" style=\"color:#fff; text-decoration:underline;\">\n        Click here for FAQs.\n      </a>\n    </strong>\n  </small>\n</div>"
+          }
+        }
+      },
+      "block_order": [
+        "parent_PEqULp",
+        "spacer_wnaC6a",
+        "spacer_rBPDnA",
+        "spacer_DpC77e",
+        "heading_iVj3m9",
+        "spacer_qXKRmH",
+        "text_FrjNWt",
+        "spacer_axWfRL",
+        "button_ACGL8Y",
+        "custom_liquid_QB47Gd"
+      ],
+      "custom_css": [
+        "[class*=\"__custom_section_\"] {background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2)), #48873e url(https://cdn.shopify.com/s/files/1/0249/3241/7583/files/50_off.png?v=1781719822) 90% 70% / cover no-repeat !important; min-height: 500px; color: #fff !important;}",
+        "[class*=\"__custom_section_\"] * {color: #fff !important;}",
+        "[class*=\"__custom_section_\"] .hdt-s-gradient,[class*=\"__custom_section_\"] .hdt-s-gradient:before {background: 0 !important;}"
+      ],
+      "name": "Custom section",
+      "settings": {
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "direction": "",
+        "justify": "",
+        "gap": false,
+        "space": 0,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_rate": 75
+      }
+    },
+    "heading": {
+      "type": "heading-collection",
+      "blocks": {
+        "6df762d7-beda-4452-bcf6-1242b294077c": {
+          "type": "description",
+          "settings": {
+            "description": "🇨🇦 Canada Day Sale 🇨🇦"
+          }
+        },
+        "9a1347b4-da62-490d-9fd4-427a03686ac2": {
+          "type": "heading",
+          "settings": {
+            "heading": "30% off select products"
+          }
+        }
+      },
+      "block_order": [
+        "6df762d7-beda-4452-bcf6-1242b294077c",
+        "9a1347b4-da62-490d-9fd4-427a03686ac2"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacing_hd": 10,
+        "color_scheme": "",
+        "padding_top": 52,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "top_heading_NDhT9y": {
+      "type": "top-heading",
+      "blocks": {
+        "sub_heading_7etnnK": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "<small>Some exclusions & discounts may apply.</small>",
+            "sub_heading_fs": "base"
+          }
+        }
+      },
+      "block_order": [
+        "sub_heading_7etnnK"
+      ],
+      "disabled": true,
+      "name": "t:sections.section_title.name",
+      "settings": {
+        "spacing_item": 30,
+        "alignment": "center",
+        "alignment_mb": "center",
+        "fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "marquee_xcTg8g": {
+      "type": "marquee",
+      "blocks": {
+        "item_kaUPF7": {
+          "type": "item",
+          "settings": {
+            "text": "<p>3X Rewards Points</p>",
+            "icon_svg": "flash",
+            "custom_svg": "",
+            "icon_width": 10,
+            "icon_width_mb": 10
+          }
+        }
+      },
+      "block_order": [
+        "item_kaUPF7"
+      ],
+      "settings": {
+        "space_item": 30,
+        "speed": 0.1,
+        "direction": "rtl",
+        "marquee_pause_when_hover": false,
+        "text_fs": "base",
+        "text_fw": "normal",
+        "text_uppercase": false,
+        "adding_border": true,
+        "icon_position_between": true,
+        "color_scheme": "scheme-4",
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_dpcnVR": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<style>\n  .cp-sale-grid {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    gap: 8px;\n  }\n  .cp-sale-card {\n    position: relative;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    text-decoration: none;\n    background-color: #1a1a1a;\n    padding: 18px 22px;\n    border-radius: 4px;\n    overflow: hidden;\n    transition: background-color .2s ease;\n  }\n  .cp-sale-card:hover {\n    background-color: #c8102e;\n  }\n  .cp-sale-img {\n    position: absolute;\n    inset: 0;\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n    opacity: 0.18;\n    transition: opacity .2s ease;\n  }\n  .cp-sale-card:hover .cp-sale-img {\n    opacity: 0.25;\n  }\n  .cp-sale-text {\n    position: relative;\n    z-index: 1;\n    font-size: clamp(13px, 1.2vw, 16px);\n    font-weight: 700;\n    letter-spacing: .18em;\n    text-transform: uppercase;\n    color: #ffffff;\n  }\n  .cp-sale-arrow {\n    position: relative;\n    z-index: 1;\n    color: #ffffff;\n    font-size: 20px;\n    line-height: 1;\n    transition: transform .2s ease;\n  }\n  .cp-sale-card:hover .cp-sale-arrow {\n    transform: translateX(4px);\n  }\n  @media (max-width: 640px) {\n    .cp-sale-grid {\n      grid-template-columns: 1fr;\n    }\n  }\n</style>\n\n<div class=\"cp-sale-grid\">\n\n  <a class=\"cp-sale-card\" href=\"https://canadianprotein.com/collections/canada-day-sale-2026-30-off\">\n    <img class=\"cp-sale-img\" src=\"https://cdn.shopify.com/s/files/1/0249/3241/7583/files/30_off.png?v=1781715425\" alt=\"\" loading=\"lazy\">\n    <span class=\"cp-sale-text\">Shop 30% Off</span>\n    <span class=\"cp-sale-arrow\">→</span>\n  </a>\n\n  <a class=\"cp-sale-card\" href=\"https://canadianprotein.com/collections/canada-day-sale-2026-50-off\">\n    <img class=\"cp-sale-img\" src=\"https://cdn.shopify.com/s/files/1/0249/3241/7583/files/50_off.png?v=1781719822\" alt=\"\" loading=\"lazy\">\n    <span class=\"cp-sale-text\">Shop 50% Off</span>\n    <span class=\"cp-sale-arrow\">→</span>\n  </a>\n\n  <a class=\"cp-sale-card\" href=\"https://canadianprotein.com/collections/canada-day-sale-2026-60-off\">\n    <img class=\"cp-sale-img\" src=\"https://cdn.shopify.com/s/files/1/0249/3241/7583/files/60_off.png?v=1781720329\" alt=\"\" loading=\"lazy\">\n    <span class=\"cp-sale-text\">Shop 60% Off</span>\n    <span class=\"cp-sale-arrow\">→</span>\n  </a>\n\n  <a class=\"cp-sale-card\" href=\"https://canadianprotein.com/collections/canada-day-sale-2026-70-off\">\n    <img class=\"cp-sale-img\" src=\"https://cdn.shopify.com/s/files/1/0249/3241/7583/files/70_off_2.png?v=1781721326\" alt=\"\" loading=\"lazy\">\n    <span class=\"cp-sale-text\">Shop 70% Off</span>\n    <span class=\"cp-sale-arrow\">→</span>\n  </a>\n\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_rate": 75
+      }
+    },
+    "image_gallery_kbpGeb": {
+      "type": "image-gallery",
+      "blocks": {
+        "gallery_item_bPteD9": {
+          "type": "gallery_item",
+          "settings": {
+            "image": "shopify://shop_images/70_off-cp-2025_f8caed89-e332-4d73-bd57-6b779dde0487.png",
+            "item_link": "shopify://collections/canada-day-sale-2025-extra-40-off",
+            "product_item": ""
+          }
+        },
+        "gallery_item_yT6UKk": {
+          "type": "gallery_item",
+          "settings": {
+            "image": "shopify://shop_images/50_off-cp-2025_2d914120-b146-4e81-985c-f68a109a25ea.png",
+            "item_link": "shopify://collections/canada-day-sale-2025-extra-20-off",
+            "product_item": ""
+          }
+        },
+        "gallery_item_ecwRNf": {
+          "type": "gallery_item",
+          "settings": {
+            "image": "shopify://shop_images/30_off-cp-2025_b211b9b4-950f-4651-a525-46f0addddc93.png",
+            "item_link": "shopify://collections/canada-day-sale-2025-30-off",
+            "product_item": ""
+          }
+        },
+        "gallery_item_MJepyN": {
+          "type": "gallery_item",
+          "settings": {
+            "image": "shopify://shop_images/shop_all-cp-2025_c4a29389-2fb8-4304-91ba-65b62235e804.png",
+            "item_link": "#shopall",
+            "product_item": ""
+          }
+        }
+      },
+      "block_order": [
+        "gallery_item_bPteD9",
+        "gallery_item_yT6UKk",
+        "gallery_item_ecwRNf",
+        "gallery_item_MJepyN"
+      ],
+      "disabled": true,
+      "name": "t:sections.gallery.name",
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 60,
+        "sec_heading_spacing": 100,
+        "image_ratio": "square",
+        "image_size": true,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "3",
+        "spacing_items": 10,
+        "navUI": false,
+        "nav_des": "default",
+        "dotUI": false,
+        "dots_pos": "outline",
+        "section_fullwidth": false,
+        "boxed_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 20,
+        "padding_rate": 75
+      }
+    },
+    "main_heading_9yN8PP": {
+      "type": "main-heading",
+      "blocks": {
+        "1_ihbQgE": {
+          "type": "1",
+          "settings": {
+            "heading": "Shop all",
+            "heading_size": "h4"
+          }
+        }
+      },
+      "block_order": [
+        "1_ihbQgE"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "",
+        "spacing_hd": 5,
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_rate": 75
+      }
+    },
+    "icon_box_bzhCti": {
+      "type": "icon-box",
+      "blocks": {
+        "item_MfCyeb": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "smile",
+            "custom_svg": "",
+            "image": "shopify://shop_images/039-badge.svg",
+            "icon_width": 60,
+            "icon_width_mb": 60,
+            "link": "",
+            "open_link": false,
+            "title": "Triple Rewards Points",
+            "content": "<p>Get 3X the rewards points, stack them for more savings</p>",
+            "adding_border": false
+          }
+        },
+        "item_LTC37e": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "payment",
+            "custom_svg": "",
+            "image": "shopify://shop_images/009-mobile_banking.svg",
+            "icon_width": 60,
+            "icon_width_mb": 60,
+            "link": "",
+            "open_link": false,
+            "title": "Flexible Payments",
+            "content": "<p>Stock up and check out with Sezzle to pay in instalments</p>",
+            "adding_border": false
+          }
+        },
+        "item_m3BDf8": {
+          "type": "item",
+          "settings": {
+            "icon_svg": "box",
+            "custom_svg": "",
+            "image": "shopify://shop_images/025-package.svg",
+            "icon_width": 60,
+            "icon_width_mb": 60,
+            "link": "",
+            "open_link": false,
+            "title": "Free Shipping on $99+",
+            "content": "<p>Spend $100+ and get FREE & FAST shipping anywhere in Canada!</p>",
+            "adding_border": false
+          }
+        }
+      },
+      "block_order": [
+        "item_MfCyeb",
+        "item_LTC37e",
+        "item_m3BDf8"
+      ],
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "",
+        "heading_tag": "h2",
+        "heading_size": "h4",
+        "sec_subheading": "",
+        "subheading_size": "xl",
+        "heading_reverse": false,
+        "heading_gap": 60,
+        "sec_heading_spacing": 30,
+        "icon_pos_center": false,
+        "icon_pos_center_mb": true,
+        "icon_circle": false,
+        "space_icon_heading": "medium",
+        "size_heading": "medium",
+        "heading_uppercase": false,
+        "space_heading_content": "small",
+        "col_dk": "3",
+        "col_tb": "3",
+        "col_mb": "2",
+        "carousel_mobile": true,
+        "border_style": "2",
+        "fullwidth": true,
+        "boxed_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_xMEByG": {
+      "type": "custom-line",
+      "disabled": true,
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 25,
+        "padding_bottom": 35,
+        "padding_rate": 75
+      }
+    },
+    "image_with_tabs_content_9hbpjb": {
+      "type": "image-with-tabs-content",
+      "blocks": {
+        "tab_item_iFTwVk": {
+          "type": "tab_item",
+          "settings": {
+            "title": "50% OFF",
+            "heading": "Creatine Monohydrate & Creatine Creapure",
+            "content_text": "TODAY ONLY: Stock up on Creatine Monohydrate & Creatine Monohydrate by Creapure with a massive 50% discount.",
+            "btn_label": "Shop Creatine",
+            "btn_link": "shopify://collections/creatine-supplements",
+            "target": true,
+            "btn_size": "base",
+            "btn_style": "solid",
+            "btn_fw": "normal",
+            "btn_icon": "1"
+          }
+        }
+      },
+      "block_order": [
+        "tab_item_iFTwVk"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading_align": "center",
+        "sec_heading": "50% OFF Creatine Monohydrate",
+        "heading_tag": "h3",
+        "heading_size": "h4",
+        "sec_subheading": "<p>Limited Time Offer Ends November 29th 11:59pm EST</p>",
+        "subheading_size": "lg",
+        "heading_reverse": false,
+        "heading_gap": 10,
+        "sec_heading_spacing": 49,
+        "main_img": "shopify://shop_images/military-image.png",
+        "image_pos": "left",
+        "image_ratio": "adapt_image",
+        "custom_height": 860,
+        "custom_height_tb": 300,
+        "custom_height_mb": 300,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "padding_rate": 75
+      }
+    },
+    "custom_line_Hx8wKY": {
+      "type": "custom-line",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "section_fullwidth": false,
+        "padding_top": 20,
+        "padding_bottom": 50,
+        "padding_rate": 75
+      }
+    },
+    "custom_liquid_n4TaAM": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"shopall\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 75
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "product_des": "1",
+        "image_ratio": "custom-pr",
+        "image_size": true,
+        "show_vendor": false,
+        "pr_border": "none",
+        "products_count": 12,
+        "col_dk": "4",
+        "col_tb": "3",
+        "col_mb": "2",
+        "pagination_type": "links",
+        "paginate_pos": "center",
+        "dis_pagination": 60,
+        "enable_sorting": true,
+        "enable_filtering": false,
+        "enable_num_cols_selector": true,
+        "widget_heading": "Product categories",
+        "cat_source": "1",
+        "cat_link_list": "",
+        "count": true,
+        "section_fullwidth": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 30,
+        "padding_bottom": 70,
+        "padding_rate": 75,
+        "sidebar_position": "left",
+        "sidebar_size": "medium"
+      }
+    },
+    "custom_liquid_CYFVna": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "section_fullwidth": false,
+        "custom_liquid": "<div id=\"faq\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_rate": 0
+      }
+    },
+    "accordion_7VDBRB": {
+      "type": "accordion",
+      "blocks": {
+        "title_yW38ei": {
+          "type": "title",
+          "settings": {
+            "title": "Frequently Asked Questions"
+          }
+        },
+        "accordion_item_JyAcMi": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "How do I get the sale discount?",
+            "content": "The perfect way to enjoy brewing tea on low hanging fruit to identify. Duis autem vel eum iriure dolor in hendrerit vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. For me, the most important part of improving at photography has been sharing it. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          }
+        },
+        "accordion_item_aqRHxt": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What discounts are included in the Canada Day Sale?",
+            "content": "30% off proteins and supplements, applied automatically at checkout\n<br>Up to 50% off select marked-down items\n<br>Up to 60% off select limited-quantity items \n<br>Up to 70% off apparel and gym equipment\n<br>3× rewards points on all orders\n<br>A free gift with every order of $1 or more"
+          }
+        },
+        "accordion_item_HYtk9r": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What is the free gift?",
+            "content": "Every order of $1 or more includes a free gift while supplies last. Possible gifts include Glutamine, Leucine, or BCAAs+ in Berry Fusion or Citrus Twist flavours. Your gift is chosen at random and is subject to availability."
+          }
+        },
+        "accordion_item_anYHhY": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Do I need a discount code?",
+            "content": "No. All Sale discounts are applied automatically at checkout. You do not need to enter a code."
+          }
+        },
+        "accordion_item_QcmfXb": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Are there any products excluded from the Sale?",
+            "content": "Yes. Bulk protein in 6kg and 10kg sizes does not qualify for Sale pricing and is excluded from all discounts. Some other exclusions may apply and will be noted on the product page."
+          }
+        },
+        "accordion_item_yXDAPE": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "What are the 3× rewards points?",
+            "content": "During the Sale, you'll earn triple the usual rewards points on every order. Points are added to your account automatically and can be used toward future purchases through the Canadian Protein rewards program."
+          }
+        },
+        "accordion_item_NAxYRT": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "I signed up for Early Access — where are my rewards points?",
+            "content": "Points may take a short time to appear in your account. If they haven't shown up after 24 hours, please contact Canadian Protein customer support."
+          }
+        },
+        "accordion_item_Md6JYm": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "My discount isn't showing at checkout — what should I do?",
+            "content": "Make sure you're shopping for eligible products (bulk products are excluded). If the discount still isn't appearing, try refreshing your cart or contact Canadian Protein customer support for help."
+          }
+        },
+        "accordion_item_chAmcj": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Can I return or exchange a Sale item?",
+            "content": "Please refer to the Canadian Protein returns policy for full details on returns and exchanges during the Sale period."
+          }
+        }
+      },
+      "block_order": [
+        "title_yW38ei",
+        "accordion_item_JyAcMi",
+        "accordion_item_aqRHxt",
+        "accordion_item_HYtk9r",
+        "accordion_item_anYHhY",
+        "accordion_item_QcmfXb",
+        "accordion_item_yXDAPE",
+        "accordion_item_NAxYRT",
+        "accordion_item_Md6JYm",
+        "accordion_item_chAmcj"
+      ],
+      "name": "t:sections.accordion.name",
+      "settings": {
+        "accordion_position": "start",
+        "accordion_icon": "1",
+        "open_first": false,
+        "enable_link_list": false,
+        "section_fullwidth": false,
+        "color_scheme": "",
+        "padding_top": 85,
+        "padding_bottom": 70,
+        "padding_rate": 75
+      }
+    },
+    "icon_with_text_LMTgLi": {
+      "type": "icon_with_text",
+      "settings": {
+        "color_scheme": "",
+        "text": "<p>Terms and Conditions for Promotions and Sales</p>",
+        "btn_label": "View Terms and Conditions",
+        "btn_link": "shopify://pages/terms-and-conditions-for-promotions-and-sales",
+        "target": false,
+        "btn_size": "xs",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "btn_icon": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
+    }
+  },
+  "order": [
+    "custom_section_zcd47U",
+    "heading",
+    "top_heading_NDhT9y",
+    "marquee_xcTg8g",
+    "custom_liquid_dpcnVR",
+    "image_gallery_kbpGeb",
+    "main_heading_9yN8PP",
+    "icon_box_bzhCti",
+    "custom_line_xMEByG",
+    "image_with_tabs_content_9hbpjb",
+    "custom_line_Hx8wKY",
+    "custom_liquid_n4TaAM",
+    "main",
+    "custom_liquid_CYFVna",
+    "accordion_7VDBRB",
+    "icon_with_text_LMTgLi"
+  ]
+}
