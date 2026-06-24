@@ -9,58 +9,68 @@
  */
 {
   "sections": {
-    "custom_section_PMytYg": {
+    "custom_section_E4tUkX": {
       "type": "custom-section",
       "blocks": {
-        "parent_A8HydF": {
+        "custom_liquid_U4NF9g": {
+          "type": "custom_liquid",
+          "name": "Early Access",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<span style=\"\n  font-size:12px;\n  font-weight:700;\n  letter-spacing:1.5px;\n  text-transform:uppercase;\n  background: linear-gradient(\n    90deg,\n    #b8860b,\n    #ffd700,\n    #fff4a3,\n    #ffd700,\n    #b8860b\n  );\n  background-size: 200% auto;\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  color: transparent;\n  animation: goldLoop 4s linear infinite;\n  display:inline-block;\n\">\n  VIP EARLY ACCESS\n</span>\n\n<style>\n@keyframes goldLoop {\n  0% { background-position: 0% center; }\n  100% { background-position: 200% center; }\n}\n</style>"
+          }
+        },
+        "parent_7CUB4g": {
           "type": "parent",
           "settings": {
             "column_lg": "hdt-col-lg-12",
             "column_md": "hdt-col-md-12",
             "column": "hdt-col-12",
-            "color_scheme": "scheme-1",
+            "color_scheme": "scheme-67a7ca9f-3333-4245-b79f-2e9849d7e615",
             "padding_top": 0,
             "padding_right": 0,
             "padding_bottom": 0,
             "padding_left": 0,
             "padding_rate": 75,
-            "class": ""
+            "class": "bfcm-col-clear"
           }
         },
-        "spacer_M8zFGM": {
+        "spacer_a3eyiM": {
           "type": "spacer",
           "settings": {
-            "space_lg": 10,
-            "space_md": 10,
+            "space_lg": 6,
+            "space_md": 6,
             "space": 10
           }
         },
-        "spacer_GryTrF": {
-          "type": "spacer",
-          "settings": {
-            "space_lg": 50,
-            "space_md": 50,
-            "space": 50
-          }
-        },
-        "spacer_ECkgA9": {
-          "type": "spacer",
-          "settings": {
-            "space_lg": 50,
-            "space_md": 50,
-            "space": 50
-          }
-        },
-        "heading_bKPhdb": {
+        "heading_Qj4CKB": {
           "type": "heading",
           "settings": {
             "heading": "🇨🇦 Canada Day Sale 🇨🇦",
             "tag": "h2",
-            "heading_size": "h2",
-            "alignment": "center"
+            "heading_size": "h5",
+            "alignment": "start"
           }
         },
-        "spacer_qpfgMN": {
+        "heading_GebcnJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Up to 70% Off Sitewide</strong>",
+            "tag": "h2",
+            "heading_size": "h1",
+            "alignment": "start"
+          }
+        },
+        "heading_Ltd7Hz": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>No Code Needed</strong>",
+            "tag": "h6",
+            "heading_size": "h5",
+            "alignment": "start"
+          }
+        },
+        "spacer_BhTPQN": {
           "type": "spacer",
           "settings": {
             "space_lg": 10,
@@ -68,79 +78,132 @@
             "space": 10
           }
         },
-        "text_LfUNdq": {
+        "text_86wpfG": {
           "type": "text",
+          "disabled": true,
           "settings": {
-            "text": "<h2>Up to 70% Off Sitewide</h2>",
-            "text_size": "4xl",
-            "alignment": "center",
-            "alignment_mb": "center"
+            "text": "<p>Shop Proteins, Supplements, &  More For 70% Off!</p>",
+            "text_size": "base",
+            "alignment": "start",
+            "alignment_mb": "start"
           }
         },
-        "spacer_waWghM": {
+        "custom_liquid_UXcMbT": {
+          "type": "custom_liquid",
+          "name": "Learn More",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<details class=\"bfcm-learn-more\" style=\"color:#fff;\">\n  <summary style=\"cursor:pointer; text-decoration:underline;\">Learn more</summary>\n  <div style=\"margin-top:10px; line-height:1.5;\">\n\n    <h6><strong>Your goals. Our quality. Canadian Protein delivers.</strong></h6><br>\n\n    <p>From high-quality protein powders to premium supplements, we've got every corner of your routine covered. Shop our full lineup, including:<br>\n    <strong>Whey Protein Isolate, Whey Protein Concentrate, Vegan Protein, Creatine Monohydrate (Creapure®), Essential Vitamins, Tested Supplements</strong> and more.</p>\n    <br>\n\n    <p>This <strong>Black Friday / Cyber Monday</strong>, unlock <strong>up to 70% off</strong> select products crafted to support strength, performance, recovery, and everyday wellness.</p>\n    <br>\n\n    <p><strong>Plus, we're stacking the extras:</strong><br>\n    – Every order is entered for a chance to <strong>win a full refund</strong> — <strong>2 winners</strong> chosen.<br>\n    – Every order is entered for a chance to <strong>win a pair of Meta Ray-Ban Glasses</strong>.<br>\n    – All orders include a <strong>free mystery gift</strong>.<br>\n    – <strong>Orders $150+</strong> receive a <strong>Canadian Protein Mystery Supplement</strong>.<br>\n    – <strong>More giveaways, surprises, and bonuses</strong> dropping throughout the event.</p>\n    <br>\n\n    <p>Fuel clean. Recover smarter. Train with confidence.</p>\n\n    <p><strong>For all giveaways and contests, terms and conditions apply.</strong>\n    <a href=\"https://canadianprotein.com/pages/bfcm-sale-terms-and-conditions\" target=\"_blank\" rel=\"noopener noreferrer\">Click here for terms and conditions.</a></p>\n\n<br/>\n\n  </div>\n</details>"
+          }
+        },
+        "spacer_3PrcfT": {
           "type": "spacer",
           "settings": {
-            "space_lg": 10,
-            "space_md": 10,
-            "space": 10
+            "space_lg": 20,
+            "space_md": 20,
+            "space": 20
           }
         },
-        "button_xHNR8b": {
+        "parent_6ziTMt": {
+          "type": "parent",
+          "name": "Button 1",
+          "settings": {
+            "column_lg": "hdt-col-lg-auto",
+            "column_md": "hdt-col-md-auto",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-b118462a-a4ac-4478-a927-bc3e753a2252",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": "bfcm-col-clear"
+          }
+        },
+        "button_YA8Qj8": {
           "type": "button",
           "settings": {
             "btn_label": "Shop now",
             "btn_link": "#shopall",
             "target": false,
-            "btn_size": "base",
+            "btn_size": "lg",
             "btn_style": "solid",
             "btn_fw": "normal",
             "btn_icon": "none",
-            "alignment": "center"
+            "alignment": "start"
           }
         },
-        "spacer_6xAHP6": {
+        "spacer_LUFFhC": {
           "type": "spacer",
           "settings": {
             "space_lg": 10,
-            "space_md": 10,
-            "space": 10
+            "space_md": 6,
+            "space": 6
           }
         },
-        "custom_liquid_pQQJid": {
+        "parent_zHwrpb": {
+          "type": "parent",
+          "name": "Button 2",
+          "settings": {
+            "column_lg": "hdt-col-lg-3",
+            "column_md": "hdt-col-md-3",
+            "column": "hdt-col-12",
+            "color_scheme": "scheme-b118462a-a4ac-4478-a927-bc3e753a2252",
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "padding_rate": 75,
+            "class": "bfcm-col-clear"
+          }
+        },
+        "spacer_BFrnzf": {
+          "type": "spacer",
+          "settings": {
+            "space_lg": 10,
+            "space_md": 6,
+            "space": 6
+          }
+        },
+        "custom_liquid_TxbVhC": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div style=\"text-align:center;\">\n  <small style=\"color:#fff;\">\n    Some exclusions may apply. <br>\n    <strong style=\"color:#fff;\">\n      <a href=\"#faq\" style=\"color:#fff; text-decoration:underline;\">\n        Click here for FAQs.\n      </a>\n    </strong>\n  </small>\n</div>"
+            "custom_liquid": "<small style=\"color:#fff;\">\n  Some exclusions may apply. <br>\n  <strong style=\"color:#fff;\">\n    <a href=\"#faq\" style=\"color:#fff; text-decoration:underline;\">\n      Click here for FAQs.\n    </a>\n  </strong>\n</small>"
           }
         }
       },
       "block_order": [
-        "parent_A8HydF",
-        "spacer_M8zFGM",
-        "spacer_GryTrF",
-        "spacer_ECkgA9",
-        "heading_bKPhdb",
-        "spacer_qpfgMN",
-        "text_LfUNdq",
-        "spacer_waWghM",
-        "button_xHNR8b",
-        "spacer_6xAHP6",
-        "custom_liquid_pQQJid"
+        "custom_liquid_U4NF9g",
+        "parent_7CUB4g",
+        "spacer_a3eyiM",
+        "heading_Qj4CKB",
+        "heading_GebcnJ",
+        "heading_Ltd7Hz",
+        "spacer_BhTPQN",
+        "text_86wpfG",
+        "custom_liquid_UXcMbT",
+        "spacer_3PrcfT",
+        "parent_6ziTMt",
+        "button_YA8Qj8",
+        "spacer_LUFFhC",
+        "parent_zHwrpb",
+        "spacer_BFrnzf",
+        "custom_liquid_TxbVhC"
       ],
       "custom_css": [
-        "[class*=\"__custom_section_\"] {background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2)), #48873e url(https://cdn.shopify.com/s/files/1/0249/3241/7583/files/Main_8f102465-2f44-4244-a7c2-c1cfff9db194.jpg?v=1781713643) 90% 70% / cover no-repeat !important; min-height: 500px; color: #fff !important;}",
-        "[class*=\"__custom_section_\"] * {color: #fff !important;}",
+        "[class*=\"__custom_section_\"] {background: linear-gradient( to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.15) 100% ), #48873e url(https://cdn.shopify.com/s/files/1/0249/3241/7583/files/Main_8f102465-2f44-4244-a7c2-c1cfff9db194.jpg?v=1781713643) center/cover no-repeat !important;}",
         "[class*=\"__custom_section_\"] .hdt-s-gradient,[class*=\"__custom_section_\"] .hdt-s-gradient:before {background: 0 !important;}"
       ],
-      "name": "Custom section",
+      "name": "BFCM25 - Header",
       "settings": {
         "section_fullwidth": false,
-        "color_scheme": "",
+        "color_scheme": "scheme-0ca8a091-1d2d-434e-b200-a3686d956bf1",
         "direction": "",
         "justify": "",
-        "gap": false,
+        "gap": true,
         "space": 0,
-        "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_top": 76,
+        "padding_bottom": 76,
         "padding_rate": 75
       }
     },
@@ -943,7 +1006,7 @@
     }
   },
   "order": [
-    "custom_section_PMytYg",
+    "custom_section_E4tUkX",
     "heading",
     "top_heading_CF4rBy",
     "marquee_xcTg8g",
