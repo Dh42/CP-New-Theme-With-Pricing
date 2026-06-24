@@ -9,136 +9,10 @@
  */
 {
   "sections": {
-    "custom_section_zcd47U": {
+    "custom_section_EBMnph": {
       "type": "custom-section",
       "blocks": {
-        "parent_PEqULp": {
-          "type": "parent",
-          "settings": {
-            "column_lg": "hdt-col-lg-12",
-            "column_md": "hdt-col-md-12",
-            "column": "hdt-col-12",
-            "color_scheme": "scheme-1",
-            "padding_top": 0,
-            "padding_right": 0,
-            "padding_bottom": 0,
-            "padding_left": 0,
-            "padding_rate": 75,
-            "class": ""
-          }
-        },
-        "spacer_wnaC6a": {
-          "type": "spacer",
-          "settings": {
-            "space_lg": 10,
-            "space_md": 10,
-            "space": 10
-          }
-        },
-        "spacer_rBPDnA": {
-          "type": "spacer",
-          "settings": {
-            "space_lg": 50,
-            "space_md": 50,
-            "space": 50
-          }
-        },
-        "spacer_DpC77e": {
-          "type": "spacer",
-          "settings": {
-            "space_lg": 50,
-            "space_md": 50,
-            "space": 50
-          }
-        },
-        "heading_iVj3m9": {
-          "type": "heading",
-          "settings": {
-            "heading": "🇨🇦 Canada Day Sale 🇨🇦",
-            "tag": "h2",
-            "heading_size": "h2",
-            "alignment": "center"
-          }
-        },
-        "spacer_qXKRmH": {
-          "type": "spacer",
-          "settings": {
-            "space_lg": 10,
-            "space_md": 10,
-            "space": 10
-          }
-        },
-        "text_FrjNWt": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Up to 70% off apparel & exercise equipment</h2>",
-            "text_size": "base",
-            "alignment": "center",
-            "alignment_mb": "center"
-          }
-        },
-        "spacer_axWfRL": {
-          "type": "spacer",
-          "settings": {
-            "space_lg": 10,
-            "space_md": 10,
-            "space": 10
-          }
-        },
-        "button_ACGL8Y": {
-          "type": "button",
-          "settings": {
-            "btn_label": "Shop now",
-            "btn_link": "#shopall",
-            "target": false,
-            "btn_size": "base",
-            "btn_style": "solid",
-            "btn_fw": "normal",
-            "btn_icon": "none",
-            "alignment": "center"
-          }
-        },
-        "custom_liquid_QB47Gd": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<div style=\"text-align:center;\">\n  <small style=\"color:#fff;\">\n    Some exclusions may apply. <br>\n    <strong style=\"color:#fff;\">\n      <a href=\"#faq\" style=\"color:#fff; text-decoration:underline;\">\n        Click here for FAQs.\n      </a>\n    </strong>\n  </small>\n</div>"
-          }
-        }
-      },
-      "block_order": [
-        "parent_PEqULp",
-        "spacer_wnaC6a",
-        "spacer_rBPDnA",
-        "spacer_DpC77e",
-        "heading_iVj3m9",
-        "spacer_qXKRmH",
-        "text_FrjNWt",
-        "spacer_axWfRL",
-        "button_ACGL8Y",
-        "custom_liquid_QB47Gd"
-      ],
-      "custom_css": [
-        "[class*=\"__custom_section_\"] {background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2)), #48873e url(https://cdn.shopify.com/s/files/1/0249/3241/7583/files/70_off_2.png?v=1781721326) 90% 70% / cover no-repeat !important; min-height: 500px; color: #fff !important;}",
-        "[class*=\"__custom_section_\"] * {color: #fff !important;}",
-        "[class*=\"__custom_section_\"] .hdt-s-gradient,[class*=\"__custom_section_\"] .hdt-s-gradient:before {background: 0 !important;}"
-      ],
-      "name": "Custom section",
-      "settings": {
-        "section_fullwidth": false,
-        "color_scheme": "",
-        "direction": "",
-        "justify": "",
-        "gap": false,
-        "space": 0,
-        "padding_top": 40,
-        "padding_bottom": 40,
-        "padding_rate": 75
-      }
-    },
-    "custom_section_QVGaQ8": {
-      "type": "custom-section",
-      "blocks": {
-        "custom_liquid_daGAJR": {
+        "custom_liquid_4xdFF4": {
           "type": "custom_liquid",
           "name": "Early Access",
           "disabled": true,
@@ -146,7 +20,7 @@
             "custom_liquid": "<span style=\"\n  font-size:12px;\n  font-weight:700;\n  letter-spacing:1.5px;\n  text-transform:uppercase;\n  background: linear-gradient(\n    90deg,\n    #b8860b,\n    #ffd700,\n    #fff4a3,\n    #ffd700,\n    #b8860b\n  );\n  background-size: 200% auto;\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n  color: transparent;\n  animation: goldLoop 4s linear infinite;\n  display:inline-block;\n\">\n  VIP EARLY ACCESS\n</span>\n\n<style>\n@keyframes goldLoop {\n  0% { background-position: 0% center; }\n  100% { background-position: 200% center; }\n}\n</style>"
           }
         },
-        "parent_kAywHb": {
+        "parent_HCbbJR": {
           "type": "parent",
           "settings": {
             "column_lg": "hdt-col-lg-12",
@@ -161,7 +35,7 @@
             "class": "bfcm-col-clear"
           }
         },
-        "spacer_dWKphX": {
+        "spacer_p3gXAz": {
           "type": "spacer",
           "settings": {
             "space_lg": 6,
@@ -169,7 +43,7 @@
             "space": 10
           }
         },
-        "heading_3i4QjE": {
+        "heading_rCH6Qp": {
           "type": "heading",
           "settings": {
             "heading": "🇨🇦 Canada Day Sale 🇨🇦",
@@ -178,16 +52,16 @@
             "alignment": "start"
           }
         },
-        "heading_6KR389": {
+        "heading_DmbAJB": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>30% off proteins & supplements</strong>",
+            "heading": "<strong>Up to 70% off apparel & exercise equipment</strong>",
             "tag": "h2",
             "heading_size": "h1",
             "alignment": "start"
           }
         },
-        "heading_b9abqL": {
+        "heading_aqaiT8": {
           "type": "heading",
           "settings": {
             "heading": "<strong>No Code Needed</strong>",
@@ -196,7 +70,7 @@
             "alignment": "start"
           }
         },
-        "spacer_Fgprkk": {
+        "spacer_TTGCLL": {
           "type": "spacer",
           "settings": {
             "space_lg": 10,
@@ -204,7 +78,7 @@
             "space": 10
           }
         },
-        "text_FVfkfr": {
+        "text_acc8ig": {
           "type": "text",
           "disabled": true,
           "settings": {
@@ -214,7 +88,7 @@
             "alignment_mb": "start"
           }
         },
-        "custom_liquid_TLa4bJ": {
+        "custom_liquid_WD3GG4": {
           "type": "custom_liquid",
           "name": "Learn More",
           "disabled": true,
@@ -222,7 +96,7 @@
             "custom_liquid": "<details class=\"bfcm-learn-more\" style=\"color:#fff;\">\n  <summary style=\"cursor:pointer; text-decoration:underline;\">Learn more</summary>\n  <div style=\"margin-top:10px; line-height:1.5;\">\n\n    <h6><strong>Your goals. Our quality. Canadian Protein delivers.</strong></h6><br>\n\n    <p>From high-quality protein powders to premium supplements, we've got every corner of your routine covered. Shop our full lineup, including:<br>\n    <strong>Whey Protein Isolate, Whey Protein Concentrate, Vegan Protein, Creatine Monohydrate (Creapure®), Essential Vitamins, Tested Supplements</strong> and more.</p>\n    <br>\n\n    <p>This <strong>Black Friday / Cyber Monday</strong>, unlock <strong>up to 70% off</strong> select products crafted to support strength, performance, recovery, and everyday wellness.</p>\n    <br>\n\n    <p><strong>Plus, we're stacking the extras:</strong><br>\n    – Every order is entered for a chance to <strong>win a full refund</strong> — <strong>2 winners</strong> chosen.<br>\n    – Every order is entered for a chance to <strong>win a pair of Meta Ray-Ban Glasses</strong>.<br>\n    – All orders include a <strong>free mystery gift</strong>.<br>\n    – <strong>Orders $150+</strong> receive a <strong>Canadian Protein Mystery Supplement</strong>.<br>\n    – <strong>More giveaways, surprises, and bonuses</strong> dropping throughout the event.</p>\n    <br>\n\n    <p>Fuel clean. Recover smarter. Train with confidence.</p>\n\n    <p><strong>For all giveaways and contests, terms and conditions apply.</strong>\n    <a href=\"https://canadianprotein.com/pages/bfcm-sale-terms-and-conditions\" target=\"_blank\" rel=\"noopener noreferrer\">Click here for terms and conditions.</a></p>\n\n<br/>\n\n  </div>\n</details>"
           }
         },
-        "spacer_LRx4wB": {
+        "spacer_T6dWwc": {
           "type": "spacer",
           "settings": {
             "space_lg": 20,
@@ -230,7 +104,7 @@
             "space": 20
           }
         },
-        "parent_DW3pEV": {
+        "parent_TnUUPe": {
           "type": "parent",
           "name": "Button 1",
           "settings": {
@@ -246,7 +120,7 @@
             "class": "bfcm-col-clear"
           }
         },
-        "button_3zKJDJ": {
+        "button_NUM8Az": {
           "type": "button",
           "settings": {
             "btn_label": "Shop now",
@@ -259,7 +133,7 @@
             "alignment": "start"
           }
         },
-        "spacer_7yw9Rq": {
+        "spacer_wbQKLC": {
           "type": "spacer",
           "settings": {
             "space_lg": 10,
@@ -267,7 +141,7 @@
             "space": 6
           }
         },
-        "parent_fMhMwM": {
+        "parent_j4Anzw": {
           "type": "parent",
           "name": "Button 2",
           "settings": {
@@ -283,7 +157,7 @@
             "class": "bfcm-col-clear"
           }
         },
-        "spacer_bReXkG": {
+        "spacer_N9EGny": {
           "type": "spacer",
           "settings": {
             "space_lg": 10,
@@ -291,7 +165,7 @@
             "space": 6
           }
         },
-        "custom_liquid_8kaRAM": {
+        "custom_liquid_YY7YxB": {
           "type": "custom_liquid",
           "settings": {
             "custom_liquid": "<small style=\"color:#fff;\">\n  Some exclusions may apply. <br>\n  <strong style=\"color:#fff;\">\n    <a href=\"#faq\" style=\"color:#fff; text-decoration:underline;\">\n      Click here for FAQs.\n    </a>\n  </strong>\n</small>"
@@ -299,25 +173,25 @@
         }
       },
       "block_order": [
-        "custom_liquid_daGAJR",
-        "parent_kAywHb",
-        "spacer_dWKphX",
-        "heading_3i4QjE",
-        "heading_6KR389",
-        "heading_b9abqL",
-        "spacer_Fgprkk",
-        "text_FVfkfr",
-        "custom_liquid_TLa4bJ",
-        "spacer_LRx4wB",
-        "parent_DW3pEV",
-        "button_3zKJDJ",
-        "spacer_7yw9Rq",
-        "parent_fMhMwM",
-        "spacer_bReXkG",
-        "custom_liquid_8kaRAM"
+        "custom_liquid_4xdFF4",
+        "parent_HCbbJR",
+        "spacer_p3gXAz",
+        "heading_rCH6Qp",
+        "heading_DmbAJB",
+        "heading_aqaiT8",
+        "spacer_TTGCLL",
+        "text_acc8ig",
+        "custom_liquid_WD3GG4",
+        "spacer_T6dWwc",
+        "parent_TnUUPe",
+        "button_NUM8Az",
+        "spacer_wbQKLC",
+        "parent_j4Anzw",
+        "spacer_N9EGny",
+        "custom_liquid_YY7YxB"
       ],
       "custom_css": [
-        "[class*=\"__custom_section_\"] {background: linear-gradient( to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.15) 100% ), #48873e url(https://cdn.shopify.com/s/files/1/0249/3241/7583/files/30_off.png?v=1781715425) center/cover no-repeat !important;}",
+        "[class*=\"__custom_section_\"] {background: linear-gradient( to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.15) 100% ), #48873e url(https://cdn.shopify.com/s/files/1/0249/3241/7583/files/70_off.png?v=1781721325) center/cover no-repeat !important;}",
         "[class*=\"__custom_section_\"] .hdt-s-gradient,[class*=\"__custom_section_\"] .hdt-s-gradient:before {background: 0 !important;}"
       ],
       "name": "BFCM25 - Header",
@@ -873,8 +747,7 @@
     }
   },
   "order": [
-    "custom_section_zcd47U",
-    "custom_section_QVGaQ8",
+    "custom_section_EBMnph",
     "heading",
     "top_heading_NDhT9y",
     "marquee_xcTg8g",
