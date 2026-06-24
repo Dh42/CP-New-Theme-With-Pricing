@@ -298,6 +298,7 @@
     },
     "custom_liquid_M3jDTy": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "section_fullwidth": false,
