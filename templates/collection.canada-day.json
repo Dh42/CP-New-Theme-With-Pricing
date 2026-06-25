@@ -873,7 +873,7 @@
         "pagination_type": "infinite",
         "paginate_pos": "center",
         "dis_pagination": 60,
-        "enable_sorting": true,
+        "enable_sorting": false,
         "enable_filtering": false,
         "enable_num_cols_selector": false,
         "widget_heading": "Product categories",
