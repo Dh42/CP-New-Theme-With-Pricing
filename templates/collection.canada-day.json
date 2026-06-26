@@ -719,21 +719,21 @@
           "type": "accordion_item",
           "settings": {
             "title": "How do I get the sale discount?",
-            "content": "The 30% off sitewide discount is applied automatically at checkout — no code needed. Additional savings on select items will also be applied automatically."
+            "content": "The sitewide discounts are applied automatically at checkout — no code needed. Additional savings on select items will also be applied automatically."
           }
         },
         "accordion_item_zgqGCL": {
           "type": "accordion_item",
           "settings": {
             "title": "What discounts are included in the Canada Day Sale?",
-            "content": "30% off proteins and supplements, applied automatically at checkout\n<br>Up to 50% off select marked-down items\n<br>Up to 60% off select limited-quantity items \n<br>Up to 70% off apparel and gym equipment\n<br>3× rewards points on all orders\n<br>A free gift with every order of $1 or more"
+            "content": "- 30% off proteins and supplements\n<br>- Up to 50% off select marked-down items\n<br>- Up to 60% off select limited-quantity items \n<br>- Up to 70% off apparel and gym equipment\n<br>- 2× rewards points on all orders\n<br>- A free gift with every order of $150 or more"
           }
         },
         "accordion_item_dtbhVW": {
           "type": "accordion_item",
           "settings": {
             "title": "What is the free gift?",
-            "content": "Every order of $1 or more includes a free gift while supplies last. Possible gifts include Glutamine, Leucine, or BCAAs+ in Berry Fusion or Citrus Twist flavours. Your gift is chosen at random and is subject to availability."
+            "content": "Every order of $150 or more includes a free gift while supplies last. Possible gifts include Glutamine, Leucine, or BCAAs+ in Berry Fusion or Citrus Twist flavours. Your gift is chosen at random and is subject to availability. Mystery Gifts cannot be returned or exchanged. Canadian Protein Reserves the right to substitute the free gift with other products at any time."
           }
         },
         "accordion_item_jKr3C3": {
@@ -753,8 +753,8 @@
         "accordion_item_ibB3an": {
           "type": "accordion_item",
           "settings": {
-            "title": "What are the 3× rewards points?",
-            "content": "During the Sale, you'll earn triple the usual rewards points on every order. Points are added to your account automatically and can be used toward future purchases through the Canadian Protein rewards program."
+            "title": "What are the 2× rewards points?",
+            "content": "During the Sale, you'll earn double the usual rewards points on every order. Points are added to your account automatically and can be used toward future purchases through the Canadian Protein rewards program."
           }
         },
         "accordion_item_yYfqjb": {
@@ -777,6 +777,13 @@
             "title": "Can I return or exchange a Sale item?",
             "content": "Please refer to the Canadian Protein returns policy for full details on returns and exchanges during the Sale period."
           }
+        },
+        "accordion_item_pqGH3B": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Can I return or exchange a free gift?",
+            "content": "No. free gifts can not be returned or exchanged."
+          }
         }
       },
       "block_order": [
@@ -789,7 +796,8 @@
         "accordion_item_ibB3an",
         "accordion_item_yYfqjb",
         "accordion_item_Ctt7x3",
-        "accordion_item_y4f9py"
+        "accordion_item_y4f9py",
+        "accordion_item_pqGH3B"
       ],
       "name": "t:sections.accordion.name",
       "settings": {
