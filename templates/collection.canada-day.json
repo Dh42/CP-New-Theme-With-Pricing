@@ -689,23 +689,6 @@
         "padding_rate": 0
       }
     },
-    "icon_with_text_LMTgLi": {
-      "type": "icon_with_text",
-      "settings": {
-        "color_scheme": "",
-        "text": "<p>Terms and Conditions for Promotions and Sales</p>",
-        "btn_label": "View Terms and Conditions",
-        "btn_link": "shopify://pages/terms-and-conditions-for-promotions-and-sales",
-        "target": false,
-        "btn_size": "xs",
-        "btn_style": "solid",
-        "btn_fw": "normal",
-        "btn_icon": "none",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_rate": 75
-      }
-    },
     "accordion_LA4kwR": {
       "type": "accordion",
       "blocks": {
@@ -811,6 +794,23 @@
         "padding_bottom": 70,
         "padding_rate": 75
       }
+    },
+    "icon_with_text_LMTgLi": {
+      "type": "icon_with_text",
+      "settings": {
+        "color_scheme": "",
+        "text": "<p>Terms and Conditions for Promotions and Sales</p>",
+        "btn_label": "View Terms and Conditions",
+        "btn_link": "shopify://pages/terms-and-conditions-for-promotions-and-sales",
+        "target": false,
+        "btn_size": "xs",
+        "btn_style": "solid",
+        "btn_fw": "normal",
+        "btn_icon": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_rate": 75
+      }
     }
   },
   "order": [
@@ -829,7 +829,7 @@
     "custom_liquid_n4TaAM",
     "main",
     "custom_liquid_rxthzb",
-    "icon_with_text_LMTgLi",
-    "accordion_LA4kwR"
+    "accordion_LA4kwR",
+    "icon_with_text_LMTgLi"
   ]
 }
