@@ -633,90 +633,98 @@
         "padding_rate": 0
       }
     },
-    "accordion_7VDBRB": {
+    "accordion_ykApEk": {
       "type": "accordion",
       "blocks": {
-        "title_yW38ei": {
+        "title_XUWwR7": {
           "type": "title",
           "settings": {
-            "title": "Frequently Asked Questions"
+            "title": "Canadian Protein Canada Day Sale — FAQ"
           }
         },
-        "accordion_item_JyAcMi": {
+        "accordion_item_Jej634": {
           "type": "accordion_item",
           "settings": {
             "title": "How do I get the sale discount?",
             "content": "The sitewide discounts are applied automatically at checkout — no code needed. Additional savings on select items will also be applied automatically."
           }
         },
-        "accordion_item_aqRHxt": {
+        "accordion_item_A4QhU8": {
           "type": "accordion_item",
           "settings": {
             "title": "What discounts are included in the Canada Day Sale?",
-            "content": "30% off proteins and supplements, applied automatically at checkout\n<br>Up to 50% off select marked-down items\n<br>Up to 60% off select limited-quantity items \n<br>Up to 70% off apparel and gym equipment\n<br>3× rewards points on all orders\n<br>A free gift with every order of $1 or more"
+            "content": "- 30% off proteins and supplements\n<br>- Up to 50% off select marked-down items\n<br>- Up to 60% off select limited-quantity items \n<br>- Up to 70% off apparel and gym equipment\n<br>- 2× rewards points on all orders\n<br>- A free gift with every order of $150 or more"
           }
         },
-        "accordion_item_HYtk9r": {
+        "accordion_item_KeynPT": {
           "type": "accordion_item",
           "settings": {
             "title": "What is the free gift?",
-            "content": "Every order of $1 or more includes a free gift while supplies last. Possible gifts include Glutamine, Leucine, or BCAAs+ in Berry Fusion or Citrus Twist flavours. Your gift is chosen at random and is subject to availability."
+            "content": "Every order of $150 or more includes a free gift while supplies last. Possible gifts include Glutamine, Leucine, or BCAAs+ in Berry Fusion or Citrus Twist flavours. Your gift is chosen at random and is subject to availability. Mystery Gifts cannot be returned or exchanged. Canadian Protein Reserves the right to substitute the free gift with other products at any time."
           }
         },
-        "accordion_item_anYHhY": {
+        "accordion_item_YrdUdH": {
           "type": "accordion_item",
           "settings": {
             "title": "Do I need a discount code?",
             "content": "No. All Sale discounts are applied automatically at checkout. You do not need to enter a code."
           }
         },
-        "accordion_item_QcmfXb": {
+        "accordion_item_kApaM3": {
           "type": "accordion_item",
           "settings": {
             "title": "Are there any products excluded from the Sale?",
             "content": "Yes. Bulk protein in 6kg and 10kg sizes does not qualify for Sale pricing and is excluded from all discounts. Some other exclusions may apply and will be noted on the product page."
           }
         },
-        "accordion_item_yXDAPE": {
+        "accordion_item_pMAaBV": {
           "type": "accordion_item",
           "settings": {
-            "title": "What are the 3× rewards points?",
-            "content": "During the Sale, you'll earn triple the usual rewards points on every order. Points are added to your account automatically and can be used toward future purchases through the Canadian Protein rewards program."
+            "title": "What are the 2× rewards points?",
+            "content": "During the Sale, you'll earn double the usual rewards points on every order. Points are added to your account automatically and can be used toward future purchases through the Canadian Protein rewards program."
           }
         },
-        "accordion_item_NAxYRT": {
+        "accordion_item_rjDKtc": {
           "type": "accordion_item",
           "settings": {
             "title": "I signed up for Early Access — where are my rewards points?",
             "content": "Points may take a short time to appear in your account. If they haven't shown up after 24 hours, please contact Canadian Protein customer support."
           }
         },
-        "accordion_item_Md6JYm": {
+        "accordion_item_xbcqTJ": {
           "type": "accordion_item",
           "settings": {
             "title": "My discount isn't showing at checkout — what should I do?",
             "content": "Make sure you're shopping for eligible products (bulk products are excluded). If the discount still isn't appearing, try refreshing your cart or contact Canadian Protein customer support for help."
           }
         },
-        "accordion_item_chAmcj": {
+        "accordion_item_VFxwrQ": {
           "type": "accordion_item",
           "settings": {
             "title": "Can I return or exchange a Sale item?",
             "content": "Please refer to the Canadian Protein returns policy for full details on returns and exchanges during the Sale period."
           }
+        },
+        "accordion_item_yat9gY": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Can I return or exchange a free gift?",
+            "content": "No. free gifts can not be returned or exchanged."
+          }
         }
       },
       "block_order": [
-        "title_yW38ei",
-        "accordion_item_JyAcMi",
-        "accordion_item_aqRHxt",
-        "accordion_item_HYtk9r",
-        "accordion_item_anYHhY",
-        "accordion_item_QcmfXb",
-        "accordion_item_yXDAPE",
-        "accordion_item_NAxYRT",
-        "accordion_item_Md6JYm",
-        "accordion_item_chAmcj"
+        "title_XUWwR7",
+        "accordion_item_Jej634",
+        "accordion_item_A4QhU8",
+        "accordion_item_KeynPT",
+        "accordion_item_YrdUdH",
+        "accordion_item_kApaM3",
+        "accordion_item_pMAaBV",
+        "accordion_item_rjDKtc",
+        "accordion_item_xbcqTJ",
+        "accordion_item_VFxwrQ",
+        "accordion_item_yat9gY"
       ],
       "name": "t:sections.accordion.name",
       "settings": {
@@ -765,7 +773,7 @@
     "custom_liquid_n4TaAM",
     "main",
     "custom_liquid_CYFVna",
-    "accordion_7VDBRB",
+    "accordion_ykApEk",
     "icon_with_text_LMTgLi"
   ]
 }
