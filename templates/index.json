@@ -161,7 +161,7 @@
         "item_bEGXYh": {
           "type": "item",
           "settings": {
-            "text": "<p><a href=\"/collections/fathers-day-flash-sale\" title=\"Father's Day Flash Sale\">FATHER'S DAY SALE</a></p>",
+            "text": "<p><a href=\"/collections/canada-day-sale\" title=\"Canada Day Sale\">CANADA DAY SALE</a></p>",
             "icon_svg": "flash",
             "custom_svg": "",
             "icon_width": 20,
@@ -171,7 +171,7 @@
         "item_rEUm4e": {
           "type": "item",
           "settings": {
-            "text": "<p><a href=\"/collections/fathers-day-flash-sale\" title=\"Father's Day Flash Sale\"><strong>20% OFF SITEWIDE</strong></a></p>",
+            "text": "<p><a href=\"/collections/canada-day-sale\" title=\"Canada Day Sale\"><strong>UP TO 70% OFF SITEWIDE</strong></a></p>",
             "icon_svg": "flash",
             "custom_svg": "",
             "icon_width": 20,
@@ -183,7 +183,6 @@
         "item_bEGXYh",
         "item_rEUm4e"
       ],
-      "disabled": true,
       "custom_css": [
         "/* Enlarge the Subscribe & Save marquee icon */.hdt-marquee__item-icon--image img[src*=\"Subscribe_and_save\"] {width: 170px !important; max-width: 170px !important; height: auto !important;}"
       ],
