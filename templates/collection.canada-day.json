@@ -502,7 +502,7 @@
     },
     "custom_liquid_bjqjVb": {
       "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
+      "name": "Shop All Link",
       "settings": {
         "section_fullwidth": false,
         "custom_liquid": "<div id=\"shopall\"></div>",
