@@ -717,7 +717,7 @@
     },
     "custom_liquid_rxthzb": {
       "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
+      "name": "FAQ Link",
       "settings": {
         "section_fullwidth": false,
         "custom_liquid": "<div id=\"faq\"></div>",
