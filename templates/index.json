@@ -161,8 +161,8 @@
         "item_bEGXYh": {
           "type": "item",
           "settings": {
-            "text": "<p><a href=\"/collections/canada-day-sale\" title=\"Canada Day Sale\">CANADA DAY SALE</a></p>",
-            "icon_svg": "flash",
+            "text": "<p>🇨🇦 <a href=\"/collections/canada-day-sale\" title=\"Canada Day Sale\">CANADA DAY SALE</a>  🇨🇦</p>",
+            "icon_svg": "none",
             "custom_svg": "",
             "icon_width": 20,
             "icon_width_mb": 20
@@ -171,8 +171,8 @@
         "item_rEUm4e": {
           "type": "item",
           "settings": {
-            "text": "<p><a href=\"/collections/canada-day-sale\" title=\"Canada Day Sale\"><strong>UP TO 70% OFF SITEWIDE</strong></a></p>",
-            "icon_svg": "flash",
+            "text": "<p><a href=\"/collections/canada-day-sale\" title=\"Canada Day Sale\"><strong>UP TO 70% OFF!</strong></a></p>",
+            "icon_svg": "none",
             "custom_svg": "",
             "icon_width": 20,
             "icon_width_mb": 20
@@ -197,7 +197,7 @@
         "text_uppercase": false,
         "adding_border": false,
         "icon_position_between": true,
-        "color_scheme": "scheme-b118462a-a4ac-4478-a927-bc3e753a2252",
+        "color_scheme": "scheme-dea2a141-c4a8-41c6-8079-fb3ee810a1b8",
         "padding_top": 36,
         "padding_bottom": 36,
         "padding_rate": 75
