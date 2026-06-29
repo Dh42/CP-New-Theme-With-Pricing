@@ -32,6 +32,21 @@
           "type": "slide",
           "name": "Buy More Save More",
           "settings": {
+            "image": "shopify://shop_images/Main_6600b6e2-d8ed-413c-b3a6-9900817731a8.jpg",
+            "eyebrow": "CANADA DAY SALE",
+            "heading": "up to 70% off sitewide.",
+            "subtext": "No code needed.",
+            "rating_text": "",
+            "cta_label": "Shop Now",
+            "cta_link": "shopify://collections/canada-day-sale",
+            "cta2_label": "",
+            "cta2_link": "shopify://collections/buy-more-save-more"
+          }
+        },
+        "slide_gLJcrB": {
+          "type": "slide",
+          "name": "Buy More Save More",
+          "settings": {
             "image": "shopify://shop_images/Hero_Banner_1.jpg",
             "eyebrow": "TRUSTED BY MILLIONS OF CANADIANS",
             "heading": "Stock up on everyday essentials.",
@@ -92,6 +107,7 @@
       "block_order": [
         "slide_CP4xta",
         "slide_PUH8NP",
+        "slide_gLJcrB",
         "slide_EUDexd",
         "slide_LhVhML",
         "slide_md6CMr"
