@@ -148,6 +148,7 @@
         "tier_76ddg4",
         "tier_PecLCt"
       ],
+      "disabled": true,
       "name": "CP Tier Bar",
       "settings": {
         "label": "Stack & Save",
