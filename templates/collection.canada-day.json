@@ -648,6 +648,7 @@
     },
     "custom_liquid_n4TaAM": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "section_fullwidth": false,
