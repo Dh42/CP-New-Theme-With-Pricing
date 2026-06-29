@@ -660,6 +660,7 @@
     },
     "custom_liquid_FB8Awf": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "Pagination Refresh",
       "settings": {
         "section_fullwidth": false,
