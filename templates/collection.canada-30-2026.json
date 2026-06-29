@@ -55,7 +55,7 @@
         "heading_N3yEnd": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>30% off proteins & supplements</strong>",
+            "heading": "<strong>30% off</strong>",
             "tag": "h2",
             "heading_size": "h1",
             "alignment": "start"
