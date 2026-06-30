@@ -294,6 +294,9 @@
         "card_wpi",
         "card_iso90"
       ],
+      "custom_css": [
+        ".product-card__rating,.card__rating,.rating,.stamped-product-reviews-badge,.jdgm-preview-badge,.spr-badge,[class*=\"rating\"] {display: none !important;}"
+      ],
       "name": "CP Comparison Grid",
       "settings": {
         "heading": "Which whey is right for you?",
