@@ -66,6 +66,10 @@
   {% assign initial_container_grams = 10000 %}
 {% elsif v.option1 contains '6 kg' or v.option2 contains '6 kg' or v.option3 contains '6 kg' or v.title contains '6 kg' %}
   {% assign initial_container_grams = 6000 %}
+{% elsif v.option1 contains '5 kg' or v.option2 contains '5 kg' or v.option3 contains '5 kg' or v.title contains '5 kg' %}
+  {% assign initial_container_grams = 5000 %}
+{% elsif v.option1 contains '3 kg' or v.option2 contains '3 kg' or v.option3 contains '3 kg' or v.title contains '3 kg' %}
+  {% assign initial_container_grams = 3000 %}
 {% elsif v.option1 contains '2 kg' or v.option2 contains '2 kg' or v.option3 contains '2 kg' or v.title contains '2 kg' %}
   {% assign initial_container_grams = 2000 %}
 {% elsif v.option1 contains '1 kg' or v.option2 contains '1 kg' or v.option3 contains '1 kg' or v.title contains '1 kg' %}
@@ -95,6 +99,10 @@
       {% assign container_grams = 10000 %}
     {% elsif variant.option1 contains '6 kg' or variant.option2 contains '6 kg' or variant.option3 contains '6 kg' or variant.title contains '6 kg' %}
       {% assign container_grams = 6000 %}
+    {% elsif variant.option1 contains '5 kg' or variant.option2 contains '5 kg' or variant.option3 contains '5 kg' or variant.title contains '5 kg' %}
+      {% assign container_grams = 5000 %}
+    {% elsif variant.option1 contains '3 kg' or variant.option2 contains '3 kg' or variant.option3 contains '3 kg' or variant.title contains '3 kg' %}
+      {% assign container_grams = 3000 %}
     {% elsif variant.option1 contains '2 kg' or variant.option2 contains '2 kg' or variant.option3 contains '2 kg' or variant.title contains '2 kg' %}
       {% assign container_grams = 2000 %}
     {% elsif variant.option1 contains '1 kg' or variant.option2 contains '1 kg' or variant.option3 contains '1 kg' or variant.title contains '1 kg' %}
