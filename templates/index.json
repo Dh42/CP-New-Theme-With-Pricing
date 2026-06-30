@@ -416,6 +416,9 @@
         "product_DUpLaD",
         "product_dfBrdf"
       ],
+      "custom_css": [
+        ".product-card__rating,.card__rating,.rating,.stamped-product-reviews-badge,.jdgm-preview-badge,.spr-badge,[class*=\"rating\"] {display: none !important;}"
+      ],
       "name": "CP Best Sellers",
       "settings": {
         "heading": "Canada's best-loved proteins",
