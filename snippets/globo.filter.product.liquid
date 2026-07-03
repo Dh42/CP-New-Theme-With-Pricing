@@ -35,7 +35,7 @@
   {%- endfor -%}
 
   <div {% if showPageData %}data-page="{{page}}"{% endif %} class="spf-col-xl-3 spf-col-lg-3 spf-col-md-4 spf-col-sm-6 spf-col-6">
-    <article class="cp-cat-card{% unless product.available %} cp-cat-card--sold-out{% endunless %} samita-product-labels">
+    <article class="cp-cat-card{% unless product.available %} cp-cat-card--sold-out{% endunless %}" samita-product-labels>
 
       {%- comment -%}────────── IMAGE WRAP ──────────{%- endcomment -%}
       <div class="cp-cat-card__img-wrap">
