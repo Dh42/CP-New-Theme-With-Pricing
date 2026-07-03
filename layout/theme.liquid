@@ -268,5 +268,7 @@
         {%- render 'cp-quick-add-drawer' -%}
       {%- endif -%}
     {%- endif -%}
+
+    {% capture t %}{% render 'samita-custom' %}{% endcapture %}{% unless t contains 'Liquid error' %}{{ t }}{% endunless %}
   </body>
 </html>
