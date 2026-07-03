@@ -176,25 +176,25 @@ window.Samita = window.Samita || {}
 Samita.ProductLabels = Samita.ProductLabels || {}
 Samita.ProductLabels.products = Samita.ProductLabels.products || []
 Samita.ProductLabels.products.push({
-"id":{{-card_product.id-}},
-"title":{{-card_product.title | json-}},
-"handle":{{-card_product.handle | json-}},
-"price":"{{-card_product.price-}}",
-"price_max":"{{-card_product.price_max}}",
-"price_min":"{{-card_product.price_min}}",
-"type":{{-card_product.type | json-}},
-"created_at":"{{-card_product.created_at | date: "%Y-%m-%d %H:%M" -}}",
-"published_at":"{{-card_product.published_at | date: "%Y-%m-%d %H:%M" -}}",
-"tags": {{-card_product.tags | json-}},
-"vendor": {{-card_product.vendor | json-}},
-"featured_image":"{{-card_product.featured_image-}}",
-"url":"{{-card_product.url-}}",
-"collections":{{-card_product.collections | map: 'id' | json-}},
-"compare_at_price":"{{-card_product.compare_at_price-}}",
-"compare_at_price_max": "{{-card_product.compare_at_price_max-}}",
-"compare_at_price_min": "{{-card_product.compare_at_price_min-}}",
-"price_varies": "{{-card_product.price_varies-}}",
-"compare_at_price_varies": "{{-card_product.compare_at_price_varies-}}",
+"id":{{-product.id-}},
+"title":{{-product.title | json-}},
+"handle":{{-product.handle | json-}},
+"price":"{{-product.price-}}",
+"price_max":"{{-product.price_max}}",
+"price_min":"{{-product.price_min}}",
+"type":{{-product.type | json-}},
+"created_at":"{{-product.created_at | date: "%Y-%m-%d %H:%M" -}}",
+"published_at":"{{-product.published_at | date: "%Y-%m-%d %H:%M" -}}",
+"tags": {{-product.tags | json-}},
+"vendor": {{-product.vendor | json-}},
+"featured_image":"{{-product.featured_image-}}",
+"url":"{{-product.url-}}",
+"collections":{{-product.collections | map: 'id' | json-}},
+"compare_at_price":"{{-product.compare_at_price-}}",
+"compare_at_price_max": "{{-product.compare_at_price_max-}}",
+"compare_at_price_min": "{{-product.compare_at_price_min-}}",
+"price_varies": "{{-product.price_varies-}}",
+"compare_at_price_varies": "{{-product.compare_at_price_varies-}}",
 "metafields": {
 {%- assign product_keys_raw = shop.metafields.SamitaLabels['product_metafield_keys'].value -%}
 {%- if product_keys_raw and product_keys_raw != blank -%}
@@ -204,28 +204,28 @@ Samita.ProductLabels.products.push({
     {%- assign parts = full_key | strip | split: '.' -%}
     {%- assign ns = parts[0] -%}
     {%- assign key = parts[1] -%}
-    {%- if card_product.metafields[ns][key] -%}
+    {%- if product.metafields[ns][key] -%}
         {%- unless first_meta -%},{%- endunless -%}
-        "{{ full_key | strip }}": {{ card_product.metafields[ns][key].value | json }}
+        "{{ full_key | strip }}": {{ product.metafields[ns][key].value | json }}
         {%- assign first_meta = false -%}
     {%- endif -%}
     {%- endfor -%}
 {%- endif -%}
 },
 "images":[
-{%- for image in card_product.images -%}{%- unless forloop.first -%},
+{%- for image in product.images -%}{%- unless forloop.first -%},
 {%- endunless -%}{"id":{{-image.id-}},
 "src":{{-image.src | json-}}}{%- endfor -%}],
-"first_available_variant":{"id":{{-card_product.selected_or_first_available_variant.id| times: 1-}}},
-"available":{{-card_product.available| json-}},
-"options": {{-card_product.options | json-}},
+"first_available_variant":{"id":{{-product.selected_or_first_available_variant.id| times: 1-}}},
+"available":{{-product.available| json-}},
+"options": {{-product.options | json-}},
 "variants":[
 
 {%- assign variant_keys_raw = shop.metafields.SamitaLabels['variant_metafield_keys'].value -%}
 {%- if variant_keys_raw and variant_keys_raw != blank -%}
     {%- assign variant_keys = variant_keys_raw -%}
 {%- endif -%}
-{%- for variant in card_product.variants -%}{%- unless forloop.first -%},
+{%- for variant in product.variants -%}{%- unless forloop.first -%},
 {%- endunless -%}
 {
 "id":{{-variant.id-}},
@@ -242,7 +242,7 @@ Samita.ProductLabels.products.push({
 "option2":  {{-variant.option2| json-}},
 "option3":  {{-variant.option3| json-}},
 "options":  {{-variant.options| json-}},
-"selected": {%- if variant.selected -%}  {{-variant.selected-}} {%- elsif card_product.selected_or_first_available_variant.id == variant.id -%} true  {%- else -%} false {%- endif -%},
+"selected": {%- if variant.selected -%}  {{-variant.selected-}} {%- elsif product.selected_or_first_available_variant.id == variant.id -%} true  {%- else -%} false {%- endif -%},
     "metafields":{
         {%- if variant_keys -%}
         {%- assign first_meta = true -%}
