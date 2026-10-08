@@ -22,7 +22,7 @@
     <div class="hdt-main-article-page">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
-          {%- when "image"- %}
+          {%- when "image" %}
             {%- liquid
               if section.settings.section_fullwidth
                 assign page_widthimg = '100vw'
@@ -1173,4 +1173,13 @@
     }
   ]
 }
-{% endschema %}
+{% endschema %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: '{%- when "image"- %}'
+  to: '{%- when "image" %}'
+  position: 1012..1031
+{%- endcomment -%}

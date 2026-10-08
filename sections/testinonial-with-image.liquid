@@ -115,7 +115,7 @@
       {%- if section.settings.image_width == 'one_img_fixed2' -%}
         {%- if section.settings.nav_pos == "middle_out" -%}
           <div class="hdt-absolute hdt-nav-btns-group hdt-w-full hdt-slider {% if section.settings.navUI %} hdt-nav-btns-{{ section.settings.nav_des }} hdt-nav-{{ section.settings.nav_pos }}{% endif %}">
-            {%- render 'nav_slider', : section.settings.nav_des -%}  
+            {%- render 'nav_slider' -%}  
           </div>
         {%- endif -%}
       {%- endif -%}
@@ -363,4 +363,13 @@
     }
   ]
 }
-{% endschema %}
+{% endschema %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'nav_slider', : section.settings.nav_des -%}"
+  to: "{%- render 'nav_slider' -%}"
+  position: 9967..9994
+{%- endcomment -%}
